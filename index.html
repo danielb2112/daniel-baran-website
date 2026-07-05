@@ -334,10 +334,10 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 </style>
-<title>Daniel Baran – Freelance IT-Projektmanagement &amp; KI</title>
-<meta name="description" content="Senior IT-Projektmanager &amp; Product Owner. KI-Projekte von der Idee bis in die Produktion. Deutsch · Polnisch · Englisch. Remote aus Poznań für DACH.">
-<meta property="og:title" content="Daniel Baran – Freelance IT-Projektmanagement &amp; KI">
-<meta property="og:description" content="Senior IT-Projektmanager &amp; Product Owner. KI-Projekte von der Idee bis in die Produktion. Deutsch · Polnisch · Englisch. Remote aus Poznań für DACH.">
+<title>Daniel Baran – IT-Projektmanager &amp; Product Owner | Freelance | Remote</title>
+<meta name="description" content="Freelance IT-Projektmanager &amp; Product Owner mit 4+ Jahren Erfahrung in ARD, MAN/VW und Warner Bros. Verfügbar September 2026. Remote für DACH + Europa.">
+<meta property="og:title" content="Daniel Baran – IT-Projektmanager &amp; Product Owner | Freelance | Remote">
+<meta property="og:description" content="Freelance IT-Projektmanager &amp; Product Owner mit 4+ Jahren Erfahrung in ARD, MAN/VW und Warner Bros. Verfügbar September 2026. Remote für DACH + Europa.">
 <meta property="og:type" content="website">
 <style>
   *{box-sizing:border-box;}
@@ -757,7 +757,7 @@
             <span style="font-family:'Space Mono',monospace; font-size:.76rem; color:var(--body); background:var(--paper); border:1px solid var(--line); padding:6px 12px; border-radius:3px; transition:all .18s ease;" style-hover="background:var(--ink); color:var(--paper); border-color:var(--ink)">LLM-Routing (Ollama/API)</span>
             <span style="font-family:'Space Mono',monospace; font-size:.76rem; color:var(--body); background:var(--paper); border:1px solid var(--line); padding:6px 12px; border-radius:3px; transition:all .18s ease;" style-hover="background:var(--ink); color:var(--paper); border-color:var(--ink)">Prompt Engineering</span>
             <span style="font-family:'Space Mono',monospace; font-size:.76rem; color:var(--body); background:var(--paper); border:1px solid var(--line); padding:6px 12px; border-radius:3px; transition:all .18s ease;" style-hover="background:var(--ink); color:var(--paper); border-color:var(--ink)">Recommendation Engines</span>
-            <span style="font-family:'Space Mono',monospace; font-size:.76rem; color:var(--body); background:var(--paper); border:1px solid var(--line); padding:6px 12px; border-radius:3px; transition:all .18s ease;" style-hover="background:var(--ink); color:var(--paper); border-color:var(--ink)">KI-Tool-Evaluation</span>
+            <span style="font-family:'Space Mono',monospace; font-size:.76rem; color:var(--body); background:var(--paper); border:1px solid var(--line); padding:6px 12px; border-radius:3px; transition:all .18s ease;" style-hover="background:var(--ink); color:var(--paper); border-color:var(--ink)">{{ aiToolEvaluation }}</span>
           </div>
         </div>
         <div data-reveal="1" style="opacity:0; transform:translateY(26px); transition:opacity .7s cubic-bezier(.16,1,.3,1) .24s, transform .7s cubic-bezier(.16,1,.3,1) .24s;">
@@ -810,7 +810,15 @@
       <div style="display:flex; flex-wrap:wrap; gap:clamp(28px,5vw,72px); margin-top:clamp(40px,6vw,64px);">
         <div>
           <div style="font-family:'Space Mono',monospace; font-size:.72rem; color:color-mix(in srgb, var(--paper) 50%, transparent); letter-spacing:.16em; text-transform:uppercase; margin-bottom:10px;">{{ labelPhone }}</div>
-          <a href="tel:+48780680329" style="font-family:'Hanken Grotesk',sans-serif; font-size:1.1rem; color:var(--paper); text-decoration:none; transition:color .2s ease;" style-hover="color:var(--accent,#3D45E6)">+48 780 680 329</a>
+          <sc-if value="{{ phoneSingle }}" hint-placeholder-val="{{ true }}">
+            <a href="{{ phoneHref }}" style="font-family:'Hanken Grotesk',sans-serif; font-size:1.1rem; color:var(--paper); text-decoration:none; transition:color .2s ease;" style-hover="color:var(--accent,#3D45E6)">{{ phoneText }}</a>
+          </sc-if>
+          <sc-if value="{{ phoneDual }}" hint-placeholder-val="{{ false }}">
+            <div style="display:flex; flex-direction:column; gap:6px;">
+              <a href="{{ phoneDeHref }}" style="font-family:'Hanken Grotesk',sans-serif; font-size:1.1rem; color:var(--paper); text-decoration:none; transition:color .2s ease;" style-hover="color:var(--accent,#3D45E6)">{{ phoneDeText }}</a>
+              <a href="{{ phonePlHref }}" style="font-family:'Hanken Grotesk',sans-serif; font-size:1.1rem; color:var(--paper); text-decoration:none; transition:color .2s ease;" style-hover="color:var(--accent,#3D45E6)">{{ phonePlText }}</a>
+            </div>
+          </sc-if>
         </div>
         <div>
           <div style="font-family:'Space Mono',monospace; font-size:.72rem; color:color-mix(in srgb, var(--paper) 50%, transparent); letter-spacing:.16em; text-transform:uppercase; margin-bottom:10px;">LinkedIn</div>
@@ -832,9 +840,9 @@
           <span style="font-family:'Space Mono',monospace; font-size:.7rem; color:color-mix(in srgb, var(--paper) 50%, transparent); letter-spacing:.14em; text-transform:uppercase;">{{ footerRole }}</span>
         </div>
         <div style="display:flex; align-items:baseline; gap:22px; flex-wrap:wrap;">
-          <a href="/impressum" style="font-family:'Space Mono',monospace; font-size:.72rem; color:color-mix(in srgb, var(--paper) 60%, transparent); letter-spacing:.1em; text-decoration:none; transition:color .2s ease;" style-hover="color:var(--accent,#3D45E6)">{{ footImpressum }}</a>
-          <a href="/datenschutz" style="font-family:'Space Mono',monospace; font-size:.72rem; color:color-mix(in srgb, var(--paper) 60%, transparent); letter-spacing:.1em; text-decoration:none; transition:color .2s ease;" style-hover="color:var(--accent,#3D45E6)">{{ footDatenschutz }}</a>
-          <span style="font-family:'Space Mono',monospace; font-size:.72rem; color:color-mix(in srgb, var(--paper) 50%, transparent); letter-spacing:.1em;">© {{ year }} · Poznań, PL</span>
+          <a href="impressum.html" style="font-family:'Space Mono',monospace; font-size:.72rem; color:color-mix(in srgb, var(--paper) 60%, transparent); letter-spacing:.1em; text-decoration:none; transition:color .2s ease;" style-hover="color:var(--accent,#3D45E6)">{{ footImpressum }}</a>
+          <a href="datenschutz.html" style="font-family:'Space Mono',monospace; font-size:.72rem; color:color-mix(in srgb, var(--paper) 60%, transparent); letter-spacing:.1em; text-decoration:none; transition:color .2s ease;" style-hover="color:var(--accent,#3D45E6)">{{ footDatenschutz }}</a>
+          <span style="font-family:'Space Mono',monospace; font-size:.72rem; color:color-mix(in srgb, var(--paper) 50%, transparent); letter-spacing:.1em;">© {{ year }}</span>
         </div>
       </div>
     </div>
@@ -844,8 +852,8 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script="" data-props="{
   &quot;palette&quot;: { &quot;editor&quot;: &quot;color&quot;, &quot;default&quot;: [&quot;#EEF0F2&quot;, &quot;#E2E5EA&quot;, &quot;#141519&quot;, &quot;#3D45E6&quot;], &quot;tsType&quot;: &quot;string[]&quot;, &quot;options&quot;: [[&quot;#EEF0F2&quot;, &quot;#E2E5EA&quot;, &quot;#141519&quot;, &quot;#3D45E6&quot;], [&quot;#0D1117&quot;, &quot;#161D27&quot;, &quot;#EDF2F7&quot;, &quot;#4D7FFF&quot;], [&quot;#141414&quot;, &quot;#201F1B&quot;, &quot;#F1F0E8&quot;, &quot;#C6F24E&quot;], [&quot;#F7F4EF&quot;, &quot;#ECE6DB&quot;, &quot;#1A1714&quot;, &quot;#DA4B1E&quot;]], &quot;section&quot;: &quot;Design&quot; },
-  &quot;availableFrom&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;[DATUM]&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Inhalt&quot; },
-  &quot;linkedinUrl&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;#&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Inhalt&quot; },
+  &quot;availableFrom&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;1. September 2026&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Inhalt&quot; },
+  &quot;linkedinUrl&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;https://www.linkedin.com/in/daniel-baran-5b14b2269&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Inhalt&quot; },
   &quot;email&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;kontakt@daniel-baran.com&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Inhalt&quot; },
   &quot;available&quot;: { &quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Inhalt&quot; },
   &quot;showStats&quot;: { &quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Inhalt&quot; }
@@ -1159,10 +1167,11 @@ class Component extends DCLogic {
       navLeistungen: "Leistungen", navReferenzen: "Stationen & Projekte", navKontakt: "Kontakt",
       heroEyebrow: "Freelance · IT- & Product-Delivery · KI-Enablement",
       h1a: "Ich bringe komplexe", h1b: "IT-Projekte", h1c: "und die Menschen dahinter", h1d: "in Einklang.",
-      heroSub: "Senior-Freelancer für IT-Projektmanagement und Product Ownership — von Enterprise-IT über Public Broadcasting bis zum Startup. Am stärksten dort, wo mehrere Systeme, Teams und Interessen zusammenfinden müssen.",
+      heroSub: "Ich übernehme die Steuerung dort, wo viele Systeme, Teams und Interessen aufeinandertreffen — und bringe Projekte verlässlich in Produktion. Enterprise-IT, Public Broadcasting, Startup: alle drei aus erster Hand.",
       availPrefix: "Verfügbar ab",
+      availableFrom: "1. September 2026",
       contactAvailPrefix: "Verfügbar für neue Projekte ab",
-      heroLoc: "Poznań, PL · Remote in Europa",
+      heroLoc: "Polen · Remote in Europa",
       ctaPrimary: "Projekt besprechen", ctaSecondary: "Projekte ansehen",
       portraitLabel: "Porträt", portraitHint: "→ dein Foto hier",
       scrollHint: "Scrollen",
@@ -1177,16 +1186,16 @@ class Component extends DCLogic {
       p1: "IT-Projektmanagement", p2: "Product Ownership", p3: "KI-Enablement", p4: "Stakeholder-Alignment",
       profilLead: "Seit über vier Jahren verbinde ich Technik, Produkt und Business — und übersetze zwischen Engineering und Fachbereich, zwischen Konzern und Startup, zwischen Disziplinen.",
       profilBody: "Ob serverlose Streaming-Infrastruktur für Millionen Nutzer:innen, eine KI-Empfehlungsengine in Produktion oder das erste Web3-Metaverse-Event für Warner Bros. Discovery Sports — meine Rolle ist es, viele bewegliche Teile in eine Richtung zu bringen und Projekte verlässlich in Produktion zu führen. Audit-sicher, über Abteilungs- und Unternehmensgrenzen hinweg.",
-      profilPrinciple: "Mein Arbeitsprinzip: lieber richtig bauen, auch wenn es länger dauert.",
+      profilPrinciple: "Gute Technik allein reicht nicht — ich sorge dafür, dass Menschen und Systeme gemeinsam funktionieren.",
       leistungenTitle: "Wobei ich Teams am meisten helfe.",
       s1t: "Technisches Projekt- & Programm-Management",
-      s1d: "Von der Bedarfsaufnahme bis zum Rollout: Ich steuere Projekte über Abteilungs- und Unternehmensgrenzen hinweg, richte Stakeholder aus und schaffe Prozesse, die auch einer Revision standhalten.",
+      s1d: "Projekte, die an Schnittstellen scheitern, sind mein Spezialgebiet. Ich steuere cross-funktionale IT-Vorhaben vom ersten Requirements-Workshop bis zum Rollout — audit-sicher, termingetreu, mit klarer Eskalationsstruktur.",
       s2t: "Product Ownership",
-      s2d: "Ich verantworte digitale Produkte end-to-end — von cloud-nativer, serverloser Architektur bis zum Backlog, der Wert liefert und in Produktion geht.",
+      s2d: "Wenn digitale Produkte zwischen Idee, Architektur und Umsetzung hängen bleiben, übernehme ich Product Ownership end-to-end — von cloud-nativer, serverloser Architektur bis zu einem Backlog, der Wert liefert und in Produktion geht.",
       s3t: "KI-Enablement & Generative AI",
-      s3d: "Ich bringe KI vom Prototyp in den Produktivbetrieb und befähige Teams, Generative AI in Produkt, Strategie und Betrieb sinnvoll einzusetzen.",
+      s3d: "Viele KI-Initiativen bleiben im Prototyp stecken. Ich bringe KI in den Produktivbetrieb und befähige Teams, Generative AI in Produkt, Strategie und Betrieb sinnvoll einzusetzen.",
       s4t: "Cloud- & Streaming-Delivery",
-      s4d: "Serverlose AWS-Services, HLS/DASH-Streaming und Transcoding-Pipelines — skalierbar, beobachtbar und produktionsreif aufgesetzt.",
+      s4d: "Streaming- und Cloud-Plattformen müssen Lastspitzen, Betrieb und Weiterentwicklung aushalten. Ich liefere serverlose AWS-Services, HLS/DASH-Streaming und Transcoding-Pipelines skalierbar, beobachtbar und produktionsreif.",
       refTitle: "Ausgewählte Projekte.",
       cAt: "Streaming-Infrastruktur im Millionenmaßstab",
       cAd: "Cloud-nativer, serverloser AWS-Service zur HLS/DASH-Manifest-Modifikation — im Live-Betrieb der ARD-Mediathek. Dazu ein zentrales Transcoding-System für VOD und Live.",
@@ -1203,18 +1212,19 @@ class Component extends DCLogic {
       cEt: "Konzern-Schnittstelle MAN ↔ Volkswagen",
       cEd: "Steuerung der Schnittstelle zwischen MAN und Volkswagen für das weltweite MAN-TGE-After-Sales-Programm — inkl. Aufbau einer globalen Support-Funktion und Integration von Fahrzeugdaten aus Konzernsystemen.",
       cEchip: "Weltweiter Rollout",
-      cFlabel: "EIGENPROJEKT", cFrole: "Architekt & Entwickler",
+      cFlabel: "PROOF OF CONCEPT", cFrole: "Architekt & Entwickler",
       cFt: "Multi-Agent-KI-System in Eigenentwicklung",
       cFd: "Produktionsreifes Multi-Agent-System selbst gebaut: LangGraph-Orchestrierung, hybrides LLM-Routing (lokal + Cloud), RAG-Memory und Freigabe-Workflows per Telegram. Weil ich KI-Projekte besser steuere, wenn ich sie auch selbst bauen kann.",
       toolkitTitle: "Womit ich arbeite.",
       g1: "Projekt & Produkt", g2: "Cloud-Architektur", g3: "Künstliche Intelligenz", g4: "Collaboration & Design",
+      aiToolEvaluation: "KI-Tool-Evaluation",
       langLabel: "Sprachen",
       langsFull: "Deutsch (Muttersprache) · Polnisch (C1, fließend) · Englisch (fließend)",
       certLabel: "Zertifizierungen",
       certValue: "Certified Product Management Expert (XDi) · Generative AI & GPAI (Bitkom) · AI for Business (Wharton Online) · Google Project Management (Coursera) · Technischer Fachwirt (IHK, Abschluss 12/2026)",
       contactLead: "Ein Projekt, das viele Systeme und Stakeholder verbindet?",
       contactAccent: "Sprechen wir darüber.",
-      labelPhone: "Telefon", labelLoc: "Standort", locValue: "Poznań, Polen · Remote in Europa",
+      labelPhone: "Telefon", labelLoc: "Standort", locValue: "Polen · Remote in Europa (DACH-Fokus)",
       labelLangs: "Sprachen",
       linkedinText: "Profil öffnen ↗",
       footerRole: "Freelance IT- & Product-Delivery",
@@ -1224,10 +1234,11 @@ class Component extends DCLogic {
       navLeistungen: "Usługi", navReferenzen: "Doświadczenie i projekty", navKontakt: "Kontakt",
       heroEyebrow: "Freelance · IT i Product Delivery · Wdrażanie AI",
       h1a: "Łączę złożone", h1b: "projekty IT", h1c: "i stojących za nimi ludzi", h1d: "w jedną całość.",
-      heroSub: "Senior freelancer w obszarze zarządzania projektami IT i product ownership — od IT w korporacjach, przez media publiczne, po startupy. Najskuteczniejszy tam, gdzie wiele systemów, zespołów i interesów musi się spotkać.",
+      heroSub: "Wchodzę tam, gdzie zderzają się systemy, zespoły i interesy — i doprowadzam projekty do produkcji. Korporacje, media publiczne, startupy: wszystkie trzy z własnego doświadczenia.",
       availPrefix: "Dostępny od",
+      availableFrom: "1 września 2026",
       contactAvailPrefix: "Dostępny dla nowych projektów od",
-      heroLoc: "Poznań, PL · Zdalnie w Europie",
+      heroLoc: "Polska · Zdalnie w Europie",
       ctaPrimary: "Omówmy projekt", ctaSecondary: "Zobacz projekty",
       portraitLabel: "Portret", portraitHint: "→ tutaj Twoje zdjęcie",
       scrollHint: "Przewiń",
@@ -1242,16 +1253,16 @@ class Component extends DCLogic {
       p1: "Zarządzanie projektami IT", p2: "Product ownership", p3: "Wdrażanie AI", p4: "Alignment interesariuszy",
       profilLead: "Od ponad czterech lat łączę technologię, produkt i biznes — tłumacząc między inżynierią a biznesem, między korporacją a startupem, między dyscyplinami.",
       profilBody: "Czy to bezserwerowa infrastruktura streamingowa dla milionów użytkowników, silnik rekomendacji AI w produkcji, czy pierwsze wydarzenie w metaverse Web3 dla Warner Bros. Discovery Sports — moją rolą jest ustawić wiele ruchomych elementów w jednym kierunku i niezawodnie doprowadzić projekty do produkcji. Zgodnie z wymogami audytu, ponad granicami działów i firm.",
-      profilPrinciple: "Moja zasada pracy: lepiej budować porządnie, nawet jeśli trwa to dłużej.",
+      profilPrinciple: "Dobra technologia to za mało — dbam o to, żeby ludzie i systemy działały razem.",
       leistungenTitle: "W czym najbardziej pomagam zespołom.",
       s1t: "Techniczne zarządzanie projektami i programami",
-      s1d: "Od zbierania wymagań po wdrożenie: prowadzę projekty ponad granicami działów i firm, koordynuję interesariuszy i tworzę procesy, które wytrzymają każdą kontrolę.",
+      s1d: "Projekty najczęściej zatrzymują się na styku zespołów, systemów i decyzji. Prowadzę cross-funkcyjne inicjatywy IT od pierwszego warsztatu wymagań po rollout — audytowalnie, terminowo i z jasną strukturą eskalacji.",
       s2t: "Product ownership",
-      s2d: "Odpowiadam za produkty cyfrowe end-to-end — od chmurowej, bezserwerowej architektury po backlog, który dostarcza wartość i trafia na produkcję.",
+      s2d: "Gdy produkt cyfrowy utknie między strategią, architekturą i wdrożeniem, przejmuję product ownership end-to-end — od chmurowej, bezserwerowej architektury po backlog, który dostarcza wartość i trafia na produkcję.",
       s3t: "Wdrażanie AI i generatywna AI",
-      s3d: "Przeprowadzam AI od prototypu do produkcji i wspieram zespoły we wdrażaniu generatywnej AI w produkcie, strategii i operacjach.",
+      s3d: "Wiele inicjatyw AI kończy się na prototypie. Przeprowadzam AI do produkcji i wspieram zespoły we wdrażaniu generatywnej AI w produkcie, strategii i operacjach.",
       s4t: "Cloud i streaming delivery",
-      s4d: "Bezserwerowe usługi AWS, streaming HLS/DASH i pipeline'y transkodowania — skalowalne, obserwowalne i gotowe na produkcję.",
+      s4d: "Platformy streamingowe i cloud muszą wytrzymać obciążenie, utrzymanie i dalszy rozwój. Dostarczam bezserwerowe usługi AWS, streaming HLS/DASH i pipeline'y transkodowania — skalowalne, obserwowalne i gotowe na produkcję.",
       refTitle: "Wybrane projekty.",
       cAt: "Infrastruktura streamingowa w skali milionów",
       cAd: "Chmurowa, bezserwerowa usługa AWS do modyfikacji manifestów HLS/DASH — działająca na żywo w ARD Mediathek. Do tego centralny system transkodowania dla VOD i live.",
@@ -1268,31 +1279,33 @@ class Component extends DCLogic {
       cEt: "Interfejs korporacyjny MAN ↔ Volkswagen",
       cEd: "Zarządzanie interfejsem między MAN a Volkswagenem dla globalnego programu posprzedażowego MAN TGE — w tym budowa globalnej funkcji wsparcia i integracja danych pojazdów z systemów koncernu.",
       cEchip: "Globalny rollout",
-      cFlabel: "PROJEKT WŁASNY", cFrole: "Architekt i deweloper",
+      cFlabel: "PROOF OF CONCEPT", cFrole: "Architekt i deweloper",
       cFt: "Autorski system multi-agentowy AI",
       cFd: "Samodzielnie zbudowany, gotowy na produkcję system multi-agentowy: orkiestracja LangGraph, hybrydowy routing LLM (lokalnie + chmura), pamięć RAG i workflow zatwierdzeń przez Telegram. Bo lepiej prowadzę projekty AI, kiedy potrafię je też sam zbudować.",
       toolkitTitle: "Z czego korzystam.",
       g1: "Projekt i produkt", g2: "Architektura chmury", g3: "Sztuczna inteligencja", g4: "Współpraca i design",
+      aiToolEvaluation: "Ewaluacja narzędzi AI",
       langLabel: "Języki",
       langsFull: "Niemiecki (ojczysty) · Polski (C1, biegły) · Angielski (biegły)",
       certLabel: "Certyfikaty",
       certValue: "Certified Product Management Expert (XDi) · Generative AI & GPAI (Bitkom) · AI for Business (Wharton Online) · Google Project Management (Coursera) · Technischer Fachwirt (IHK, ukończenie 12/2026)",
       contactLead: "Projekt, który łączy wiele systemów i interesariuszy?",
       contactAccent: "Porozmawiajmy.",
-      labelPhone: "Telefon", labelLoc: "Lokalizacja", locValue: "Poznań, Polska · Zdalnie w Europie",
+      labelPhone: "Telefon", labelLoc: "Lokalizacja", locValue: "Polska · Zdalnie w Europie (fokus DACH)",
       labelLangs: "Języki",
       linkedinText: "Otwórz profil ↗",
-      footerRole: "Freelance IT i product delivery",
+      footerRole: "Freelance IT & product delivery",
       footImpressum: "Nota prawna", footDatenschutz: "Polityka prywatności"
     },
     en: {
       navLeistungen: "Services", navReferenzen: "Roles & projects", navKontakt: "Contact",
       heroEyebrow: "Freelance · IT & Product Delivery · AI Enablement",
       h1a: "I bring complex", h1b: "IT projects", h1c: "and the people behind them", h1d: "into alignment.",
-      heroSub: "Senior freelancer for IT project management and product ownership — from enterprise IT through public broadcasting to startups. Strongest where multiple systems, teams and interests have to come together.",
+      heroSub: "I step in where systems, teams and interests collide — and get projects reliably to production. Enterprise IT, public broadcasting, startup: all three first-hand.",
       availPrefix: "Available from",
+      availableFrom: "1 September 2026",
       contactAvailPrefix: "Available for new projects from",
-      heroLoc: "Poznań, PL · Remote across Europe",
+      heroLoc: "Poland · Remote across Europe",
       ctaPrimary: "Discuss a project", ctaSecondary: "See the work",
       portraitLabel: "Portrait", portraitHint: "→ your photo here",
       scrollHint: "Scroll",
@@ -1307,16 +1320,16 @@ class Component extends DCLogic {
       p1: "IT project management", p2: "Product ownership", p3: "AI enablement", p4: "Stakeholder alignment",
       profilLead: "For over four years I've been connecting technology, product and business — translating between engineering and the business side, between corporations and startups, between disciplines.",
       profilBody: "Whether serverless streaming infrastructure for millions of users, an AI recommendation engine in production, or the first Web3 metaverse event for Warner Bros. Discovery Sports — my role is to move many moving parts in one direction and take projects reliably into production. Audit-proof, across department and company boundaries.",
-      profilPrinciple: "My working principle: build it right, even if it takes longer.",
+      profilPrinciple: "Good tech alone isn't enough — I make sure people and systems work together.",
       leistungenTitle: "Where I help teams most.",
       s1t: "Technical project & programme management",
-      s1d: "From demand intake to rollout: I steer projects across department and company boundaries, align stakeholders and establish processes that hold up under review.",
+      s1d: "Projects often fail at the interfaces between teams, systems and decisions. I steer cross-functional IT initiatives from the first requirements workshop to rollout — audit-ready, on schedule and with a clear escalation structure.",
       s2t: "Product ownership",
-      s2d: "I own digital products end-to-end — from cloud-native, serverless architecture to a backlog that delivers value and ships to production.",
+      s2d: "When digital products get stuck between strategy, architecture and delivery, I take ownership end-to-end — from cloud-native, serverless architecture to a backlog that delivers value and ships to production.",
       s3t: "AI enablement & generative AI",
-      s3d: "I take AI from prototype into production and enable teams to use generative AI meaningfully across product, strategy and operations.",
+      s3d: "Many AI initiatives never move beyond prototype. I take AI into production and enable teams to use generative AI meaningfully across product, strategy and operations.",
       s4t: "Cloud & streaming delivery",
-      s4d: "Serverless AWS services, HLS/DASH streaming and transcoding pipelines — set up to be scalable, observable and production-ready.",
+      s4d: "Streaming and cloud platforms have to handle load, operations and future change. I deliver serverless AWS services, HLS/DASH streaming and transcoding pipelines that are scalable, observable and production-ready.",
       refTitle: "Selected projects.",
       cAt: "Streaming infrastructure at millions scale",
       cAd: "Cloud-native, serverless AWS service for HLS/DASH manifest modification — running live in the ARD Mediathek. Plus a central transcoding system for VOD and live.",
@@ -1333,18 +1346,19 @@ class Component extends DCLogic {
       cEt: "Enterprise interface MAN ↔ Volkswagen",
       cEd: "Steering the interface between MAN and Volkswagen for the worldwide MAN TGE after-sales programme — including building a global support function and integrating vehicle data from group systems.",
       cEchip: "Worldwide rollout",
-      cFlabel: "OWN PROJECT", cFrole: "Architect & developer",
+      cFlabel: "PROOF OF CONCEPT", cFrole: "Architect & developer",
       cFt: "Self-built multi-agent AI system",
       cFd: "Built a production-ready multi-agent system myself: LangGraph orchestration, hybrid LLM routing (local + cloud), RAG memory and approval workflows via Telegram. Because I steer AI projects better when I can also build them myself.",
       toolkitTitle: "What I work with.",
       g1: "Project & product", g2: "Cloud architecture", g3: "Artificial intelligence", g4: "Collaboration & design",
+      aiToolEvaluation: "AI Tool Evaluation",
       langLabel: "Languages",
       langsFull: "German (native) · Polish (C1, fluent) · English (fluent)",
       certLabel: "Certifications",
       certValue: "Certified Product Management Expert (XDi) · Generative AI & GPAI (Bitkom) · AI for Business (Wharton Online) · Google Project Management (Coursera) · Technischer Fachwirt (IHK, completing 12/2026)",
       contactLead: "A project that connects many systems and stakeholders?",
       contactAccent: "Let's talk.",
-      labelPhone: "Phone", labelLoc: "Location", locValue: "Poznań, Poland · Remote across Europe",
+      labelPhone: "Phone", labelLoc: "Location", locValue: "Poland · Remote across Europe (DACH focus)",
       labelLangs: "Languages",
       linkedinText: "Open profile ↗",
       footerRole: "Freelance IT & product delivery",
@@ -1356,7 +1370,12 @@ class Component extends DCLogic {
     const lang = this.state.lang;
     const t = this.T[lang] || this.T.de;
     const pal = this._pal();
-    const availDate = this.props.availableFrom ?? "[DATUM]";
+    const availDate = t.availableFrom || this.props.availableFrom || "1. September 2026";
+    const phoneDE = "+491727539490";
+    const phonePL = "+48780680329";
+    const phoneDeText = "+49 172 7539490";
+    const phonePlText = "+48 780 680 329";
+    const linkedinUrl = this.props.linkedinUrl && this.props.linkedinUrl !== "#" ? this.props.linkedinUrl : "https://www.linkedin.com/in/daniel-baran-5b14b2269";
     const email = this.props.email ?? "kontakt@daniel-baran.com";
     return {
       ...t,
@@ -1365,7 +1384,15 @@ class Component extends DCLogic {
       contactStatus: t.contactAvailPrefix + " " + availDate,
       email,
       emailHref: "mailto:" + email,
-      linkedinUrl: this.props.linkedinUrl ?? "#",
+      linkedinUrl,
+      phoneSingle: lang !== "en",
+      phoneDual: lang === "en",
+      phoneText: lang === "pl" ? phonePlText : phoneDeText,
+      phoneHref: "tel:" + (lang === "pl" ? phonePL : phoneDE),
+      phoneDeText,
+      phonePlText,
+      phoneDeHref: "tel:" + phoneDE,
+      phonePlHref: "tel:" + phonePL,
       pickDe: () => this.setLang("de"),
       pickPl: () => this.setLang("pl"),
       pickEn: () => this.setLang("en"),
