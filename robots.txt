@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://daniel-baran.com/sitemap.xml
