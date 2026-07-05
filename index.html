@@ -15,6 +15,8 @@
   .project-detail-meta{font-family:'Space Mono',monospace;font-size:.76rem;line-height:1.5;color:var(--muted,#8a8175);margin:0 0 24px}
   .project-detail-body{display:flex;flex-direction:column;gap:16px}
   .project-detail-body p{font-family:'Hanken Grotesk',sans-serif;font-size:1.02rem;line-height:1.65;margin:0;color:var(--body,#3a352f)}
+  .project-detail-section{display:flex;flex-direction:column;gap:8px}
+  .project-detail-label{font-family:'Space Mono',monospace;font-size:.72rem;line-height:1.4;letter-spacing:.08em;text-transform:uppercase;color:var(--accent,#DA4B1E);margin:8px 0 0}
   body.project-modal-open{overflow:hidden}
   @media (max-width:640px){.project-detail-backdrop{padding:0;align-items:stretch}.project-detail-modal{width:100%;min-height:100svh;max-height:100svh;border-radius:0;border:0;padding:64px 22px 28px}.project-detail-close{top:18px;right:18px}}
   @media (prefers-reduced-motion:reduce){.project-detail-modal,.project-detail-trigger{transition:none;transform:none}}
@@ -1247,8 +1249,8 @@ class Component extends DCLogic {
       cBchip: "9-Personen-Team",
       detailMore: "Mehr erfahren ↗",
       cCrole: "Projektmanagement (Adastra Studios)",
-      cCt: "Immersive Fan-Experience — UCI Track Champions League",
-      cCd: "Als Projektmanager auf Studioseite (Adastra Studios, als Partner von Infinite Reality) an der browserbasierten Preview der immersiven Fan-Experience für Warner Bros. Discovery Sports mitgewirkt — öffentlich zugänglich rund um die Finalrunden in London 2022.",
+      cCt: "Immersive Fan-Plattform, UCI Track Champions League",
+      cCd: "Als Projektmanager auf Studioseite (Adastra Studios, als Partner von Infinite Reality) an der browserbasierten Preview der immersiven Fan-Experience für Warner Bros. Discovery Sports mitgewirkt. Öffentlich zugänglich rund um die Finalrunden in London 2022.",
       cCchip: "WBD Sports · 2022",
       cGrole: "Projektleitung (Adastra Studios)",
       cGt: "The Infinite Playa — Virtual Burn",
@@ -1320,8 +1322,8 @@ class Component extends DCLogic {
       cBchip: "9-osobowy zespół",
       detailMore: "Dowiedz się więcej ↗",
       cCrole: "Project management (Adastra Studios)",
-      cCt: "Immersyjne doświadczenie dla fanów — UCI Track Champions League",
-      cCd: "Jako project manager po stronie studia (Adastra Studios, jako partner Infinite Reality) współtworzyłem przeglądarkową wersję preview immersyjnego doświadczenia dla fanów Warner Bros. Discovery Sports — publicznie dostępną wokół finałów w Londynie w 2022.",
+      cCt: "Immersyjna platforma dla fanów, UCI Track Champions League",
+      cCd: "Jako project manager po stronie studia (Adastra Studios, jako partner Infinite Reality) współtworzyłem przeglądarkową wersję preview immersyjnego doświadczenia dla fanów Warner Bros. Discovery Sports. Publicznie dostępną wokół finałów w Londynie w 2022.",
       cCchip: "WBD Sports · 2022",
       cGrole: "Kierownictwo projektu (Adastra Studios)",
       cGt: "The Infinite Playa — Virtual Burn",
@@ -1393,8 +1395,8 @@ class Component extends DCLogic {
       cBchip: "9-person team",
       detailMore: "Learn more ↗",
       cCrole: "Project management (Adastra Studios)",
-      cCt: "Immersive fan experience — UCI Track Champions League",
-      cCd: "As project manager on the studio side (Adastra Studios, as a partner of Infinite Reality), contributed to the browser-based preview of the immersive fan experience for Warner Bros. Discovery Sports — publicly accessible around the London finals in 2022.",
+      cCt: "Immersive fan platform, UCI Track Champions League",
+      cCd: "As project manager on the studio side (Adastra Studios, as a partner of Infinite Reality), contributed to the browser-based preview of the immersive fan experience for Warner Bros. Discovery Sports. Publicly accessible around the London finals in 2022.",
       cCchip: "WBD Sports · 2022",
       cGrole: "Project lead (Adastra Studios)",
       cGt: "The Infinite Playa — Virtual Burn",
@@ -1495,33 +1497,39 @@ class Component extends DCLogic {
   const DETAIL_COPY = {
     uci: {
       de: {
-        title: "Immersive Fan-Experience — UCI Track Champions League",
+        title: "Immersive Fan-Plattform, UCI Track Champions League",
         meta: "Projektmanagement (Adastra Studios) · 2022 · Warner Bros. Discovery Sports",
-        paragraphs: [
-          "Für die UCI Track Champions League — eine internationale Bahnradsport-Serie von der UCI und Warner Bros. Discovery Sports — entstand eine immersive Fan-Experience, die das klassische TV-Erlebnis um eine soziale, datengetriebene Ebene erweitert. Technologiepartner war Infinite Reality; Adastra Studios wirkte als Partner an der Umsetzung mit, ich als Projektmanager auf Studioseite.",
-          "Die 2022 in London gezeigte Preview war bewusst browserbasiert — zugänglich ohne VR-Headset, direkt über Desktop oder Laptop. Fans erstellten einen Avatar und bewegten sich durch eine virtuelle Umgebung rund um die Finalrunden.",
-          "Kern der Experience war echter Mehrwert statt bloßer 3D-Verpackung: Auswahl aus mehreren Live-Kamera-Feeds („choose your own director\"), Social-Viewing in gemeinsamen Räumen und die Einbindung von Live-Daten und Zusatzinhalten. Das Projekt war als erster Pilot einer mehrjährigen Partnerschaft angelegt, die später weitere Sport-Properties umfassen sollte.",
-          "Aus Projektsicht das Spannende: ein Format zu koordinieren, das sich nicht in eine Schublade stecken lässt — irgendwo zwischen Livestream, Multiplayer-Sozialraum und Event-Begleiter, mit entsprechend vielen beteiligten Gewerken und Schnittstellen."
+        intro: "Eine immersive Fan-Plattform für eine internationale Bahnradsport-Serie, gebaut um das Live-Sport-Erlebnis um eine soziale und datengetriebene Ebene zu erweitern. Ich habe als Projektmanager auf Studioseite an der browserbasierten Preview 2022 mitgewirkt. Adastra Studios war dabei Partner des Technologiepartners Infinite Reality.",
+        sections: [
+          { label: "Ausgangslage", text: "Die UCI Track Champions League ist eine von der UCI und Warner Bros. Discovery Sports aufgebaute Bahnradsport-Serie mit bewusst zugänglichem, entertainmentorientiertem Format. Für die Saison sollte das klassische Broadcast-Erlebnis um ein digitales Premium-Fanangebot ergänzt werden. Gedacht war das als erster Pilot einer mehrjährig angelegten Partnerschaft, die später weitere Sport-Properties umfassen sollte. Die technische Plattform kam von Infinite Reality, Adastra Studios war als Partner an der Umsetzung beteiligt." },
+          { label: "Das Produkt", text: "Statt eines linearen TV-Feeds bot die Plattform eine virtuelle Umgebung, in der Video, Live-Daten, Social Interaction und Zusatzcontent in einem gemeinsamen Interface zusammenliefen. Die Preview zu den Finalrunden in London am 2. und 3. Dezember 2022 lief bewusst im Browser, ohne VR-Headset, direkt auf Desktop und Laptop. Diese Entscheidung senkte die Einstiegshürde deutlich. Reichweite und Zugänglichkeit standen von Anfang an über einem Headset-first-Ansatz. Fans legten einen Avatar an und bewegten sich durch eine Umgebung, die als virtuelles Velodrom mit mehreren Zonen aufgebaut war." },
+          { label: "Kernfunktionen", text: "Der Mehrwert lag in echten Funktionen, nicht in reiner 3D-Optik. Herzstück war die Auswahl aus mehr als acht Live-Kamera-Feeds, aus denen Fans selbst wählen konnten, statt einem festen Regie-Schnitt zu folgen. Dazu kamen Echtzeitdaten der Fahrer wie Herzfrequenz, Kadenz und Leistung, ergänzt um Live-Statistiken und Highlights. Diese Kombination passt besonders gut zum Bahnradsport, weil die Rennen kurz, intensiv und stark messbar sind. Eine soziale Schicht mit Watch-Parties und gemeinsamen Räumen erlaubte gemeinsames Schauen per Voice und Video statt isoliertem Konsum. Ergänzt wurde das Ganze um eine NFT-Galerie mit digitalen Sammlerstücken zu 72 Fahrern, typisch für den Web3-Kontext der Zeit." },
+          { label: "Warum es besonders war", text: "Viele Metaverse-Initiativen dieser Jahre kreisten vor allem um NFTs und blieben abstrakt. Dieses Projekt setzte auf konkreten Nutzwert. Live-Video, soziale Co-Präsenz und Daten-Overlay ergaben für Fans einen greifbaren Gewinn an Kontrolle, Nähe und Kontext. Zur Einordnung der Dimension der Serie insgesamt: Die UCI Track Champions League erreichte in ihrer ersten Saison laut UCI 149 Millionen Zuschauer über das Netzwerk von Warner Bros. Discovery und weitere Broadcast-Partner in 206 Ländern. Die immersive Experience selbst war der experimentelle Companion zu dieser Reichweite, kein Massenprodukt." },
+          { label: "Meine Einordnung", text: "Aus Projektsicht war das Reizvolle die Koordination eines Formats, das sich keiner Schublade zuordnen lässt, irgendwo zwischen Livestream, Multiplayer-Sozialraum und Event-Begleiter. Viele beteiligte Gewerke, feste Termine rund um ein Live-Event und die Aufgabe, Innovation und Zugänglichkeit gleichzeitig hinzubekommen. Genau die Art Schnittstellen-Projekt, an dem ich am liebsten arbeite." }
         ]
       },
       pl: {
-        title: "Immersyjne doświadczenie dla fanów — UCI Track Champions League",
+        title: "Immersyjna platforma dla fanów, UCI Track Champions League",
         meta: "Project management (Adastra Studios) · 2022 · Warner Bros. Discovery Sports",
-        paragraphs: [
-          "Dla UCI Track Champions League — międzynarodowej serii kolarstwa torowego UCI i Warner Bros. Discovery Sports — powstało immersyjne doświadczenie dla fanów, rozszerzające klasyczny przekaz TV o warstwę społeczną i opartą na danych. Partnerem technologicznym było Infinite Reality; Adastra Studios współtworzyło realizację jako partner, ja jako project manager po stronie studia.",
-          "Pokazana w Londynie w 2022 wersja preview była celowo przeglądarkowa — dostępna bez gogli VR, bezpośrednio na komputerze. Fani tworzyli awatar i poruszali się po wirtualnym środowisku wokół rund finałowych.",
-          "Sednem była realna wartość, a nie tylko efektowna oprawa 3D: wybór spośród wielu kamer na żywo, wspólne oglądanie w współdzielonych przestrzeniach oraz integracja danych na żywo i treści dodatkowych. Projekt był pierwszym pilotem wieloletniej współpracy, obejmującej później kolejne właściwości sportowe.",
-          "Z perspektywy projektu najciekawsze: koordynowanie formatu, którego nie da się jednoznacznie zaszufladkować — gdzieś między streamingiem, wieloosobową przestrzenią społeczną a towarzyszem wydarzenia, z wieloma zaangażowanymi zespołami i interfejsami."
+        intro: "Immersyjna platforma dla fanów międzynarodowej serii kolarstwa torowego, zbudowana po to, by rozszerzyć doświadczenie sportu na żywo o warstwę społeczną i opartą na danych. Uczestniczyłem jako project manager po stronie studia w przeglądarkowej wersji preview w 2022. Adastra Studios było partnerem partnera technologicznego Infinite Reality.",
+        sections: [
+          { label: "Punkt wyjścia", text: "UCI Track Champions League to seria kolarstwa torowego zbudowana przez UCI i Warner Bros. Discovery Sports w przystępnym, rozrywkowym formacie. Klasyczny przekaz miał zostać uzupełniony o cyfrowe, premium doświadczenie dla fanów. Pomyślano to jako pierwszy pilot wieloletniej współpracy, obejmującej później kolejne właściwości sportowe. Platforma techniczna pochodziła od Infinite Reality, a Adastra Studios uczestniczyło w realizacji jako partner." },
+          { label: "Produkt", text: "Zamiast liniowego przekazu TV platforma oferowała wirtualne środowisko, w którym wideo, dane na żywo, interakcja społeczna i treści dodatkowe łączyły się w jednym interfejsie. Wersja preview na finały w Londynie 2 i 3 grudnia 2022 działała celowo w przeglądarce, bez gogli VR, bezpośrednio na komputerze i laptopie. Ta decyzja wyraźnie obniżyła próg wejścia. Zasięg i dostępność liczyły się od początku bardziej niż podejście headset-first. Fani zakładali awatar i poruszali się po środowisku zbudowanym jako wirtualny welodrom z wieloma strefami." },
+          { label: "Kluczowe funkcje", text: "Wartość tkwiła w realnych funkcjach, nie w samej oprawie 3D. Sercem był wybór spośród ponad ośmiu kamer na żywo, z których fani mogli wybierać sami, zamiast podążać za stałym montażem reżyserskim. Do tego dane zawodników w czasie rzeczywistym, jak tętno, kadencja i moc, uzupełnione o statystyki na żywo i najważniejsze momenty. Ta kombinacja pasuje szczególnie dobrze do kolarstwa torowego, bo wyścigi są krótkie, intensywne i mocno mierzalne. Warstwa społeczna z watch-party i wspólnymi przestrzeniami pozwalała oglądać razem przez głos i wideo, zamiast w izolacji. Całość uzupełniała galeria NFT z cyfrowymi kolekcjami 72 zawodników, typowa dla ówczesnego kontekstu Web3." },
+          { label: "Dlaczego było wyjątkowe", text: "Wiele inicjatyw metaverse z tamtych lat krążyło głównie wokół NFT i pozostawało abstrakcyjnych. Ten projekt stawiał na konkretną użyteczność. Wideo na żywo, społeczna współobecność i nakładka danych dawały fanom wymierny zysk w kontroli, bliskości i kontekście. Dla skali samej serii: według UCI, UCI Track Champions League w pierwszym sezonie osiągnęła 149 milionów widzów w sieci Warner Bros. Discovery i u kolejnych partnerów nadawczych w 206 krajach. Sama immersyjna experience była eksperymentalnym towarzyszem tego zasięgu, nie produktem masowym." },
+          { label: "Moja perspektywa", text: "Z perspektywy projektu najciekawsza była koordynacja formatu, którego nie da się zaszufladkować, gdzieś między streamingiem, wieloosobową przestrzenią społeczną a towarzyszem wydarzenia. Wiele zaangażowanych zespołów, twarde terminy wokół wydarzenia na żywo i zadanie pogodzenia innowacji z dostępnością. Dokładnie ten rodzaj projektu na styku dziedzin, przy którym pracuję najchętniej." }
         ]
       },
       en: {
-        title: "Immersive fan experience — UCI Track Champions League",
+        title: "Immersive fan platform, UCI Track Champions League",
         meta: "Project management (Adastra Studios) · 2022 · Warner Bros. Discovery Sports",
-        paragraphs: [
-          "For the UCI Track Champions League — an international track cycling series by the UCI and Warner Bros. Discovery Sports — an immersive fan experience was created that extends the classic TV broadcast with a social, data-driven layer. The technology partner was Infinite Reality; Adastra Studios contributed to the delivery as a partner, with me as project manager on the studio side.",
-          "The preview shown in London in 2022 was deliberately browser-based — accessible without a VR headset, straight from desktop or laptop. Fans created an avatar and moved through a virtual environment around the final rounds.",
-          "At its core the experience offered real added value rather than just a 3D wrapper: a choice of multiple live camera feeds („choose your own director\"), social viewing in shared spaces, and the integration of live data and extra content. The project was set up as the first pilot of a multi-year partnership intended to cover further sports properties later on.",
-          "From a project perspective, the interesting part: coordinating a format that resists easy categorisation — somewhere between livestream, multiplayer social space and event companion, with a correspondingly large number of disciplines and interfaces involved."
+        intro: "An immersive fan platform for an international track cycling series, built to extend the live sport experience with a social, data-driven layer. I contributed as project manager on the studio side to the browser-based preview in 2022. Adastra Studios was a partner of the technology partner Infinite Reality.",
+        sections: [
+          { label: "The starting point", text: "The UCI Track Champions League is a track cycling series built by the UCI and Warner Bros. Discovery Sports with a deliberately accessible, entertainment-focused format. For the season, the classic broadcast was to be complemented with a digital premium fan offering. It was designed as the first pilot of a multi-year partnership intended to cover further sports properties later. The technical platform came from Infinite Reality, with Adastra Studios involved in the delivery as a partner." },
+          { label: "The product", text: "Instead of a linear TV feed, the platform offered a virtual environment where video, live data, social interaction and extra content came together in one interface. The preview for the London finals on 2 and 3 December 2022 deliberately ran in the browser, without a VR headset, straight on desktop and laptop. That decision noticeably lowered the barrier to entry. Reach and accessibility came before a headset-first approach from the start. Fans set up an avatar and moved through an environment built as a virtual velodrome with several zones." },
+          { label: "Core features", text: "The value lay in real functionality, not just 3D looks. At its heart was a choice of more than eight live camera feeds fans could pick from themselves, instead of following a fixed broadcast cut. Alongside that came riders' real-time data such as heart rate, cadence and power, plus live stats and highlights. That combination suits track cycling especially well, because the races are short, intense and highly measurable. A social layer with watch-parties and shared spaces enabled watching together via voice and video rather than isolated consumption. All of it was rounded off with an NFT gallery of digital collectibles for 72 riders, typical of the Web3 context of the time." },
+          { label: "Why it stood out", text: "Many metaverse initiatives of those years revolved mainly around NFTs and stayed abstract. This project focused on concrete utility. Live video, social co-presence and a data overlay gave fans a tangible gain in control, closeness and context. To put the scale of the series itself in perspective: according to the UCI, the UCI Track Champions League reached 149 million viewers in its first season across the Warner Bros. Discovery network and further broadcast partners in 206 countries. The immersive experience itself was the experimental companion to that reach, not a mass product." },
+          { label: "My take", text: "From a project perspective, the appealing part was coordinating a format that resists any single category, somewhere between livestream, multiplayer social space and event companion. Many disciplines involved, fixed deadlines around a live event, and the task of achieving innovation and accessibility at the same time. Exactly the kind of interface-heavy project I most enjoy working on." }
         ]
       }
     },
@@ -1529,31 +1537,37 @@ class Component extends DCLogic {
       de: {
         title: "The Infinite Playa — Virtual Burn",
         meta: "Projektleitung (Adastra Studios) · 2021 · Virtual Burn",
-        paragraphs: [
-          "The Infinite Playa war eine der offiziell anerkannten virtuellen Welten des Burning Man „Virtual Burn\" — eine fotorealistische, frei begehbare Nachbildung der Playa von Black Rock City. Nachdem das physische Event nicht stattfinden konnte, ermöglichte diese Experience Burnern weltweit, das Gefühl des „Home\" digital zu erleben.",
-          "Zugänglich war sie öffentlich per Browser (Desktop und Mobile) sowie VR-Headset. Fans erstellten einen Avatar, erkundeten die weite Playa, bewegten sich durch Kunstinstallationen, Bühnen und soziale Räume und nahmen an Live-Performances teil.",
-          "Ich war Projektleiter auf Studioseite (Adastra Studios) und verantwortete den von Adastra beigesteuerten Teil der 2021er-Ausbaustufe — der Version, die als voll ausgearbeitete Umsetzung dessen galt, was ein Jahr zuvor unter großem Zeitdruck begonnen worden war.",
-          "Reizvoll an dem Projekt war die Mischung aus kreativer Ambition und technischer Realität: eine fotorealistische, gemeinschaftlich bespielbare Welt, die zu einem festen Termin öffentlich live gehen musste — mit allem, was das an Koordination zwischen Kunst, 3D-Produktion und Technik bedeutet."
+        intro: "Eine fotorealistische, frei begehbare virtuelle Nachbildung der Playa von Black Rock City, eine der offiziell anerkannten Welten des Burning Man Virtual Burn. Ich war Projektleiter auf Studioseite für den von Adastra Studios beigesteuerten Teil der 2021er-Ausbaustufe.",
+        sections: [
+          { label: "Ausgangslage", text: "Burning Man ist eine der bekanntesten temporären Gemeinschaften der Welt. Jedes Jahr entsteht in der Wüste von Nevada für kurze Zeit eine ganze Stadt aus Kunst, Selbstausdruck und Gemeinschaft. Als das physische Event nicht wie gewohnt stattfinden konnte, entstanden offizielle virtuelle Welten, um das Erlebnis digital zugänglich zu machen. The Infinite Playa war eine davon. Die Idee war, das Gefühl von Home, wie Burner die Playa nennen, in eine begehbare digitale Welt zu übersetzen." },
+          { label: "Die Experience", text: "Anders als viele abstrakte Metaverse-Experimente setzte The Infinite Playa auf Fotorealismus und Weite. Die offene Playa, wie man sie kennt, digital nachgebildet und frei erkundbar. Zugänglich war die Welt öffentlich, sowohl über den Browser auf Desktop und Mobile als auch per VR-Headset. Diese breite Zugänglichkeit war zentral, denn Burner weltweit sollten teilnehmen können, unabhängig von ihrer Ausstattung." },
+          { label: "Was man erleben konnte", text: "Fans legten einen Avatar an und bewegten sich frei durch die weite Playa, vorbei an Kunstinstallationen, über Bühnen und durch soziale Räume. Es gab Live-Performances und Begegnungen, die den kollektiven, sozialen Charakter des echten Events digital spiegeln sollten. Das Prinzip war Teilnehmen statt Zuschauen, ein geteilter Raum statt eines Streams." },
+          { label: "Meine Rolle", text: "Als Projektleiter auf Studioseite verantwortete ich den von Adastra Studios beigesteuerten Teil der 2021er-Version. Diese Ausbaustufe galt als die voll ausgearbeitete Umsetzung dessen, was ein Jahr zuvor unter großem Zeitdruck begonnen worden war, mit entsprechend hohem Anspruch an Qualität und Fertigstellung." },
+          { label: "Was es besonders machte", text: "Der Reiz lag in der Spannung zwischen kreativer Ambition und technischer Realität. Eine fotorealistische, gemeinschaftlich bespielbare Welt, die zu einem festen Termin öffentlich live gehen musste. Das bedeutet Koordination zwischen künstlerischer Vision, 3D-Produktion und Technik, unter einem Termindruck, der sich nicht verschieben lässt, weil das Event stattfindet, wenn es stattfindet. Genau diese Mischung aus Kreativität, Technik und harter Deadline macht solche Projekte für mich spannend." }
         ]
       },
       pl: {
         title: "The Infinite Playa — Virtual Burn",
         meta: "Kierownictwo projektu (Adastra Studios) · 2021 · Virtual Burn",
-        paragraphs: [
-          "The Infinite Playa była jedną z oficjalnie uznanych wirtualnych światów Burning Man „Virtual Burn\" — fotorealistyczną, w pełni eksplorowalną rekonstrukcją playa z Black Rock City. Gdy fizyczne wydarzenie nie mogło się odbyć, to doświadczenie pozwoliło Burnersom na całym świecie poczuć „Home\" w wersji cyfrowej.",
-          "Dostępna była publicznie przez przeglądarkę (desktop i mobile) oraz gogle VR. Fani tworzyli awatar, eksplorowali rozległą playa, poruszali się wśród instalacji artystycznych, scen i przestrzeni społecznych oraz uczestniczyli w występach na żywo.",
-          "Byłem kierownikiem projektu po stronie studia (Adastra Studios) i odpowiadałem za część wniesioną przez Adastra w edycji 2021 — wersji uznawanej za w pełni dopracowaną realizację tego, co rok wcześniej rozpoczęto pod dużą presją czasu.",
-          "Najciekawsze w projekcie było połączenie kreatywnej ambicji z techniczną rzeczywistością: fotorealistyczny, wspólnie animowany świat, który musiał publicznie wystartować w ustalonym terminie — ze wszystkim, co oznacza to dla koordynacji między sztuką, produkcją 3D i technologią."
+        intro: "Fotorealistyczna, w pełni eksplorowalna wirtualna rekonstrukcja playa z Black Rock City, jeden z oficjalnie uznanych światów Burning Man Virtual Burn. Byłem kierownikiem projektu po stronie studia dla części wniesionej przez Adastra Studios w edycji 2021.",
+        sections: [
+          { label: "Punkt wyjścia", text: "Burning Man to jedna z najbardziej znanych tymczasowych społeczności świata. Co roku na pustyni w Nevadzie na krótko powstaje całe miasto sztuki, ekspresji i wspólnoty. Gdy fizyczne wydarzenie nie mogło odbyć się jak zwykle, powstały oficjalne wirtualne światy, by udostępnić to doświadczenie cyfrowo. The Infinite Playa była jednym z nich. Chodziło o przełożenie poczucia Home, jak Burnersi nazywają playa, na eksplorowalny świat cyfrowy." },
+          { label: "Doświadczenie", text: "W przeciwieństwie do wielu abstrakcyjnych eksperymentów metaverse, The Infinite Playa stawiała na fotorealizm i przestrzeń. Otwarta playa, jaką się zna, odwzorowana cyfrowo i swobodnie eksplorowalna. Świat był dostępny publicznie, zarówno przez przeglądarkę na desktopie i mobile, jak i przez gogle VR. Ta szeroka dostępność była kluczowa, bo Burnersi na całym świecie mieli móc uczestniczyć, niezależnie od sprzętu." },
+          { label: "Co można było przeżyć", text: "Fani zakładali awatar i swobodnie poruszali się po rozległej playa, mijając instalacje artystyczne, przez sceny i przestrzenie społeczne. Były występy na żywo i spotkania, mające cyfrowo odzwierciedlać kolektywny, społeczny charakter prawdziwego wydarzenia. Zasadą było uczestnictwo zamiast oglądania, wspólna przestrzeń zamiast streamu." },
+          { label: "Moja rola", text: "Jako kierownik projektu po stronie studia odpowiadałem za część wniesioną przez Adastra Studios w wersji 2021. Ta edycja była uznawana za w pełni dopracowaną realizację tego, co rok wcześniej rozpoczęto pod dużą presją czasu, z odpowiednio wysokimi wymaganiami co do jakości i ukończenia." },
+          { label: "Co czyniło je wyjątkowym", text: "Urok tkwił w napięciu między kreatywną ambicją a techniczną rzeczywistością. Fotorealistyczny, wspólnie animowany świat, który musiał publicznie wystartować w ustalonym terminie. To oznacza koordynację między wizją artystyczną, produkcją 3D i technologią, pod presją terminu, którego nie da się przesunąć, bo wydarzenie odbywa się wtedy, kiedy się odbywa. Właśnie ta mieszanka kreatywności, techniki i twardego deadline'u czyni takie projekty dla mnie fascynującymi." }
         ]
       },
       en: {
         title: "The Infinite Playa — Virtual Burn",
         meta: "Project lead (Adastra Studios) · 2021 · Virtual Burn",
-        paragraphs: [
-          "The Infinite Playa was one of the officially recognised virtual worlds of the Burning Man „Virtual Burn\" — a photorealistic, freely explorable recreation of the Black Rock City playa. After the physical event couldn't take place, this experience let Burners worldwide feel that sense of „Home\" digitally.",
-          "It was publicly accessible via browser (desktop and mobile) as well as VR headset. Fans created an avatar, explored the vast playa, moved through art installations, stages and social spaces, and joined live performances.",
-          "I was project lead on the studio side (Adastra Studios), responsible for the part Adastra contributed to the 2021 iteration — the version regarded as the fully realised delivery of what had been started under heavy time pressure a year earlier.",
-          "What made the project compelling was the mix of creative ambition and technical reality: a photorealistic, communally usable world that had to go public live at a fixed date — with everything that implies for coordination between art, 3D production and technology."
+        intro: "A photorealistic, freely explorable virtual recreation of the Black Rock City playa, one of the officially recognised worlds of Burning Man's Virtual Burn. I was project lead on the studio side for the part Adastra Studios contributed to the 2021 iteration.",
+        sections: [
+          { label: "The starting point", text: "Burning Man is one of the best-known temporary communities in the world. Every year an entire city of art, self-expression and community briefly rises in the Nevada desert. When the physical event couldn't take place as usual, official virtual worlds were created to make the experience accessible digitally. The Infinite Playa was one of them. The idea was to translate the feeling of Home, as Burners call the playa, into an explorable digital world." },
+          { label: "The experience", text: "Unlike many abstract metaverse experiments, The Infinite Playa went for photorealism and openness. The open playa as you know it, recreated digitally and free to explore. The world was publicly accessible, both via browser on desktop and mobile and via VR headset. That broad accessibility was central, because Burners worldwide were meant to take part, regardless of their gear." },
+          { label: "What you could do", text: "Fans set up an avatar and moved freely across the vast playa, past art installations, across stages and through social spaces. There were live performances and encounters meant to digitally mirror the collective, social character of the real event. The principle was participating rather than spectating, a shared space rather than a stream." },
+          { label: "My role", text: "As project lead on the studio side, I was responsible for the part Adastra Studios contributed to the 2021 version. That iteration was regarded as the fully realised delivery of what had been started under heavy time pressure a year earlier, with correspondingly high demands on quality and completion." },
+          { label: "What made it special", text: "The appeal lay in the tension between creative ambition and technical reality. A photorealistic, communally usable world that had to go public live at a fixed date. That means coordination between artistic vision, 3D production and technology, under a deadline that can't be moved, because the event happens when it happens. It's exactly that mix of creativity, engineering and a hard deadline that makes projects like this exciting to me." }
         ]
       }
     }
@@ -1593,10 +1607,21 @@ class Component extends DCLogic {
     titleEl.textContent = copy.title;
     metaEl.textContent = copy.meta;
     bodyEl.innerHTML = "";
-    copy.paragraphs.forEach((text) => {
+    if (copy.intro) {
+      const intro = document.createElement("p");
+      intro.textContent = copy.intro;
+      bodyEl.appendChild(intro);
+    }
+    (copy.sections || []).forEach((section) => {
+      const wrapper = document.createElement("section");
+      wrapper.className = "project-detail-section";
+      const label = document.createElement("h3");
+      label.className = "project-detail-label";
+      label.textContent = section.label;
       const p = document.createElement("p");
-      p.textContent = text;
-      bodyEl.appendChild(p);
+      p.textContent = section.text;
+      wrapper.append(label, p);
+      bodyEl.appendChild(wrapper);
     });
     closeButton.setAttribute("aria-label", closeLabels[lang] || closeLabels.de);
     backdrop.classList.add("is-open");
