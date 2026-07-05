@@ -2,6 +2,24 @@
 <html><head><script>window.__resources = {"portraitImg": "assets/bundle/38031ec4-945a-407b-923f-8989129ce4d6.jpg"};</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<style id="project-detail-modal-styles">
+  .project-detail-trigger{font-family:'Space Mono',monospace;font-size:.78rem;color:var(--accent,#DA4B1E);background:transparent;border:0;padding:7px 0;text-decoration:none;cursor:pointer;transition:color .2s ease,transform .2s ease}
+  .project-detail-trigger:hover{color:var(--ink);transform:translateX(2px)}
+  .project-detail-backdrop{position:fixed;inset:0;z-index:500;background:color-mix(in srgb,#000 55%,transparent);display:none;align-items:center;justify-content:center;padding:clamp(16px,4vw,40px)}
+  .project-detail-backdrop.is-open{display:flex}
+  .project-detail-modal{width:min(640px,100%);max-height:min(760px,calc(100svh - 48px));overflow:auto;background:var(--paper,#F7F4EF);color:var(--body,#3a352f);border:1px solid var(--line,#e0d8cc);border-radius:8px;box-shadow:0 30px 90px color-mix(in srgb,#000 30%,transparent);padding:clamp(24px,4vw,40px);position:relative;transform:translateY(10px);opacity:0;transition:transform .22s ease,opacity .22s ease}
+  .project-detail-backdrop.is-open .project-detail-modal{transform:none;opacity:1}
+  .project-detail-close{position:absolute;top:14px;right:14px;width:34px;height:34px;border:1px solid var(--line,#e0d8cc);border-radius:4px;background:transparent;color:var(--ink,#1A1714);font-family:'Space Mono',monospace;cursor:pointer}
+  .project-detail-close:hover{border-color:var(--accent,#DA4B1E);color:var(--accent,#DA4B1E)}
+  .project-detail-modal h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.7rem,4vw,2.5rem);line-height:1.08;color:var(--ink,#1A1714);margin:0 42px 12px 0;font-weight:600}
+  .project-detail-meta{font-family:'Space Mono',monospace;font-size:.76rem;line-height:1.5;color:var(--muted,#8a8175);margin:0 0 24px}
+  .project-detail-body{display:flex;flex-direction:column;gap:16px}
+  .project-detail-body p{font-family:'Hanken Grotesk',sans-serif;font-size:1.02rem;line-height:1.65;margin:0;color:var(--body,#3a352f)}
+  body.project-modal-open{overflow:hidden}
+  @media (max-width:640px){.project-detail-backdrop{padding:0;align-items:stretch}.project-detail-modal{width:100%;min-height:100svh;max-height:100svh;border-radius:0;border:0;padding:64px 22px 28px}.project-detail-close{top:18px;right:18px}}
+  @media (prefers-reduced-motion:reduce){.project-detail-modal,.project-detail-trigger{transition:none;transform:none}}
+</style>
+
 <script src="assets/bundle/98fbe8e7-3e34-4182-88f6-79233bad489b.js"></script>
 
 
@@ -659,17 +677,41 @@
         <div style="padding:clamp(26px,4vw,56px); display:flex; flex-direction:column; justify-content:center; border-left:1px solid var(--line);">
           <div style="display:flex; justify-content:space-between; gap:12px; margin-bottom:18px;">
             <span style="font-family:'Space Mono',monospace; font-size:.76rem; color:var(--accent,#3D45E6); letter-spacing:.06em;">WBD SPORTS</span>
-            <span style="font-family:'Space Mono',monospace; font-size:.76rem; color:var(--muted);">IT Project Manager</span>
+            <span style="font-family:'Space Mono',monospace; font-size:.76rem; color:var(--muted);">{{ cCrole }}</span>
           </div>
           <h3 style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:clamp(1.6rem,2.8vw,2.4rem); line-height:1.12; letter-spacing:-0.015em; color:var(--ink); margin:0 0 16px;">{{ cCt }}</h3>
           <p style="font-family:'Hanken Grotesk',sans-serif; font-size:clamp(1rem,1.2vw,1.1rem); line-height:1.65; color:var(--body); margin:0 0 22px; max-width:52ch;">{{ cCd }}</p>
-          <span style="align-self:flex-start; font-family:'Space Mono',monospace; font-size:.78rem; color:var(--accent,#3D45E6); border:1px solid var(--accent,#3D45E6); padding:7px 16px; border-radius:999px;">{{ cCchip }}</span>
+          <div style="display:flex; align-items:center; flex-wrap:wrap; gap:14px;">
+            <span style="align-self:flex-start; font-family:'Space Mono',monospace; font-size:.78rem; color:var(--accent,#3D45E6); border:1px solid var(--accent,#3D45E6); padding:7px 16px; border-radius:999px;">{{ cCchip }}</span>
+            <button type="button" class="project-detail-trigger" data-project-detail="uci">{{ detailMore }}</button>
+          </div>
         </div>
       </article>
 
-      <article data-screen-label="Projekt Vestium" style="position:sticky; top:120px; margin-bottom:26px; border:1px solid color-mix(in srgb, var(--ink) 22%, transparent); border-radius:8px; background:var(--paper); overflow:hidden; box-shadow:0 -16px 40px color-mix(in srgb, var(--ink) 10%, transparent); display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); min-height:clamp(430px,62vh,600px);">
-        <div style="position:relative; min-height:260px; background-color:var(--pat); background-image:linear-gradient(color-mix(in srgb, var(--ink) 7%, transparent) 1px, transparent 1px), linear-gradient(90deg, color-mix(in srgb, var(--ink) 7%, transparent) 1px, transparent 1px); background-size:26px 26px; display:flex; align-items:center; justify-content:center;">
+
+
+      <article data-screen-label="Projekt Burning Man" style="position:sticky; top:120px; margin-bottom:26px; border:1px solid color-mix(in srgb, var(--ink) 22%, transparent); border-radius:8px; background:var(--paper); overflow:hidden; box-shadow:0 -16px 40px color-mix(in srgb, var(--ink) 10%, transparent); display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); min-height:clamp(430px,62vh,600px);">
+        <div style="position:relative; min-height:260px; background:repeating-linear-gradient(45deg, var(--paper2) 0px, var(--paper2) 10px, var(--pat) 10px, var(--pat) 20px); display:flex; align-items:center; justify-content:center;">
           <span aria-hidden="true" style="position:absolute; top:14px; right:22px; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:clamp(4rem,7vw,6.5rem); line-height:1; color:transparent; -webkit-text-stroke:1px color-mix(in srgb, var(--ink) 20%, transparent);">04</span>
+          <span style="display:inline-flex; align-items:center; gap:12px; background:var(--paper); border:1px solid var(--line); border-radius:3px; padding:14px 26px; font-family:'Space Mono',monospace; font-weight:700; font-size:1.6rem; letter-spacing:.14em; color:var(--ink);"><span style="width:10px; height:10px; background:var(--accent,#3D45E6); flex:none;"></span>BM</span>
+        </div>
+        <div style="padding:clamp(26px,4vw,56px); display:flex; flex-direction:column; justify-content:center; border-left:1px solid var(--line);">
+          <div style="display:flex; justify-content:space-between; gap:12px; margin-bottom:18px;">
+            <span style="font-family:'Space Mono',monospace; font-size:.76rem; color:var(--accent,#3D45E6); letter-spacing:.06em;">VIRTUAL BURN</span>
+            <span style="font-family:'Space Mono',monospace; font-size:.76rem; color:var(--muted);">{{ cGrole }}</span>
+          </div>
+          <h3 style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:clamp(1.6rem,2.8vw,2.4rem); line-height:1.12; letter-spacing:-0.015em; color:var(--ink); margin:0 0 16px;">{{ cGt }}</h3>
+          <p style="font-family:'Hanken Grotesk',sans-serif; font-size:clamp(1rem,1.2vw,1.1rem); line-height:1.65; color:var(--body); margin:0 0 22px; max-width:52ch;">{{ cGd }}</p>
+          <div style="display:flex; align-items:center; flex-wrap:wrap; gap:14px;">
+            <span style="align-self:flex-start; font-family:'Space Mono',monospace; font-size:.78rem; color:var(--accent,#3D45E6); border:1px solid var(--accent,#3D45E6); padding:7px 16px; border-radius:999px;">{{ cGchip }}</span>
+            <button type="button" class="project-detail-trigger" data-project-detail="burning">{{ detailMore }}</button>
+          </div>
+        </div>
+      </article>
+
+      <article data-screen-label="Projekt Vestium" style="position:sticky; top:132px; margin-bottom:26px; border:1px solid color-mix(in srgb, var(--ink) 22%, transparent); border-radius:8px; background:var(--paper); overflow:hidden; box-shadow:0 -16px 40px color-mix(in srgb, var(--ink) 10%, transparent); display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); min-height:clamp(430px,62vh,600px);">
+        <div style="position:relative; min-height:260px; background-color:var(--pat); background-image:linear-gradient(color-mix(in srgb, var(--ink) 7%, transparent) 1px, transparent 1px), linear-gradient(90deg, color-mix(in srgb, var(--ink) 7%, transparent) 1px, transparent 1px); background-size:26px 26px; display:flex; align-items:center; justify-content:center;">
+          <span aria-hidden="true" style="position:absolute; top:14px; right:22px; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:clamp(4rem,7vw,6.5rem); line-height:1; color:transparent; -webkit-text-stroke:1px color-mix(in srgb, var(--ink) 20%, transparent);">05</span>
           <span style="display:inline-flex; align-items:center; gap:12px; background:var(--paper); border:1px solid var(--line); border-radius:3px; padding:14px 26px; font-family:'Space Mono',monospace; font-weight:700; font-size:1.6rem; letter-spacing:.14em; color:var(--ink);"><span style="width:10px; height:10px; background:var(--accent,#3D45E6); flex:none;"></span>VST</span>
         </div>
         <div style="padding:clamp(26px,4vw,56px); display:flex; flex-direction:column; justify-content:center; border-left:1px solid var(--line);">
@@ -683,9 +725,9 @@
         </div>
       </article>
 
-      <article data-screen-label="Projekt MAN" style="position:sticky; top:132px; margin-bottom:26px; border:1px solid color-mix(in srgb, var(--ink) 22%, transparent); border-radius:8px; background:var(--paper); overflow:hidden; box-shadow:0 -16px 40px color-mix(in srgb, var(--ink) 10%, transparent); display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); min-height:clamp(430px,62vh,600px);">
+      <article data-screen-label="Projekt MAN" style="position:sticky; top:144px; margin-bottom:26px; border:1px solid color-mix(in srgb, var(--ink) 22%, transparent); border-radius:8px; background:var(--paper); overflow:hidden; box-shadow:0 -16px 40px color-mix(in srgb, var(--ink) 10%, transparent); display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); min-height:clamp(430px,62vh,600px);">
         <div style="position:relative; min-height:260px; background:repeating-linear-gradient(90deg, var(--paper2) 0px, var(--paper2) 12px, var(--pat) 12px, var(--pat) 24px); display:flex; align-items:center; justify-content:center;">
-          <span aria-hidden="true" style="position:absolute; top:14px; right:22px; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:clamp(4rem,7vw,6.5rem); line-height:1; color:transparent; -webkit-text-stroke:1px color-mix(in srgb, var(--ink) 20%, transparent);">05</span>
+          <span aria-hidden="true" style="position:absolute; top:14px; right:22px; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:clamp(4rem,7vw,6.5rem); line-height:1; color:transparent; -webkit-text-stroke:1px color-mix(in srgb, var(--ink) 20%, transparent);">06</span>
           <span style="display:inline-flex; align-items:center; gap:12px; background:var(--paper); border:1px solid var(--line); border-radius:3px; padding:14px 26px; font-family:'Space Mono',monospace; font-weight:700; font-size:1.6rem; letter-spacing:.14em; color:var(--ink);"><span style="width:10px; height:10px; background:var(--accent,#3D45E6); flex:none;"></span>MAN</span>
         </div>
         <div style="padding:clamp(26px,4vw,56px); display:flex; flex-direction:column; justify-content:center; border-left:1px solid var(--line);">
@@ -699,9 +741,9 @@
         </div>
       </article>
 
-      <article data-screen-label="Projekt KI-System" style="position:sticky; top:144px; border:1px solid color-mix(in srgb, var(--ink) 40%, transparent); border-radius:8px; background:var(--ink); color:var(--paper); overflow:hidden; box-shadow:0 -16px 40px color-mix(in srgb, var(--ink) 18%, transparent); display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); min-height:clamp(430px,62vh,600px);">
+      <article data-screen-label="Projekt KI-System" style="position:sticky; top:156px; border:1px solid color-mix(in srgb, var(--ink) 40%, transparent); border-radius:8px; background:var(--ink); color:var(--paper); overflow:hidden; box-shadow:0 -16px 40px color-mix(in srgb, var(--ink) 18%, transparent); display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); min-height:clamp(430px,62vh,600px);">
         <div style="position:relative; min-height:260px; background:repeating-radial-gradient(circle at 50% 50%, color-mix(in srgb, var(--paper) 5%, var(--ink)) 0px, color-mix(in srgb, var(--paper) 5%, var(--ink)) 12px, color-mix(in srgb, var(--paper) 11%, var(--ink)) 12px, color-mix(in srgb, var(--paper) 11%, var(--ink)) 24px); display:flex; align-items:center; justify-content:center;">
-          <span aria-hidden="true" style="position:absolute; top:14px; right:22px; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:clamp(4rem,7vw,6.5rem); line-height:1; color:transparent; -webkit-text-stroke:1px color-mix(in srgb, var(--paper) 28%, transparent);">06</span>
+          <span aria-hidden="true" style="position:absolute; top:14px; right:22px; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:clamp(4rem,7vw,6.5rem); line-height:1; color:transparent; -webkit-text-stroke:1px color-mix(in srgb, var(--paper) 28%, transparent);">07</span>
           <span style="display:inline-flex; align-items:center; gap:12px; background:var(--ink); border:1px solid color-mix(in srgb, var(--paper) 35%, transparent); border-radius:3px; padding:14px 26px; font-family:'Space Mono',monospace; font-weight:700; font-size:1.6rem; letter-spacing:.14em; color:var(--paper);"><span style="width:10px; height:10px; background:var(--accent,#3D45E6); flex:none;"></span>AI</span>
         </div>
         <div style="padding:clamp(26px,4vw,56px); display:flex; flex-direction:column; justify-content:center; border-left:1px solid color-mix(in srgb, var(--paper) 16%, transparent);">
@@ -1203,9 +1245,15 @@ class Component extends DCLogic {
       cBt: "KI-Empfehlungsengine in Produktion",
       cBd: "Ein 9-köpfiges Team von manueller redaktioneller Kuration zu einer KI-gestützten Empfehlungsengine geführt — live in Produktion, im Rahmen des SWR AI Hub.",
       cBchip: "9-Personen-Team",
-      cCt: "Erstes Web3-Metaverse-Event",
-      cCd: "Umsetzung des ersten Web3-Metaverse-Events der UCI Track Champions League. Zuvor die Burning-Man-VR-Experience mit einem interdisziplinären Team von bis zu 30 Personen.",
-      cCchip: "Internationale Teams",
+      detailMore: "Mehr erfahren ↗",
+      cCrole: "Projektmanagement (Adastra Studios)",
+      cCt: "Immersive Fan-Experience — UCI Track Champions League",
+      cCd: "Als Projektmanager auf Studioseite (Adastra Studios, als Partner von Infinite Reality) an der browserbasierten Preview der immersiven Fan-Experience für Warner Bros. Discovery Sports mitgewirkt — öffentlich zugänglich rund um die Finalrunden in London 2022.",
+      cCchip: "WBD Sports · 2022",
+      cGrole: "Projektleitung (Adastra Studios)",
+      cGt: "The Infinite Playa — Virtual Burn",
+      cGd: "Als Projektleiter auf Studioseite (Adastra Studios) an der 2021er-Ausbaustufe von The Infinite Playa mitgewirkt — einer öffentlich zugänglichen, browser- und VR-basierten Burning-Man-Welt für den Virtual Burn.",
+      cGchip: "Virtual Burn · 2021",
       cDt: "Fashion-Tech mit 3D-Avataren",
       cDd: "Fashion-Tech-Startup für virtuelle Anprobe per 3D-Scan-Avataren mitgegründet. Als Co-Founder ein 8-köpfiges Team für 3D-Rendering und Echtzeit-Visualisierung aufgebaut und geführt.",
       cDchip: "8-köpfiges Team",
@@ -1270,9 +1318,15 @@ class Component extends DCLogic {
       cBt: "Silnik rekomendacji AI na produkcji",
       cBd: "Poprowadziłem 9-osobowy zespół od ręcznej kuracji redakcyjnej do silnika rekomendacji opartego na AI — na żywo na produkcji, w ramach SWR AI Hub.",
       cBchip: "9-osobowy zespół",
-      cCt: "Pierwsze wydarzenie w metaverse Web3",
-      cCd: "Realizacja pierwszego wydarzenia w metaverse Web3 dla UCI Track Champions League. Wcześniej Burning Man VR z interdyscyplinarnym zespołem do 30 osób.",
-      cCchip: "Zespoły międzynarodowe",
+      detailMore: "Dowiedz się więcej ↗",
+      cCrole: "Project management (Adastra Studios)",
+      cCt: "Immersyjne doświadczenie dla fanów — UCI Track Champions League",
+      cCd: "Jako project manager po stronie studia (Adastra Studios, jako partner Infinite Reality) współtworzyłem przeglądarkową wersję preview immersyjnego doświadczenia dla fanów Warner Bros. Discovery Sports — publicznie dostępną wokół finałów w Londynie w 2022.",
+      cCchip: "WBD Sports · 2022",
+      cGrole: "Kierownictwo projektu (Adastra Studios)",
+      cGt: "The Infinite Playa — Virtual Burn",
+      cGd: "Jako kierownik projektu po stronie studia (Adastra Studios) odpowiadałem za część wniesioną przez Adastra w edycji 2021 The Infinite Playa — publicznie dostępnego świata Burning Man w przeglądarce i VR w ramach Virtual Burn.",
+      cGchip: "Virtual Burn · 2021",
       cDt: "Fashion-tech z awatarami 3D",
       cDd: "Współzałożyciel startupu fashion-tech do wirtualnej przymiarki z awatarami ze skanów 3D. Zbudowałem i poprowadziłem 8-osobowy zespół ds. renderingu 3D i wizualizacji w czasie rzeczywistym.",
       cDchip: "8-osobowy zespół",
@@ -1337,9 +1391,15 @@ class Component extends DCLogic {
       cBt: "AI recommendation engine in production",
       cBd: "Led a 9-person team from manual editorial curation to an AI-powered recommendation engine — live in production, as part of the SWR AI Hub.",
       cBchip: "9-person team",
-      cCt: "First Web3 metaverse event",
-      cCd: "Delivery of the first Web3 metaverse event for the UCI Track Champions League. Previously the Burning Man VR experience with an interdisciplinary team of up to 30.",
-      cCchip: "International teams",
+      detailMore: "Learn more ↗",
+      cCrole: "Project management (Adastra Studios)",
+      cCt: "Immersive fan experience — UCI Track Champions League",
+      cCd: "As project manager on the studio side (Adastra Studios, as a partner of Infinite Reality), contributed to the browser-based preview of the immersive fan experience for Warner Bros. Discovery Sports — publicly accessible around the London finals in 2022.",
+      cCchip: "WBD Sports · 2022",
+      cGrole: "Project lead (Adastra Studios)",
+      cGt: "The Infinite Playa — Virtual Burn",
+      cGd: "As project lead on the studio side (Adastra Studios), responsible for Adastra's contribution to the 2021 iteration of The Infinite Playa — a publicly accessible browser- and VR-based Burning Man world for Virtual Burn.",
+      cGchip: "Virtual Burn · 2021",
       cDt: "Fashion-tech with 3D avatars",
       cDd: "Co-founded a fashion-tech startup for virtual try-on using 3D-scan avatars. Built and led an 8-person team for 3D rendering and real-time visualisation.",
       cDchip: "8-person team",
@@ -1421,5 +1481,168 @@ class Component extends DCLogic {
 }
 </script>
 
+<div id="project-detail-backdrop" class="project-detail-backdrop" aria-hidden="true">
+  <section class="project-detail-modal" role="dialog" aria-modal="true" aria-labelledby="project-detail-title" tabindex="-1">
+    <button class="project-detail-close" type="button" aria-label="Schließen">×</button>
+    <p class="project-detail-meta" id="project-detail-meta"></p>
+    <h2 id="project-detail-title"></h2>
+    <div class="project-detail-body" id="project-detail-body"></div>
+  </section>
+</div>
+
+<script>
+(() => {
+  const DETAIL_COPY = {
+    uci: {
+      de: {
+        title: "Immersive Fan-Experience — UCI Track Champions League",
+        meta: "Projektmanagement (Adastra Studios) · 2022 · Warner Bros. Discovery Sports",
+        paragraphs: [
+          "Für die UCI Track Champions League — eine internationale Bahnradsport-Serie von der UCI und Warner Bros. Discovery Sports — entstand eine immersive Fan-Experience, die das klassische TV-Erlebnis um eine soziale, datengetriebene Ebene erweitert. Technologiepartner war Infinite Reality; Adastra Studios wirkte als Partner an der Umsetzung mit, ich als Projektmanager auf Studioseite.",
+          "Die 2022 in London gezeigte Preview war bewusst browserbasiert — zugänglich ohne VR-Headset, direkt über Desktop oder Laptop. Fans erstellten einen Avatar und bewegten sich durch eine virtuelle Umgebung rund um die Finalrunden.",
+          "Kern der Experience war echter Mehrwert statt bloßer 3D-Verpackung: Auswahl aus mehreren Live-Kamera-Feeds („choose your own director\"), Social-Viewing in gemeinsamen Räumen und die Einbindung von Live-Daten und Zusatzinhalten. Das Projekt war als erster Pilot einer mehrjährigen Partnerschaft angelegt, die später weitere Sport-Properties umfassen sollte.",
+          "Aus Projektsicht das Spannende: ein Format zu koordinieren, das sich nicht in eine Schublade stecken lässt — irgendwo zwischen Livestream, Multiplayer-Sozialraum und Event-Begleiter, mit entsprechend vielen beteiligten Gewerken und Schnittstellen."
+        ]
+      },
+      pl: {
+        title: "Immersyjne doświadczenie dla fanów — UCI Track Champions League",
+        meta: "Project management (Adastra Studios) · 2022 · Warner Bros. Discovery Sports",
+        paragraphs: [
+          "Dla UCI Track Champions League — międzynarodowej serii kolarstwa torowego UCI i Warner Bros. Discovery Sports — powstało immersyjne doświadczenie dla fanów, rozszerzające klasyczny przekaz TV o warstwę społeczną i opartą na danych. Partnerem technologicznym było Infinite Reality; Adastra Studios współtworzyło realizację jako partner, ja jako project manager po stronie studia.",
+          "Pokazana w Londynie w 2022 wersja preview była celowo przeglądarkowa — dostępna bez gogli VR, bezpośrednio na komputerze. Fani tworzyli awatar i poruszali się po wirtualnym środowisku wokół rund finałowych.",
+          "Sednem była realna wartość, a nie tylko efektowna oprawa 3D: wybór spośród wielu kamer na żywo, wspólne oglądanie w współdzielonych przestrzeniach oraz integracja danych na żywo i treści dodatkowych. Projekt był pierwszym pilotem wieloletniej współpracy, obejmującej później kolejne właściwości sportowe.",
+          "Z perspektywy projektu najciekawsze: koordynowanie formatu, którego nie da się jednoznacznie zaszufladkować — gdzieś między streamingiem, wieloosobową przestrzenią społeczną a towarzyszem wydarzenia, z wieloma zaangażowanymi zespołami i interfejsami."
+        ]
+      },
+      en: {
+        title: "Immersive fan experience — UCI Track Champions League",
+        meta: "Project management (Adastra Studios) · 2022 · Warner Bros. Discovery Sports",
+        paragraphs: [
+          "For the UCI Track Champions League — an international track cycling series by the UCI and Warner Bros. Discovery Sports — an immersive fan experience was created that extends the classic TV broadcast with a social, data-driven layer. The technology partner was Infinite Reality; Adastra Studios contributed to the delivery as a partner, with me as project manager on the studio side.",
+          "The preview shown in London in 2022 was deliberately browser-based — accessible without a VR headset, straight from desktop or laptop. Fans created an avatar and moved through a virtual environment around the final rounds.",
+          "At its core the experience offered real added value rather than just a 3D wrapper: a choice of multiple live camera feeds („choose your own director\"), social viewing in shared spaces, and the integration of live data and extra content. The project was set up as the first pilot of a multi-year partnership intended to cover further sports properties later on.",
+          "From a project perspective, the interesting part: coordinating a format that resists easy categorisation — somewhere between livestream, multiplayer social space and event companion, with a correspondingly large number of disciplines and interfaces involved."
+        ]
+      }
+    },
+    burning: {
+      de: {
+        title: "The Infinite Playa — Virtual Burn",
+        meta: "Projektleitung (Adastra Studios) · 2021 · Virtual Burn",
+        paragraphs: [
+          "The Infinite Playa war eine der offiziell anerkannten virtuellen Welten des Burning Man „Virtual Burn\" — eine fotorealistische, frei begehbare Nachbildung der Playa von Black Rock City. Nachdem das physische Event nicht stattfinden konnte, ermöglichte diese Experience Burnern weltweit, das Gefühl des „Home\" digital zu erleben.",
+          "Zugänglich war sie öffentlich per Browser (Desktop und Mobile) sowie VR-Headset. Fans erstellten einen Avatar, erkundeten die weite Playa, bewegten sich durch Kunstinstallationen, Bühnen und soziale Räume und nahmen an Live-Performances teil.",
+          "Ich war Projektleiter auf Studioseite (Adastra Studios) und verantwortete den von Adastra beigesteuerten Teil der 2021er-Ausbaustufe — der Version, die als voll ausgearbeitete Umsetzung dessen galt, was ein Jahr zuvor unter großem Zeitdruck begonnen worden war.",
+          "Reizvoll an dem Projekt war die Mischung aus kreativer Ambition und technischer Realität: eine fotorealistische, gemeinschaftlich bespielbare Welt, die zu einem festen Termin öffentlich live gehen musste — mit allem, was das an Koordination zwischen Kunst, 3D-Produktion und Technik bedeutet."
+        ]
+      },
+      pl: {
+        title: "The Infinite Playa — Virtual Burn",
+        meta: "Kierownictwo projektu (Adastra Studios) · 2021 · Virtual Burn",
+        paragraphs: [
+          "The Infinite Playa była jedną z oficjalnie uznanych wirtualnych światów Burning Man „Virtual Burn\" — fotorealistyczną, w pełni eksplorowalną rekonstrukcją playa z Black Rock City. Gdy fizyczne wydarzenie nie mogło się odbyć, to doświadczenie pozwoliło Burnersom na całym świecie poczuć „Home\" w wersji cyfrowej.",
+          "Dostępna była publicznie przez przeglądarkę (desktop i mobile) oraz gogle VR. Fani tworzyli awatar, eksplorowali rozległą playa, poruszali się wśród instalacji artystycznych, scen i przestrzeni społecznych oraz uczestniczyli w występach na żywo.",
+          "Byłem kierownikiem projektu po stronie studia (Adastra Studios) i odpowiadałem za część wniesioną przez Adastra w edycji 2021 — wersji uznawanej za w pełni dopracowaną realizację tego, co rok wcześniej rozpoczęto pod dużą presją czasu.",
+          "Najciekawsze w projekcie było połączenie kreatywnej ambicji z techniczną rzeczywistością: fotorealistyczny, wspólnie animowany świat, który musiał publicznie wystartować w ustalonym terminie — ze wszystkim, co oznacza to dla koordynacji między sztuką, produkcją 3D i technologią."
+        ]
+      },
+      en: {
+        title: "The Infinite Playa — Virtual Burn",
+        meta: "Project lead (Adastra Studios) · 2021 · Virtual Burn",
+        paragraphs: [
+          "The Infinite Playa was one of the officially recognised virtual worlds of the Burning Man „Virtual Burn\" — a photorealistic, freely explorable recreation of the Black Rock City playa. After the physical event couldn't take place, this experience let Burners worldwide feel that sense of „Home\" digitally.",
+          "It was publicly accessible via browser (desktop and mobile) as well as VR headset. Fans created an avatar, explored the vast playa, moved through art installations, stages and social spaces, and joined live performances.",
+          "I was project lead on the studio side (Adastra Studios), responsible for the part Adastra contributed to the 2021 iteration — the version regarded as the fully realised delivery of what had been started under heavy time pressure a year earlier.",
+          "What made the project compelling was the mix of creative ambition and technical reality: a photorealistic, communally usable world that had to go public live at a fixed date — with everything that implies for coordination between art, 3D production and technology."
+        ]
+      }
+    }
+  };
+
+  const closeLabels = { de: "Schließen", pl: "Zamknij", en: "Close" };
+  const backdrop = document.getElementById("project-detail-backdrop");
+  const modal = backdrop?.querySelector(".project-detail-modal");
+  const closeButton = backdrop?.querySelector(".project-detail-close");
+  const titleEl = document.getElementById("project-detail-title");
+  const metaEl = document.getElementById("project-detail-meta");
+  const bodyEl = document.getElementById("project-detail-body");
+  let lastFocused = null;
+
+  const getLang = () => {
+    const stored = localStorage.getItem("db_site_lang");
+    if (stored === "pl" || stored === "en" || stored === "de") return stored;
+    const docLang = document.documentElement.lang;
+    return docLang === "pl" || docLang === "en" ? docLang : "de";
+  };
+
+  const getFocusable = () => Array.from(modal.querySelectorAll('a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])'));
+
+  const closeModal = () => {
+    backdrop.classList.remove("is-open");
+    backdrop.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("project-modal-open");
+    document.removeEventListener("keydown", onKeydown);
+    if (lastFocused && typeof lastFocused.focus === "function") lastFocused.focus();
+  };
+
+  const openModal = (key, trigger) => {
+    const lang = getLang();
+    const copy = DETAIL_COPY[key]?.[lang] || DETAIL_COPY[key]?.de;
+    if (!copy) return;
+    lastFocused = trigger;
+    titleEl.textContent = copy.title;
+    metaEl.textContent = copy.meta;
+    bodyEl.innerHTML = "";
+    copy.paragraphs.forEach((text) => {
+      const p = document.createElement("p");
+      p.textContent = text;
+      bodyEl.appendChild(p);
+    });
+    closeButton.setAttribute("aria-label", closeLabels[lang] || closeLabels.de);
+    backdrop.classList.add("is-open");
+    backdrop.setAttribute("aria-hidden", "false");
+    document.body.classList.add("project-modal-open");
+    document.addEventListener("keydown", onKeydown);
+    modal.focus();
+  };
+
+  function onKeydown(event) {
+    if (event.key === "Escape") {
+      event.preventDefault();
+      closeModal();
+      return;
+    }
+    if (event.key !== "Tab") return;
+    const focusable = getFocusable();
+    if (!focusable.length) {
+      event.preventDefault();
+      modal.focus();
+      return;
+    }
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  }
+
+  document.addEventListener("click", (event) => {
+    const trigger = event.target.closest("[data-project-detail]");
+    if (trigger) {
+      event.preventDefault();
+      openModal(trigger.getAttribute("data-project-detail"), trigger);
+      return;
+    }
+    if (event.target === backdrop || event.target === closeButton) {
+      event.preventDefault();
+      closeModal();
+    }
+  });
+})();
+</script>
 
 </body></html>
