@@ -76,7 +76,23 @@
   .project-detail-body p{font-family:'Hanken Grotesk',sans-serif;font-size:1.02rem;line-height:1.65;margin:0;color:var(--body,#3a352f)}
   .project-detail-section{display:flex;flex-direction:column;gap:8px}
   .project-detail-label{font-family:'Space Mono',monospace;font-size:.72rem;line-height:1.4;letter-spacing:.08em;text-transform:uppercase;color:var(--accent,#DA4B1E);margin:8px 0 0}
-  body.project-modal-open{overflow:hidden}
+  .project-tile{position:relative;min-height:260px;background:repeating-linear-gradient(135deg,var(--paper2) 0px,var(--paper2) 11px,var(--pat) 11px,var(--pat) 22px);display:flex;align-items:stretch;justify-content:center;padding:clamp(24px,4vw,44px)}
+  .project-tile-card{width:min(420px,100%);display:flex;flex-direction:column;justify-content:space-between;gap:clamp(16px,2.8vw,26px);border:1px solid var(--line);background:color-mix(in srgb,var(--paper) 76%,transparent);border-radius:6px;padding:clamp(22px,3vw,34px);box-shadow:0 18px 46px color-mix(in srgb,var(--ink) 9%,transparent)}
+  .project-tile-code{display:block;font-family:'Space Mono',monospace;font-weight:700;font-size:clamp(3rem,7vw,4.5rem);line-height:.95;letter-spacing:.12em;color:var(--ink);word-break:break-word}
+  .project-tile-accent{width:38px;height:3px;background:var(--accent,#DA4B1E);margin:16px 0 12px}
+  .project-tile-category{font-family:'Space Mono',monospace;font-size:.72rem;line-height:1.5;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+  .project-tile-rule{height:1px;background:var(--line)}
+  .project-tile-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 18px}
+  .project-tile-value{font-family:'Space Mono',monospace;font-weight:700;font-size:clamp(1.45rem,3.3vw,1.9rem);line-height:1;color:var(--ink);word-break:break-word}
+  .project-tile-label{font-family:'Space Mono',monospace;font-size:.68rem;line-height:1.35;letter-spacing:.04em;color:var(--muted);margin-top:7px}
+  .project-tile-footer{font-family:'Space Mono',monospace;font-size:.68rem;line-height:1.5;letter-spacing:.05em;color:var(--muted)}
+  .project-tile--dark{background:repeating-radial-gradient(circle at 50% 50%,color-mix(in srgb,var(--paper) 5%,var(--ink)) 0px,color-mix(in srgb,var(--paper) 5%,var(--ink)) 12px,color-mix(in srgb,var(--paper) 11%,var(--ink)) 12px,color-mix(in srgb,var(--paper) 11%,var(--ink)) 24px)}
+  .project-tile--dark .project-tile-card{border-color:color-mix(in srgb,var(--paper) 22%,transparent);background:color-mix(in srgb,var(--ink) 86%,transparent);box-shadow:none}
+  .project-tile--dark .project-tile-code,.project-tile--dark .project-tile-value{color:var(--paper)}
+  .project-tile--dark .project-tile-category,.project-tile--dark .project-tile-label,.project-tile--dark .project-tile-footer{color:color-mix(in srgb,var(--paper) 62%,transparent)}
+  .project-tile--dark .project-tile-rule{background:color-mix(in srgb,var(--paper) 18%,transparent)}
+  @media (max-width:420px){.project-tile{padding:20px}.project-tile-grid{grid-template-columns:1fr}.project-tile-code{font-size:clamp(2.35rem,14vw,3.5rem)}}
+    body.project-modal-open{overflow:hidden}
   @media (max-width:640px){.project-detail-backdrop{padding:0;align-items:stretch}.project-detail-modal{width:100%;min-height:100svh;max-height:100svh;border-radius:0;border:0;padding:64px 22px 28px}.project-detail-close{top:18px;right:18px}}
   @media (prefers-reduced-motion:reduce){.project-detail-modal,.project-detail-trigger{transition:none;transform:none}}
 </style>
@@ -690,9 +706,23 @@
     <div data-dc-tpl="218" style="display: flex; flex-direction: column;">
 
       <article data-dc-tpl="219" data-screen-label="Projekt ARD" style="position: sticky; top: 84px; margin-bottom: 26px; border: 1px solid color-mix(in srgb, var(--ink) 22%, transparent); border-radius: 8px; background: var(--paper); overflow: hidden; box-shadow: 0 -16px 40px color-mix(in srgb, var(--ink) 10%, transparent); display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); min-height: clamp(430px, 62vh, 600px);">
-        <div data-dc-tpl="220" style="position: relative; min-height: 260px; background: repeating-linear-gradient(180deg, var(--paper2) 0px, var(--paper2) 9px, var(--pat) 9px, var(--pat) 18px); display: flex; align-items: center; justify-content: center;">
-          <span data-dc-tpl="221" aria-hidden="true" style="position: absolute; top: 14px; right: 22px; font-family: &quot;Space Grotesk&quot;, sans-serif; font-weight: 700; font-size: clamp(4rem, 7vw, 6.5rem); line-height: 1; color: transparent; -webkit-text-stroke: 1px color-mix(in srgb, var(--ink) 20%, transparent);">01</span>
-          <span data-dc-tpl="222" style="display: inline-flex; align-items: center; gap: 12px; background: var(--paper); border: 1px solid var(--line); border-radius: 3px; padding: 14px 26px; font-family: &quot;Space Mono&quot;, monospace; font-weight: 700; font-size: 1.6rem; letter-spacing: 0.14em; color: var(--ink);"><span data-dc-tpl="223" style="width: 10px; height: 10px; background: var(--accent,#3D45E6); flex: 0 0 auto;"></span>ARD</span>
+        <div class="project-tile">
+          <div class="project-tile-card">
+            <div>
+              <span class="project-tile-code">ARD</span>
+              <div class="project-tile-accent" aria-hidden="true"></div>
+              <div class="project-tile-category">INFRASTRUKTURA STREAMINGOWA</div>
+            </div>
+            <div class="project-tile-rule" aria-hidden="true"></div>
+            <div class="project-tile-grid">
+              <div class="project-tile-metric"><div class="project-tile-value">Live</div><div class="project-tile-label">ARD-Mediathek</div></div>
+              <div class="project-tile-metric"><div class="project-tile-value">HLS</div><div class="project-tile-label">/ DASH-Manifest</div></div>
+              <div class="project-tile-metric"><div class="project-tile-value">AWS</div><div class="project-tile-label">Serverless</div></div>
+              <div class="project-tile-metric"><div class="project-tile-value">VOD</div><div class="project-tile-label">+ transkodowanie live</div></div>
+            </div>
+            <div class="project-tile-rule" aria-hidden="true"></div>
+            <div class="project-tile-footer">Cloud-native · w produkcji</div>
+          </div>
         </div>
         <div data-dc-tpl="224" style="padding: clamp(26px, 4vw, 56px); display: flex; flex-direction: column; justify-content: center; border-left: 1px solid var(--line);">
           <div data-dc-tpl="225" style="display: flex; justify-content: space-between; gap: 12px; margin-bottom: 18px;">
@@ -706,9 +736,23 @@
       </article>
 
       <article data-dc-tpl="231" data-screen-label="Projekt SWR" style="position: sticky; top: 96px; margin-bottom: 26px; border: 1px solid color-mix(in srgb, var(--ink) 22%, transparent); border-radius: 8px; background: var(--paper); overflow: hidden; box-shadow: 0 -16px 40px color-mix(in srgb, var(--ink) 10%, transparent); display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); min-height: clamp(430px, 62vh, 600px);">
-        <div data-dc-tpl="232" style="position: relative; min-height: 260px; background-color: var(--pat); background-image: radial-gradient(color-mix(in srgb, var(--ink) 12%, transparent) 1.5px, transparent 1.5px); background-size: 20px 20px; display: flex; align-items: center; justify-content: center;">
-          <span data-dc-tpl="233" aria-hidden="true" style="position: absolute; top: 14px; right: 22px; font-family: &quot;Space Grotesk&quot;, sans-serif; font-weight: 700; font-size: clamp(4rem, 7vw, 6.5rem); line-height: 1; color: transparent; -webkit-text-stroke: 1px color-mix(in srgb, var(--ink) 20%, transparent);">02</span>
-          <span data-dc-tpl="234" style="display: inline-flex; align-items: center; gap: 12px; background: var(--paper); border: 1px solid var(--line); border-radius: 3px; padding: 14px 26px; font-family: &quot;Space Mono&quot;, monospace; font-weight: 700; font-size: 1.6rem; letter-spacing: 0.14em; color: var(--ink);"><span data-dc-tpl="235" style="width: 10px; height: 10px; background: var(--accent,#3D45E6); flex: 0 0 auto;"></span>SWR</span>
+        <div class="project-tile">
+          <div class="project-tile-card">
+            <div>
+              <span class="project-tile-code">SWR</span>
+              <div class="project-tile-accent" aria-hidden="true"></div>
+              <div class="project-tile-category">SILNIK REKOMENDACJI AI</div>
+            </div>
+            <div class="project-tile-rule" aria-hidden="true"></div>
+            <div class="project-tile-grid">
+              <div class="project-tile-metric"><div class="project-tile-value">9</div><div class="project-tile-label">Wielkość zespołu</div></div>
+              <div class="project-tile-metric"><div class="project-tile-value">Live</div><div class="project-tile-label">w produkcji</div></div>
+              <div class="project-tile-metric"><div class="project-tile-value">ML</div><div class="project-tile-label">System rekomendacji</div></div>
+              <div class="project-tile-metric"><div class="project-tile-value">AI Hub</div><div class="project-tile-label">SWR</div></div>
+            </div>
+            <div class="project-tile-rule" aria-hidden="true"></div>
+            <div class="project-tile-footer">Od ręcznej kuracji do AI</div>
+          </div>
         </div>
         <div data-dc-tpl="236" style="padding: clamp(26px, 4vw, 56px); display: flex; flex-direction: column; justify-content: center; border-left: 1px solid var(--line);">
           <div data-dc-tpl="237" style="display: flex; justify-content: space-between; gap: 12px; margin-bottom: 18px;">
@@ -722,9 +766,23 @@
       </article>
 
       <article data-dc-tpl="243" data-screen-label="Projekt WBD" style="position: sticky; top: 108px; margin-bottom: 26px; border: 1px solid color-mix(in srgb, var(--ink) 22%, transparent); border-radius: 8px; background: var(--paper); overflow: hidden; box-shadow: 0 -16px 40px color-mix(in srgb, var(--ink) 10%, transparent); display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); min-height: clamp(430px, 62vh, 600px);">
-        <div data-dc-tpl="244" style="position: relative; min-height: 260px; background: repeating-linear-gradient(135deg, var(--paper2) 0px, var(--paper2) 11px, var(--pat) 11px, var(--pat) 22px); display: flex; align-items: center; justify-content: center;">
-          <span data-dc-tpl="245" aria-hidden="true" style="position: absolute; top: 14px; right: 22px; font-family: &quot;Space Grotesk&quot;, sans-serif; font-weight: 700; font-size: clamp(4rem, 7vw, 6.5rem); line-height: 1; color: transparent; -webkit-text-stroke: 1px color-mix(in srgb, var(--ink) 20%, transparent);">03</span>
-          <span data-dc-tpl="246" style="display: inline-flex; align-items: center; gap: 12px; background: var(--paper); border: 1px solid var(--line); border-radius: 3px; padding: 14px 26px; font-family: &quot;Space Mono&quot;, monospace; font-weight: 700; font-size: 1.6rem; letter-spacing: 0.14em; color: var(--ink);"><span data-dc-tpl="247" style="width: 10px; height: 10px; background: var(--accent,#3D45E6); flex: 0 0 auto;"></span>WBD</span>
+        <div class="project-tile">
+          <div class="project-tile-card">
+            <div>
+              <span class="project-tile-code">WBD</span>
+              <div class="project-tile-accent" aria-hidden="true"></div>
+              <div class="project-tile-category">UCI TRACK CHAMPIONS LEAGUE</div>
+            </div>
+            <div class="project-tile-rule" aria-hidden="true"></div>
+            <div class="project-tile-grid">
+              <div class="project-tile-metric"><div class="project-tile-value">149M</div><div class="project-tile-label">Widzów (seria)</div></div>
+              <div class="project-tile-metric"><div class="project-tile-value">206</div><div class="project-tile-label">Krajów</div></div>
+              <div class="project-tile-metric"><div class="project-tile-value">8+</div><div class="project-tile-label">Kamery</div></div>
+              <div class="project-tile-metric"><div class="project-tile-value">2022</div><div class="project-tile-label">Londyn · Preview</div></div>
+            </div>
+            <div class="project-tile-rule" aria-hidden="true"></div>
+            <div class="project-tile-footer">Przeglądarka &amp; VR · Dane live · Social viewing</div>
+          </div>
         </div>
         <div data-dc-tpl="248" style="padding: clamp(26px, 4vw, 56px); display: flex; flex-direction: column; justify-content: center; border-left: 1px solid var(--line);">
           <div data-dc-tpl="249" style="display: flex; justify-content: space-between; gap: 12px; margin-bottom: 18px;">
@@ -743,9 +801,23 @@
 
 
       <article data-dc-tpl="257" data-screen-label="Projekt Burning Man" style="position: sticky; top: 120px; margin-bottom: 26px; border: 1px solid color-mix(in srgb, var(--ink) 22%, transparent); border-radius: 8px; background: var(--paper); overflow: hidden; box-shadow: 0 -16px 40px color-mix(in srgb, var(--ink) 10%, transparent); display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); min-height: clamp(430px, 62vh, 600px);">
-        <div data-dc-tpl="258" style="position: relative; min-height: 260px; background: repeating-linear-gradient(45deg, var(--paper2) 0px, var(--paper2) 10px, var(--pat) 10px, var(--pat) 20px); display: flex; align-items: center; justify-content: center;">
-          <span data-dc-tpl="259" aria-hidden="true" style="position: absolute; top: 14px; right: 22px; font-family: &quot;Space Grotesk&quot;, sans-serif; font-weight: 700; font-size: clamp(4rem, 7vw, 6.5rem); line-height: 1; color: transparent; -webkit-text-stroke: 1px color-mix(in srgb, var(--ink) 20%, transparent);">04</span>
-          <span data-dc-tpl="260" style="display: inline-flex; align-items: center; gap: 12px; background: var(--paper); border: 1px solid var(--line); border-radius: 3px; padding: 14px 26px; font-family: &quot;Space Mono&quot;, monospace; font-weight: 700; font-size: 1.6rem; letter-spacing: 0.14em; color: var(--ink);"><span data-dc-tpl="261" style="width: 10px; height: 10px; background: var(--accent,#3D45E6); flex: 0 0 auto;"></span>BM</span>
+        <div class="project-tile">
+          <div class="project-tile-card">
+            <div>
+              <span class="project-tile-code">PLAYA</span>
+              <div class="project-tile-accent" aria-hidden="true"></div>
+              <div class="project-tile-category">BURNING MAN · VIRTUAL BURN</div>
+            </div>
+            <div class="project-tile-rule" aria-hidden="true"></div>
+            <div class="project-tile-grid">
+              <div class="project-tile-metric"><div class="project-tile-value">2021</div><div class="project-tile-label">Edycja</div></div>
+              <div class="project-tile-metric"><div class="project-tile-value">3D</div><div class="project-tile-label">Fotorealistyczna</div></div>
+              <div class="project-tile-metric"><div class="project-tile-value">VR</div><div class="project-tile-label">+ przeglądarka</div></div>
+              <div class="project-tile-metric"><div class="project-tile-value">Public</div><div class="project-tile-label">oficjalnie uznana</div></div>
+            </div>
+            <div class="project-tile-rule" aria-hidden="true"></div>
+            <div class="project-tile-footer">Swobodna eksploracja · występy live · globalnie</div>
+          </div>
         </div>
         <div data-dc-tpl="262" style="padding: clamp(26px, 4vw, 56px); display: flex; flex-direction: column; justify-content: center; border-left: 1px solid var(--line);">
           <div data-dc-tpl="263" style="display: flex; justify-content: space-between; gap: 12px; margin-bottom: 18px;">
@@ -762,9 +834,23 @@
       </article>
 
       <article data-dc-tpl="271" data-screen-label="Projekt Vestium" style="position: sticky; top: 132px; margin-bottom: 26px; border: 1px solid color-mix(in srgb, var(--ink) 22%, transparent); border-radius: 8px; background: var(--paper); overflow: hidden; box-shadow: 0 -16px 40px color-mix(in srgb, var(--ink) 10%, transparent); display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); min-height: clamp(430px, 62vh, 600px);">
-        <div data-dc-tpl="272" style="position: relative; min-height: 260px; background-color: var(--pat); background-image: linear-gradient(color-mix(in srgb, var(--ink) 7%, transparent) 1px, transparent 1px), linear-gradient(90deg, color-mix(in srgb, var(--ink) 7%, transparent) 1px, transparent 1px); background-size: 26px 26px; display: flex; align-items: center; justify-content: center;">
-          <span data-dc-tpl="273" aria-hidden="true" style="position: absolute; top: 14px; right: 22px; font-family: &quot;Space Grotesk&quot;, sans-serif; font-weight: 700; font-size: clamp(4rem, 7vw, 6.5rem); line-height: 1; color: transparent; -webkit-text-stroke: 1px color-mix(in srgb, var(--ink) 20%, transparent);">05</span>
-          <span data-dc-tpl="274" style="display: inline-flex; align-items: center; gap: 12px; background: var(--paper); border: 1px solid var(--line); border-radius: 3px; padding: 14px 26px; font-family: &quot;Space Mono&quot;, monospace; font-weight: 700; font-size: 1.6rem; letter-spacing: 0.14em; color: var(--ink);"><span data-dc-tpl="275" style="width: 10px; height: 10px; background: var(--accent,#3D45E6); flex: 0 0 auto;"></span>VST</span>
+        <div class="project-tile">
+          <div class="project-tile-card">
+            <div>
+              <span class="project-tile-code">VSTM</span>
+              <div class="project-tile-accent" aria-hidden="true"></div>
+              <div class="project-tile-category">FASHION-TECH · CO-FOUNDER</div>
+            </div>
+            <div class="project-tile-rule" aria-hidden="true"></div>
+            <div class="project-tile-grid">
+              <div class="project-tile-metric"><div class="project-tile-value">8</div><div class="project-tile-label">Wielkość zespołu</div></div>
+              <div class="project-tile-metric"><div class="project-tile-value">3D</div><div class="project-tile-label">Awatary 3D</div></div>
+              <div class="project-tile-metric"><div class="project-tile-value">Co</div><div class="project-tile-label">Founder</div></div>
+              <div class="project-tile-metric"><div class="project-tile-value">RT</div><div class="project-tile-label">Wizualizacja real-time</div></div>
+            </div>
+            <div class="project-tile-rule" aria-hidden="true"></div>
+            <div class="project-tile-footer">Wirtualna przymiarka · zbudowane od zera</div>
+          </div>
         </div>
         <div data-dc-tpl="276" style="padding: clamp(26px, 4vw, 56px); display: flex; flex-direction: column; justify-content: center; border-left: 1px solid var(--line);">
           <div data-dc-tpl="277" style="display: flex; justify-content: space-between; gap: 12px; margin-bottom: 18px;">
@@ -778,9 +864,23 @@
       </article>
 
       <article data-dc-tpl="283" data-screen-label="Projekt MAN" style="position: sticky; top: 144px; margin-bottom: 26px; border: 1px solid color-mix(in srgb, var(--ink) 22%, transparent); border-radius: 8px; background: var(--paper); overflow: hidden; box-shadow: 0 -16px 40px color-mix(in srgb, var(--ink) 10%, transparent); display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); min-height: clamp(430px, 62vh, 600px);">
-        <div data-dc-tpl="284" style="position: relative; min-height: 260px; background: repeating-linear-gradient(90deg, var(--paper2) 0px, var(--paper2) 12px, var(--pat) 12px, var(--pat) 24px); display: flex; align-items: center; justify-content: center;">
-          <span data-dc-tpl="285" aria-hidden="true" style="position: absolute; top: 14px; right: 22px; font-family: &quot;Space Grotesk&quot;, sans-serif; font-weight: 700; font-size: clamp(4rem, 7vw, 6.5rem); line-height: 1; color: transparent; -webkit-text-stroke: 1px color-mix(in srgb, var(--ink) 20%, transparent);">06</span>
-          <span data-dc-tpl="286" style="display: inline-flex; align-items: center; gap: 12px; background: var(--paper); border: 1px solid var(--line); border-radius: 3px; padding: 14px 26px; font-family: &quot;Space Mono&quot;, monospace; font-weight: 700; font-size: 1.6rem; letter-spacing: 0.14em; color: var(--ink);"><span data-dc-tpl="287" style="width: 10px; height: 10px; background: var(--accent,#3D45E6); flex: 0 0 auto;"></span>MAN</span>
+        <div class="project-tile">
+          <div class="project-tile-card">
+            <div>
+              <span class="project-tile-code">MAN</span>
+              <div class="project-tile-accent" aria-hidden="true"></div>
+              <div class="project-tile-category">AFTER SALES · MAN ↔ VOLKSWAGEN</div>
+            </div>
+            <div class="project-tile-rule" aria-hidden="true"></div>
+            <div class="project-tile-grid">
+              <div class="project-tile-metric"><div class="project-tile-value">TGE</div><div class="project-tile-label">Program posprzedażowy</div></div>
+              <div class="project-tile-metric"><div class="project-tile-value">2</div><div class="project-tile-label">Połączone koncerny</div></div>
+              <div class="project-tile-metric"><div class="project-tile-value">Global</div><div class="project-tile-label">Funkcja wsparcia</div></div>
+              <div class="project-tile-metric"><div class="project-tile-value">SSO</div><div class="project-tile-label">Integracja systemów</div></div>
+            </div>
+            <div class="project-tile-rule" aria-hidden="true"></div>
+            <div class="project-tile-footer">Globalny rollout · systemy koncernu</div>
+          </div>
         </div>
         <div data-dc-tpl="288" style="padding: clamp(26px, 4vw, 56px); display: flex; flex-direction: column; justify-content: center; border-left: 1px solid var(--line);">
           <div data-dc-tpl="289" style="display: flex; justify-content: space-between; gap: 12px; margin-bottom: 18px;">
@@ -794,9 +894,23 @@
       </article>
 
       <article data-dc-tpl="295" data-screen-label="Projekt KI-System" style="position: sticky; top: 156px; border: 1px solid color-mix(in srgb, var(--ink) 40%, transparent); border-radius: 8px; background: var(--ink); color: var(--paper); overflow: hidden; box-shadow: 0 -16px 40px color-mix(in srgb, var(--ink) 18%, transparent); display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); min-height: clamp(430px, 62vh, 600px);">
-        <div data-dc-tpl="296" style="position: relative; min-height: 260px; background: repeating-radial-gradient(circle at 50% 50%, color-mix(in srgb, var(--paper) 5%, var(--ink)) 0px, color-mix(in srgb, var(--paper) 5%, var(--ink)) 12px, color-mix(in srgb, var(--paper) 11%, var(--ink)) 12px, color-mix(in srgb, var(--paper) 11%, var(--ink)) 24px); display: flex; align-items: center; justify-content: center;">
-          <span data-dc-tpl="297" aria-hidden="true" style="position: absolute; top: 14px; right: 22px; font-family: &quot;Space Grotesk&quot;, sans-serif; font-weight: 700; font-size: clamp(4rem, 7vw, 6.5rem); line-height: 1; color: transparent; -webkit-text-stroke: 1px color-mix(in srgb, var(--paper) 28%, transparent);">07</span>
-          <span data-dc-tpl="298" style="display: inline-flex; align-items: center; gap: 12px; background: var(--ink); border: 1px solid color-mix(in srgb, var(--paper) 35%, transparent); border-radius: 3px; padding: 14px 26px; font-family: &quot;Space Mono&quot;, monospace; font-weight: 700; font-size: 1.6rem; letter-spacing: 0.14em; color: var(--paper);"><span data-dc-tpl="299" style="width: 10px; height: 10px; background: var(--accent,#3D45E6); flex: 0 0 auto;"></span>AI</span>
+        <div class="project-tile project-tile--dark">
+          <div class="project-tile-card">
+            <div>
+              <span class="project-tile-code">ATLAS</span>
+              <div class="project-tile-accent" aria-hidden="true"></div>
+              <div class="project-tile-category">AI MULTI-AGENT · PROJEKT WŁASNY</div>
+            </div>
+            <div class="project-tile-rule" aria-hidden="true"></div>
+            <div class="project-tile-grid">
+              <div class="project-tile-metric"><div class="project-tile-value">7</div><div class="project-tile-label">Zbudowane fazy</div></div>
+              <div class="project-tile-metric"><div class="project-tile-value">3</div><div class="project-tile-label">Role agentów</div></div>
+              <div class="project-tile-metric"><div class="project-tile-value">RAG</div><div class="project-tile-label">+ Memory</div></div>
+              <div class="project-tile-metric"><div class="project-tile-value">HITL</div><div class="project-tile-label">Zatwierdzenia</div></div>
+            </div>
+            <div class="project-tile-rule" aria-hidden="true"></div>
+            <div class="project-tile-footer">LangGraph · lokalnie + chmura · zbudowane samodzielnie</div>
+          </div>
         </div>
         <div data-dc-tpl="300" style="padding: clamp(26px, 4vw, 56px); display: flex; flex-direction: column; justify-content: center; border-left: 1px solid color-mix(in srgb, var(--paper) 16%, transparent);">
           <div data-dc-tpl="301" style="display: flex; justify-content: space-between; gap: 12px; margin-bottom: 18px;">
