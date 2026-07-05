@@ -368,6 +368,8 @@
   @keyframes spin{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
   @keyframes heroRise{from{opacity:0; transform:translateY(46px);}to{opacity:1; transform:none;}}
   @keyframes bounceY{0%,100%{transform:translateY(0);}50%{transform:translateY(9px);}}
+  #top,#profil,#leistungen,#projekte,#kontakt{scroll-margin-top:96px;}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}}
 </style>
 </helmet>
 
@@ -1481,6 +1483,45 @@ class Component extends DCLogic {
     };
   }
 }
+</script>
+
+<script>
+(() => {
+  const sectionIds = new Set(["top", "profil", "leistungen", "projekte", "kontakt"]);
+  const prefersReduced = () => window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  const scrollToSection = (target, updateHash = true) => {
+    const header = document.querySelector("header");
+    const headerHeight = header ? Math.ceil(header.getBoundingClientRect().height) : 0;
+    const top = Math.max(0, target.getBoundingClientRect().top + window.scrollY - headerHeight - 12);
+    window.scrollTo({ top, behavior: prefersReduced() ? "auto" : "smooth" });
+    if (updateHash) history.pushState(null, "", "#" + target.id);
+    window.dispatchEvent(new Event("scroll"));
+  };
+
+  document.addEventListener("click", (event) => {
+    const link = event.target.closest('a[href^="#"]');
+    if (!link) return;
+    const id = decodeURIComponent(link.getAttribute("href").slice(1));
+    if (!sectionIds.has(id)) return;
+    const target = document.getElementById(id);
+    if (!target) return;
+    event.preventDefault();
+    scrollToSection(target);
+  });
+
+  window.addEventListener("hashchange", () => {
+    const id = decodeURIComponent(window.location.hash.slice(1));
+    const target = sectionIds.has(id) ? document.getElementById(id) : null;
+    if (target) scrollToSection(target, false);
+  });
+
+  window.addEventListener("load", () => {
+    const id = decodeURIComponent(window.location.hash.slice(1));
+    const target = sectionIds.has(id) ? document.getElementById(id) : null;
+    if (target) requestAnimationFrame(() => scrollToSection(target, false));
+  });
+})();
 </script>
 
 <div id="project-detail-backdrop" class="project-detail-backdrop" aria-hidden="true">
