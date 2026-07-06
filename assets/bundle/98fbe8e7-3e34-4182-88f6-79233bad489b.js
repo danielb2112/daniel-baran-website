@@ -1045,7 +1045,7 @@
     }
     return cur;
   }
-  var BABEL_URL = "assets/bundle/babel.min.js";
+  var BABEL_URL = "/assets/bundle/babel.min.js";
   var BABEL_SRI = "";
   var GLOBAL_POLL_INTERVAL_MS = 50;
   var GLOBAL_POLL_TIMEOUT_MS = 3e4;
@@ -1591,9 +1591,9 @@
   }
 
   // src/index.ts
-  var REACT_URL = "assets/bundle/react.production.min.js";
+  var REACT_URL = "/assets/bundle/react.production.min.js";
   var REACT_SRI = "";
-  var REACT_DOM_URL = "assets/bundle/react-dom.production.min.js";
+  var REACT_DOM_URL = "/assets/bundle/react-dom.production.min.js";
   var REACT_DOM_SRI = "";
   function hideRawTemplate() {
     const s = document.createElement("style");
