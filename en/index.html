@@ -1055,6 +1055,162 @@
   </section></div></div></div>
 
 
+<script id="restored-design-motion">
+(() => {
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const shell = document.querySelector("#dc-root .sc-host > div") || document.documentElement;
+  const hero = document.getElementById("top");
+  const canvas = hero ? hero.querySelector("canvas") : null;
+  const progress = document.querySelector("header > div[style*='bottom']");
+  const portrait = hero ? Array.from(hero.querySelectorAll("div")).find((el) => el.getAttribute("style")?.includes("max-width: 400px")) : null;
+  const card = portrait ? Array.from(portrait.querySelectorAll("div")).find((el) => el.getAttribute("style")?.includes("aspect-ratio")) : null;
+  const lens = card ? card.querySelector('img[aria-hidden="true"]') : null;
+
+  const cssColor = (name) => getComputedStyle(shell).getPropertyValue(name).trim();
+  const rgb = (value) => {
+    if (!value) return [20, 21, 25];
+    const hex = value.match(/#([0-9a-f]{3,8})/i);
+    if (hex) {
+      let h = hex[1];
+      if (h.length === 3) h = h.split("").map((x) => x + x).join("");
+      return [parseInt(h.slice(0, 2), 16), parseInt(h.slice(2, 4), 16), parseInt(h.slice(4, 6), 16)];
+    }
+    const parts = value.match(/rgba?\(([^)]+)\)/i);
+    if (parts) return parts[1].split(/[ ,/]+/).slice(0, 3).map((n) => parseFloat(n));
+    return [20, 21, 25];
+  };
+
+  let ctx, cw = 0, ch = 0, grid = [], mx = null, my = null;
+  const makeGrid = () => {
+    const sp = 46;
+    grid = [];
+    for (let y = sp; y < ch - sp * 0.4; y += sp) {
+      for (let x = sp * 0.7; x < cw - sp * 0.4; x += sp) {
+        grid.push({ x, y, ph: (x * 0.37 + y * 0.53) % (Math.PI * 2) });
+      }
+    }
+  };
+
+  const resizeCanvas = () => {
+    if (!canvas || !hero) return;
+    const r = hero.getBoundingClientRect();
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    cw = Math.max(1, r.width);
+    ch = Math.max(1, r.height);
+    canvas.width = Math.round(cw * dpr);
+    canvas.height = Math.round(ch * dpr);
+    ctx = canvas.getContext("2d");
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    makeGrid();
+  };
+
+  const drawNeedles = (now) => {
+    if (!ctx || !hero) return;
+    const hr = hero.getBoundingClientRect();
+    if (hr.bottom < 0 || hr.top > (window.innerHeight || 800)) return;
+    ctx.clearRect(0, 0, cw, ch);
+    const ink = rgb(cssColor("--ink"));
+    const acc = rgb(cssColor("--accent"));
+    const R = 240;
+    ctx.lineCap = "round";
+    for (const n of grid) {
+      const base = Math.sin(n.x * 0.0055 + now * 0.00055 + n.ph) * 1.1 + Math.cos(n.y * 0.0065 - now * 0.00042) * 1.1;
+      let ang = base;
+      let wgt = 0;
+      if (mx != null && my != null) {
+        const dx = mx - n.x;
+        const dy = my - n.y;
+        const d = Math.sqrt(dx * dx + dy * dy);
+        if (d < R) {
+          wgt = 1 - d / R;
+          wgt = wgt * wgt * (3 - 2 * wgt);
+          const target = Math.atan2(dy, dx);
+          const vx = Math.cos(base) * (1 - wgt) + Math.cos(target) * wgt;
+          const vy = Math.sin(base) * (1 - wgt) + Math.sin(target) * wgt;
+          ang = Math.atan2(vy, vx);
+        }
+      }
+      const len = (11 + wgt * 9) / 2;
+      const ca = Math.cos(ang) * len;
+      const sa = Math.sin(ang) * len;
+      const alpha = 0.22 + wgt * 0.55;
+      const c = wgt > 0.45 ? acc : ink;
+      ctx.strokeStyle = `rgba(${c[0]},${c[1]},${c[2]},${alpha.toFixed(3)})`;
+      ctx.lineWidth = 1.4 + wgt * 0.8;
+      ctx.beginPath();
+      ctx.moveTo(n.x - ca, n.y - sa);
+      ctx.lineTo(n.x + ca, n.y + sa);
+      ctx.stroke();
+    }
+  };
+
+  let lx = null, ly = null, lcx = null, lcy = null, lcr = null;
+  const tickLens = (now) => {
+    if (!lens || !card) return;
+    const r = card.getBoundingClientRect();
+    if (r.bottom < 0 || r.top > (window.innerHeight || 800)) return;
+    let tx, ty, targetR;
+    if (lx != null && ly != null) {
+      tx = lx;
+      ty = ly;
+      targetR = Math.max(r.width * 0.45, 160);
+    } else {
+      tx = r.width * 0.60 + Math.sin(now * 0.00045) * r.width * 0.22;
+      ty = r.height * 0.30 + Math.cos(now * 0.00031) * r.height * 0.15;
+      targetR = Math.max(r.width * 0.32, 120);
+    }
+    lcx = lcx == null ? tx : lcx + (tx - lcx) * 0.10;
+    lcy = lcy == null ? ty : lcy + (ty - lcy) * 0.10;
+    lcr = lcr == null ? targetR : lcr + (targetR - lcr) * 0.08;
+    const mask = `radial-gradient(circle ${lcr.toFixed(1)}px at ${lcx.toFixed(1)}px ${lcy.toFixed(1)}px, rgb(0 0 0) 0px ${(lcr * 0.55).toFixed(1)}px, transparent ${lcr.toFixed(1)}px)`;
+    lens.style.webkitMaskImage = mask;
+    lens.style.maskImage = mask;
+    lens.style.opacity = "1";
+  };
+
+  const onScroll = () => {
+    const de = document.documentElement;
+    const max = de.scrollHeight - de.clientHeight || 1;
+    const p = Math.min(1, Math.max(0, (window.scrollY || de.scrollTop) / max));
+    if (progress) progress.style.width = `${p * 100}%`;
+    if (portrait && hero && !reduce) {
+      const r = hero.getBoundingClientRect();
+      portrait.style.transform = `translateY(${Math.min(0, r.top) * -0.08}px)`;
+    }
+  };
+
+  if (canvas && hero) {
+    resizeCanvas();
+    window.addEventListener("resize", resizeCanvas);
+    hero.addEventListener("mousemove", (event) => {
+      const r = hero.getBoundingClientRect();
+      mx = event.clientX - r.left;
+      my = event.clientY - r.top;
+    });
+    hero.addEventListener("mouseleave", () => { mx = null; my = null; });
+  }
+
+  if (card) {
+    card.addEventListener("mousemove", (event) => {
+      const r = card.getBoundingClientRect();
+      lx = event.clientX - r.left;
+      ly = event.clientY - r.top;
+    });
+    card.addEventListener("mouseleave", () => { lx = null; ly = null; });
+  }
+
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+
+  const tick = (now) => {
+    drawNeedles(now || 0);
+    tickLens(now || 0);
+    if (!reduce) requestAnimationFrame(tick);
+  };
+  requestAnimationFrame(tick);
+})();
+</script>
+
 <script>
 (() => {
   const sectionIds = new Set(["top", "profil", "leistungen", "projekte", "kontakt"]);
