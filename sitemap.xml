@@ -25,11 +25,51 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://daniel-baran.com/" />
   </url>
   <url>
-    <loc>https://daniel-baran.com/impressum.html</loc>
+    <loc>https://daniel-baran.com/impressum</loc>
     <lastmod>2026-07-06</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://daniel-baran.com/impressum" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-baran.com/en/imprint" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://daniel-baran.com/pl/nota-prawna" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://daniel-baran.com/impressum" />
   </url>
   <url>
-    <loc>https://daniel-baran.com/datenschutz.html</loc>
+    <loc>https://daniel-baran.com/en/imprint</loc>
     <lastmod>2026-07-06</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://daniel-baran.com/impressum" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-baran.com/en/imprint" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://daniel-baran.com/pl/nota-prawna" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://daniel-baran.com/impressum" />
+  </url>
+  <url>
+    <loc>https://daniel-baran.com/pl/nota-prawna</loc>
+    <lastmod>2026-07-06</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://daniel-baran.com/impressum" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-baran.com/en/imprint" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://daniel-baran.com/pl/nota-prawna" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://daniel-baran.com/impressum" />
+  </url>
+  <url>
+    <loc>https://daniel-baran.com/datenschutz</loc>
+    <lastmod>2026-07-06</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://daniel-baran.com/datenschutz" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-baran.com/en/privacy" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://daniel-baran.com/pl/prywatnosc" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://daniel-baran.com/datenschutz" />
+  </url>
+  <url>
+    <loc>https://daniel-baran.com/en/privacy</loc>
+    <lastmod>2026-07-06</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://daniel-baran.com/datenschutz" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-baran.com/en/privacy" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://daniel-baran.com/pl/prywatnosc" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://daniel-baran.com/datenschutz" />
+  </url>
+  <url>
+    <loc>https://daniel-baran.com/pl/prywatnosc</loc>
+    <lastmod>2026-07-06</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://daniel-baran.com/datenschutz" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-baran.com/en/privacy" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://daniel-baran.com/pl/prywatnosc" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://daniel-baran.com/datenschutz" />
   </url>
 </urlset>
