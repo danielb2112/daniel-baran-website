@@ -589,6 +589,7 @@
           <span style="width:30px; height:3px; background:var(--accent,#3D45E6); flex:none; transform:translateY(-6px);"></span>
           <p style="font-family:'Instrument Serif',serif; font-style:italic; font-weight:400; font-size:clamp(1.35rem,2.2vw,1.9rem); line-height:1.4; color:var(--ink); margin:0;">{{ profilPrinciple }}</p>
         </div>
+        <button type="button" class="project-detail-trigger" data-project-detail="about" data-reveal="1" style="margin-top:22px; opacity:0; transform:translateY(26px); transition:opacity .7s cubic-bezier(.16,1,.3,1) .24s, transform .7s cubic-bezier(.16,1,.3,1) .24s;">{{ aboutMore }}</button>
       </div>
     </div>
   </section>
@@ -1369,9 +1370,10 @@ class Component extends DCLogic {
       statCap3: "Sprachen",
       statVal4: "Konzern bis Startup", statCap4: "Beide Welten aus erster Hand",
       p1: "IT-Projektmanagement", p2: "Product Ownership", p3: "KI-Enablement", p4: "Stakeholder-Alignment",
-      profilLead: "Seit über vier Jahren verbinde ich Technik, Produkt und Business — und übersetze zwischen Engineering und Fachbereich, zwischen Konzern und Startup, zwischen Disziplinen.",
-      profilBody: "Ob serverlose Streaming-Infrastruktur für Millionen Nutzer:innen, eine KI-Empfehlungsengine in Produktion oder das erste Web3-Metaverse-Event für Warner Bros. Discovery Sports — meine Rolle ist es, viele bewegliche Teile in eine Richtung zu bringen und Projekte verlässlich in Produktion zu führen. Audit-sicher, über Abteilungs- und Unternehmensgrenzen hinweg.",
-      profilPrinciple: "Gute Technik allein reicht nicht — ich sorge dafür, dass Menschen und Systeme gemeinsam funktionieren.",
+      profilLead: "Seit über vier Jahren verbinde ich Technik, Produkt und Business und bringe digitale Projekte über Branchen- und Konzerngrenzen hinweg verlässlich in Produktion.",
+      profilBody: "Mein Weg begann nicht am Schreibtisch, sondern in der Werkstatt. Als gelernter Mechatroniker im Maschinenbau habe ich verstanden, wie Automatisierung, Anlagen und industrielle Prozesse wirklich funktionieren. Von dort ging es ins Projektmanagement und in sehr unterschiedliche Welten: immersive Digitalprojekte in Los Angeles, unter anderem für Warner Bros. Discovery Sports, ein eigenes Fashion-Tech-Startup als Co-Founder, zwei Jahre Product Owner beim SWR mit Streaming-Infrastruktur und KI in Produktion, und heute die IT-Schnittstelle zwischen MAN und Volkswagen im After Sales. Was sich durchzieht, ist die Fähigkeit, viele bewegliche Teile in eine Richtung zu bringen, gerade dort, wo Systeme, Teams und Interessen aufeinandertreffen.",
+      profilPrinciple: "Gute Technik allein reicht nicht. Ich sorge dafür, dass Menschen und Systeme gemeinsam funktionieren.",
+      aboutMore: "Mehr über mich ↗",
       leistungenTitle: "Wobei ich Teams am meisten helfe.",
       s1t: "Technisches Projekt- & Programm-Management",
       s1d: "Projekte, die an Schnittstellen scheitern, sind mein Spezialgebiet. Ich steuere cross-funktionale IT-Vorhaben vom ersten Requirements-Workshop bis zum Rollout — audit-sicher, termingetreu, mit klarer Eskalationsstruktur.",
@@ -1450,9 +1452,10 @@ class Component extends DCLogic {
       statCap3: "Języki",
       statVal4: "Od korporacji po startup", statCap4: "Oba światy z pierwszej ręki",
       p1: "Zarządzanie projektami IT", p2: "Product ownership", p3: "Wdrażanie AI", p4: "Alignment interesariuszy",
-      profilLead: "Od ponad czterech lat łączę technologię, produkt i biznes — tłumacząc między inżynierią a biznesem, między korporacją a startupem, między dyscyplinami.",
-      profilBody: "Czy to bezserwerowa infrastruktura streamingowa dla milionów użytkowników, silnik rekomendacji AI w produkcji, czy pierwsze wydarzenie w metaverse Web3 dla Warner Bros. Discovery Sports — moją rolą jest ustawić wiele ruchomych elementów w jednym kierunku i niezawodnie doprowadzić projekty do produkcji. Zgodnie z wymogami audytu, ponad granicami działów i firm.",
-      profilPrinciple: "Dobra technologia to za mało — dbam o to, żeby ludzie i systemy działały razem.",
+      profilLead: "Od ponad czterech lat łączę technologię, produkt i biznes, doprowadzając projekty cyfrowe niezawodnie do produkcji ponad granicami branż i koncernów.",
+      profilBody: "Moja droga nie zaczęła się przy biurku, tylko na hali produkcyjnej. Jako wykształcony mechatronik w branży maszynowej zrozumiałem, jak naprawdę działają automatyzacja, maszyny i procesy przemysłowe. Stamtąd przeszedłem do zarządzania projektami i do bardzo różnych światów: immersyjne projekty cyfrowe w Los Angeles, między innymi dla Warner Bros. Discovery Sports, własny startup fashion-tech jako co-founder, dwa lata jako Product Owner w SWR z infrastrukturą streamingową i AI na produkcji, a dziś interfejs IT między MAN a Volkswagenem w After Sales. Przez wszystko przewija się umiejętność ustawiania wielu ruchomych elementów w jednym kierunku, zwłaszcza tam, gdzie zderzają się systemy, zespoły i interesy.",
+      profilPrinciple: "Sama dobra technologia nie wystarczy. Dbam o to, żeby ludzie i systemy działały razem.",
+      aboutMore: "Więcej o mnie ↗",
       leistungenTitle: "W czym najbardziej pomagam zespołom.",
       s1t: "Techniczne zarządzanie projektami i programami",
       s1d: "Projekty najczęściej zatrzymują się na styku zespołów, systemów i decyzji. Prowadzę cross-funkcyjne inicjatywy IT od pierwszego warsztatu wymagań po rollout — audytowalnie, terminowo i z jasną strukturą eskalacji.",
@@ -1531,9 +1534,10 @@ class Component extends DCLogic {
       statCap3: "Languages",
       statVal4: "Corporate to startup", statCap4: "Both worlds first-hand",
       p1: "IT project management", p2: "Product ownership", p3: "AI enablement", p4: "Stakeholder alignment",
-      profilLead: "For over four years I've been connecting technology, product and business — translating between engineering and the business side, between corporations and startups, between disciplines.",
-      profilBody: "Whether serverless streaming infrastructure for millions of users, an AI recommendation engine in production, or the first Web3 metaverse event for Warner Bros. Discovery Sports — my role is to move many moving parts in one direction and take projects reliably into production. Audit-proof, across department and company boundaries.",
-      profilPrinciple: "Good tech alone isn't enough — I make sure people and systems work together.",
+      profilLead: "For over four years I've been connecting technology, product and business, taking digital projects reliably into production across industry and corporate boundaries.",
+      profilBody: "My path didn't start at a desk, it started on the shop floor. As a trained mechatronics engineer in mechanical engineering, I learned how automation, machinery and industrial processes really work. From there I moved into project management and into very different worlds: immersive digital projects in Los Angeles, including for Warner Bros. Discovery Sports, my own fashion-tech startup as co-founder, two years as Product Owner at SWR with streaming infrastructure and AI in production, and today the IT interface between MAN and Volkswagen in After Sales. What runs through all of it is the ability to move many moving parts in one direction, especially where systems, teams and interests collide.",
+      profilPrinciple: "Good tech alone isn't enough. I make sure people and systems work together.",
+      aboutMore: "More about me ↗",
       leistungenTitle: "Where I help teams most.",
       s1t: "Technical project & programme management",
       s1d: "Projects often fail at the interfaces between teams, systems and decisions. I steer cross-functional IT initiatives from the first requirements workshop to rollout — audit-ready, on schedule and with a clear escalation structure.",
@@ -1699,6 +1703,74 @@ class Component extends DCLogic {
 <script>
 (() => {
   const DETAIL_COPY = {
+    about: {
+        "de": {
+            "title": "Über mich",
+            "meta": "Über mich · Hintergrund · Arbeitsweise",
+            "sections": [
+                {
+                    "label": "Der Anfang",
+                    "text": "Angefangen habe ich im Maschinenbau, mit einer Ausbildung zum Mechatroniker bei STOPA Anlagenbau, einem der europaweit führenden Hersteller von automatisierten Lager- und Parksystemen. Ein klassischer Hidden Champion aus dem Schwarzwald, der komplexe Anlagen in die ganze Welt liefert, teils als Standardlösung, teils individuell für den Kunden konstruiert. Ich kam in einer Zeit dazu, in der das Unternehmen selbst im Wandel war und Prozesse auf Lean Management umstellte, und unser Ausbildungsleiter hat uns früh in diese Management-Themen mit hineingenommen. So habe ich nicht nur die Technik gelernt, von Automatisierung bis SPS-Steuerung, sondern auch, wie ein Industrieunternehmen tickt und wie aus einer Kundenanforderung eine gebaute Anlage wird. Schon in der Ausbildung habe ich in einem Dreierteam ein anspruchsvolles Projekt konzipiert und geleitet, ein omnidirektionales Fahrzeug mit pneumatisch gesteuertem Lagersystem. Da wurde mir klar, dass mich die Planung und Konzeption mehr reizt als die Fertigung selbst."
+                },
+                {
+                    "label": "Der Weg",
+                    "text": "Nach der Ausbildung habe ich zunächst in der Instandhaltung gearbeitet, unter anderem bei Mercedes-Benz. Dann kam der Schritt in die Selbstständigkeit und ins Projektmanagement. Mit Mitgründern habe ich Vestium aufgebaut, ein Fashion-Tech-Startup mit eigener 3D-Scan-Technologie, wo ich als Co-Founder und COO von der Idee über Prototyp und Businessplan bis zur Investorenreife gearbeitet habe. Parallel bin ich über den Inhaber von Adastra Studios ins internationale Projektmanagement gekommen und habe immersive Digital- und Metaverse-Projekte in Los Angeles betreut, darunter Beiträge zu The Infinite Playa für den virtuellen Burning Man und die immersive Fan-Experience der UCI Track Champions League für Warner Bros. Discovery Sports. Danach zwei Jahre als Product Owner beim SWR, der zweitgrößten ARD-Rundfunkanstalt, mit Streaming-Infrastruktur für Millionen Nutzer, der Leitung eines zentralen ARD-Transcoding-Projekts, einer KI-Empfehlungsengine in Produktion und dem Aufbau der KI-Testphase. Heute verantworte ich bei MAN Truck & Bus die IT-Schnittstelle zwischen MAN und Volkswagen im weltweiten After-Sales-Programm des MAN TGE."
+                },
+                {
+                    "label": "Was mich ausmacht",
+                    "text": "Diese Herkunft ist mein Unterschied. Ich verstehe Technik nicht nur aus der Management-Perspektive, sondern von der Basis her, und ich habe in sehr unterschiedlichen Welten geliefert: im industriellen Mittelstand, im US-Entertainment, im eigenen Startup, im öffentlich-rechtlichen Rundfunk und im Automobilkonzern. Vom kleinen, freelancer-geprägten Studio bis zur großen, strukturierten Konzernorganisation fühle ich mich in beiden Umgebungen zuhause. Dazu kommt echte KI-Praxis: Ich manage KI-Projekte nicht nur, ich baue selbst. Mein privates Multi-Agent-System Atlas, mit Agenten-Orchestrierung, RAG-Gedächtnis und Human-in-the-Loop-Design, ist der Beleg dafür, dass ich die Bausteine moderner KI-Systeme praktisch beherrsche, obwohl ich keinen formalen Programmier-Hintergrund habe. Ich kann mit Entwicklern auf Augenhöhe reden und im nächsten Meeting eine Entscheidungsvorlage für die Geschäftsführung präsentieren."
+                },
+                {
+                    "label": "Wie ich arbeite",
+                    "text": "Mein Anspruch ist, viele bewegliche Teile in eine Richtung zu bringen, gerade dort, wo Systeme, Teams und Interessen aufeinandertreffen. Ich arbeite strukturiert und methodisch, ob klassisch oder agil als Product Owner, und ich denke in Prozessen, die auch einer Revision standhalten. Automatisierung setze ich ein, wo sie hilft, menschliche Kontrolle, wo sie nötig ist. Gute Technik allein reicht mir nicht. Am Ende zählt, dass Menschen und Systeme gemeinsam funktionieren und dass ein Projekt verlässlich in Produktion geht."
+                }
+            ]
+        },
+        "en": {
+            "title": "About me",
+            "meta": "About me · background · way of working",
+            "sections": [
+                {
+                    "label": "Where it started",
+                    "text": "I started out in mechanical engineering, training as a mechatronics engineer at STOPA Anlagenbau, one of Europe's leading manufacturers of automated storage and parking systems. A classic hidden champion from the Black Forest that ships complex systems all over the world, some as standard solutions, some engineered individually for the customer. I joined at a time when the company itself was changing and moving its processes to lean management, and our training manager involved us in those management topics early on. So I didn't just learn the technology, from automation to PLC control, but also how an industrial company works and how a customer requirement becomes a built system. Even during my training, in a team of three, I designed and led an ambitious project, an omnidirectional vehicle with a pneumatically controlled storage system. That's when it became clear to me that planning and shaping things appeals to me more than production itself."
+                },
+                {
+                    "label": "The path",
+                    "text": "After my training I first worked in maintenance, including at Mercedes-Benz. Then came the move into self-employment and project management. With co-founders I built Vestium, a fashion-tech startup with its own 3D scanning technology, where as co-founder and COO I worked from the idea through prototype and business plan to investment readiness. In parallel, through the owner of Adastra Studios, I moved into international project management and looked after immersive digital and metaverse projects in Los Angeles, including contributions to The Infinite Playa for the virtual Burning Man and the immersive fan experience of the UCI Track Champions League for Warner Bros. Discovery Sports. After that, two years as Product Owner at SWR, Germany's second-largest ARD broadcaster, with streaming infrastructure for millions of users, leading a central ARD transcoding project, an AI recommendation engine in production and building up the AI testing phase. Today, at MAN Truck & Bus, I'm responsible for the IT interface between MAN and Volkswagen in the worldwide after-sales programme of the MAN TGE."
+                },
+                {
+                    "label": "What defines me",
+                    "text": "That background is my difference. I understand technology not only from a management perspective but from the ground up, and I've delivered in very different worlds: in industrial mid-sized business, in US entertainment, in my own startup, in public broadcasting and in an automotive group. From the small, freelance-driven studio to the large, structured corporate organisation, I feel at home in both. On top of that comes real hands-on AI: I don't just manage AI projects, I build. My private multi-agent system Atlas, with agent orchestration, RAG memory and human-in-the-loop design, is proof that I practically command the building blocks of modern AI systems, even though I have no formal programming background. I can talk to developers as equals and, in the next meeting, present a decision paper to management."
+                },
+                {
+                    "label": "How I work",
+                    "text": "My aim is to move many moving parts in one direction, especially where systems, teams and interests collide. I work in a structured, methodical way, whether classic or agile as a product owner, and I think in processes that hold up under review. I use automation where it helps and human control where it's needed. Good tech alone isn't enough for me. What counts in the end is that people and systems work together and that a project ships reliably to production."
+                }
+            ]
+        },
+        "pl": {
+            "title": "O mnie",
+            "meta": "O mnie · doświadczenie · sposób pracy",
+            "sections": [
+                {
+                    "label": "Początek",
+                    "text": "Zaczynałem w branży maszynowej, od nauki zawodu mechatronika w STOPA Anlagenbau, jednym z wiodących w Europie producentów zautomatyzowanych systemów magazynowych i parkingowych. Klasyczny hidden champion ze Schwarzwaldu, który dostarcza złożone instalacje na cały świat, częściowo jako rozwiązania standardowe, częściowo konstruowane indywidualnie. Dołączyłem w czasie, gdy firma sama się zmieniała i przechodziła na lean management, a nasz kierownik szkolenia wcześnie wciągał nas w te tematy zarządcze. Dzięki temu nauczyłem się nie tylko techniki, od automatyzacji po sterowniki PLC, ale też tego, jak działa firma przemysłowa i jak z wymagania klienta powstaje gotowa instalacja. Już podczas nauki, w trzyosobowym zespole, zaprojektowałem i poprowadziłem ambitny projekt, pojazd omnidirekcyjny ze sterowanym pneumatycznie systemem magazynowym. Wtedy stało się dla mnie jasne, że planowanie i kształtowanie pociąga mnie bardziej niż sama produkcja."
+                },
+                {
+                    "label": "Droga",
+                    "text": "Po nauce najpierw pracowałem w utrzymaniu ruchu, między innymi w Mercedes-Benz. Potem przyszedł krok w samodzielność i zarządzanie projektami. Ze współzałożycielami zbudowałem Vestium, startup fashion-tech z własną technologią skanowania 3D, gdzie jako co-founder i COO pracowałem od pomysłu przez prototyp i biznesplan po gotowość inwestycyjną. Równolegle, przez właściciela Adastra Studios, wszedłem w międzynarodowe zarządzanie projektami i opiekowałem się immersyjnymi projektami cyfrowymi i metaverse w Los Angeles, w tym wkładem w The Infinite Playa dla wirtualnego Burning Man oraz immersyjnym doświadczeniem dla fanów UCI Track Champions League dla Warner Bros. Discovery Sports. Potem dwa lata jako Product Owner w SWR, drugiej co do wielkości stacji ARD, z infrastrukturą streamingową dla milionów użytkowników, kierowaniem centralnym projektem transcodingu ARD, silnikiem rekomendacji AI na produkcji i budową fazy testowej AI. Dziś w MAN Truck & Bus odpowiadam za interfejs IT między MAN a Volkswagenem w globalnym programie posprzedażowym MAN TGE."
+                },
+                {
+                    "label": "Co mnie wyróżnia",
+                    "text": "To pochodzenie jest moją różnicą. Rozumiem technologię nie tylko z perspektywy zarządczej, ale od podstaw, i dostarczałem w bardzo różnych światach: w przemysłowym sektorze średnich firm, w amerykańskim entertainment, we własnym startupie, w mediach publicznych i w koncernie motoryzacyjnym. Od małego, freelancerskiego studia po dużą, ustrukturyzowaną organizację koncernową czuję się w obu środowiskach jak u siebie. Do tego dochodzi realna praktyka AI: nie tylko zarządzam projektami AI, sam buduję. Mój prywatny system multiagentowy Atlas, z orkiestracją agentów, pamięcią RAG i projektowaniem human-in-the-loop, jest dowodem, że praktycznie panuję nad elementami nowoczesnych systemów AI, mimo że nie mam formalnego wykształcenia programistycznego. Potrafię rozmawiać z deweloperami jak równy z równym, a na kolejnym spotkaniu przedstawić materiał decyzyjny dla zarządu."
+                },
+                {
+                    "label": "Jak pracuję",
+                    "text": "Moim celem jest ustawić wiele ruchomych elementów w jednym kierunku, zwłaszcza tam, gdzie zderzają się systemy, zespoły i interesy. Pracuję w sposób ustrukturyzowany i metodyczny, klasycznie lub zwinnie jako Product Owner, i myślę procesami, które wytrzymają audyt. Automatyzację stosuję tam, gdzie pomaga, a kontrolę człowieka tam, gdzie jest potrzebna. Sama dobra technologia mi nie wystarcza. Ostatecznie liczy się to, żeby ludzie i systemy działały razem i żeby projekt niezawodnie trafił na produkcję."
+                }
+            ]
+        }
+    },
     uci: {
       de: {
         title: "Immersive Fan-Plattform, UCI Track Champions League",
