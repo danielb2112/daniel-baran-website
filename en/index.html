@@ -32,7 +32,7 @@
   .project-detail-modal h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.8rem,4vw,2.65rem);line-height:1.06;letter-spacing:-.02em;color:var(--ink);margin:0 44px 14px 0;font-weight:600}
   .project-detail-meta{display:inline-flex;width:auto;font-family:'Space Mono',monospace;font-size:.72rem;line-height:1.5;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);border:1px solid color-mix(in srgb,var(--accent) 60%,transparent);border-radius:999px;padding:7px 14px;margin:0 44px 20px 0}
   .project-detail-body{display:flex;flex-direction:column;gap:18px;border-top:1px solid var(--line);padding-top:24px}
-  .case-filter{font-family:'Space Mono',monospace;font-size:.78rem;color:var(--body);background:transparent;border:1px solid var(--line);border-radius:3px;padding:8px 12px;cursor:pointer;transition:background .18s ease,color .18s ease,border-color .18s ease}.case-filter[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}.case-filter:hover{border-color:var(--accent,#3D45E6);color:var(--accent,#3D45E6)}.case-filter[aria-pressed="true"]:hover{color:var(--paper)}.project-detail-body p{font-family:'Hanken Grotesk',sans-serif;font-size:1.04rem;line-height:1.68;margin:0;color:var(--body)}
+  .contact-choice{display:flex;gap:10px;align-items:center;font-family:'Hanken Grotesk',sans-serif;font-size:1rem;line-height:1.5;color:color-mix(in srgb,var(--paper) 78%,transparent);text-transform:none;letter-spacing:0}.contact-choice input{accent-color:var(--accent,#3D45E6);flex:none}.case-filter{font-family:'Space Mono',monospace;font-size:.78rem;color:var(--body);background:transparent;border:1px solid var(--line);border-radius:3px;padding:8px 12px;cursor:pointer;transition:background .18s ease,color .18s ease,border-color .18s ease}.case-filter[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}.case-filter:hover{border-color:var(--accent,#3D45E6);color:var(--accent,#3D45E6)}.case-filter[aria-pressed="true"]:hover{color:var(--paper)}.project-detail-body p{font-family:'Hanken Grotesk',sans-serif;font-size:1.04rem;line-height:1.68;margin:0;color:var(--body)}
   .project-detail-section{display:flex;flex-direction:column;gap:8px;padding-top:4px}
   .project-detail-label{font-family:'Space Mono',monospace;font-size:.72rem;line-height:1.4;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin:8px 0 0}
   .project-tile{position:relative;min-height:260px;background:repeating-linear-gradient(135deg,var(--paper2) 0px,var(--paper2) 11px,var(--pat) 11px,var(--pat) 22px);display:flex;align-items:stretch;justify-content:center;padding:clamp(24px,4vw,44px)}
@@ -797,60 +797,49 @@
     <div ref="{{ spotRef }}" aria-hidden="true" style="position:absolute; inset:0; pointer-events:none; background:radial-gradient(640px circle at 28% 22%, color-mix(in srgb, var(--accent,#3D45E6) 14%, transparent), transparent 62%);"></div>
     <div style="max-width:1360px; margin:0 auto; padding:clamp(64px,10vw,150px) clamp(20px,5vw,48px) clamp(40px,5vw,64px); position:relative; z-index:1;">
       <div style="display:flex; align-items:baseline; gap:16px; border-top:1px solid color-mix(in srgb, var(--paper) 18%, transparent); padding-top:20px; margin-bottom:clamp(32px,5vw,56px);">
-        <span style="font-family:'Space Mono',monospace; font-size:.82rem; color:var(--accent,#3D45E6); letter-spacing:.04em;">(05)</span>
+        <span style="font-family:'Space Mono',monospace; font-size:.82rem; color:var(--accent,#3D45E6); letter-spacing:.04em;">(07)</span>
         <span style="font-family:'Space Mono',monospace; font-size:.82rem; color:color-mix(in srgb, var(--paper) 60%, transparent); letter-spacing:.18em; text-transform:uppercase;">{{ secKontakt }}</span>
       </div>
-
-      <h2 data-reveal="1" style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:clamp(2.2rem,5.2vw,4.4rem); line-height:1.06; letter-spacing:-0.022em; margin:0; max-width:22ch; opacity:0; transform:translateY(26px); transition:opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);">{{ contactLead }} <span style="font-family:'Instrument Serif',serif; font-style:italic; font-weight:400; font-size:1.06em; color:var(--accent,#3D45E6);">{{ contactAccent }}</span></h2>
-
-      <sc-if value="{{ available }}" hint-placeholder-val="{{ true }}">
-        <div style="display:inline-flex; align-items:center; gap:10px; font-family:'Space Mono',monospace; font-size:.85rem; color:color-mix(in srgb, var(--paper) 75%, transparent); margin-top:clamp(24px,3vw,32px); letter-spacing:.01em;">
-          <span style="width:8px; height:8px; border-radius:50%; background:var(--accent,#3D45E6); animation:pulse 2.4s ease-out infinite;"></span>
-          {{ contactStatus }}
-        </div>
-      </sc-if>
-
-      <div data-reveal="1" style="margin-top:clamp(36px,5vw,56px); opacity:0; transform:translateY(26px); transition:opacity .7s cubic-bezier(.16,1,.3,1) .1s, transform .7s cubic-bezier(.16,1,.3,1) .1s;">
-        <a href="{{ emailHref }}" style="font-family:'Space Grotesk',sans-serif; font-weight:500; font-size:clamp(1.6rem,4.4vw,3.2rem); color:var(--paper); text-decoration:none; letter-spacing:-0.02em; border-bottom:2px solid color-mix(in srgb, var(--paper) 25%, transparent); padding-bottom:6px; transition:color .2s ease, border-color .2s ease; word-break:break-word;" style-hover="color:var(--accent,#3D45E6); border-color:var(--accent,#3D45E6)">{{ email }}</a>
+      <div data-reveal="1" style="max-width:760px; opacity:0; transform:translateY(26px); transition:opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);">
+        <h2 style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:clamp(2.2rem,5.2vw,4.4rem); line-height:1.06; letter-spacing:-0.022em; margin:0; max-width:16ch;">{{ contactTitle }}</h2>
+        <p style="font-family:'Hanken Grotesk',sans-serif; font-size:1.08rem; line-height:1.65; color:color-mix(in srgb, var(--paper) 74%, transparent); margin:22px 0 0;">{{ contactIntro }}</p>
       </div>
-
-      <div style="display:flex; flex-wrap:wrap; gap:clamp(28px,5vw,72px); margin-top:clamp(40px,6vw,64px);">
-        <div>
-          <div style="font-family:'Space Mono',monospace; font-size:.72rem; color:color-mix(in srgb, var(--paper) 50%, transparent); letter-spacing:.16em; text-transform:uppercase; margin-bottom:10px;">{{ labelPhone }}</div>
-          <sc-if value="{{ phoneSingle }}" hint-placeholder-val="{{ true }}">
-            <a href="{{ phoneHref }}" style="font-family:'Hanken Grotesk',sans-serif; font-size:1.1rem; color:var(--paper); text-decoration:none; transition:color .2s ease;" style-hover="color:var(--accent,#3D45E6)">{{ phoneText }}</a>
-          </sc-if>
-          <sc-if value="{{ phoneDual }}" hint-placeholder-val="{{ false }}">
-            <div style="display:flex; flex-direction:column; gap:6px;">
-              <a href="{{ phoneDeHref }}" style="font-family:'Hanken Grotesk',sans-serif; font-size:1.1rem; color:var(--paper); text-decoration:none; transition:color .2s ease;" style-hover="color:var(--accent,#3D45E6)">{{ phoneDeText }}</a>
-              <a href="{{ phonePlHref }}" style="font-family:'Hanken Grotesk',sans-serif; font-size:1.1rem; color:var(--paper); text-decoration:none; transition:color .2s ease;" style-hover="color:var(--accent,#3D45E6)">{{ phonePlText }}</a>
-            </div>
-          </sc-if>
+      <form data-contact-form novalidate style="margin-top:clamp(36px,5vw,56px); display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr)); gap:clamp(28px,5vw,64px); align-items:start;">
+        <div data-reveal="1" style="display:grid; gap:18px; opacity:0; transform:translateY(26px); transition:opacity .7s cubic-bezier(.16,1,.3,1) .08s, transform .7s cubic-bezier(.16,1,.3,1) .08s;">
+          <label style="display:grid; gap:8px; font-family:'Space Mono',monospace; font-size:.78rem; color:color-mix(in srgb, var(--paper) 70%, transparent); letter-spacing:.08em; text-transform:uppercase;">{{ formWhoLabel }}<input name="who" required maxlength="100" placeholder="{{ formWhoPlaceholder }}" style="width:100%; border:1px solid color-mix(in srgb, var(--paper) 22%, transparent); background:color-mix(in srgb, var(--paper) 8%, transparent); color:var(--paper); border-radius:4px; padding:14px 16px; font-family:'Hanken Grotesk',sans-serif; font-size:1rem;"></label>
+          <fieldset data-required-group="topic" style="border:1px solid color-mix(in srgb, var(--paper) 22%, transparent); border-radius:4px; padding:16px; margin:0; display:grid; gap:10px;"><legend style="font-family:'Space Mono',monospace; font-size:.78rem; color:color-mix(in srgb, var(--paper) 70%, transparent); letter-spacing:.08em; text-transform:uppercase; padding:0 6px;">{{ formTopicLabel }}</legend>
+            <label class="contact-choice"><input type="checkbox" name="topic" value="po"> <span>{{ topic1 }}</span></label>
+            <label class="contact-choice"><input type="checkbox" name="topic" value="sprint"> <span>{{ topic2 }}</span></label>
+            <label class="contact-choice"><input type="checkbox" name="topic" value="ai"> <span>{{ topic3 }}</span></label>
+            <label class="contact-choice"><input type="checkbox" name="topic" value="other"> <span>{{ topic4 }}</span></label>
+          </fieldset>
+          <fieldset style="border:1px solid color-mix(in srgb, var(--paper) 22%, transparent); border-radius:4px; padding:16px; margin:0; display:grid; gap:10px;"><legend style="font-family:'Space Mono',monospace; font-size:.78rem; color:color-mix(in srgb, var(--paper) 70%, transparent); letter-spacing:.08em; text-transform:uppercase; padding:0 6px;">{{ formBudgetLabel }}</legend>
+            <label class="contact-choice"><input type="radio" name="budget" value="under-10" required> <span>{{ budget1 }}</span></label>
+            <label class="contact-choice"><input type="radio" name="budget" value="10-25"> <span>{{ budget2 }}</span></label>
+            <label class="contact-choice"><input type="radio" name="budget" value="25-60"> <span>{{ budget3 }}</span></label>
+            <label class="contact-choice"><input type="radio" name="budget" value="over-60"> <span>{{ budget4 }}</span></label>
+            <label class="contact-choice"><input type="radio" name="budget" value="unclear"> <span>{{ budget5 }}</span></label>
+          </fieldset>
+          <label style="display:grid; gap:8px; font-family:'Space Mono',monospace; font-size:.78rem; color:color-mix(in srgb, var(--paper) 70%, transparent); letter-spacing:.08em; text-transform:uppercase;">{{ formContextLabel }}<textarea name="context" required maxlength="300" rows="6" placeholder="{{ formContextHint }}" style="width:100%; resize:vertical; border:1px solid color-mix(in srgb, var(--paper) 22%, transparent); background:color-mix(in srgb, var(--paper) 8%, transparent); color:var(--paper); border-radius:4px; padding:14px 16px; font-family:'Hanken Grotesk',sans-serif; font-size:1rem; line-height:1.5;"></textarea></label>
+          <label style="display:grid; gap:8px; font-family:'Space Mono',monospace; font-size:.78rem; color:color-mix(in srgb, var(--paper) 70%, transparent); letter-spacing:.08em; text-transform:uppercase;">{{ formEmailLabel }}<input type="email" name="email" required placeholder="name@example.com" style="width:100%; border:1px solid color-mix(in srgb, var(--paper) 22%, transparent); background:color-mix(in srgb, var(--paper) 8%, transparent); color:var(--paper); border-radius:4px; padding:14px 16px; font-family:'Hanken Grotesk',sans-serif; font-size:1rem;"></label>
+          <label class="contact-choice" style="align-items:flex-start;"><input type="checkbox" name="privacy" required> <span>{{ formConsentPrefix }} <a href="/datenschutz" style="color:var(--accent,#3D45E6);">{{ formConsentLink }}</a>.</span></label>
+          <p data-contact-error style="display:none; font-family:'Space Mono',monospace; font-size:.78rem; color:var(--accent,#3D45E6); margin:0;">{{ formError }}</p>
+          <p data-contact-success style="display:none; font-family:'Space Mono',monospace; font-size:.78rem; color:color-mix(in srgb, var(--paper) 72%, transparent); margin:0;">{{ formSuccess }}</p>
+          <button type="submit" style="justify-self:start; display:inline-flex; align-items:center; gap:10px; background:var(--accent,#3D45E6); color:var(--paper); border:0; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:1rem; padding:15px 24px; border-radius:3px; cursor:pointer;">{{ formSubmit }} <span style="font-family:'Space Mono',monospace;">→</span></button>
         </div>
-        <div>
-          <div style="font-family:'Space Mono',monospace; font-size:.72rem; color:color-mix(in srgb, var(--paper) 50%, transparent); letter-spacing:.16em; text-transform:uppercase; margin-bottom:10px;">LinkedIn</div>
-          <a href="{{ linkedinUrl }}" target="_blank" rel="noopener" style="font-family:'Hanken Grotesk',sans-serif; font-size:1.1rem; color:var(--paper); text-decoration:none; transition:color .2s ease;" style-hover="color:var(--accent,#3D45E6)">{{ linkedinText }}</a>
-        </div>
-        <div>
-          <div style="font-family:'Space Mono',monospace; font-size:.72rem; color:color-mix(in srgb, var(--paper) 50%, transparent); letter-spacing:.16em; text-transform:uppercase; margin-bottom:10px;">{{ labelLoc }}</div>
-          <div style="font-family:'Hanken Grotesk',sans-serif; font-size:1.1rem; color:var(--paper);">{{ locValue }}</div>
-        </div>
-        <div>
-          <div style="font-family:'Space Mono',monospace; font-size:.72rem; color:color-mix(in srgb, var(--paper) 50%, transparent); letter-spacing:.16em; text-transform:uppercase; margin-bottom:10px;">{{ labelLangs }}</div>
-          <div style="font-family:'Hanken Grotesk',sans-serif; font-size:1.1rem; color:var(--paper);">{{ langsFull }}</div>
-        </div>
-      </div>
-
+        <aside data-reveal="1" style="border:1px solid color-mix(in srgb, var(--paper) 18%, transparent); border-radius:6px; padding:clamp(22px,3vw,30px); background:color-mix(in srgb, var(--paper) 6%, transparent); opacity:0; transform:translateY(26px); transition:opacity .7s cubic-bezier(.16,1,.3,1) .16s, transform .7s cubic-bezier(.16,1,.3,1) .16s;">
+          <h3 style="font-family:'Space Mono',monospace; font-size:.82rem; color:color-mix(in srgb, var(--paper) 60%, transparent); letter-spacing:.16em; text-transform:uppercase; margin:0 0 18px;">{{ contactDirectTitle }}</h3>
+          <div style="display:grid; gap:12px;">
+            <!-- Cal.com-Link folgt -->
+            <a href="#" aria-disabled="true" style="font-family:'Space Grotesk',sans-serif; font-weight:600; color:color-mix(in srgb, var(--paper) 45%, transparent); text-decoration:none; border:1px solid color-mix(in srgb, var(--paper) 18%, transparent); padding:12px 14px; border-radius:3px; pointer-events:none;">{{ directBook }} →</a>
+            <a href="{{ linkedinUrl }}" target="_blank" rel="noopener" style="font-family:'Space Grotesk',sans-serif; font-weight:600; color:var(--paper); text-decoration:none; border:1px solid color-mix(in srgb, var(--paper) 22%, transparent); padding:12px 14px; border-radius:3px;">LinkedIn →</a>
+            <a href="{{ emailHref }}" style="font-family:'Space Grotesk',sans-serif; font-weight:600; color:var(--paper); text-decoration:none; border:1px solid color-mix(in srgb, var(--paper) 22%, transparent); padding:12px 14px; border-radius:3px;">{{ email }}</a>
+          </div>
+        </aside>
+      </form>
       <div style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:baseline; gap:16px 32px; margin-top:clamp(56px,8vw,96px); padding-top:24px; border-top:1px solid color-mix(in srgb, var(--paper) 18%, transparent);">
-        <div style="display:flex; align-items:baseline; gap:12px; flex-wrap:wrap;">
-          <span style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:1.05rem; color:var(--paper);">Daniel Baran</span>
-          <span style="font-family:'Space Mono',monospace; font-size:.7rem; color:color-mix(in srgb, var(--paper) 50%, transparent); letter-spacing:.14em; text-transform:uppercase;">{{ footerRole }}</span>
-        </div>
-        <div style="display:flex; align-items:baseline; gap:22px; flex-wrap:wrap;">
-          <a href="/en/imprint" style="font-family:'Space Mono',monospace; font-size:.72rem; color:color-mix(in srgb, var(--paper) 60%, transparent); letter-spacing:.1em; text-decoration:none; transition:color .2s ease;" style-hover="color:var(--accent,#3D45E6)">{{ footImpressum }}</a>
-          <a href="/en/privacy" style="font-family:'Space Mono',monospace; font-size:.72rem; color:color-mix(in srgb, var(--paper) 60%, transparent); letter-spacing:.1em; text-decoration:none; transition:color .2s ease;" style-hover="color:var(--accent,#3D45E6)">{{ footDatenschutz }}</a>
-          <span style="font-family:'Space Mono',monospace; font-size:.72rem; color:color-mix(in srgb, var(--paper) 50%, transparent); letter-spacing:.1em;">© {{ year }}</span>
-        </div>
+        <div style="display:flex; align-items:baseline; gap:12px; flex-wrap:wrap;"><span style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:1.05rem; color:var(--paper);">Daniel Baran</span><span style="font-family:'Space Mono',monospace; font-size:.7rem; color:color-mix(in srgb, var(--paper) 50%, transparent); letter-spacing:.14em; text-transform:uppercase;">{{ footerRole }}</span></div>
+        <div style="display:flex; align-items:baseline; gap:22px; flex-wrap:wrap;"><a href="/impressum" style="font-family:'Space Mono',monospace; font-size:.72rem; color:color-mix(in srgb, var(--paper) 60%, transparent); letter-spacing:.1em; text-decoration:none; transition:color .2s ease;" style-hover="color:var(--accent,#3D45E6)">{{ footImpressum }}</a><a href="/datenschutz" style="font-family:'Space Mono',monospace; font-size:.72rem; color:color-mix(in srgb, var(--paper) 60%, transparent); letter-spacing:.1em; text-decoration:none; transition:color .2s ease;" style-hover="color:var(--accent,#3D45E6)">{{ footDatenschutz }}</a><span style="font-family:'Space Mono',monospace; font-size:.72rem; color:color-mix(in srgb, var(--paper) 50%, transparent); letter-spacing:.1em;">© {{ year }}</span></div>
       </div>
     </div>
   </section>
@@ -1351,6 +1340,31 @@ class Component extends DCLogic {
       labelPhone: "Telefon", labelLoc: "Standort", locValue: "Polen · Remote in Europa (DACH-Fokus)",
       labelLangs: "Sprachen",
       linkedinText: "Profil öffnen ↗",
+      contactTitle: "Passt es? Dann lass uns reden.",
+      contactIntro: "Kein Formular-Marathon. Vier Felder, ich melde mich innerhalb von zwei Werktagen zurück.",
+      formWhoLabel: "Wer bist du?",
+      formWhoPlaceholder: "Name, Firma, Rolle",
+      formTopicLabel: "Worum geht es?",
+      topic1: "Interims-Product-Ownership",
+      topic2: "Projekt-Sprint mit klarem Umfang",
+      topic3: "KI-Enablement für unser Team",
+      topic4: "Etwas anderes, erzähle ich im Gespräch",
+      formBudgetLabel: "Budget-Rahmen",
+      budget1: "unter 10.000 €",
+      budget2: "10.000 € bis 25.000 €",
+      budget3: "25.000 € bis 60.000 €",
+      budget4: "über 60.000 €",
+      budget5: "noch nicht klar",
+      formContextLabel: "Was ist der Kontext?",
+      formContextHint: "Kurze Situations-Beschreibung. Was ist die Situation, welcher Termin-Horizont, was habt ihr schon versucht.",
+      formEmailLabel: "E-Mail",
+      formConsentPrefix: "Ich willige ein, dass Daniel Baran meine Angaben zur Bearbeitung meiner Anfrage verarbeitet.",
+      formConsentLink: "Datenschutzerklärung",
+      formSubmit: "Anfrage senden",
+      formError: "Bitte fülle alle Pflichtfelder aus und wähle mindestens ein Thema.",
+      formSuccess: "Danke. Das Formular ist vorbereitet, sendet aber aktuell noch keine Daten.",
+      contactDirectTitle: "Weitere Optionen",
+      directBook: "Direkt buchen",
       footerRole: "Freelance IT- & Product-Delivery",
       footImpressum: "Impressum", footDatenschutz: "Datenschutz"
     },
@@ -1534,6 +1548,31 @@ class Component extends DCLogic {
       labelPhone: "Telefon", labelLoc: "Lokalizacja", locValue: "Polska · Zdalnie w Europie (fokus DACH)",
       labelLangs: "Języki",
       linkedinText: "Otwórz profil ↗",
+      contactTitle: "Pasuje? To porozmawiajmy.",
+      contactIntro: "Bez maratonu formularzy. Cztery pola, odpowiadam w ciągu dwóch dni roboczych.",
+      formWhoLabel: "Kim jesteś?",
+      formWhoPlaceholder: "Imię, firma, rola",
+      formTopicLabel: "O co chodzi?",
+      topic1: "Interim Product Ownership",
+      topic2: "Sprint projektowy z jasnym zakresem",
+      topic3: "AI enablement dla naszego zespołu",
+      topic4: "Coś innego, opowiem w rozmowie",
+      formBudgetLabel: "Ramy budżetu",
+      budget1: "poniżej 10 000 €",
+      budget2: "10 000 € do 25 000 €",
+      budget3: "25 000 € do 60 000 €",
+      budget4: "powyżej 60 000 €",
+      budget5: "jeszcze nie wiadomo",
+      formContextLabel: "Jaki jest kontekst?",
+      formContextHint: "Krótki opis sytuacji. Jaka jest sytuacja, jaki horyzont terminu, czego już próbowaliście.",
+      formEmailLabel: "E-mail",
+      formConsentPrefix: "Wyrażam zgodę na przetwarzanie moich danych przez Daniela Barana w celu obsługi zapytania.",
+      formConsentLink: "polityką prywatności",
+      formSubmit: "Wyślij zapytanie",
+      formError: "Wypełnij wszystkie wymagane pola i wybierz co najmniej jeden temat.",
+      formSuccess: "Dziękuję. Formularz jest przygotowany, ale obecnie nie wysyła jeszcze danych.",
+      contactDirectTitle: "Inne opcje",
+      directBook: "Umów bezpośrednio",
       footerRole: "Freelance IT & product delivery",
       footImpressum: "Nota prawna", footDatenschutz: "Polityka prywatności"
     },
@@ -1717,6 +1756,31 @@ class Component extends DCLogic {
       labelPhone: "Phone", labelLoc: "Location", locValue: "Poland · Remote across Europe (DACH focus)",
       labelLangs: "Languages",
       linkedinText: "Open profile ↗",
+      contactTitle: "Sounds right? Let's talk.",
+      contactIntro: "No form marathon. Four fields, and I will get back to you within two working days.",
+      formWhoLabel: "Who are you?",
+      formWhoPlaceholder: "Name, company, role",
+      formTopicLabel: "What is it about?",
+      topic1: "Interim product ownership",
+      topic2: "Project sprint with clear scope",
+      topic3: "AI enablement for our team",
+      topic4: "Something else, I will explain in the call",
+      formBudgetLabel: "Budget range",
+      budget1: "under €10,000",
+      budget2: "€10,000 to €25,000",
+      budget3: "€25,000 to €60,000",
+      budget4: "over €60,000",
+      budget5: "not clear yet",
+      formContextLabel: "What is the context?",
+      formContextHint: "Short situation description. What is the situation, what is the timeline, what have you already tried.",
+      formEmailLabel: "Email",
+      formConsentPrefix: "I consent to Daniel Baran processing my information to handle my inquiry.",
+      formConsentLink: "privacy policy",
+      formSubmit: "Send inquiry",
+      formError: "Please fill in all required fields and select at least one topic.",
+      formSuccess: "Thank you. The form is prepared, but currently does not send data yet.",
+      contactDirectTitle: "Other options",
+      directBook: "Book directly",
       footerRole: "Freelance IT & product delivery",
       footImpressum: "Legal notice", footDatenschutz: "Privacy"
     }
@@ -1829,6 +1893,28 @@ class Component extends DCLogic {
       const tags = (card.getAttribute("data-case-tags") || "").split(/\s+/);
       card.hidden = filter !== "all" && !tags.includes(filter);
     });
+  });
+})();
+</script>
+
+<script>
+(() => {
+  document.addEventListener("submit", (event) => {
+    const form = event.target.closest("[data-contact-form]");
+    if (!form) return;
+    event.preventDefault();
+    const topicChecked = Boolean(form.querySelector('input[name="topic"]:checked'));
+    const error = form.querySelector("[data-contact-error]");
+    const success = form.querySelector("[data-contact-success]");
+    if (!form.checkValidity() || !topicChecked) {
+      if (success) success.style.display = "none";
+      if (error) error.style.display = "block";
+      form.reportValidity();
+      return;
+    }
+    // TODO: später an Cal.com-Webhook oder E-Mail-Versand-Service anbinden.
+    if (error) error.style.display = "none";
+    if (success) success.style.display = "block";
   });
 })();
 </script>
