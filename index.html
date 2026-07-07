@@ -573,23 +573,55 @@
       <span style="font-family:'Space Mono',monospace; font-size:.82rem; color:var(--accent,#3D45E6); letter-spacing:.04em;">(01)</span>
       <span style="font-family:'Space Mono',monospace; font-size:.82rem; color:var(--muted); letter-spacing:.18em; text-transform:uppercase;">{{ secProfil }}</span>
     </div>
-    <div style="display:flex; flex-wrap:wrap; gap:clamp(28px,5vw,72px);">
-      <div data-reveal="1" style="flex:0 1 240px; min-width:0; opacity:0; transform:translateY(26px); transition:opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);">
-        <ul style="list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:12px;">
-          <li style="font-family:'Space Mono',monospace; font-size:.86rem; color:var(--body); padding-bottom:12px; border-bottom:1px solid var(--line); display:flex; justify-content:space-between; gap:10px;">{{ p1 }} <span style="color:var(--accent,#3D45E6);">01</span></li>
-          <li style="font-family:'Space Mono',monospace; font-size:.86rem; color:var(--body); padding-bottom:12px; border-bottom:1px solid var(--line); display:flex; justify-content:space-between; gap:10px;">{{ p2 }} <span style="color:var(--accent,#3D45E6);">02</span></li>
-          <li style="font-family:'Space Mono',monospace; font-size:.86rem; color:var(--body); padding-bottom:12px; border-bottom:1px solid var(--line); display:flex; justify-content:space-between; gap:10px;">{{ p3 }} <span style="color:var(--accent,#3D45E6);">03</span></li>
-          <li style="font-family:'Space Mono',monospace; font-size:.86rem; color:var(--body); display:flex; justify-content:space-between; gap:10px;">{{ p4 }} <span style="color:var(--accent,#3D45E6);">04</span></li>
-        </ul>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr)); gap:clamp(32px,6vw,88px); align-items:start;">
+      <div data-reveal="1" style="min-width:0; opacity:0; transform:translateY(26px); transition:opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);">
+        <h2 style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:clamp(2rem,4.2vw,3.4rem); line-height:1.04; letter-spacing:-0.02em; color:var(--ink); margin:0 0 22px; max-width:12ch;">{{ profileTitle }}</h2>
+        <p style="font-family:'Hanken Grotesk',sans-serif; font-size:clamp(1.02rem,1.3vw,1.15rem); line-height:1.65; color:var(--body); margin:0; max-width:48ch;">{{ profileIntro }}</p>
+        <button type="button" class="project-detail-trigger" data-project-detail="about" style="margin-top:24px;">{{ aboutMore }}</button>
       </div>
-      <div style="flex:1 1 520px; min-width:0;">
-        <p data-reveal="1" style="font-family:'Space Grotesk',sans-serif; font-weight:500; font-size:clamp(1.45rem,2.7vw,2.2rem); line-height:1.26; letter-spacing:-0.012em; color:var(--ink); margin:0; opacity:0; transform:translateY(26px); transition:opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);">{{ profilLead }}</p>
-        <p data-reveal="1" style="font-family:'Hanken Grotesk',sans-serif; font-size:clamp(1.02rem,1.3vw,1.15rem); line-height:1.65; color:var(--body); max-width:62ch; margin:clamp(24px,3vw,32px) 0 0; opacity:0; transform:translateY(26px); transition:opacity .7s cubic-bezier(.16,1,.3,1) .1s, transform .7s cubic-bezier(.16,1,.3,1) .1s;">{{ profilBody }}</p>
-        <div data-reveal="1" style="display:flex; align-items:baseline; gap:16px; margin-top:clamp(26px,3.5vw,36px); opacity:0; transform:translateY(26px); transition:opacity .7s cubic-bezier(.16,1,.3,1) .18s, transform .7s cubic-bezier(.16,1,.3,1) .18s;">
-          <span style="width:30px; height:3px; background:var(--accent,#3D45E6); flex:none; transform:translateY(-6px);"></span>
-          <p style="font-family:'Instrument Serif',serif; font-style:italic; font-weight:400; font-size:clamp(1.35rem,2.2vw,1.9rem); line-height:1.4; color:var(--ink); margin:0;">{{ profilPrinciple }}</p>
+      <div style="min-width:0;">
+        <div data-reveal="1" style="opacity:0; transform:translateY(26px); transition:opacity .7s cubic-bezier(.16,1,.3,1) .08s, transform .7s cubic-bezier(.16,1,.3,1) .08s;">
+          <div style="display:flex; align-items:center; gap:14px; margin-bottom:18px;">
+            <span style="width:28px; height:3px; background:var(--accent,#3D45E6); flex:none;"></span>
+            <h3 style="font-family:'Space Mono',monospace; font-size:.82rem; line-height:1.3; color:var(--muted); letter-spacing:.18em; text-transform:uppercase; margin:0;">{{ profileSkillsTitle }}</h3>
+          </div>
+          <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:1px; background:var(--line); border:1px solid var(--line); border-radius:6px; overflow:hidden;">
+            <article style="background:var(--paper); padding:clamp(22px,2.6vw,30px);">
+              <span style="font-family:'Space Mono',monospace; font-size:.76rem; color:var(--accent,#3D45E6);">01</span>
+              <h4 style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:1.22rem; line-height:1.2; color:var(--ink); margin:12px 0 10px;">{{ profileSkill1Title }}</h4>
+              <p style="font-family:'Hanken Grotesk',sans-serif; font-size:.98rem; line-height:1.62; color:var(--body); margin:0;">{{ profileSkill1Text }}</p>
+            </article>
+            <article style="background:var(--paper); padding:clamp(22px,2.6vw,30px);">
+              <span style="font-family:'Space Mono',monospace; font-size:.76rem; color:var(--accent,#3D45E6);">02</span>
+              <h4 style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:1.22rem; line-height:1.2; color:var(--ink); margin:12px 0 10px;">{{ profileSkill2Title }}</h4>
+              <p style="font-family:'Hanken Grotesk',sans-serif; font-size:.98rem; line-height:1.62; color:var(--body); margin:0;">{{ profileSkill2Text }}</p>
+            </article>
+            <article style="background:var(--paper); padding:clamp(22px,2.6vw,30px);">
+              <span style="font-family:'Space Mono',monospace; font-size:.76rem; color:var(--accent,#3D45E6);">03</span>
+              <h4 style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:1.22rem; line-height:1.2; color:var(--ink); margin:12px 0 10px;">{{ profileSkill3Title }}</h4>
+              <p style="font-family:'Hanken Grotesk',sans-serif; font-size:.98rem; line-height:1.62; color:var(--body); margin:0;">{{ profileSkill3Text }}</p>
+            </article>
+            <article style="background:var(--paper); padding:clamp(22px,2.6vw,30px);">
+              <span style="font-family:'Space Mono',monospace; font-size:.76rem; color:var(--accent,#3D45E6);">04</span>
+              <h4 style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:1.22rem; line-height:1.2; color:var(--ink); margin:12px 0 10px;">{{ profileSkill4Title }}</h4>
+              <p style="font-family:'Hanken Grotesk',sans-serif; font-size:.98rem; line-height:1.62; color:var(--body); margin:0;">{{ profileSkill4Text }}</p>
+            </article>
+          </div>
         </div>
-        <button type="button" class="project-detail-trigger" data-project-detail="about" style="margin-top:22px;">{{ aboutMore }}</button>
+        <div data-reveal="1" style="margin-top:clamp(30px,4vw,46px); opacity:0; transform:translateY(26px); transition:opacity .7s cubic-bezier(.16,1,.3,1) .16s, transform .7s cubic-bezier(.16,1,.3,1) .16s;">
+          <div style="display:flex; align-items:center; gap:14px; margin-bottom:18px;">
+            <span style="width:28px; height:3px; background:var(--accent,#3D45E6); flex:none;"></span>
+            <h3 style="font-family:'Space Mono',monospace; font-size:.82rem; line-height:1.3; color:var(--muted); letter-spacing:.18em; text-transform:uppercase; margin:0;">{{ profileTimelineTitle }}</h3>
+          </div>
+          <ol style="list-style:none; margin:0; padding:0; border-top:1px solid var(--line);">
+            <li style="display:grid; grid-template-columns:minmax(150px,.42fr) minmax(0,1fr); gap:18px; padding:16px 0; border-bottom:1px solid var(--line);"><span style="font-family:'Space Mono',monospace; font-size:.8rem; color:var(--accent,#3D45E6);">{{ profileTl1Date }}</span><p style="font-family:'Hanken Grotesk',sans-serif; font-size:1rem; line-height:1.55; color:var(--body); margin:0;"><strong style="font-family:'Space Grotesk',sans-serif; color:var(--ink);">{{ profileTl1Role }}</strong><br>{{ profileTl1Text }}</p></li>
+            <li style="display:grid; grid-template-columns:minmax(150px,.42fr) minmax(0,1fr); gap:18px; padding:16px 0; border-bottom:1px solid var(--line);"><span style="font-family:'Space Mono',monospace; font-size:.8rem; color:var(--accent,#3D45E6);">{{ profileTl2Date }}</span><p style="font-family:'Hanken Grotesk',sans-serif; font-size:1rem; line-height:1.55; color:var(--body); margin:0;"><strong style="font-family:'Space Grotesk',sans-serif; color:var(--ink);">{{ profileTl2Role }}</strong><br>{{ profileTl2Text }}</p></li>
+            <li style="display:grid; grid-template-columns:minmax(150px,.42fr) minmax(0,1fr); gap:18px; padding:16px 0; border-bottom:1px solid var(--line);"><span style="font-family:'Space Mono',monospace; font-size:.8rem; color:var(--accent,#3D45E6);">{{ profileTl3Date }}</span><p style="font-family:'Hanken Grotesk',sans-serif; font-size:1rem; line-height:1.55; color:var(--body); margin:0;"><strong style="font-family:'Space Grotesk',sans-serif; color:var(--ink);">{{ profileTl3Role }}</strong><br>{{ profileTl3Text }}</p></li>
+            <li style="display:grid; grid-template-columns:minmax(150px,.42fr) minmax(0,1fr); gap:18px; padding:16px 0; border-bottom:1px solid var(--line);"><span style="font-family:'Space Mono',monospace; font-size:.8rem; color:var(--accent,#3D45E6);">{{ profileTl4Date }}</span><p style="font-family:'Hanken Grotesk',sans-serif; font-size:1rem; line-height:1.55; color:var(--body); margin:0;"><strong style="font-family:'Space Grotesk',sans-serif; color:var(--ink);">{{ profileTl4Role }}</strong><br>{{ profileTl4Text }}</p></li>
+            <li style="display:grid; grid-template-columns:minmax(150px,.42fr) minmax(0,1fr); gap:18px; padding:16px 0; border-bottom:1px solid var(--line);"><span style="font-family:'Space Mono',monospace; font-size:.8rem; color:var(--accent,#3D45E6);">{{ profileTl5Date }}</span><p style="font-family:'Hanken Grotesk',sans-serif; font-size:1rem; line-height:1.55; color:var(--body); margin:0;"><strong style="font-family:'Space Grotesk',sans-serif; color:var(--ink);">{{ profileTl5Role }}</strong><br>{{ profileTl5Text }}</p></li>
+            <li style="display:grid; grid-template-columns:minmax(150px,.42fr) minmax(0,1fr); gap:18px; padding:16px 0; border-bottom:1px solid var(--line);"><span style="font-family:'Space Mono',monospace; font-size:.8rem; color:var(--accent,#3D45E6);">{{ profileTl6Date }}</span><p style="font-family:'Hanken Grotesk',sans-serif; font-size:1rem; line-height:1.55; color:var(--body); margin:0;"><strong style="font-family:'Space Grotesk',sans-serif; color:var(--ink);">{{ profileTl6Role }}</strong><br>{{ profileTl6Text }}</p></li>
+          </ol>
+        </div>
       </div>
     </div>
   </section>
@@ -1351,6 +1383,36 @@ class Component extends DCLogic {
       profilBody: "Mein Weg begann nicht am Schreibtisch, sondern in der Werkstatt. Als gelernter Mechatroniker im Maschinenbau habe ich verstanden, wie Automatisierung, Anlagen und industrielle Prozesse wirklich funktionieren. Von dort ging es ins Projektmanagement und in sehr unterschiedliche Welten: immersive Digitalprojekte in Los Angeles, unter anderem für Warner Bros. Discovery Sports, ein eigenes Fashion-Tech-Startup als Co-Founder, zwei Jahre Product Owner beim SWR mit Streaming-Infrastruktur und KI in Produktion, und heute die IT-Schnittstelle zwischen MAN und Volkswagen im After Sales. Was sich durchzieht, ist die Fähigkeit, viele bewegliche Teile in eine Richtung zu bringen, gerade dort, wo Systeme, Teams und Interessen aufeinandertreffen.",
       profilPrinciple: "Gute Technik allein reicht nicht. Ich sorge dafür, dass Menschen und Systeme gemeinsam funktionieren.",
       aboutMore: "Mehr über mich ↗",
+      profileTitle: "Wer arbeitet hier mit euch?",
+      profileIntro: "Ich bin Daniel Baran, seit über fünf Jahren in IT-Projekten unterwegs, zuerst als Co-Founder eines Mode-Tech-Ventures, dann als Product Owner beim SWR, aktuell als Senior IT Project Manager im Automotive-After-Sales. Was meine Kunden zurückholt, ist selten die Methodik allein. Es ist die Fähigkeit, zwischen Entwicklung, Fachabteilung, Redaktion und Geschäftsführung zu übersetzen, ohne dass unterwegs die Substanz verloren geht.",
+      profileSkillsTitle: "Was ich mitbringe",
+      profileSkill1Title: "Cross-funktionale Übersetzung",
+      profileSkill1Text: "Ich sitze zwischen Entwickler-Teams und Fachabteilungen und mache aus \"das geht technisch nicht\" und \"das braucht die Fachseite aber\" ein realistisches Backlog. Meine Medien- und Konzern-Erfahrung hat mir beigebracht, wie man das ohne Kollateralschäden hinbekommt.",
+      profileSkill2Title: "Komplexe Multi-Stakeholder-Umgebungen",
+      profileSkill2Text: "Ob ARD-Verbund mit mehreren Anstalten, internationales Metaverse-Projekt mit verteilten Teams, oder Konzern-Integration im Nutzfahrzeug-Umfeld, ich habe gelernt, wie man Anforderungen konsolidiert, Governance sauber aufsetzt und trotzdem liefert. Diese Erfahrung ist selten und in vielen Kontexten direkt anwendbar.",
+      profileSkill3Title: "KI-Enablement, nicht KI-Hype",
+      profileSkill3Text: "Ich habe eine KI-Testphase im öffentlich-rechtlichen Rundfunk mitgestaltet und eine Empfehlungsengine für ein Redaktions-Portal konzipiert, fine-getunt und produktiv ausgerollt. Was ich nicht mache: PoC-Karussells ohne Roll-out-Plan.",
+      profileSkill4Title: "Startup-Härte trifft Konzern-Governance",
+      profileSkill4Text: "Vom Vestium-Gründerteam über internationale Streaming-Projekte zu SWR und einem Nutzfahrzeug-Konzern, ich kenne beide Enden des Spektrums und die Übersetzung dazwischen ist das, wofür Kunden mich buchen.",
+      profileTimelineTitle: "Karriere kompakt",
+      profileTl1Date: "2025 – heute",
+      profileTl1Role: "Senior IT Project Manager",
+      profileTl1Text: "Europäischer Nutzfahrzeughersteller · After-Sales-Integration im Konzernverbund",
+      profileTl2Date: "2023 – 2025",
+      profileTl2Role: "Product Owner / Project Lead",
+      profileTl2Text: "SWR/ARD, Baden-Baden und Stuttgart · Vier Projekte in der Produktentwicklung (siehe Cases)",
+      profileTl3Date: "2022",
+      profileTl3Role: "Project Manager",
+      profileTl3Text: "Adastra Studios als Sub-Partner von Infinite Reality · Warner Bros. Discovery / UCI Track Champions League Browser-Preview",
+      profileTl4Date: "2021",
+      profileTl4Role: "Project Lead (aus Support-Rolle gewachsen)",
+      profileTl4Text: "Adastra Studios · Infinite Playa Metaverse-Plattform",
+      profileTl5Date: "2021 – 2022",
+      profileTl5Role: "Co-Founder & COO",
+      profileTl5Text: "Vestium Inc. · Mode-Tech-Venture mit 3D-Body-Scanning-Prototyp",
+      profileTl6Date: "vor 2021",
+      profileTl6Role: "Technische Basis",
+      profileTl6Text: "Mechatroniker-Ausbildung bei einem Anlagenbauer für Blechlager-Systeme · Anschließend Instandhaltung bei einem deutschen Automobilhersteller",
       leistungenTitle: "Wobei ich Teams am meisten helfe.",
       s1t: "Technisches Projekt- & Programm-Management",
       s1d: "Projekte, die an Schnittstellen scheitern, sind mein Spezialgebiet. Ich steuere cross-funktionale IT-Vorhaben vom ersten Requirements-Workshop bis zum Rollout — audit-sicher, termingetreu, mit klarer Eskalationsstruktur.",
@@ -1434,6 +1496,36 @@ class Component extends DCLogic {
       profilBody: "Moja droga nie zaczęła się przy biurku, tylko na hali produkcyjnej. Jako wykształcony mechatronik w branży maszynowej zrozumiałem, jak naprawdę działają automatyzacja, maszyny i procesy przemysłowe. Stamtąd przeszedłem do zarządzania projektami i do bardzo różnych światów: immersyjne projekty cyfrowe w Los Angeles, między innymi dla Warner Bros. Discovery Sports, własny startup fashion-tech jako co-founder, dwa lata jako Product Owner w SWR z infrastrukturą streamingową i AI na produkcji, a dziś interfejs IT między MAN a Volkswagenem w After Sales. Przez wszystko przewija się umiejętność ustawiania wielu ruchomych elementów w jednym kierunku, zwłaszcza tam, gdzie zderzają się systemy, zespoły i interesy.",
       profilPrinciple: "Sama dobra technologia nie wystarczy. Dbam o to, żeby ludzie i systemy działały razem.",
       aboutMore: "Więcej o mnie ↗",
+      profileTitle: "Kto z wami pracuje?",
+      profileIntro: "Jestem Daniel Baran, od ponad pięciu lat pracuję przy projektach IT, najpierw jako co-founder venture fashion-tech, potem jako Product Owner w SWR, obecnie jako Senior IT Project Manager w after-sales motoryzacyjnym. To, co sprowadza do mnie klientów, rzadko jest samą metodyką. To umiejętność tłumaczenia między developmentem, działem merytorycznym, redakcją a zarządem, bez utraty istoty po drodze.",
+      profileSkillsTitle: "Co wnoszę",
+      profileSkill1Title: "Tłumaczenie między działami",
+      profileSkill1Text: "Siedzę między zespołami developerskimi a działami merytorycznymi i zamieniam \"technicznie się nie da\" oraz \"biznes tego potrzebuje\" w realistyczny backlog. Doświadczenie w mediach i korporacjach nauczyło mnie robić to bez szkód ubocznych.",
+      profileSkill2Title: "Złożone środowiska multi-stakeholder",
+      profileSkill2Text: "ARD z kilkoma stacjami, międzynarodowy projekt metaverse z rozproszonymi zespołami czy integracja koncernowa w obszarze pojazdów użytkowych: nauczyłem się konsolidować wymagania, porządnie ustawiać governance i mimo to dowozić. To rzadkie doświadczenie i w wielu kontekstach bezpośrednio użyteczne.",
+      profileSkill3Title: "AI enablement, nie hype wokół AI",
+      profileSkill3Text: "Współtworzyłem fazę testową AI w mediach publicznych oraz koncepcyjnie przygotowałem, dostroiłem i wdrożyłem na produkcję silnik rekomendacji dla portalu redakcyjnego. Czego nie robię: karuzeli PoC bez planu roll-outu.",
+      profileSkill4Title: "Twardość startupu spotyka governance korporacji",
+      profileSkill4Text: "Od zespołu założycielskiego Vestium przez międzynarodowe projekty streamingowe po SWR i koncern pojazdów użytkowych, znam oba końce spektrum. Tłumaczenie między nimi to powód, dla którego klienci mnie zatrudniają.",
+      profileTimelineTitle: "Kariera w skrócie",
+      profileTl1Date: "2025 – dziś",
+      profileTl1Role: "Senior IT Project Manager",
+      profileTl1Text: "Europejski producent pojazdów użytkowych · integracja after-sales w strukturze koncernowej",
+      profileTl2Date: "2023 – 2025",
+      profileTl2Role: "Product Owner / Project Lead",
+      profileTl2Text: "SWR/ARD, Baden-Baden i Stuttgart · cztery projekty w rozwoju produktu (zobacz case studies)",
+      profileTl3Date: "2022",
+      profileTl3Role: "Project Manager",
+      profileTl3Text: "Adastra Studios jako sub-partner Infinite Reality · Warner Bros. Discovery / UCI Track Champions League Browser Preview",
+      profileTl4Date: "2021",
+      profileTl4Role: "Project Lead (wyrosły z roli wsparcia)",
+      profileTl4Text: "Adastra Studios · platforma metaverse Infinite Playa",
+      profileTl5Date: "2021 – 2022",
+      profileTl5Role: "Co-Founder & COO",
+      profileTl5Text: "Vestium Inc. · venture fashion-tech z prototypem 3D body scanning",
+      profileTl6Date: "przed 2021",
+      profileTl6Role: "Podstawa techniczna",
+      profileTl6Text: "Wykształcenie mechatroniczne u producenta systemów magazynowych do blach · następnie utrzymanie ruchu u niemieckiego producenta samochodów",
       leistungenTitle: "W czym najbardziej pomagam zespołom.",
       s1t: "Techniczne zarządzanie projektami i programami",
       s1d: "Projekty najczęściej zatrzymują się na styku zespołów, systemów i decyzji. Prowadzę cross-funkcyjne inicjatywy IT od pierwszego warsztatu wymagań po rollout — audytowalnie, terminowo i z jasną strukturą eskalacji.",
@@ -1517,6 +1609,36 @@ class Component extends DCLogic {
       profilBody: "My path didn't start at a desk, it started on the shop floor. As a trained mechatronics engineer in mechanical engineering, I learned how automation, machinery and industrial processes really work. From there I moved into project management and into very different worlds: immersive digital projects in Los Angeles, including for Warner Bros. Discovery Sports, my own fashion-tech startup as co-founder, two years as Product Owner at SWR with streaming infrastructure and AI in production, and today the IT interface between MAN and Volkswagen in After Sales. What runs through all of it is the ability to move many moving parts in one direction, especially where systems, teams and interests collide.",
       profilPrinciple: "Good tech alone isn't enough. I make sure people and systems work together.",
       aboutMore: "More about me ↗",
+      profileTitle: "Who's working with you?",
+      profileIntro: "I'm Daniel Baran, working in IT projects for over five years, first as co-founder of a fashion-tech venture, then as Product Owner at SWR, currently as Senior IT Project Manager in automotive after-sales. What brings my clients back is rarely methodology alone. It's the ability to translate between development, business units, editorial teams and management without losing substance along the way.",
+      profileSkillsTitle: "What I bring",
+      profileSkill1Title: "Cross-functional translation",
+      profileSkill1Text: "I sit between developer teams and business units and turn \"that is not technically possible\" and \"the business still needs it\" into a realistic backlog. My media and enterprise experience taught me how to do that without collateral damage.",
+      profileSkill2Title: "Complex multi-stakeholder environments",
+      profileSkill2Text: "Whether an ARD network with several broadcasters, an international metaverse project with distributed teams, or group integration in the commercial vehicle environment, I have learned how to consolidate requirements, set up governance cleanly and still deliver. That experience is rare and directly applicable in many contexts.",
+      profileSkill3Title: "AI enablement, not AI hype",
+      profileSkill3Text: "I helped shape an AI testing phase in public broadcasting and conceived, fine-tuned and rolled out a recommendation engine for an editorial portal. What I do not do: PoC carousels without a rollout plan.",
+      profileSkill4Title: "Startup grit meets enterprise governance",
+      profileSkill4Text: "From the Vestium founding team through international streaming projects to SWR and a commercial vehicle group, I know both ends of the spectrum. Translating between them is what clients bring me in for.",
+      profileTimelineTitle: "Career snapshot",
+      profileTl1Date: "2025 – today",
+      profileTl1Role: "Senior IT Project Manager",
+      profileTl1Text: "European commercial vehicle manufacturer · after-sales integration across the group",
+      profileTl2Date: "2023 – 2025",
+      profileTl2Role: "Product Owner / Project Lead",
+      profileTl2Text: "SWR/ARD, Baden-Baden and Stuttgart · four projects in product development (see cases)",
+      profileTl3Date: "2022",
+      profileTl3Role: "Project Manager",
+      profileTl3Text: "Adastra Studios as sub-partner of Infinite Reality · Warner Bros. Discovery / UCI Track Champions League browser preview",
+      profileTl4Date: "2021",
+      profileTl4Role: "Project Lead (grown from support role)",
+      profileTl4Text: "Adastra Studios · Infinite Playa metaverse platform",
+      profileTl5Date: "2021 – 2022",
+      profileTl5Role: "Co-Founder & COO",
+      profileTl5Text: "Vestium Inc. · fashion-tech venture with 3D body-scanning prototype",
+      profileTl6Date: "before 2021",
+      profileTl6Role: "Technical foundation",
+      profileTl6Text: "Mechatronics training at a manufacturer of sheet-metal storage systems · then maintenance at a German automotive manufacturer",
       leistungenTitle: "Where I help teams most.",
       s1t: "Technical project & programme management",
       s1d: "Projects often fail at the interfaces between teams, systems and decisions. I steer cross-functional IT initiatives from the first requirements workshop to rollout — audit-ready, on schedule and with a clear escalation structure.",
@@ -1684,69 +1806,30 @@ class Component extends DCLogic {
   const DETAIL_COPY = {
     about: {
         "de": {
-            "title": "Über mich",
-            "meta": "Über mich · Hintergrund · Arbeitsweise",
+            "title": "Wer arbeitet hier mit euch?",
+            "meta": "Profil · Kompetenzen · Karriere kompakt",
+            "intro": "Ich bin Daniel Baran, seit über fünf Jahren in IT-Projekten unterwegs, zuerst als Co-Founder eines Mode-Tech-Ventures, dann als Product Owner beim SWR, aktuell als Senior IT Project Manager im Automotive-After-Sales.",
             "sections": [
-                {
-                    "label": "Der Anfang",
-                    "text": "Angefangen habe ich im Maschinenbau, mit einer Ausbildung zum Mechatroniker bei STOPA Anlagenbau, einem der europaweit führenden Hersteller von automatisierten Lager- und Parksystemen. Ein klassischer Hidden Champion aus dem Schwarzwald, der komplexe Anlagen in die ganze Welt liefert, teils als Standardlösung, teils individuell für den Kunden konstruiert. Ich kam in einer Zeit dazu, in der das Unternehmen selbst im Wandel war und Prozesse auf Lean Management umstellte, und unser Ausbildungsleiter hat uns früh in diese Management-Themen mit hineingenommen. So habe ich nicht nur die Technik gelernt, von Automatisierung bis SPS-Steuerung, sondern auch, wie ein Industrieunternehmen tickt und wie aus einer Kundenanforderung eine gebaute Anlage wird. Schon in der Ausbildung habe ich in einem Dreierteam ein anspruchsvolles Projekt konzipiert und geleitet, ein omnidirektionales Fahrzeug mit pneumatisch gesteuertem Lagersystem. Da wurde mir klar, dass mich die Planung und Konzeption mehr reizt als die Fertigung selbst."
-                },
-                {
-                    "label": "Der Weg",
-                    "text": "Nach der Ausbildung habe ich zunächst in der Instandhaltung gearbeitet, unter anderem bei Mercedes-Benz. Dann kam der Schritt in die Selbstständigkeit und ins Projektmanagement. Mit Mitgründern habe ich Vestium aufgebaut, ein Fashion-Tech-Startup mit eigener 3D-Scan-Technologie, wo ich als Co-Founder und COO von der Idee über Prototyp und Businessplan bis zur Investorenreife gearbeitet habe. Parallel bin ich über den Inhaber von Adastra Studios ins internationale Projektmanagement gekommen und habe immersive Digital- und Metaverse-Projekte in Los Angeles betreut, darunter Beiträge zu The Infinite Playa für den virtuellen Burning Man und die immersive Fan-Experience der UCI Track Champions League für Warner Bros. Discovery Sports. Danach zwei Jahre als Product Owner beim SWR, der zweitgrößten ARD-Rundfunkanstalt, mit Streaming-Infrastruktur für Millionen Nutzer, der Leitung eines zentralen ARD-Transcoding-Projekts, einer KI-Empfehlungsengine in Produktion und dem Aufbau der KI-Testphase. Heute verantworte ich bei MAN Truck & Bus die IT-Schnittstelle zwischen MAN und Volkswagen im weltweiten After-Sales-Programm des MAN TGE."
-                },
-                {
-                    "label": "Was mich ausmacht",
-                    "text": "Diese Herkunft ist mein Unterschied. Ich verstehe Technik nicht nur aus der Management-Perspektive, sondern von der Basis her, und ich habe in sehr unterschiedlichen Welten geliefert: im industriellen Mittelstand, im US-Entertainment, im eigenen Startup, im öffentlich-rechtlichen Rundfunk und im Automobilkonzern. Vom kleinen, freelancer-geprägten Studio bis zur großen, strukturierten Konzernorganisation fühle ich mich in beiden Umgebungen zuhause. Dazu kommt echte KI-Praxis: Ich manage KI-Projekte nicht nur, ich baue selbst. Mein privates Multi-Agent-System Atlas, mit Agenten-Orchestrierung, RAG-Gedächtnis und Human-in-the-Loop-Design, ist der Beleg dafür, dass ich die Bausteine moderner KI-Systeme praktisch beherrsche, obwohl ich keinen formalen Programmier-Hintergrund habe. Ich kann mit Entwicklern auf Augenhöhe reden und im nächsten Meeting eine Entscheidungsvorlage für die Geschäftsführung präsentieren."
-                },
-                {
-                    "label": "Wie ich arbeite",
-                    "text": "Mein Anspruch ist, viele bewegliche Teile in eine Richtung zu bringen, gerade dort, wo Systeme, Teams und Interessen aufeinandertreffen. Ich arbeite strukturiert und methodisch, ob klassisch oder agil als Product Owner, und ich denke in Prozessen, die auch einer Revision standhalten. Automatisierung setze ich ein, wo sie hilft, menschliche Kontrolle, wo sie nötig ist. Gute Technik allein reicht mir nicht. Am Ende zählt, dass Menschen und Systeme gemeinsam funktionieren und dass ein Projekt verlässlich in Produktion geht."
-                }
+                { "label": "Was ich mitbringe", "text": "Cross-funktionale Übersetzung, komplexe Multi-Stakeholder-Umgebungen, KI-Enablement ohne Hype und die Verbindung aus Startup-Härte und Konzern-Governance. Meine Arbeit beginnt dort, wo Entwicklung, Fachabteilung, Redaktion und Geschäftsführung dieselbe Sache aus unterschiedlichen Blickwinkeln sehen." },
+                { "label": "Karriere kompakt", "text": "2025 bis heute: Senior IT Project Manager bei einem europäischen Nutzfahrzeughersteller. 2023 bis 2025: Product Owner / Project Lead bei SWR/ARD. 2022: Project Manager bei Adastra Studios als Sub-Partner von Infinite Reality. 2021: Project Lead für Infinite Playa. 2021 bis 2022: Co-Founder & COO bei Vestium Inc. Davor: technische Basis als Mechatroniker und in der Instandhaltung." }
             ]
         },
         "en": {
-            "title": "About me",
-            "meta": "About me · background · way of working",
+            "title": "Who's working with you?",
+            "meta": "Profile · skills · career snapshot",
+            "intro": "I'm Daniel Baran, working in IT projects for over five years, first as co-founder of a fashion-tech venture, then as Product Owner at SWR, currently as Senior IT Project Manager in automotive after-sales.",
             "sections": [
-                {
-                    "label": "Where it started",
-                    "text": "I started out in mechanical engineering, training as a mechatronics engineer at STOPA Anlagenbau, one of Europe's leading manufacturers of automated storage and parking systems. A classic hidden champion from the Black Forest that ships complex systems all over the world, some as standard solutions, some engineered individually for the customer. I joined at a time when the company itself was changing and moving its processes to lean management, and our training manager involved us in those management topics early on. So I didn't just learn the technology, from automation to PLC control, but also how an industrial company works and how a customer requirement becomes a built system. Even during my training, in a team of three, I designed and led an ambitious project, an omnidirectional vehicle with a pneumatically controlled storage system. That's when it became clear to me that planning and shaping things appeals to me more than production itself."
-                },
-                {
-                    "label": "The path",
-                    "text": "After my training I first worked in maintenance, including at Mercedes-Benz. Then came the move into self-employment and project management. With co-founders I built Vestium, a fashion-tech startup with its own 3D scanning technology, where as co-founder and COO I worked from the idea through prototype and business plan to investment readiness. In parallel, through the owner of Adastra Studios, I moved into international project management and looked after immersive digital and metaverse projects in Los Angeles, including contributions to The Infinite Playa for the virtual Burning Man and the immersive fan experience of the UCI Track Champions League for Warner Bros. Discovery Sports. After that, two years as Product Owner at SWR, Germany's second-largest ARD broadcaster, with streaming infrastructure for millions of users, leading a central ARD transcoding project, an AI recommendation engine in production and building up the AI testing phase. Today, at MAN Truck & Bus, I'm responsible for the IT interface between MAN and Volkswagen in the worldwide after-sales programme of the MAN TGE."
-                },
-                {
-                    "label": "What defines me",
-                    "text": "That background is my difference. I understand technology not only from a management perspective but from the ground up, and I've delivered in very different worlds: in industrial mid-sized business, in US entertainment, in my own startup, in public broadcasting and in an automotive group. From the small, freelance-driven studio to the large, structured corporate organisation, I feel at home in both. On top of that comes real hands-on AI: I don't just manage AI projects, I build. My private multi-agent system Atlas, with agent orchestration, RAG memory and human-in-the-loop design, is proof that I practically command the building blocks of modern AI systems, even though I have no formal programming background. I can talk to developers as equals and, in the next meeting, present a decision paper to management."
-                },
-                {
-                    "label": "How I work",
-                    "text": "My aim is to move many moving parts in one direction, especially where systems, teams and interests collide. I work in a structured, methodical way, whether classic or agile as a product owner, and I think in processes that hold up under review. I use automation where it helps and human control where it's needed. Good tech alone isn't enough for me. What counts in the end is that people and systems work together and that a project ships reliably to production."
-                }
+                { "label": "What I bring", "text": "Cross-functional translation, complex multi-stakeholder environments, AI enablement without hype, and the combination of startup grit with enterprise governance. My work starts where development, business units, editorial teams and management look at the same thing from different angles." },
+                { "label": "Career snapshot", "text": "2025 to today: Senior IT Project Manager at a European commercial vehicle manufacturer. 2023 to 2025: Product Owner / Project Lead at SWR/ARD. 2022: Project Manager at Adastra Studios as sub-partner of Infinite Reality. 2021: Project Lead for Infinite Playa. 2021 to 2022: Co-Founder & COO at Vestium Inc. Before that: technical foundation as a mechatronics engineer and in maintenance." }
             ]
         },
         "pl": {
-            "title": "O mnie",
-            "meta": "O mnie · doświadczenie · sposób pracy",
+            "title": "Kto z wami pracuje?",
+            "meta": "Profil · kompetencje · kariera w skrócie",
+            "intro": "Jestem Daniel Baran, od ponad pięciu lat pracuję przy projektach IT, najpierw jako co-founder venture fashion-tech, potem jako Product Owner w SWR, obecnie jako Senior IT Project Manager w after-sales motoryzacyjnym.",
             "sections": [
-                {
-                    "label": "Początek",
-                    "text": "Zaczynałem w branży maszynowej, od nauki zawodu mechatronika w STOPA Anlagenbau, jednym z wiodących w Europie producentów zautomatyzowanych systemów magazynowych i parkingowych. Klasyczny hidden champion ze Schwarzwaldu, który dostarcza złożone instalacje na cały świat, częściowo jako rozwiązania standardowe, częściowo konstruowane indywidualnie. Dołączyłem w czasie, gdy firma sama się zmieniała i przechodziła na lean management, a nasz kierownik szkolenia wcześnie wciągał nas w te tematy zarządcze. Dzięki temu nauczyłem się nie tylko techniki, od automatyzacji po sterowniki PLC, ale też tego, jak działa firma przemysłowa i jak z wymagania klienta powstaje gotowa instalacja. Już podczas nauki, w trzyosobowym zespole, zaprojektowałem i poprowadziłem ambitny projekt, pojazd omnidirekcyjny ze sterowanym pneumatycznie systemem magazynowym. Wtedy stało się dla mnie jasne, że planowanie i kształtowanie pociąga mnie bardziej niż sama produkcja."
-                },
-                {
-                    "label": "Droga",
-                    "text": "Po nauce najpierw pracowałem w utrzymaniu ruchu, między innymi w Mercedes-Benz. Potem przyszedł krok w samodzielność i zarządzanie projektami. Ze współzałożycielami zbudowałem Vestium, startup fashion-tech z własną technologią skanowania 3D, gdzie jako co-founder i COO pracowałem od pomysłu przez prototyp i biznesplan po gotowość inwestycyjną. Równolegle, przez właściciela Adastra Studios, wszedłem w międzynarodowe zarządzanie projektami i opiekowałem się immersyjnymi projektami cyfrowymi i metaverse w Los Angeles, w tym wkładem w The Infinite Playa dla wirtualnego Burning Man oraz immersyjnym doświadczeniem dla fanów UCI Track Champions League dla Warner Bros. Discovery Sports. Potem dwa lata jako Product Owner w SWR, drugiej co do wielkości stacji ARD, z infrastrukturą streamingową dla milionów użytkowników, kierowaniem centralnym projektem transcodingu ARD, silnikiem rekomendacji AI na produkcji i budową fazy testowej AI. Dziś w MAN Truck & Bus odpowiadam za interfejs IT między MAN a Volkswagenem w globalnym programie posprzedażowym MAN TGE."
-                },
-                {
-                    "label": "Co mnie wyróżnia",
-                    "text": "To pochodzenie jest moją różnicą. Rozumiem technologię nie tylko z perspektywy zarządczej, ale od podstaw, i dostarczałem w bardzo różnych światach: w przemysłowym sektorze średnich firm, w amerykańskim entertainment, we własnym startupie, w mediach publicznych i w koncernie motoryzacyjnym. Od małego, freelancerskiego studia po dużą, ustrukturyzowaną organizację koncernową czuję się w obu środowiskach jak u siebie. Do tego dochodzi realna praktyka AI: nie tylko zarządzam projektami AI, sam buduję. Mój prywatny system multiagentowy Atlas, z orkiestracją agentów, pamięcią RAG i projektowaniem human-in-the-loop, jest dowodem, że praktycznie panuję nad elementami nowoczesnych systemów AI, mimo że nie mam formalnego wykształcenia programistycznego. Potrafię rozmawiać z deweloperami jak równy z równym, a na kolejnym spotkaniu przedstawić materiał decyzyjny dla zarządu."
-                },
-                {
-                    "label": "Jak pracuję",
-                    "text": "Moim celem jest ustawić wiele ruchomych elementów w jednym kierunku, zwłaszcza tam, gdzie zderzają się systemy, zespoły i interesy. Pracuję w sposób ustrukturyzowany i metodyczny, klasycznie lub zwinnie jako Product Owner, i myślę procesami, które wytrzymają audyt. Automatyzację stosuję tam, gdzie pomaga, a kontrolę człowieka tam, gdzie jest potrzebna. Sama dobra technologia mi nie wystarcza. Ostatecznie liczy się to, żeby ludzie i systemy działały razem i żeby projekt niezawodnie trafił na produkcję."
-                }
+                { "label": "Co wnoszę", "text": "Tłumaczenie między działami, złożone środowiska multi-stakeholder, AI enablement bez hype'u oraz połączenie twardości startupu z governance korporacji. Moja praca zaczyna się tam, gdzie development, działy merytoryczne, redakcja i zarząd patrzą na tę samą rzecz z różnych stron." },
+                { "label": "Kariera w skrócie", "text": "2025 do dziś: Senior IT Project Manager u europejskiego producenta pojazdów użytkowych. 2023 do 2025: Product Owner / Project Lead w SWR/ARD. 2022: Project Manager w Adastra Studios jako sub-partner Infinite Reality. 2021: Project Lead dla Infinite Playa. 2021 do 2022: Co-Founder & COO w Vestium Inc. Wcześniej: podstawa techniczna jako mechatronik i w utrzymaniu ruchu." }
             ]
         }
     },
