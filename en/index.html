@@ -607,20 +607,6 @@
             </article>
           </div>
         </div>
-        <div data-reveal="1" style="margin-top:clamp(30px,4vw,46px); opacity:0; transform:translateY(26px); transition:opacity .7s cubic-bezier(.16,1,.3,1) .16s, transform .7s cubic-bezier(.16,1,.3,1) .16s;">
-          <div style="display:flex; align-items:center; gap:14px; margin-bottom:18px;">
-            <span style="width:28px; height:3px; background:var(--accent,#3D45E6); flex:none;"></span>
-            <h3 style="font-family:'Space Mono',monospace; font-size:.82rem; line-height:1.3; color:var(--muted); letter-spacing:.18em; text-transform:uppercase; margin:0;">{{ profileTimelineTitle }}</h3>
-          </div>
-          <ol style="list-style:none; margin:0; padding:0; border-top:1px solid var(--line);">
-            <li style="display:grid; grid-template-columns:minmax(150px,.42fr) minmax(0,1fr); gap:18px; padding:16px 0; border-bottom:1px solid var(--line);"><span style="font-family:'Space Mono',monospace; font-size:.8rem; color:var(--accent,#3D45E6);">{{ profileTl1Date }}</span><p style="font-family:'Hanken Grotesk',sans-serif; font-size:1rem; line-height:1.55; color:var(--body); margin:0;"><strong style="font-family:'Space Grotesk',sans-serif; color:var(--ink);">{{ profileTl1Role }}</strong><br>{{ profileTl1Text }}</p></li>
-            <li style="display:grid; grid-template-columns:minmax(150px,.42fr) minmax(0,1fr); gap:18px; padding:16px 0; border-bottom:1px solid var(--line);"><span style="font-family:'Space Mono',monospace; font-size:.8rem; color:var(--accent,#3D45E6);">{{ profileTl2Date }}</span><p style="font-family:'Hanken Grotesk',sans-serif; font-size:1rem; line-height:1.55; color:var(--body); margin:0;"><strong style="font-family:'Space Grotesk',sans-serif; color:var(--ink);">{{ profileTl2Role }}</strong><br>{{ profileTl2Text }}</p></li>
-            <li style="display:grid; grid-template-columns:minmax(150px,.42fr) minmax(0,1fr); gap:18px; padding:16px 0; border-bottom:1px solid var(--line);"><span style="font-family:'Space Mono',monospace; font-size:.8rem; color:var(--accent,#3D45E6);">{{ profileTl3Date }}</span><p style="font-family:'Hanken Grotesk',sans-serif; font-size:1rem; line-height:1.55; color:var(--body); margin:0;"><strong style="font-family:'Space Grotesk',sans-serif; color:var(--ink);">{{ profileTl3Role }}</strong><br>{{ profileTl3Text }}</p></li>
-            <li style="display:grid; grid-template-columns:minmax(150px,.42fr) minmax(0,1fr); gap:18px; padding:16px 0; border-bottom:1px solid var(--line);"><span style="font-family:'Space Mono',monospace; font-size:.8rem; color:var(--accent,#3D45E6);">{{ profileTl4Date }}</span><p style="font-family:'Hanken Grotesk',sans-serif; font-size:1rem; line-height:1.55; color:var(--body); margin:0;"><strong style="font-family:'Space Grotesk',sans-serif; color:var(--ink);">{{ profileTl4Role }}</strong><br>{{ profileTl4Text }}</p></li>
-            <li style="display:grid; grid-template-columns:minmax(150px,.42fr) minmax(0,1fr); gap:18px; padding:16px 0; border-bottom:1px solid var(--line);"><span style="font-family:'Space Mono',monospace; font-size:.8rem; color:var(--accent,#3D45E6);">{{ profileTl5Date }}</span><p style="font-family:'Hanken Grotesk',sans-serif; font-size:1rem; line-height:1.55; color:var(--body); margin:0;"><strong style="font-family:'Space Grotesk',sans-serif; color:var(--ink);">{{ profileTl5Role }}</strong><br>{{ profileTl5Text }}</p></li>
-            <li style="display:grid; grid-template-columns:minmax(150px,.42fr) minmax(0,1fr); gap:18px; padding:16px 0; border-bottom:1px solid var(--line);"><span style="font-family:'Space Mono',monospace; font-size:.8rem; color:var(--accent,#3D45E6);">{{ profileTl6Date }}</span><p style="font-family:'Hanken Grotesk',sans-serif; font-size:1rem; line-height:1.55; color:var(--body); margin:0;"><strong style="font-family:'Space Grotesk',sans-serif; color:var(--ink);">{{ profileTl6Role }}</strong><br>{{ profileTl6Text }}</p></li>
-          </ol>
-        </div>
       </div>
     </div>
   </section>
@@ -1210,26 +1196,7 @@ class Component extends DCLogic {
       profileSkill6Text: "Ich habe Live-Events verantwortet, die wochenlang beworben waren und exakt zur angekündigten Minute laufen mussten. Verschieben war keine Option. Dort lernt man, kompromisslos zu priorisieren und rechtzeitig Nein zu sagen.",
       profileSkill6Title: "Harte Go-lives",
       profileSkill5Text: "Mechatroniker-Ausbildung, Instandhaltung in der Automobilindustrie, heute Digitalisierung von Werkstattprozessen. Wenn Software auf Maschinen, Werkstätten oder physische Produkte trifft, muss mir niemand erklären, warum die Realität sich nicht ans Backlog hält.",
-      profileSkill5Title: "Physisch trifft digital",
-      profileTimelineTitle: "Karriere kompakt",
-      profileTl1Date: "2025 – heute",
-      profileTl1Role: "Senior IT Project Manager",
-      profileTl1Text: "Europäischer Nutzfahrzeughersteller · After-Sales-Integration im Konzernverbund",
-      profileTl2Date: "2023 – 2025",
-      profileTl2Role: "Product Owner / Project Lead",
-      profileTl2Text: "Großer Broadcaster · Vier Projekte in der Produktentwicklung (siehe Cases)",
-      profileTl3Date: "2022",
-      profileTl3Role: "Project Manager",
-      profileTl3Text: "Adastra Studios als Sub-Partner von Infinite Reality · Warner Bros. Discovery / UCI Track Champions League Browser-Preview",
-      profileTl4Date: "2021",
-      profileTl4Role: "Project Lead (aus Support-Rolle gewachsen)",
-      profileTl4Text: "Adastra Studios · Infinite Playa, eine der sechs offiziellen Welten von Burning Mans Virtual Burn 2021",
-      profileTl5Date: "2021 – 2022",
-      profileTl5Role: "Co-Founder & COO",
-      profileTl5Text: "Vestium Inc. · Mode-Tech-Venture mit 3D-Body-Scanning-Prototyp",
-      profileTl6Date: "vor 2021",
-      profileTl6Role: "Technische Basis",
-      profileTl6Text: "Mechatroniker-Ausbildung bei einem Anlagenbauer für Blechlager-Systeme · Anschließend Instandhaltung bei einem deutschen Automobilhersteller",
+      profileSkill5Title: "Physisch trifft digital", eine der sechs offiziellen Welten von Burning Mans Virtual Burn 2021",
       refTitle: "Ausgewählte Projekte.",
       caseOverviewTitle: "Ausgewählte Case Studies.",
       caseOverviewIntro: "Sechs Projekte, ehrlich dokumentiert. Wo Zahlen fehlen, fehlen sie bewusst, weil sie entweder nicht öffentlich sind oder weil ich sie nicht rekonstruieren kann.",
@@ -1374,26 +1341,7 @@ class Component extends DCLogic {
       profileSkill6Text: "Odpowiadałem za wydarzenia na żywo, promowane tygodniami, które musiały ruszyć dokładnie o zapowiedzianej minucie. Przesunięcie terminu nie wchodziło w grę. Tam człowiek uczy się bezkompromisowo priorytetyzować i w porę mówić \"nie\".",
       profileSkill6Title: "Twarde go-live'y",
       profileSkill5Text: "Wykształcenie mechatroniczne, utrzymanie ruchu w przemyśle motoryzacyjnym, dziś digitalizacja procesów warsztatowych. Kiedy software styka się z maszynami, warsztatami albo fizycznymi produktami, nikt nie musi mi tłumaczyć, dlaczego rzeczywistość nie trzyma się backlogu.",
-      profileSkill5Title: "Fizyczne spotyka cyfrowe",
-      profileTimelineTitle: "Kariera w skrócie",
-      profileTl1Date: "2025 – dziś",
-      profileTl1Role: "Senior IT Project Manager",
-      profileTl1Text: "Europejski producent pojazdów użytkowych · Integracja after-sales w strukturach koncernu",
-      profileTl2Date: "2023 – 2025",
-      profileTl2Role: "Product Owner / Project Lead",
-      profileTl2Text: "Duży nadawca · Cztery projekty w rozwoju produktu (zob. case studies)",
-      profileTl3Date: "2022",
-      profileTl3Role: "Project Manager",
-      profileTl3Text: "Adastra Studios jako subpartner Infinite Reality · Warner Bros. Discovery / UCI Track Champions League, preview przeglądarkowy",
-      profileTl4Date: "2021",
-      profileTl4Role: "Project Lead (wyrosły z roli wsparcia)",
-      profileTl4Text: "Adastra Studios · Infinite Playa, jeden z sześciu oficjalnych światów Virtual Burn 2021 festiwalu Burning Man",
-      profileTl5Date: "2021 – 2022",
-      profileTl5Role: "Co-Founder & COO",
-      profileTl5Text: "Vestium Inc. · Fashion-tech startup z prototypem skanowania 3D sylwetki",
-      profileTl6Date: "przed 2021",
-      profileTl6Role: "Baza techniczna",
-      profileTl6Text: "Nauka zawodu mechatronika u producenta systemów magazynowania blach · Następnie utrzymanie ruchu u niemieckiego producenta samochodów",
+      profileSkill5Title: "Fizyczne spotyka cyfrowe", preview przeglądarkowy", jeden z sześciu oficjalnych światów Virtual Burn 2021 festiwalu Burning Man",
       refTitle: "Wybrane projekty.",
       caseOverviewTitle: "Wybrane case studies.",
       caseOverviewIntro: "Sześć projektów udokumentowanych uczciwie. Tam, gdzie brakuje liczb, brakuje ich świadomie, bo nie są publiczne albo nie da się ich rzetelnie odtworzyć.",
@@ -1538,26 +1486,7 @@ class Component extends DCLogic {
       profileSkill6Text: "I have been responsible for live events that were promoted for weeks and had to run at exactly the announced minute. Moving the date was not an option. That is where you learn to prioritise without compromise and say no early enough.",
       profileSkill6Title: "Hard go-lives",
       profileSkill5Text: "Mechatronics training, maintenance in the automotive industry, now digitalisation of workshop processes. When software meets machines, workshops or physical products, nobody needs to explain to me why reality does not follow the backlog.",
-      profileSkill5Title: "Physical meets digital",
-      profileTimelineTitle: "Career snapshot",
-      profileTl1Date: "2025 – today",
-      profileTl1Role: "Senior IT Project Manager",
-      profileTl1Text: "European commercial vehicle manufacturer · after-sales integration across the group",
-      profileTl2Date: "2023 – 2025",
-      profileTl2Role: "Product Owner / Project Lead",
-      profileTl2Text: "Major broadcaster · four projects in product development (see cases)",
-      profileTl3Date: "2022",
-      profileTl3Role: "Project Manager",
-      profileTl3Text: "Adastra Studios as sub-partner of Infinite Reality · Warner Bros. Discovery / UCI Track Champions League browser preview",
-      profileTl4Date: "2021",
-      profileTl4Role: "Project Lead (grown from support role)",
-      profileTl4Text: "Adastra Studios · Infinite Playa, one of the six official worlds of Burning Mans Virtual Burn 2021",
-      profileTl5Date: "2021 – 2022",
-      profileTl5Role: "Co-Founder & COO",
-      profileTl5Text: "Vestium Inc. · fashion-tech venture with 3D body-scanning prototype",
-      profileTl6Date: "before 2021",
-      profileTl6Role: "Technical foundation",
-      profileTl6Text: "Mechatronics training at a manufacturer of sheet-metal storage systems · then maintenance at a German automotive manufacturer",
+      profileSkill5Title: "Physical meets digital", one of the six official worlds of Burning Mans Virtual Burn 2021",
       refTitle: "Selected projects.",
       caseOverviewTitle: "Selected case studies.",
       caseOverviewIntro: "Six projects, documented honestly. Where numbers are missing, they are missing deliberately because they are either not public or cannot be reconstructed reliably.",
