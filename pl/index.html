@@ -771,6 +771,7 @@
         <p style="font-family:'Hanken Grotesk',sans-serif; font-size:1.08rem; line-height:1.65; color:color-mix(in srgb, var(--paper) 74%, transparent); margin:22px 0 0;">{{ contactIntro }}</p>
       </div>
       <form data-contact-form novalidate style="margin-top:clamp(36px,5vw,56px); display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr)); gap:clamp(28px,5vw,64px); align-items:start;">
+        <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute; left:-10000px; width:1px; height:1px; opacity:0;">
         <div data-reveal="1" style="display:grid; gap:18px; opacity:0; transform:translateY(26px); transition:opacity .7s cubic-bezier(.16,1,.3,1) .08s, transform .7s cubic-bezier(.16,1,.3,1) .08s;">
           <label style="display:grid; gap:8px; font-family:'Space Mono',monospace; font-size:.78rem; color:color-mix(in srgb, var(--paper) 70%, transparent); letter-spacing:.08em; text-transform:uppercase;">{{ formWhoLabel }}<input name="who" required maxlength="100" placeholder="{{ formWhoPlaceholder }}" style="width:100%; border:1px solid color-mix(in srgb, var(--paper) 22%, transparent); background:color-mix(in srgb, var(--paper) 8%, transparent); color:var(--paper); border-radius:4px; padding:14px 16px; font-family:'Hanken Grotesk',sans-serif; font-size:1rem;"></label>
           <fieldset data-required-group="topic" style="border:1px solid color-mix(in srgb, var(--paper) 22%, transparent); border-radius:4px; padding:16px; margin:0; display:grid; gap:10px;"><legend style="font-family:'Space Mono',monospace; font-size:.78rem; color:color-mix(in srgb, var(--paper) 70%, transparent); letter-spacing:.08em; text-transform:uppercase; padding:0 6px;">{{ formTopicLabel }}</legend>
@@ -790,14 +791,12 @@
           <label style="display:grid; gap:8px; font-family:'Space Mono',monospace; font-size:.78rem; color:color-mix(in srgb, var(--paper) 70%, transparent); letter-spacing:.08em; text-transform:uppercase;">{{ formEmailLabel }}<input type="email" name="email" required placeholder="name@example.com" style="width:100%; border:1px solid color-mix(in srgb, var(--paper) 22%, transparent); background:color-mix(in srgb, var(--paper) 8%, transparent); color:var(--paper); border-radius:4px; padding:14px 16px; font-family:'Hanken Grotesk',sans-serif; font-size:1rem;"></label>
           <label class="contact-choice" style="align-items:flex-start;"><input type="checkbox" name="privacy" required> <span>{{ formConsentPrefix }} <a href="/pl/prywatnosc/" style="color:var(--accent,#3D45E6);">{{ formConsentLink }}</a>.</span></label>
           <p data-contact-error style="display:none; font-family:'Space Mono',monospace; font-size:.78rem; color:var(--accent,#3D45E6); margin:0;">{{ formError }}</p>
-          <p data-contact-success style="display:none; font-family:'Space Mono',monospace; font-size:.78rem; color:color-mix(in srgb, var(--paper) 72%, transparent); margin:0;">{{ formSuccess }}</p>
+          <p data-contact-success data-success-text="{{ formSuccess }}" style="display:none; font-family:'Space Mono',monospace; font-size:.78rem; color:color-mix(in srgb, var(--paper) 72%, transparent); margin:0;">{{ formSuccess }}</p>
           <button type="submit" style="justify-self:start; display:inline-flex; align-items:center; gap:10px; background:var(--accent,#3D45E6); color:var(--paper); border:0; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:1rem; padding:15px 24px; border-radius:3px; cursor:pointer;">{{ formSubmit }} <span style="font-family:'Space Mono',monospace;">→</span></button>
         </div>
         <aside data-reveal="1" style="border:1px solid color-mix(in srgb, var(--paper) 18%, transparent); border-radius:6px; padding:clamp(22px,3vw,30px); background:color-mix(in srgb, var(--paper) 6%, transparent); opacity:0; transform:translateY(26px); transition:opacity .7s cubic-bezier(.16,1,.3,1) .16s, transform .7s cubic-bezier(.16,1,.3,1) .16s;">
           <h3 style="font-family:'Space Mono',monospace; font-size:.82rem; color:color-mix(in srgb, var(--paper) 60%, transparent); letter-spacing:.16em; text-transform:uppercase; margin:0 0 18px;">{{ contactDirectTitle }}</h3>
           <div style="display:grid; gap:12px;">
-            <!-- Cal.com-Link folgt -->
-            <a href="#" aria-disabled="true" style="font-family:'Space Grotesk',sans-serif; font-weight:600; color:color-mix(in srgb, var(--paper) 45%, transparent); text-decoration:none; border:1px solid color-mix(in srgb, var(--paper) 18%, transparent); padding:12px 14px; border-radius:3px; pointer-events:none;">{{ directBook }} →</a>
             <a href="{{ linkedinUrl }}" target="_blank" rel="noopener" style="font-family:'Space Grotesk',sans-serif; font-weight:600; color:var(--paper); text-decoration:none; border:1px solid color-mix(in srgb, var(--paper) 22%, transparent); padding:12px 14px; border-radius:3px;">LinkedIn →</a>
             <a href="{{ emailHref }}" style="font-family:'Space Grotesk',sans-serif; font-weight:600; color:var(--paper); text-decoration:none; border:1px solid color-mix(in srgb, var(--paper) 22%, transparent); padding:12px 14px; border-radius:3px;">{{ email }}</a>
           </div>
@@ -1264,7 +1263,7 @@ class Component extends DCLogic {
       formConsentLink: "Datenschutzerklärung",
       formSubmit: "Anfrage senden",
       formError: "Bitte füllen Sie alle Pflichtfelder aus und wählen Sie mindestens ein Thema.",
-      formSuccess: "Danke. Das Formular ist vorbereitet, sendet aber aktuell noch keine Daten.",
+      formSuccess: "Danke. Ihre Anfrage wurde gesendet. Ich melde mich innerhalb von zwei Werktagen.",
       contactDirectTitle: "Weitere Optionen",
       directBook: "Direkt buchen",
       footerRole: "Freelance IT- & Product-Delivery",
@@ -1408,7 +1407,7 @@ class Component extends DCLogic {
       formConsentLink: "polityką prywatności",
       formSubmit: "Wyślij zapytanie",
       formError: "Wypełnij wszystkie wymagane pola i wybierz co najmniej jeden temat.",
-      formSuccess: "Dziękuję. Formularz jest przygotowany, ale obecnie nie wysyła jeszcze danych.",
+      formSuccess: "Dziękuję. Zapytanie zostało wysłane. Odpowiem w ciągu dwóch dni roboczych.",
       contactDirectTitle: "Inne opcje",
       directBook: "Umów bezpośrednio",
       footerRole: "Freelance IT & product delivery",
@@ -1552,7 +1551,7 @@ class Component extends DCLogic {
       formConsentLink: "privacy policy",
       formSubmit: "Send inquiry",
       formError: "Please fill in all required fields and select at least one topic.",
-      formSuccess: "Thank you. The form is prepared, but currently does not send data yet.",
+      formSuccess: "Thank you. Your inquiry has been sent. I will get back within two working days.",
       contactDirectTitle: "Other options",
       directBook: "Book directly",
       footerRole: "Freelance IT & product delivery",
@@ -1673,22 +1672,90 @@ class Component extends DCLogic {
 
 <script>
 (() => {
-  document.addEventListener("submit", (event) => {
+  const messages = {
+    de: {
+      validation: "Bitte füllen Sie alle Pflichtfelder aus und wählen Sie mindestens ein Thema.",
+      sending: "Anfrage wird gesendet...",
+      server: "Die Anfrage konnte nicht gesendet werden. Bitte schreiben Sie direkt per E-Mail."
+    },
+    pl: {
+      validation: "Wypełnij wszystkie wymagane pola i wybierz co najmniej jeden temat.",
+      sending: "Wysyłanie zapytania...",
+      server: "Nie udało się wysłać zapytania. Proszę napisać bezpośrednio e-mailem."
+    },
+    en: {
+      validation: "Please fill in all required fields and select at least one topic.",
+      sending: "Sending inquiry...",
+      server: "The inquiry could not be sent. Please write directly by email."
+    }
+  };
+
+  document.addEventListener("submit", async (event) => {
     const form = event.target.closest("[data-contact-form]");
     if (!form) return;
     event.preventDefault();
+
+    const lang = document.documentElement.lang || "de";
+    const copy = messages[lang] || messages.de;
     const topicChecked = Boolean(form.querySelector('input[name="topic"]:checked'));
     const error = form.querySelector("[data-contact-error]");
     const success = form.querySelector("[data-contact-success]");
+    const submit = form.querySelector('button[type="submit"]');
+
     if (!form.checkValidity() || !topicChecked) {
       if (success) success.style.display = "none";
-      if (error) error.style.display = "block";
+      if (error) {
+        error.textContent = copy.validation;
+        error.style.display = "block";
+      }
       form.reportValidity();
       return;
     }
-    // TODO: später an Cal.com-Webhook oder E-Mail-Versand-Service anbinden.
+
+    const data = new FormData(form);
+    const payload = {
+      who: data.get("who"),
+      email: data.get("email"),
+      context: data.get("context"),
+      budget: data.get("budget"),
+      topics: data.getAll("topic"),
+      privacy: data.get("privacy") === "on",
+      website: data.get("website") || ""
+    };
+
     if (error) error.style.display = "none";
-    if (success) success.style.display = "block";
+    if (success) {
+      success.textContent = copy.sending;
+      success.style.display = "block";
+    }
+    if (submit) {
+      submit.disabled = true;
+      submit.style.opacity = ".62";
+      submit.style.cursor = "progress";
+    }
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify(payload)
+      });
+      if (!response.ok) throw new Error("contact request failed");
+      form.reset();
+      if (success) success.textContent = success.getAttribute("data-success-text") || success.textContent;
+    } catch {
+      if (success) success.style.display = "none";
+      if (error) {
+        error.textContent = copy.server;
+        error.style.display = "block";
+      }
+    } finally {
+      if (submit) {
+        submit.disabled = false;
+        submit.style.opacity = "";
+        submit.style.cursor = "";
+      }
+    }
   });
 })();
 </script>
