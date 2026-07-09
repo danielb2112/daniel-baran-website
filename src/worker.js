@@ -20,6 +20,36 @@ function canonicalHostRedirect(url) {
   return Response.redirect(url.toString(), 301);
 }
 
+function temporaryLanguageRedirect(url) {
+  return new Response(null, {
+    status: 302,
+    headers: {
+      location: url.toString(),
+      vary: "Accept-Language",
+      "cache-control": "no-store",
+    },
+  });
+}
+
+function browserLanguageRedirect(request, url) {
+  if (!["GET", "HEAD"].includes(request.method) || url.pathname !== "/") return null;
+  if (url.searchParams.get("lang") === "de") return null;
+
+  const acceptLanguage = request.headers.get("accept-language");
+  if (!acceptLanguage) return null;
+
+  const firstLanguage = acceptLanguage.split(",", 1)[0].trim().toLowerCase();
+  if (!firstLanguage || firstLanguage.startsWith("de")) return null;
+
+  if (firstLanguage.startsWith("pl")) {
+    url.pathname = "/pl/";
+    return temporaryLanguageRedirect(url);
+  }
+
+  url.pathname = "/en/";
+  return temporaryLanguageRedirect(url);
+}
+
 function json(data, status = 200, headers = {}) {
   return new Response(JSON.stringify(data), { status, headers: { ...JSON_HEADERS, ...headers } });
 }
@@ -186,6 +216,9 @@ export default {
     const url = new URL(request.url);
     const redirect = canonicalHostRedirect(url);
     if (redirect) return redirect;
+
+    const languageRedirect = browserLanguageRedirect(request, url);
+    if (languageRedirect) return languageRedirect;
 
     if (url.pathname === "/api/contact") {
       return handleContact(request, env);
