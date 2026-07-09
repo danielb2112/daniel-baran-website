@@ -14,6 +14,12 @@ const ALLOWED_ORIGINS = new Set(["https://daniel-baran.com", "https://www.daniel
 const MAX_BODY_BYTES = 4096;
 const RATE_LIMIT = new Map();
 
+function canonicalHostRedirect(url) {
+  if (url.hostname !== "www.daniel-baran.com") return null;
+  url.hostname = "daniel-baran.com";
+  return Response.redirect(url.toString(), 301);
+}
+
 function json(data, status = 200, headers = {}) {
   return new Response(JSON.stringify(data), { status, headers: { ...JSON_HEADERS, ...headers } });
 }
@@ -178,6 +184,9 @@ async function handleContact(request, env) {
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
+    const redirect = canonicalHostRedirect(url);
+    if (redirect) return redirect;
+
     if (url.pathname === "/api/contact") {
       return handleContact(request, env);
     }
