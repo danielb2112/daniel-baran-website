@@ -1,14 +1,21 @@
 const JSON_HEADERS = {
   "content-type": "application/json; charset=utf-8",
   "cache-control": "no-store",
+  "x-content-type-options": "nosniff",
+  "referrer-policy": "strict-origin-when-cross-origin",
+  "permissions-policy": "accelerometer=(), ambient-light-sensor=(), autoplay=(), camera=(), display-capture=(), encrypted-media=(), fullscreen=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), midi=(), payment=(), picture-in-picture=(), publickey-credentials-get=(), screen-wake-lock=(), usb=(), web-share=(), xr-spatial-tracking=()",
+  "x-frame-options": "DENY",
+  "vary": "Origin",
 };
 
 const TOPICS = new Set(["po", "sprint", "ai", "other"]);
 const BUDGETS = new Set(["under-10", "10-25", "25-60", "over-60", "unclear"]);
+const ALLOWED_ORIGINS = new Set(["https://daniel-baran.com", "https://www.daniel-baran.com"]);
+const MAX_BODY_BYTES = 4096;
 const RATE_LIMIT = new Map();
 
-function json(data, status = 200) {
-  return new Response(JSON.stringify(data), { status, headers: JSON_HEADERS });
+function json(data, status = 200, headers = {}) {
+  return new Response(JSON.stringify(data), { status, headers: { ...JSON_HEADERS, ...headers } });
 }
 
 function clean(value, maxLength) {
@@ -34,7 +41,33 @@ function rateLimited(ip) {
   }
   entry.count += 1;
   RATE_LIMIT.set(ip, entry);
-  return entry.count > maxRequests;
+  return {
+    limited: entry.count > maxRequests,
+    retryAfter: Math.max(1, Math.ceil((entry.resetAt - now) / 1000)),
+  };
+}
+
+function hasValidOrigin(request) {
+  const origin = request.headers.get("origin");
+  return !origin || ALLOWED_ORIGINS.has(origin);
+}
+
+async function readJsonBody(request) {
+  const contentLength = Number(request.headers.get("content-length") || 0);
+  if (contentLength > MAX_BODY_BYTES) {
+    return { ok: false, status: 413, error: "Request body is too large." };
+  }
+
+  const text = await request.text();
+  if (text.length > MAX_BODY_BYTES) {
+    return { ok: false, status: 413, error: "Request body is too large." };
+  }
+
+  try {
+    return { ok: true, payload: JSON.parse(text) };
+  } catch {
+    return { ok: false, status: 400, error: "Invalid JSON." };
+  }
 }
 
 function validate(payload) {
@@ -94,20 +127,20 @@ function buildEmail({ who, email, context, budget, topics }) {
 }
 
 async function handleContact(request, env) {
-  if (request.method === "OPTIONS") return new Response(null, { status: 204 });
+  if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: JSON_HEADERS });
   if (request.method !== "POST") return json({ ok: false, error: "Method not allowed." }, 405);
+  if (!hasValidOrigin(request)) return json({ ok: false, error: "Invalid request origin." }, 403);
 
   const ip = getClientIp(request);
-  if (rateLimited(ip)) return json({ ok: false, error: "Too many requests." }, 429);
-
-  let payload;
-  try {
-    payload = await request.json();
-  } catch {
-    return json({ ok: false, error: "Invalid JSON." }, 400);
+  const rate = rateLimited(ip);
+  if (rate.limited) {
+    return json({ ok: false, error: "Too many requests." }, 429, { "retry-after": String(rate.retryAfter) });
   }
 
-  const result = validate(payload);
+  const body = await readJsonBody(request);
+  if (!body.ok) return json({ ok: false, error: body.error }, body.status);
+
+  const result = validate(body.payload);
   if (!result.ok) return json({ ok: false, error: result.error }, result.status);
 
   const apiKey = env.RESEND_API_KEY;
