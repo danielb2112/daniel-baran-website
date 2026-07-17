@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Über mich - Daniel Baran</title>
+<meta name="description" content="Profil, Arbeitsweise, Karriere und Toolkit von Daniel Baran.">
+<link rel="canonical" href="https://daniel-baran.com/ueber-mich/">
+<link rel="alternate" hreflang="de" href="https://daniel-baran.com/ueber-mich/">
+<link rel="alternate" hreflang="en" href="https://daniel-baran.com/en/about/">
+<link rel="alternate" hreflang="pl" href="https://daniel-baran.com/pl/o-mnie/">
+<link rel="alternate" hreflang="x-default" href="https://daniel-baran.com/ueber-mich/">
+<link rel="icon" href="/favicon.ico">
+<meta property="og:title" content="Über mich - Daniel Baran">
+<meta property="og:description" content="Profil, Arbeitsweise, Karriere und Toolkit von Daniel Baran.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://daniel-baran.com/ueber-mich/">
+<meta property="og:image" content="https://daniel-baran.com/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Über mich - Daniel Baran">
+<meta name="twitter:description" content="Profil, Arbeitsweise, Karriere und Toolkit von Daniel Baran.">
+<meta name="twitter:image" content="https://daniel-baran.com/assets/og-image.png">
+<script>window.__DB_DEFAULT_LANG="de";window.__DB_ALT_ROUTES={"de": "/ueber-mich/", "en": "/en/about/", "pl": "/pl/o-mnie/"};window.__VESTIUM_YOUTUBE_ID="La4rd4JhlFE";</script>
+<script src="/assets/bundle/98fbe8e7-3e34-4182-88f6-79233bad489b.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Über mich - Daniel Baran</title>
+  <style>
+    @font-face { font-family:'Space Grotesk'; font-style:normal; font-weight:400; font-display:swap; src:url('/assets/fonts/space-grotesk-400.woff2') format('woff2'); }
+    @font-face { font-family:'Space Grotesk'; font-style:normal; font-weight:500; font-display:swap; src:url('/assets/fonts/space-grotesk-500.woff2') format('woff2'); }
+    html, body { margin:0; padding:0; background:#E7E5E0; }
+    body { font-family:'Space Grotesk', 'Helvetica Neue', Arial, sans-serif; color:#0D0D0C; -webkit-font-smoothing:antialiased; }
+    a { color:#0D0D0C; text-decoration:none; }
+    a:hover { color:#0D0D0C; }
+    :focus-visible { outline:2px solid #2A2AE5; outline-offset:3px; }
+    ::selection { background:#2A2AE5; color:#E7E5E0; }
+    button { font-family:'Space Grotesk', 'Helvetica Neue', Arial, sans-serif; }
+    @keyframes letterUp { from { transform:translateY(110%); } to { transform:translateY(0); } }
+    @keyframes softIn { from { opacity:0; transform:translateY(14px); } to { opacity:1; transform:translateY(0); } }
+    @keyframes barIn { from { opacity:0; } to { opacity:1; } }
+    @media (prefers-reduced-motion: reduce) {
+      * { animation:none !important; transition:none !important; }
+    }
+  </style>
+</helmet>
+
+<div style="min-height:100svh; background:#E7E5E0; color:#0D0D0C;">
+
+  <!-- ===== Header-Bar ===== -->
+  <header style="position:fixed; top:0; left:0; right:0; z-index:10; display:grid; grid-template-columns:1fr auto 1fr; align-items:center; gap:24px; padding:14px clamp(20px,3vw,48px); border-bottom:1.5px solid #0D0D0C; background:#E7E5E0; font-size:0.8rem; letter-spacing:0.02em; animation:barIn 0.8s cubic-bezier(0.62,0.05,0.01,0.99) 0.9s both;">
+    <a href="/" style="font-weight:500; text-transform:uppercase; letter-spacing:0.04em; white-space:nowrap;">Daniel Baran</a>
+    <div style="color:#4A4945; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; min-width:0;">{{ t.tagline }}</div>
+    <nav aria-label="Hauptnavigation" style="display:flex; justify-content:flex-end; align-items:center; gap:22px; white-space:nowrap;">
+      <a href="/ueber-mich/" aria-current="page" style="border-bottom:1.5px solid #0D0D0C; padding-bottom:2px;">{{ t.navAbout }}</a>
+      <a href="/#leistungen" style="border-bottom:1.5px solid transparent; padding-bottom:2px;" style-hover="border-bottom-color:#2A2AE5;">{{ t.navServices }}</a>
+      <a href="/#prozess" style="border-bottom:1.5px solid transparent; padding-bottom:2px;" style-hover="border-bottom-color:#2A2AE5;">{{ t.navProcess }}</a>
+      <a href="/projekte/" style="border-bottom:1.5px solid transparent; padding-bottom:2px;" style-hover="border-bottom-color:#2A2AE5;">{{ t.navProjects }}</a>
+      <a href="/#kontakt" style="border-bottom:1.5px solid transparent; padding-bottom:2px;" style-hover="border-bottom-color:#2A2AE5;">{{ t.navContact }}</a>
+      <span style="display:flex; gap:10px; margin-left:14px; color:#4A4945;">
+        <sc-for list="{{ langs }}" as="lg" hint-placeholder-count="3">
+          <button type="button" onClick="{{ lg.select }}" aria-current="{{ lg.current }}" style="background:none; border:none; padding:0 0 2px; cursor:pointer; font-size:0.8rem; letter-spacing:0.02em; color:{{ lg.color }}; border-bottom:1.5px solid {{ lg.underline }};" style-hover="border-bottom-color:#2A2AE5;">{{ lg.label }}</button>
+        </sc-for>
+      </span>
+    </nav>
+  </header>
+
+  <!-- ===== Unterseiten-Header ===== -->
+  <section data-screen-label="Profil Header" style="padding:clamp(130px,20vh,220px) clamp(20px,3vw,48px) clamp(48px,7vh,88px); box-sizing:border-box;">
+    <h1 aria-label="Passionate Project Manager" style="display:flex; flex-wrap:wrap; column-gap:0.24em; row-gap:0; margin:0; font-weight:500; text-transform:uppercase; font-size:clamp(3.2rem,13vw,9rem); line-height:0.88; letter-spacing:0;">
+      <sc-for list="{{ headlineWords }}" as="word" hint-placeholder-count="3">
+        <span style="display:flex;"><sc-for list="{{ word.letters }}" as="l" hint-placeholder-count="5"><span aria-hidden="true" style="display:block; overflow:hidden; line-height:0.9; padding-bottom:0.1em; margin-bottom:-0.1em;"><span style="display:inline-block; animation:letterUp 1.15s cubic-bezier(0.62,0.05,0.01,0.99) {{ l.delay }} both;">{{ l.char }}</span></span></sc-for></span>
+      </sc-for>
+    </h1>
+
+    <dl style="margin:clamp(40px,6vh,72px) 0 0; animation:softIn 0.9s cubic-bezier(0.62,0.05,0.01,0.99) 0.95s both;">
+      <sc-for list="{{ facts }}" as="f" hint-placeholder-count="4">
+        <div style="display:grid; grid-template-columns:minmax(160px,220px) 1fr; gap:clamp(24px,4vw,64px); padding:7px 0; align-items:baseline;">
+          <dt style="font-size:0.78rem; letter-spacing:0.12em; text-transform:uppercase; color:#4A4945;">{{ f.label }}</dt>
+          <dd style="margin:0; font-size:0.92rem; line-height:1.4; font-weight:500;">{{ f.value }}</dd>
+        </div>
+      </sc-for>
+      <div style="padding:clamp(20px,3vh,32px) 0 0;">
+        <p style="margin:0; font-size:0.98rem; line-height:1.4; max-width:58ch;">{{ t.introPre }}<a href="/projekte/" style="border-bottom:1.5px solid #0D0D0C; padding-bottom:1px;" style-hover="border-bottom-color:#2A2AE5;">{{ t.introLink }}</a>{{ t.introPost }}</p>
+      </div>
+    </dl>
+  </section>
+
+  <!-- ===== Inhalt ===== -->
+  <section data-screen-label="Profil Inhalt" style="padding:0 clamp(20px,3vw,48px) clamp(56px,9vh,110px); box-sizing:border-box;">
+
+    <!-- (01) Was ich mitbringe — Akkordeon -->
+    <div data-reveal style="padding:clamp(44px,6.5vh,80px) 0 clamp(14px,2vh,22px);">
+      <span style="display:block; margin-bottom:clamp(10px,1.5vh,16px); font-size:0.78rem; letter-spacing:0.12em; text-transform:uppercase; color:#4A4945;">(01)</span>
+      <h2 style="margin:0; font-weight:500; text-transform:uppercase; font-size:clamp(3.6rem,10.5vw,8.4rem); line-height:0.86; letter-spacing:0;">{{ t.s01 }}</h2>
+    </div>
+    <div>
+      <sc-for list="{{ skills }}" as="s" hint-placeholder-count="6">
+        <article data-reveal>
+          <h3 style="margin:0;">
+            <button type="button" onClick="{{ s.toggle }}" aria-expanded="{{ s.open }}" style="width:100%; display:grid; grid-template-columns:minmax(160px,220px) 1fr auto; gap:clamp(24px,4vw,64px); align-items:baseline; background:none; border:none; padding:clamp(18px,2.5vh,28px) 0; cursor:pointer; text-align:left; color:#0D0D0C;">
+              <span style="font-size:0.78rem; letter-spacing:0.04em; color:#4A4945; font-weight:400;">{{ s.num }}</span>
+              <span style="font-weight:500; text-transform:uppercase; font-size:clamp(1.1rem,1.8vw,1.45rem); line-height:1.05; letter-spacing:0; justify-self:start; color:{{ s.color }};">{{ s.title }}</span>
+              <span aria-hidden="true" style="font-weight:400; font-size:clamp(1.3rem,2vw,1.7rem); line-height:1; transform:{{ s.rot }}; transition:transform 0.6s cubic-bezier(0.62,0.05,0.01,0.99); transform-origin:center;">+</span>
+            </button>
+          </h3>
+          <div style="display:grid; grid-template-rows:{{ s.rows }}; transition:{{ s.trans }};">
+            <div style="overflow:hidden; min-height:0;">
+              <div style="display:grid; grid-template-columns:minmax(160px,220px) 1fr; gap:clamp(24px,4vw,64px); padding:0 0 clamp(20px,3vh,32px);">
+                <span></span>
+                <p style="margin:0; font-size:0.95rem; line-height:1.4; color:#4A4945; max-width:58ch;">{{ s.text }}</p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </sc-for>
+    </div>
+
+    <!-- (02) Arbeitsweise -->
+    <article data-reveal style="margin-top:clamp(44px,6.5vh,80px); padding:clamp(44px,6.5vh,80px) 0 clamp(28px,4vh,40px);">
+      <div>
+        <span style="display:block; margin-bottom:clamp(10px,1.5vh,16px); font-size:0.78rem; letter-spacing:0.12em; text-transform:uppercase; color:#4A4945;">(02)</span>
+        <h2 style="margin:0; font-weight:500; text-transform:uppercase; font-size:clamp(3.6rem,10.5vw,8.4rem); line-height:0.86; letter-spacing:0;">{{ t.s02 }}</h2>
+      </div>
+      <div style="display:grid; grid-template-columns:minmax(160px,220px) 1fr; gap:clamp(24px,4vw,64px); margin-top:clamp(20px,3vh,32px);">
+        <span></span>
+        <div>
+          <p style="margin:0; font-size:0.98rem; line-height:1.4; max-width:58ch;">{{ t.workP1 }}</p>
+          <p style="margin:14px 0 0; font-size:0.98rem; line-height:1.4; max-width:58ch;">{{ t.workP2 }}</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- (03) Karriere kompakt -->
+    <div data-reveal style="padding:clamp(44px,6.5vh,80px) 0 clamp(14px,2vh,22px);">
+      <span style="display:block; margin-bottom:clamp(10px,1.5vh,16px); font-size:0.78rem; letter-spacing:0.12em; text-transform:uppercase; color:#4A4945;">(03)</span>
+      <h2 style="margin:0; font-weight:500; text-transform:uppercase; font-size:clamp(3.6rem,10.5vw,8.4rem); line-height:0.86; letter-spacing:0;">{{ t.s03 }}</h2>
+    </div>
+    <sc-for list="{{ timeline }}" as="t" hint-placeholder-count="5">
+      <div data-reveal style="display:grid; grid-template-columns:minmax(160px,220px) minmax(200px,26ch) 1fr; gap:clamp(24px,4vw,64px); border-top:1.5px solid #0D0D0C; padding:clamp(18px,2.5vh,28px) 0; align-items:baseline;">
+        <span style="font-weight:500; font-size:0.95rem; letter-spacing:0.02em;">{{ t.years }}</span>
+        <h3 style="margin:0; font-weight:500; text-transform:uppercase; font-size:clamp(1.05rem,1.7vw,1.35rem); line-height:1.1; letter-spacing:0;">{{ t.role }}</h3>
+        <p style="margin:0; font-size:0.95rem; line-height:1.4; color:#4A4945; max-width:56ch;">{{ t.org }}</p>
+      </div>
+    </sc-for>
+
+    <!-- (04) Toolkit & Methoden — Akkordeon -->
+    <div data-reveal style="padding:clamp(44px,6.5vh,80px) 0 clamp(14px,2vh,22px);">
+      <span style="display:block; margin-bottom:clamp(10px,1.5vh,16px); font-size:0.78rem; letter-spacing:0.12em; text-transform:uppercase; color:#4A4945;">(04)</span>
+      <h2 style="margin:0; font-weight:500; text-transform:uppercase; font-size:clamp(3.6rem,10.5vw,8.4rem); line-height:0.86; letter-spacing:0;">{{ t.s04 }}</h2>
+    </div>
+    <div>
+      <sc-for list="{{ toolkit }}" as="g" hint-placeholder-count="6">
+        <article data-reveal>
+          <h3 style="margin:0;">
+            <button type="button" onClick="{{ g.toggle }}" aria-expanded="{{ g.open }}" style="width:100%; display:grid; grid-template-columns:minmax(160px,220px) 1fr auto; gap:clamp(24px,4vw,64px); align-items:baseline; background:none; border:none; padding:clamp(18px,2.5vh,28px) 0; cursor:pointer; text-align:left; color:#0D0D0C;">
+              <span style="font-size:0.78rem; letter-spacing:0.04em; color:#4A4945; font-weight:400;">{{ g.num }}</span>
+              <span style="font-weight:500; text-transform:uppercase; font-size:clamp(1.05rem,1.6vw,1.35rem); line-height:1.1; letter-spacing:0; justify-self:start;">{{ g.title }}</span>
+              <span aria-hidden="true" style="font-weight:400; font-size:clamp(1.3rem,2vw,1.7rem); line-height:1; transform:{{ g.rot }}; transition:transform 0.6s cubic-bezier(0.62,0.05,0.01,0.99); transform-origin:center;">+</span>
+            </button>
+          </h3>
+          <div style="display:grid; grid-template-rows:{{ g.rows }}; transition:grid-template-rows 0.7s cubic-bezier(0.62,0.05,0.01,0.99);">
+            <div style="overflow:hidden; min-height:0;">
+              <div style="display:grid; grid-template-columns:minmax(160px,220px) 1fr; gap:clamp(24px,4vw,64px); padding:0 0 clamp(20px,3vh,32px);">
+                <span></span>
+                <p style="margin:0; font-size:0.95rem; line-height:1.55; color:#4A4945;">{{ g.text }}</p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </sc-for>
+    </div>
+
+    <!-- Abschluss -->
+    <div data-reveal style="margin-top:clamp(28px,4.5vh,48px); padding:clamp(40px,7vh,80px) 0 clamp(16px,3vh,32px);">
+      <p style="margin:0; font-weight:500; text-transform:uppercase; font-size:clamp(3.6rem,10.5vw,8.4rem); line-height:0.86; letter-spacing:0; max-width:16ch;">{{ t.closingText }}</p>
+      <p style="margin:clamp(20px,3.5vh,32px) 0 0;"><a href="/#kontakt" style="font-weight:500; font-size:clamp(1rem,1.4vw,1.2rem); text-transform:uppercase; letter-spacing:0.01em; border-bottom:1.5px solid #0D0D0C; padding-bottom:4px;" style-hover="border-bottom-color:#2A2AE5;">{{ t.closingLink }}</a></p>
+    </div>
+
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer style="border-top:1.5px solid #0D0D0C; padding:18px clamp(20px,3vw,48px); display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px; font-size:0.78rem; letter-spacing:0.04em; color:#4A4945;">
+    <span>{{ t.footerName }}</span>
+    <span style="display:flex; gap:18px;">
+      <a href="https://www.linkedin.com/in/daniel-baran-5b14b2269" target="_blank" rel="noopener" style="color:#4A4945; border-bottom:1.5px solid transparent; padding-bottom:2px;" style-hover="border-bottom-color:#2A2AE5;">{{ t.footerLinkedin }}</a>
+      <a href="/impressum/" style="color:#4A4945; border-bottom:1.5px solid transparent; padding-bottom:2px;" style-hover="border-bottom-color:#2A2AE5;">{{ t.footerImprint }}</a>
+      <a href="/datenschutz/" style="color:#4A4945; border-bottom:1.5px solid transparent; padding-bottom:2px;" style-hover="border-bottom-color:#2A2AE5;">{{ t.footerPrivacy }}</a>
+    </span>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const DATA = {
+  de: {
+    tagline: "Senior IT Project & Product Manager · Remote · DACH",
+    navAbout: "Über mich", navServices: "Leistungen", navProcess: "Prozess", navProjects: "Projekte", navContact: "Kontakt",
+    facts: [
+      { label: "Standort", value: "Poznań · Remote · vor Ort nach Bedarf" },
+      { label: "Sprachen", value: "Deutsch · Polnisch · Englisch" },
+      { label: "Schwerpunkt", value: "IT-Projekte · Product Ownership · KI-Enablement" },
+      { label: "Verfügbarkeit", value: "auf Anfrage" },
+    ],
+    introPre: "Ich steuere Digitalisierungsprojekte im Automotive-After-Sales – davor lagen zwei Jahre Produktentwicklung bei SWR/ARD, virtuelle Live-Events mit international verteilten Teams und der Mitaufbau eines Fashion-Tech-Startups. Die Branchen waren immer andere, das Muster war immer dasselbe: komplexe Vorhaben mit vielen Stimmen, die eine klare Richtung brauchen. Die Stationen stehen unten – was in den Projekten passiert ist, steht unter ",
+    introLink: "Projekte", introPost: ".",
+    s01: "Was ich mitbringe", s02: "Arbeitsweise", s03: "Karriere kompakt", s04: "Toolkit & Methoden",
+    workP1: "Welche Methodik ein Projekt braucht, entscheide ich nach Projekttyp, nicht nach Vorliebe: Wasserfall, wo Änderungen ab einem Punkt tabu sind, agil, wo ein Produkt mit dem Feedback wachsen muss. Und ein Team ist selten unmotiviert, weil ihm die Fähigkeiten fehlen – meistens fehlt schlicht Klarheit. Deshalb will ich in jedem Projekt die Person sein, an die sich jeder mit jedem Anliegen wenden kann.",
+    workP2: "Aufgewachsen bin ich in Polen und Deutschland, gearbeitet habe ich mit Teams aus der ganzen Welt. Kulturelle Reibung erkenne ich deshalb meist, bevor sie zum Problem wird.",
+    closingText: "Klingt nach einem Match? Lass uns reden.", closingLink: "Zum Kontakt →",
+    footerName: "Daniel Baran · Freelance IT- & Product-Delivery", footerLinkedin: "LinkedIn ↗", footerImprint: "Impressum", footerPrivacy: "Datenschutz",
+    skills: [
+      { num: "01", title: "Cross-funktionale Übersetzung", text: "Ich sitze zwischen Entwickler-Teams und Fachabteilungen und mache aus \"das geht technisch nicht\" und \"das braucht die Fachseite aber\" ein realistisches Backlog. Meine Medien- und Konzern-Erfahrung hat mir beigebracht, wie man das ohne Kollateralschäden hinbekommt." },
+      { num: "02", title: "Komplexe Multi-Stakeholder-Umgebungen", text: "Ob Senderverbund mit mehreren Anstalten, internationales Metaverse-Projekt mit verteilten Teams oder Konzern-Integration im Nutzfahrzeug-Umfeld, ich habe gelernt, wie man Anforderungen konsolidiert, Governance sauber aufsetzt und trotzdem liefert. Auch wenn fünf Seiten fünf verschiedene Prioritäten haben." },
+      { num: "03", title: "KI in Produktion", accent: true, text: "Mit KI beschäftige ich mich seit Jahren, weit über den Berufsalltag hinaus. Auf meiner eigenen lokalen Infrastruktur vergleiche ich Sprachmodelle, teste Spracherkennung und Bildgenerierung und experimentiere mit RAG-Ansätzen. Mein größtes privates Projekt: ein selbst entwickeltes Multi-Agenten-System, das Aufgaben eigenständig plant, umsetzt und zur Freigabe vorlegt. Das ist kein Selbstzweck. Wer KI-Projekte für Unternehmen bewerten und steuern will, muss wissen, was die Technologie wirklich kann und wo sie an ihre Grenzen stößt. Diesen Unterschied merkt man in jedem Gespräch: zwischen jemandem, der über KI redet, und jemandem, der sie täglich selbst baut und einsetzt." },
+      { num: "04", title: "Startup-Härte trifft Konzern-Governance", text: "Vom Gründerteam eines Mode-Tech-Startups über internationale Streaming-Projekte zu einem großen Broadcaster und einem Nutzfahrzeug-Konzern, ich kenne beide Enden des Spektrums und weiß, welches Tempo ein Projekt gerade braucht." },
+      { num: "05", title: "Physisch trifft digital", text: "Mechatroniker-Ausbildung, Instandhaltung in der Automobilindustrie, heute Digitalisierung von Werkstattprozessen. Wenn Software auf Maschinen, Werkstätten oder physische Produkte trifft, muss mir niemand erklären, warum die Realität sich nicht ans Backlog hält." },
+      { num: "06", title: "Harte Go-lives", text: "Ich habe Live-Events verantwortet, die wochenlang beworben waren und exakt zur angekündigten Minute laufen mussten. Verschieben war keine Option. Dort lernt man, kompromisslos zu priorisieren und rechtzeitig Nein zu sagen." },
+    ],
+    timeline: [
+      { years: "2025 – heute", role: "Senior IT Project Manager", org: "MAN Truck & Bus · After-Sales-Digitalisierung im Konzernverbund" },
+      { years: "2023 – 2025", role: "Product Owner / Project Lead", org: "SWR/ARD · Vier Projekte in der Produktentwicklung (siehe Projekte)" },
+      { years: "2021 – 2023", role: "Project Manager / Project Lead", org: "Adastra Studios · Infinite Playa (Burning Mans Virtual Burn 2021) · UCI Track Champions League für Warner Bros. Discovery (als Partner von Infinite Reality)" },
+      { years: "2019 – 2022", role: "Co-Founder & COO", org: "Vestium Inc. · Mode-Tech-Venture mit 3D-Body-Scanning-Prototyp" },
+      { years: "vor 2021", role: "Technische Basis", org: "Mechatroniker-Ausbildung im Anlagenbau · Instandhaltung bei einem deutschen Automobilhersteller · weitere Stationen" },
+    ],
+    toolkit: [
+      { num: "01", title: "Projekt & Produkt", text: "Jira · Confluence · Scrum · Kanban · OKR · Roadmapping · Stakeholder-Workshops · Anforderungserhebung · Priorisierung & MVP-Denken · A/B-Testing · Web-Analytics (Google Analytics) · Go-live-Planung · Projektübernahmen & Übergaben · Scope- & Change-Request-Management · Risiko- & Eskalationsmanagement · Budgetverantwortung · Business Cases & Executive-Präsentationen · Dokumentation & Wissenstransfer" },
+      { num: "02", title: "Führung & Zusammenarbeit", text: "Verteilte & internationale Teams · Remote-Führung über Zeitzonen · Vendor- & Outsourcing-Steuerung · Workshop-Moderation · Konfliktmanagement · Onboarding & Einarbeitung neuer Projektleiter · Zusammenarbeit Fachbereich/IT" },
+      { num: "03", title: "Media, Streaming & Immersive", text: "HLS/DASH · Transcoding · CDN · Barrierefreiheit (Untertitel) · AWS Serverless · High Availability & Failover · Monitoring (Grafana) & Rollback-Strategien · SLA-Design & 24/7-Support-Modelle · GitLab CI/CD · Unreal Engine" },
+      { num: "04", title: "Künstliche Intelligenz", text: "Generative AI · Multi-Agenten-Systeme & Agent-Orchestrierung · LangGraph · RAG · Vektordatenbanken & Embeddings · LLM-Routing (Ollama/API) · Lokale LLMs · Human-in-the-Loop-Workflows · Prompt Engineering · Recommendation Engines · Speech-to-Text (Whisper) · Bildgenerierung · KI-Tool-Evaluation · AI-Coding-Agents (Claude Code, Codex, Cursor)" },
+      { num: "05", title: "Enterprise & Integration", text: "SSO & Identity · Systemmigrationen · Portal-Lösungen · Konzernübergreifende Schnittstellen · Rollout & Training · Change Management · DSGVO-konforme Umsetzung · ServiceNow · Docker · Cloudflare (Pages/Workers) · n8n" },
+      { num: "06", title: "Collaboration & Design", text: "Miro · Figma · Microsoft 365 · Slack · Teams" },
+    ],
+  },
+  en: {
+    tagline: "Senior IT Project & Product Manager · Remote · DACH",
+    navAbout: "About", navServices: "Services", navProcess: "Process", navProjects: "Projects", navContact: "Contact",
+    facts: [
+      { label: "Location", value: "Poznań · Remote · on site as needed" },
+      { label: "Languages", value: "German · Polish · English" },
+      { label: "Focus", value: "IT projects · Product ownership · AI enablement" },
+      { label: "Availability", value: "on request" },
+    ],
+    introPre: "I manage digitalization projects in automotive after sales. Before that came two years of product development at SWR/ARD, virtual live events with internationally distributed teams, and co-building a fashion-tech startup. The industries kept changing, the pattern stayed the same: complex initiatives with many voices that need a clear direction. The career stations are below; what happened inside the projects is under ",
+    introLink: "Projects", introPost: ".",
+    s01: "What I bring", s02: "How I work", s03: "Career at a glance", s04: "Toolkit & Methods",
+    workP1: "Which methodology a project needs is a question of project type, not personal preference: waterfall where changes are off-limits beyond a certain point, agile where a product has to grow with feedback. And a team is rarely unmotivated because it lacks skills. What is usually missing is simple clarity. That is why, in every project, I want to be the person anyone can turn to with any concern.",
+    workP2: "I grew up in Poland and Germany and have worked with teams from all over the world. So I usually spot cultural friction before it becomes a problem.",
+    closingText: "Sounds like a match? Let's talk.", closingLink: "Get in touch →",
+    footerName: "Daniel Baran · Freelance IT & Product Delivery", footerLinkedin: "LinkedIn ↗", footerImprint: "Legal Notice", footerPrivacy: "Privacy",
+    skills: [
+      { num: "01", title: "Cross-functional translation", text: "I sit between development teams and business departments and turn \"that's technically impossible\" and \"but the business side needs this\" into a realistic backlog. My media and corporate experience taught me how to pull that off without collateral damage." },
+      { num: "02", title: "Complex multi-stakeholder environments", text: "Whether a broadcasting network with several member organizations, an international metaverse project with distributed teams or corporate integration in the commercial vehicle world, I have learned how to consolidate requirements, set up clean governance and still deliver. Even when five parties have five different priorities." },
+      { num: "03", title: "AI in production", accent: true, text: "I have been deeply involved with AI for years, far beyond my day job. On my own local infrastructure, I compare language models, test speech recognition and image generation, and experiment with RAG approaches. My biggest private project: a self-built multi-agent system that plans and executes tasks autonomously and presents them for approval. This is not an end in itself. Anyone who wants to evaluate and manage AI projects for companies has to know what the technology can really do and where it hits its limits. You notice this difference in every conversation: between someone who talks about AI and someone who builds and uses it themselves every day." },
+      { num: "04", title: "Startup grit meets corporate governance", text: "From the founding team of a fashion-tech startup through international streaming projects to a major broadcaster and a commercial vehicle group, I know both ends of the spectrum and can tell which pace a project needs right now." },
+      { num: "05", title: "Physical meets digital", text: "A mechatronics apprenticeship, maintenance in the automotive industry, and today the digitalization of workshop processes. When software meets machines, workshops or physical products, nobody has to explain to me why reality doesn't stick to the backlog." },
+      { num: "06", title: "Hard go-lives", text: "I have been responsible for live events that were promoted for weeks and had to run at exactly the announced minute. Postponing was not an option. That is where you learn to prioritize without compromise and to say no in time." },
+    ],
+    timeline: [
+      { years: "2025 – today", role: "Senior IT Project Manager", org: "MAN Truck & Bus · After-sales digitalization within the corporate group" },
+      { years: "2023 – 2025", role: "Product Owner / Project Lead", org: "SWR/ARD · Four projects in product development (see Projects)" },
+      { years: "2021 – 2023", role: "Project Manager / Project Lead", org: "Adastra Studios · Infinite Playa (Burning Man's Virtual Burn 2021) · UCI Track Champions League for Warner Bros. Discovery (as a partner of Infinite Reality)" },
+      { years: "2019 – 2022", role: "Co-Founder & COO", org: "Vestium Inc. · Fashion-tech venture with a 3D body scanning prototype" },
+      { years: "before 2021", role: "Technical foundation", org: "Mechatronics apprenticeship in plant engineering · Maintenance at a German car manufacturer · further roles" },
+    ],
+    toolkit: [
+      { num: "01", title: "Project & Product", text: "Jira · Confluence · Scrum · Kanban · OKR · Roadmapping · Stakeholder workshops · Requirements gathering · Prioritization & MVP thinking · A/B testing · Web analytics (Google Analytics) · Go-live planning · Project takeovers & handovers · Scope & change request management · Risk & escalation management · Budget responsibility · Business cases & executive presentations · Documentation & knowledge transfer" },
+      { num: "02", title: "Leadership & Collaboration", text: "Distributed & international teams · Remote leadership across time zones · Vendor & outsourcing management · Workshop facilitation · Conflict management · Onboarding new project leads · Business/IT alignment" },
+      { num: "03", title: "Media, Streaming & Immersive", text: "HLS/DASH · Transcoding · CDN · Accessibility (subtitles) · AWS Serverless · High availability & failover · Monitoring (Grafana) & rollback strategies · SLA design & 24/7 support models · GitLab CI/CD · Unreal Engine" },
+      { num: "04", title: "Artificial Intelligence", text: "Generative AI · Multi-agent systems & agent orchestration · LangGraph · RAG · Vector databases & embeddings · LLM routing (Ollama/API) · Local LLMs · Human-in-the-loop workflows · Prompt engineering · Recommendation engines · Speech-to-text (Whisper) · Image generation · AI tool evaluation · AI coding agents (Claude Code, Codex, Cursor)" },
+      { num: "05", title: "Enterprise & Integration", text: "SSO & identity · System migrations · Portal solutions · Cross-company interfaces · Rollout & training · Change management · GDPR-compliant implementation · ServiceNow · Docker · Cloudflare (Pages/Workers) · n8n" },
+      { num: "06", title: "Collaboration & Design", text: "Miro · Figma · Microsoft 365 · Slack · Teams" },
+    ],
+  },
+  pl: {
+    tagline: "Senior IT Project & Product Manager · Zdalnie · DACH",
+    navAbout: "O mnie", navServices: "Usługi", navProcess: "Proces", navProjects: "Projekty", navContact: "Kontakt",
+    facts: [
+      { label: "Lokalizacja", value: "Poznań · Zdalnie · na miejscu w razie potrzeby" },
+      { label: "Języki", value: "Niemiecki · Polski · Angielski" },
+      { label: "Specjalizacja", value: "Projekty IT · Product ownership · AI enablement" },
+      { label: "Dostępność", value: "na zapytanie" },
+    ],
+    introPre: "Prowadzę projekty cyfryzacyjne w automotive after sales. Wcześniej były dwa lata rozwoju produktów w SWR/ARD, wirtualne wydarzenia na żywo z rozproszonymi, międzynarodowymi zespołami i współtworzenie fashion-tech startupu. Branże zawsze były inne, schemat zawsze ten sam: złożone przedsięwzięcia z wieloma głosami, które potrzebują jasnego kierunku. Poszczególne etapy są poniżej, a co działo się w projektach, można znaleźć w zakładce ",
+    introLink: "Projekty", introPost: ".",
+    s01: "Co wnoszę", s02: "Sposób pracy", s03: "Kariera w skrócie", s04: "Toolkit i metody",
+    workP1: "O tym, jakiej metodyki potrzebuje projekt, decyduje typ projektu, nie moje preferencje: waterfall tam, gdzie od pewnego momentu zmiany są tabu, agile tam, gdzie produkt musi rosnąć razem z feedbackiem. A zespół rzadko jest niezmotywowany dlatego, że brakuje mu umiejętności. Najczęściej brakuje po prostu jasności. Dlatego w każdym projekcie chcę być osobą, do której każdy może przyjść z każdą sprawą.",
+    workP2: "Dorastałem w Polsce i w Niemczech, a pracowałem z zespołami z całego świata. Dlatego kulturowe tarcia zwykle wyłapuję, zanim staną się problemem.",
+    closingText: "Pasujemy do siebie? Pogadajmy.", closingLink: "Przejdź do kontaktu →",
+    footerName: "Daniel Baran · Freelance IT & Product Delivery", footerLinkedin: "LinkedIn ↗", footerImprint: "Nota prawna", footerPrivacy: "Prywatność",
+    skills: [
+      { num: "01", title: "Tłumaczenie między biznesem a IT", text: "Siedzę między zespołami deweloperskimi a działami biznesowymi i zamieniam \"to technicznie niemożliwe\" oraz \"ale biznes tego potrzebuje\" w realistyczny backlog. Doświadczenie z mediów i koncernów nauczyło mnie, jak robić to bez szkód ubocznych." },
+      { num: "02", title: "Złożone środowiska z wieloma interesariuszami", text: "Czy to związek nadawców z kilkoma stacjami, międzynarodowy projekt metaverse z rozproszonymi zespołami, czy integracja koncernowa w świecie pojazdów użytkowych, nauczyłem się konsolidować wymagania, porządnie ustawiać governance i mimo wszystko dowozić. Nawet gdy pięć stron ma pięć różnych priorytetów." },
+      { num: "03", title: "AI w produkcji", accent: true, text: "Od lat intensywnie zajmuję się AI, daleko poza codzienną pracą zawodową. Na własnej lokalnej infrastrukturze porównuję modele językowe, testuję rozpoznawanie mowy i generowanie obrazów oraz eksperymentuję z podejściami RAG. Mój największy prywatny projekt: samodzielnie zbudowany system multiagentowy, który sam planuje i realizuje zadania, a następnie przedstawia je do zatwierdzenia. To nie jest sztuka dla sztuki. Kto chce oceniać i prowadzić projekty AI dla firm, musi wiedzieć, co ta technologia naprawdę potrafi i gdzie kończą się jej możliwości. Tę różnicę słychać w każdej rozmowie: między kimś, kto o AI mówi, a kimś, kto codziennie sam ją buduje i wykorzystuje." },
+      { num: "04", title: "Startupowa szkoła przetrwania i koncernowy governance", text: "Od zespołu założycielskiego fashion-tech startupu przez międzynarodowe projekty streamingowe po dużego nadawcę i koncern pojazdów użytkowych, znam oba końce spektrum i wiem, jakiego tempa projekt akurat potrzebuje." },
+      { num: "05", title: "Fizyczne spotyka cyfrowe", text: "Wykształcenie mechatroniczne, utrzymanie ruchu w przemyśle motoryzacyjnym, dziś cyfryzacja procesów warsztatowych. Kiedy software spotyka maszyny, warsztaty albo fizyczne produkty, nikt nie musi mi tłumaczyć, dlaczego rzeczywistość nie trzyma się backlogu." },
+      { num: "06", title: "Twarde go-live'y", text: "Odpowiadałem za wydarzenia na żywo, które były promowane tygodniami i musiały ruszyć dokładnie o zapowiedzianej minucie. Przesunięcie nie wchodziło w grę. Tam człowiek uczy się priorytetyzować bez kompromisów i mówić \"nie\" w odpowiednim momencie." },
+    ],
+    timeline: [
+      { years: "2025 – dziś", role: "Senior IT Project Manager", org: "MAN Truck & Bus · Cyfryzacja after sales w strukturach koncernu" },
+      { years: "2023 – 2025", role: "Product Owner / Project Lead", org: "SWR/ARD · Cztery projekty w dziale rozwoju produktu (zob. Projekty)" },
+      { years: "2021 – 2023", role: "Project Manager / Project Lead", org: "Adastra Studios · Infinite Playa (Virtual Burn festiwalu Burning Man 2021) · UCI Track Champions League dla Warner Bros. Discovery (jako partner Infinite Reality)" },
+      { years: "2019 – 2022", role: "Co-Founder & COO", org: "Vestium Inc. · Fashion-tech venture z prototypem skanowania 3D" },
+      { years: "przed 2021", role: "Podstawy techniczne", org: "Wykształcenie mechatroniczne w budowie maszyn i instalacji · Utrzymanie ruchu u niemieckiego producenta samochodów · kolejne etapy" },
+    ],
+    toolkit: [
+      { num: "01", title: "Projekt i produkt", text: "Jira · Confluence · Scrum · Kanban · OKR · Roadmapping · Warsztaty z interesariuszami · Zbieranie wymagań · Priorytetyzacja i myślenie MVP · Testy A/B · Analityka webowa (Google Analytics) · Planowanie go-live · Przejmowanie i przekazywanie projektów · Zarządzanie zakresem i change requestami · Zarządzanie ryzykiem i eskalacjami · Odpowiedzialność budżetowa · Business case'y i prezentacje dla zarządu · Dokumentacja i transfer wiedzy" },
+      { num: "02", title: "Przywództwo i współpraca", text: "Zespoły rozproszone i międzynarodowe · Zdalne prowadzenie zespołów w różnych strefach czasowych · Zarządzanie vendorami i outsourcingiem · Moderacja warsztatów · Zarządzanie konfliktami · Onboarding nowych kierowników projektów · Współpraca biznes/IT" },
+      { num: "03", title: "Media, streaming i technologie immersyjne", text: "HLS/DASH · Transcoding · CDN · Dostępność cyfrowa (napisy) · AWS Serverless · High availability i failover · Monitoring (Grafana) i strategie rollbacku · Projektowanie SLA i modele wsparcia 24/7 · GitLab CI/CD · Unreal Engine" },
+      { num: "04", title: "Sztuczna inteligencja", text: "Generative AI · Systemy multiagentowe i orkiestracja agentów · LangGraph · RAG · Bazy wektorowe i embeddingi · LLM routing (Ollama/API) · Lokalne LLM-y · Workflow human-in-the-loop · Prompt engineering · Silniki rekomendacji · Speech-to-text (Whisper) · Generowanie obrazów · Ewaluacja narzędzi AI · Agenci AI do kodowania (Claude Code, Codex, Cursor)" },
+      { num: "05", title: "Enterprise i integracje", text: "SSO i identity · Migracje systemów · Rozwiązania portalowe · Interfejsy między koncernami · Rollout i szkolenia · Change management · Zgodność z RODO · ServiceNow · Docker · Cloudflare (Pages/Workers) · n8n" },
+      { num: "06", title: "Collaboration i design", text: "Miro · Figma · Microsoft 365 · Slack · Teams" },
+    ],
+  },
+};
+
+class Component extends DCLogic {
+  state = {
+    openSkills: [], openTools: [],
+    lang: (() => { const d = window.__DB_DEFAULT_LANG; if (d && DATA[d]) return d; try { const l = localStorage.getItem("db-lang"); return (l && DATA[l]) ? l : "de"; } catch (e) { return "de"; } })(),
+  };
+
+  setLang(code) {
+    if (!DATA[code]) return;
+    try { localStorage.setItem("db-lang", code); } catch (e) {}
+    const target = window.__DB_ALT_ROUTES && window.__DB_ALT_ROUTES[code];
+    const current = window.location.pathname.endsWith("/") ? window.location.pathname : window.location.pathname + "/";
+    if (target && target !== current) {
+      window.location.href = target;
+      return;
+    }
+    this.setState({ lang: code });
+  }
+
+  renderVals() {
+    const lang = DATA[this.state.lang] ? this.state.lang : "de";
+    const L = DATA[lang];
+
+    let i = 0;
+    const headlineWords = "PASSIONATE PROJECT MANAGER".split(" ").map((w) => ({
+      letters: w.split("").map((ch) => ({ char: ch, delay: (150 + i++ * 28) + "ms" })),
+    }));
+
+    const langs = [
+      { code: "de", label: "DE" }, { code: "pl", label: "PL" }, { code: "en", label: "EN" },
+    ].map((o) => ({
+      label: o.label,
+      current: lang === o.code ? "true" : "false",
+      color: lang === o.code ? "#0D0D0C" : "#4A4945",
+      underline: lang === o.code ? "#0D0D0C" : "transparent",
+      select: () => this.setLang(o.code),
+    }));
+
+    const acc = (defs, key) => defs.map((d) => {
+      const open = this.state[key].includes(d.num);
+      return Object.assign({}, d, {
+        open,
+        color: d.accent ? "#2A2AE5" : "#0D0D0C",
+        trans: d.accent ? "none" : "grid-template-rows 0.7s cubic-bezier(0.62,0.05,0.01,0.99)",
+        rows: open ? "1fr" : "0fr",
+        rot: open ? "rotate(45deg)" : "rotate(0deg)",
+        toggle: () => this.setState((s) => ({
+          [key]: s[key].includes(d.num) ? s[key].filter((x) => x !== d.num) : s[key].concat(d.num),
+        })),
+      });
+    });
+
+    return {
+      t: L, langs, headlineWords,
+      facts: L.facts,
+      skills: acc(L.skills, "openSkills"),
+      timeline: L.timeline,
+      toolkit: acc(L.toolkit, "openTools"),
+    };
+  }
+
+  componentDidMount() {
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const els = document.querySelectorAll("[data-reveal]");
+    if (reduce) { els.forEach((el) => { el.style.opacity = "1"; }); return; }
+    const ease = "cubic-bezier(0.62,0.05,0.01,0.99)";
+    els.forEach((el) => {
+      el.style.clipPath = "inset(8% 0 8% 0)";
+      el.style.transform = "scale(1.06)";
+      el.style.opacity = "0.001";
+      el.style.transition = "clip-path 1s " + ease + ", transform 1s " + ease + ", opacity 0.6s " + ease;
+    });
+    this._io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.style.clipPath = "inset(0 0 0 0)";
+          e.target.style.transform = "scale(1)";
+          e.target.style.opacity = "1";
+          this._io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    els.forEach((el) => this._io.observe(el));
+  }
+
+  componentWillUnmount() {
+    if (this._io) this._io.disconnect();
+  }
+}
+</script>
+</body>
+</html>

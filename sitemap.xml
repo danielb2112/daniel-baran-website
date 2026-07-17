@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://daniel-baran.com/</loc>
-    <lastmod>2026-07-10</lastmod>
+    <lastmod>2026-07-17</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://daniel-baran.com/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://daniel-baran.com/en/" />
     <xhtml:link rel="alternate" hreflang="pl" href="https://daniel-baran.com/pl/" />
@@ -10,7 +10,7 @@
   </url>
   <url>
     <loc>https://daniel-baran.com/en/</loc>
-    <lastmod>2026-07-10</lastmod>
+    <lastmod>2026-07-17</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://daniel-baran.com/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://daniel-baran.com/en/" />
     <xhtml:link rel="alternate" hreflang="pl" href="https://daniel-baran.com/pl/" />
@@ -18,63 +18,111 @@
   </url>
   <url>
     <loc>https://daniel-baran.com/pl/</loc>
-    <lastmod>2026-07-10</lastmod>
+    <lastmod>2026-07-17</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://daniel-baran.com/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://daniel-baran.com/en/" />
     <xhtml:link rel="alternate" hreflang="pl" href="https://daniel-baran.com/pl/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://daniel-baran.com/" />
   </url>
   <url>
-    <loc>https://daniel-baran.com/impressum</loc>
-    <lastmod>2026-07-10</lastmod>
-    <xhtml:link rel="alternate" hreflang="de" href="https://daniel-baran.com/impressum" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-baran.com/en/imprint" />
-    <xhtml:link rel="alternate" hreflang="pl" href="https://daniel-baran.com/pl/nota-prawna" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://daniel-baran.com/impressum" />
+    <loc>https://daniel-baran.com/ueber-mich/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://daniel-baran.com/ueber-mich/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-baran.com/en/about/" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://daniel-baran.com/pl/o-mnie/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://daniel-baran.com/ueber-mich/" />
   </url>
   <url>
-    <loc>https://daniel-baran.com/en/imprint</loc>
-    <lastmod>2026-07-10</lastmod>
-    <xhtml:link rel="alternate" hreflang="de" href="https://daniel-baran.com/impressum" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-baran.com/en/imprint" />
-    <xhtml:link rel="alternate" hreflang="pl" href="https://daniel-baran.com/pl/nota-prawna" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://daniel-baran.com/impressum" />
+    <loc>https://daniel-baran.com/en/about/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://daniel-baran.com/ueber-mich/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-baran.com/en/about/" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://daniel-baran.com/pl/o-mnie/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://daniel-baran.com/ueber-mich/" />
   </url>
   <url>
-    <loc>https://daniel-baran.com/pl/nota-prawna</loc>
-    <lastmod>2026-07-10</lastmod>
-    <xhtml:link rel="alternate" hreflang="de" href="https://daniel-baran.com/impressum" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-baran.com/en/imprint" />
-    <xhtml:link rel="alternate" hreflang="pl" href="https://daniel-baran.com/pl/nota-prawna" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://daniel-baran.com/impressum" />
+    <loc>https://daniel-baran.com/pl/o-mnie/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://daniel-baran.com/ueber-mich/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-baran.com/en/about/" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://daniel-baran.com/pl/o-mnie/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://daniel-baran.com/ueber-mich/" />
   </url>
   <url>
-    <loc>https://daniel-baran.com/datenschutz</loc>
-    <lastmod>2026-07-10</lastmod>
-    <xhtml:link rel="alternate" hreflang="de" href="https://daniel-baran.com/datenschutz" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-baran.com/en/privacy" />
-    <xhtml:link rel="alternate" hreflang="pl" href="https://daniel-baran.com/pl/prywatnosc" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://daniel-baran.com/datenschutz" />
+    <loc>https://daniel-baran.com/projekte/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://daniel-baran.com/projekte/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-baran.com/en/projects/" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://daniel-baran.com/pl/projekty/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://daniel-baran.com/projekte/" />
   </url>
   <url>
-    <loc>https://daniel-baran.com/en/privacy</loc>
-    <lastmod>2026-07-10</lastmod>
-    <xhtml:link rel="alternate" hreflang="de" href="https://daniel-baran.com/datenschutz" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-baran.com/en/privacy" />
-    <xhtml:link rel="alternate" hreflang="pl" href="https://daniel-baran.com/pl/prywatnosc" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://daniel-baran.com/datenschutz" />
+    <loc>https://daniel-baran.com/en/projects/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://daniel-baran.com/projekte/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-baran.com/en/projects/" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://daniel-baran.com/pl/projekty/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://daniel-baran.com/projekte/" />
   </url>
   <url>
-    <loc>https://daniel-baran.com/pl/prywatnosc</loc>
-    <lastmod>2026-07-10</lastmod>
-    <xhtml:link rel="alternate" hreflang="de" href="https://daniel-baran.com/datenschutz" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-baran.com/en/privacy" />
-    <xhtml:link rel="alternate" hreflang="pl" href="https://daniel-baran.com/pl/prywatnosc" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://daniel-baran.com/datenschutz" />
+    <loc>https://daniel-baran.com/pl/projekty/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://daniel-baran.com/projekte/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-baran.com/en/projects/" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://daniel-baran.com/pl/projekty/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://daniel-baran.com/projekte/" />
+  </url>
+  <url>
+    <loc>https://daniel-baran.com/impressum/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://daniel-baran.com/impressum/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-baran.com/en/imprint/" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://daniel-baran.com/pl/nota-prawna/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://daniel-baran.com/impressum/" />
+  </url>
+  <url>
+    <loc>https://daniel-baran.com/en/imprint/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://daniel-baran.com/impressum/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-baran.com/en/imprint/" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://daniel-baran.com/pl/nota-prawna/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://daniel-baran.com/impressum/" />
+  </url>
+  <url>
+    <loc>https://daniel-baran.com/pl/nota-prawna/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://daniel-baran.com/impressum/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-baran.com/en/imprint/" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://daniel-baran.com/pl/nota-prawna/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://daniel-baran.com/impressum/" />
+  </url>
+  <url>
+    <loc>https://daniel-baran.com/datenschutz/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://daniel-baran.com/datenschutz/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-baran.com/en/privacy/" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://daniel-baran.com/pl/prywatnosc/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://daniel-baran.com/datenschutz/" />
+  </url>
+  <url>
+    <loc>https://daniel-baran.com/en/privacy/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://daniel-baran.com/datenschutz/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-baran.com/en/privacy/" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://daniel-baran.com/pl/prywatnosc/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://daniel-baran.com/datenschutz/" />
+  </url>
+  <url>
+    <loc>https://daniel-baran.com/pl/prywatnosc/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://daniel-baran.com/datenschutz/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://daniel-baran.com/en/privacy/" />
+    <xhtml:link rel="alternate" hreflang="pl" href="https://daniel-baran.com/pl/prywatnosc/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://daniel-baran.com/datenschutz/" />
   </url>
   <url>
     <loc>https://daniel-baran.com/projekte/swr-ki-empfehlungsengine/</loc>
-    <lastmod>2026-07-10</lastmod>
+    <lastmod>2026-07-17</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://daniel-baran.com/projekte/swr-ki-empfehlungsengine/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://daniel-baran.com/en/projects/swr-ki-empfehlungsengine/" />
     <xhtml:link rel="alternate" hreflang="pl" href="https://daniel-baran.com/pl/projekty/swr-ki-empfehlungsengine/" />
@@ -82,7 +130,7 @@
   </url>
   <url>
     <loc>https://daniel-baran.com/en/projects/swr-ki-empfehlungsengine/</loc>
-    <lastmod>2026-07-10</lastmod>
+    <lastmod>2026-07-17</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://daniel-baran.com/projekte/swr-ki-empfehlungsengine/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://daniel-baran.com/en/projects/swr-ki-empfehlungsengine/" />
     <xhtml:link rel="alternate" hreflang="pl" href="https://daniel-baran.com/pl/projekty/swr-ki-empfehlungsengine/" />
@@ -90,7 +138,7 @@
   </url>
   <url>
     <loc>https://daniel-baran.com/pl/projekty/swr-ki-empfehlungsengine/</loc>
-    <lastmod>2026-07-10</lastmod>
+    <lastmod>2026-07-17</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://daniel-baran.com/projekte/swr-ki-empfehlungsengine/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://daniel-baran.com/en/projects/swr-ki-empfehlungsengine/" />
     <xhtml:link rel="alternate" hreflang="pl" href="https://daniel-baran.com/pl/projekty/swr-ki-empfehlungsengine/" />
@@ -98,7 +146,7 @@
   </url>
   <url>
     <loc>https://daniel-baran.com/projekte/swr-ki-testphase/</loc>
-    <lastmod>2026-07-10</lastmod>
+    <lastmod>2026-07-17</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://daniel-baran.com/projekte/swr-ki-testphase/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://daniel-baran.com/en/projects/swr-ki-testphase/" />
     <xhtml:link rel="alternate" hreflang="pl" href="https://daniel-baran.com/pl/projekty/swr-ki-testphase/" />
@@ -106,7 +154,7 @@
   </url>
   <url>
     <loc>https://daniel-baran.com/en/projects/swr-ki-testphase/</loc>
-    <lastmod>2026-07-10</lastmod>
+    <lastmod>2026-07-17</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://daniel-baran.com/projekte/swr-ki-testphase/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://daniel-baran.com/en/projects/swr-ki-testphase/" />
     <xhtml:link rel="alternate" hreflang="pl" href="https://daniel-baran.com/pl/projekty/swr-ki-testphase/" />
@@ -114,7 +162,7 @@
   </url>
   <url>
     <loc>https://daniel-baran.com/pl/projekty/swr-ki-testphase/</loc>
-    <lastmod>2026-07-10</lastmod>
+    <lastmod>2026-07-17</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://daniel-baran.com/projekte/swr-ki-testphase/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://daniel-baran.com/en/projects/swr-ki-testphase/" />
     <xhtml:link rel="alternate" hreflang="pl" href="https://daniel-baran.com/pl/projekty/swr-ki-testphase/" />
@@ -122,7 +170,7 @@
   </url>
   <url>
     <loc>https://daniel-baran.com/projekte/swr-multiplatform-service/</loc>
-    <lastmod>2026-07-10</lastmod>
+    <lastmod>2026-07-17</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://daniel-baran.com/projekte/swr-multiplatform-service/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://daniel-baran.com/en/projects/swr-multiplatform-service/" />
     <xhtml:link rel="alternate" hreflang="pl" href="https://daniel-baran.com/pl/projekty/swr-multiplatform-service/" />
@@ -130,7 +178,7 @@
   </url>
   <url>
     <loc>https://daniel-baran.com/en/projects/swr-multiplatform-service/</loc>
-    <lastmod>2026-07-10</lastmod>
+    <lastmod>2026-07-17</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://daniel-baran.com/projekte/swr-multiplatform-service/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://daniel-baran.com/en/projects/swr-multiplatform-service/" />
     <xhtml:link rel="alternate" hreflang="pl" href="https://daniel-baran.com/pl/projekty/swr-multiplatform-service/" />
@@ -138,7 +186,7 @@
   </url>
   <url>
     <loc>https://daniel-baran.com/pl/projekty/swr-multiplatform-service/</loc>
-    <lastmod>2026-07-10</lastmod>
+    <lastmod>2026-07-17</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://daniel-baran.com/projekte/swr-multiplatform-service/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://daniel-baran.com/en/projects/swr-multiplatform-service/" />
     <xhtml:link rel="alternate" hreflang="pl" href="https://daniel-baran.com/pl/projekty/swr-multiplatform-service/" />
@@ -146,7 +194,7 @@
   </url>
   <url>
     <loc>https://daniel-baran.com/projekte/swr-ard-transcoding/</loc>
-    <lastmod>2026-07-10</lastmod>
+    <lastmod>2026-07-17</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://daniel-baran.com/projekte/swr-ard-transcoding/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://daniel-baran.com/en/projects/swr-ard-transcoding/" />
     <xhtml:link rel="alternate" hreflang="pl" href="https://daniel-baran.com/pl/projekty/swr-ard-transcoding/" />
@@ -154,7 +202,7 @@
   </url>
   <url>
     <loc>https://daniel-baran.com/en/projects/swr-ard-transcoding/</loc>
-    <lastmod>2026-07-10</lastmod>
+    <lastmod>2026-07-17</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://daniel-baran.com/projekte/swr-ard-transcoding/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://daniel-baran.com/en/projects/swr-ard-transcoding/" />
     <xhtml:link rel="alternate" hreflang="pl" href="https://daniel-baran.com/pl/projekty/swr-ard-transcoding/" />
@@ -162,7 +210,7 @@
   </url>
   <url>
     <loc>https://daniel-baran.com/pl/projekty/swr-ard-transcoding/</loc>
-    <lastmod>2026-07-10</lastmod>
+    <lastmod>2026-07-17</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://daniel-baran.com/projekte/swr-ard-transcoding/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://daniel-baran.com/en/projects/swr-ard-transcoding/" />
     <xhtml:link rel="alternate" hreflang="pl" href="https://daniel-baran.com/pl/projekty/swr-ard-transcoding/" />
@@ -170,7 +218,7 @@
   </url>
   <url>
     <loc>https://daniel-baran.com/projekte/vestium/</loc>
-    <lastmod>2026-07-10</lastmod>
+    <lastmod>2026-07-17</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://daniel-baran.com/projekte/vestium/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://daniel-baran.com/en/projects/vestium/" />
     <xhtml:link rel="alternate" hreflang="pl" href="https://daniel-baran.com/pl/projekty/vestium/" />
@@ -178,7 +226,7 @@
   </url>
   <url>
     <loc>https://daniel-baran.com/en/projects/vestium/</loc>
-    <lastmod>2026-07-10</lastmod>
+    <lastmod>2026-07-17</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://daniel-baran.com/projekte/vestium/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://daniel-baran.com/en/projects/vestium/" />
     <xhtml:link rel="alternate" hreflang="pl" href="https://daniel-baran.com/pl/projekty/vestium/" />
@@ -186,7 +234,7 @@
   </url>
   <url>
     <loc>https://daniel-baran.com/pl/projekty/vestium/</loc>
-    <lastmod>2026-07-10</lastmod>
+    <lastmod>2026-07-17</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://daniel-baran.com/projekte/vestium/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://daniel-baran.com/en/projects/vestium/" />
     <xhtml:link rel="alternate" hreflang="pl" href="https://daniel-baran.com/pl/projekty/vestium/" />
@@ -194,7 +242,7 @@
   </url>
   <url>
     <loc>https://daniel-baran.com/projekte/infinite-playa/</loc>
-    <lastmod>2026-07-10</lastmod>
+    <lastmod>2026-07-17</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://daniel-baran.com/projekte/infinite-playa/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://daniel-baran.com/en/projects/infinite-playa/" />
     <xhtml:link rel="alternate" hreflang="pl" href="https://daniel-baran.com/pl/projekty/infinite-playa/" />
@@ -202,7 +250,7 @@
   </url>
   <url>
     <loc>https://daniel-baran.com/en/projects/infinite-playa/</loc>
-    <lastmod>2026-07-10</lastmod>
+    <lastmod>2026-07-17</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://daniel-baran.com/projekte/infinite-playa/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://daniel-baran.com/en/projects/infinite-playa/" />
     <xhtml:link rel="alternate" hreflang="pl" href="https://daniel-baran.com/pl/projekty/infinite-playa/" />
@@ -210,7 +258,7 @@
   </url>
   <url>
     <loc>https://daniel-baran.com/pl/projekty/infinite-playa/</loc>
-    <lastmod>2026-07-10</lastmod>
+    <lastmod>2026-07-17</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://daniel-baran.com/projekte/infinite-playa/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://daniel-baran.com/en/projects/infinite-playa/" />
     <xhtml:link rel="alternate" hreflang="pl" href="https://daniel-baran.com/pl/projekty/infinite-playa/" />
@@ -218,7 +266,7 @@
   </url>
   <url>
     <loc>https://daniel-baran.com/projekte/uci-track-champions-league/</loc>
-    <lastmod>2026-07-10</lastmod>
+    <lastmod>2026-07-17</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://daniel-baran.com/projekte/uci-track-champions-league/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://daniel-baran.com/en/projects/uci-track-champions-league/" />
     <xhtml:link rel="alternate" hreflang="pl" href="https://daniel-baran.com/pl/projekty/uci-track-champions-league/" />
@@ -226,7 +274,7 @@
   </url>
   <url>
     <loc>https://daniel-baran.com/en/projects/uci-track-champions-league/</loc>
-    <lastmod>2026-07-10</lastmod>
+    <lastmod>2026-07-17</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://daniel-baran.com/projekte/uci-track-champions-league/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://daniel-baran.com/en/projects/uci-track-champions-league/" />
     <xhtml:link rel="alternate" hreflang="pl" href="https://daniel-baran.com/pl/projekty/uci-track-champions-league/" />
@@ -234,7 +282,7 @@
   </url>
   <url>
     <loc>https://daniel-baran.com/pl/projekty/uci-track-champions-league/</loc>
-    <lastmod>2026-07-10</lastmod>
+    <lastmod>2026-07-17</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://daniel-baran.com/projekte/uci-track-champions-league/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://daniel-baran.com/en/projects/uci-track-champions-league/" />
     <xhtml:link rel="alternate" hreflang="pl" href="https://daniel-baran.com/pl/projekty/uci-track-champions-league/" />
@@ -242,7 +290,7 @@
   </url>
   <url>
     <loc>https://daniel-baran.com/projekte/systemmigration-konzernverbund/</loc>
-    <lastmod>2026-07-10</lastmod>
+    <lastmod>2026-07-17</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://daniel-baran.com/projekte/systemmigration-konzernverbund/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://daniel-baran.com/en/projects/systemmigration-konzernverbund/" />
     <xhtml:link rel="alternate" hreflang="pl" href="https://daniel-baran.com/pl/projekty/systemmigration-konzernverbund/" />
@@ -250,7 +298,7 @@
   </url>
   <url>
     <loc>https://daniel-baran.com/en/projects/systemmigration-konzernverbund/</loc>
-    <lastmod>2026-07-10</lastmod>
+    <lastmod>2026-07-17</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://daniel-baran.com/projekte/systemmigration-konzernverbund/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://daniel-baran.com/en/projects/systemmigration-konzernverbund/" />
     <xhtml:link rel="alternate" hreflang="pl" href="https://daniel-baran.com/pl/projekty/systemmigration-konzernverbund/" />
@@ -258,7 +306,7 @@
   </url>
   <url>
     <loc>https://daniel-baran.com/pl/projekty/systemmigration-konzernverbund/</loc>
-    <lastmod>2026-07-10</lastmod>
+    <lastmod>2026-07-17</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://daniel-baran.com/projekte/systemmigration-konzernverbund/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://daniel-baran.com/en/projects/systemmigration-konzernverbund/" />
     <xhtml:link rel="alternate" hreflang="pl" href="https://daniel-baran.com/pl/projekty/systemmigration-konzernverbund/" />
@@ -266,7 +314,7 @@
   </url>
   <url>
     <loc>https://daniel-baran.com/projekte/fahrzeugumbauten-dokumentation/</loc>
-    <lastmod>2026-07-10</lastmod>
+    <lastmod>2026-07-17</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://daniel-baran.com/projekte/fahrzeugumbauten-dokumentation/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://daniel-baran.com/en/projects/fahrzeugumbauten-dokumentation/" />
     <xhtml:link rel="alternate" hreflang="pl" href="https://daniel-baran.com/pl/projekty/fahrzeugumbauten-dokumentation/" />
@@ -274,7 +322,7 @@
   </url>
   <url>
     <loc>https://daniel-baran.com/en/projects/fahrzeugumbauten-dokumentation/</loc>
-    <lastmod>2026-07-10</lastmod>
+    <lastmod>2026-07-17</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://daniel-baran.com/projekte/fahrzeugumbauten-dokumentation/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://daniel-baran.com/en/projects/fahrzeugumbauten-dokumentation/" />
     <xhtml:link rel="alternate" hreflang="pl" href="https://daniel-baran.com/pl/projekty/fahrzeugumbauten-dokumentation/" />
@@ -282,7 +330,7 @@
   </url>
   <url>
     <loc>https://daniel-baran.com/pl/projekty/fahrzeugumbauten-dokumentation/</loc>
-    <lastmod>2026-07-10</lastmod>
+    <lastmod>2026-07-17</lastmod>
     <xhtml:link rel="alternate" hreflang="de" href="https://daniel-baran.com/projekte/fahrzeugumbauten-dokumentation/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://daniel-baran.com/en/projects/fahrzeugumbauten-dokumentation/" />
     <xhtml:link rel="alternate" hreflang="pl" href="https://daniel-baran.com/pl/projekty/fahrzeugumbauten-dokumentation/" />

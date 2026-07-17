@@ -1,4 +1,451 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Personalized recommendations for the SWR website | Case Study Daniel Baran</title><meta name="description" content="Took an AI recommendation system from concept to production as Product Owner, in collaboration with ZDF. A deliberately simple feedback tool brought the fully booked editorial teams into training the model. After go-live, the system performed measurably better than the legacy setup."><link rel="canonical" href="https://daniel-baran.com/en/projects/swr-ki-empfehlungsengine/"><link rel="alternate" hreflang="de" href="https://daniel-baran.com/projekte/swr-ki-empfehlungsengine/">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Personalisierte Empfehlungen für die SWR-Website - Case Study - Daniel Baran</title>
+<meta name="description" content="Daniel Baran case study covering project and product work in media, startup, streaming, AI or automotive.">
+<link rel="canonical" href="https://daniel-baran.com/en/projects/swr-ki-empfehlungsengine/">
+<link rel="alternate" hreflang="de" href="https://daniel-baran.com/projekte/swr-ki-empfehlungsengine/">
 <link rel="alternate" hreflang="en" href="https://daniel-baran.com/en/projects/swr-ki-empfehlungsengine/">
 <link rel="alternate" hreflang="pl" href="https://daniel-baran.com/pl/projekty/swr-ki-empfehlungsengine/">
-<link rel="alternate" hreflang="x-default" href="https://daniel-baran.com/projekte/swr-ki-empfehlungsengine/"><meta property="og:title" content="Personalized recommendations for the SWR website | Case Study Daniel Baran"><meta property="og:description" content="Took an AI recommendation system from concept to production as Product Owner, in collaboration with ZDF. A deliberately simple feedback tool brought the fully booked editorial teams into training the model. After go-live, the system performed measurably better than the legacy setup."><meta property="og:type" content="article"><meta property="og:url" content="https://daniel-baran.com/en/projects/swr-ki-empfehlungsengine/"><meta property="og:image" content="https://daniel-baran.com/assets/og-image.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Personalized recommendations for the SWR website | Case Study Daniel Baran"><meta name="twitter:description" content="Took an AI recommendation system from concept to production as Product Owner, in collaboration with ZDF. A deliberately simple feedback tool brought the fully booked editorial teams into training the model. After go-live, the system performed measurably better than the legacy setup."><meta name="twitter:image" content="https://daniel-baran.com/assets/og-image.png"><link rel="icon" href="/favicon.ico"><link rel="preload" href="/assets/fonts/space-grotesk-v16-latin_latin-ext-regular.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/assets/fonts/hanken-grotesk-v8-latin_latin-ext-regular.woff2" as="font" type="font/woff2" crossorigin><style>@font-face{font-family:'Space Grotesk';src:url('/assets/fonts/space-grotesk-v16-latin_latin-ext-regular.woff2') format('woff2');font-weight:400 700}@font-face{font-family:'Hanken Grotesk';src:url('/assets/fonts/hanken-grotesk-v8-latin_latin-ext-regular.woff2') format('woff2');font-weight:400 800}@font-face{font-family:'Space Mono';src:url('/assets/fonts/space-mono-v13-latin_latin-ext-regular.woff2') format('woff2')}:root{--paper:#EEF0F2;--paper2:#E2E5EA;--ink:#141519;--body:color-mix(in srgb,var(--ink) 82%,var(--paper));--muted:color-mix(in srgb,var(--ink) 55%,var(--paper));--line:color-mix(in srgb,var(--ink) 14%,transparent);--accent:#3D45E6}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink)}a{transition:color .18s ease,border-color .18s ease}a:hover{color:var(--accent)!important}header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}@media(max-width:720px){nav{gap:12px!important}main{padding-top:20px!important}}</style></head><body><header><div style="max-width:1360px;margin:0 auto;padding:16px clamp(20px,5vw,48px);display:flex;justify-content:space-between;gap:20px;align-items:center;"><a href="/en/" style="font-family:'Space Grotesk',sans-serif;font-weight:700;color:var(--ink);text-decoration:none;letter-spacing:.02em;">Daniel Baran</a><nav style="display:flex;align-items:center;gap:18px;flex-wrap:wrap;"><a href="/en/#leistungen" style="font-family:'Space Mono',monospace;font-size:.82rem;color:var(--body);text-decoration:none;">Services</a><a href="/en/#prozess" style="font-family:'Space Mono',monospace;font-size:.82rem;color:var(--body);text-decoration:none;">Process</a><a href="/en/#projekte" style="font-family:'Space Mono',monospace;font-size:.82rem;color:var(--body);text-decoration:none;">Projects</a><a href="/en/#kontakt" style="font-family:'Space Mono',monospace;font-size:.82rem;color:var(--body);text-decoration:none;">Contact</a><span style="font-family:'Space Mono',monospace;font-size:.78rem;display:flex;gap:8px;"><a href="https://daniel-baran.com/projekte/swr-ki-empfehlungsengine/" style="color:var(--muted);text-decoration:none;">DE</a> <a href="https://daniel-baran.com/pl/projekty/swr-ki-empfehlungsengine/" style="color:var(--muted);text-decoration:none;">PL</a> <a href="https://daniel-baran.com/en/projects/swr-ki-empfehlungsengine/" style="color:var(--accent);text-decoration:none;">EN</a></span></nav></div></header><main style="max-width:1120px;margin:0 auto;padding:clamp(64px,9vw,120px) clamp(20px,5vw,48px);"><a href="/en/#projekte" style="font-family:'Space Mono',monospace;font-size:.82rem;color:var(--accent);text-decoration:none;">← Back to overview</a><p style="font-family:'Space Mono',monospace;font-size:.86rem;line-height:1.5;color:var(--muted);margin:clamp(34px,5vw,64px) 0 12px;">AI recommendation system in production · Product Owner · SWR/ARD, in collaboration with ZDF · 2023 to 2025</p><h1 style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(2.5rem,6vw,5.8rem);line-height:.96;letter-spacing:-.035em;color:var(--ink);max-width:12ch;margin:0 0 clamp(42px,6vw,72px);">Personalized recommendations for the SWR website</h1><section style="border-top:1px solid var(--line); padding:clamp(26px,4vw,44px) 0;"><h2 style="font-family:'Space Mono',monospace; font-size:.86rem; letter-spacing:.16em; text-transform:uppercase; color:var(--accent); margin:0 0 14px;">Context</h2><p style="font-family:'Hanken Grotesk',sans-serif; font-size:clamp(1.04rem,1.35vw,1.18rem); line-height:1.72; color:var(--body); margin:0; max-width:78ch;">The SWR website covers editorial content across a wide range of topics, from news to sports to science. Below every article, readers see recommendations for further reading. These recommendations play a big part in whether readers stay on the site or leave.</p></section><section style="border-top:1px solid var(--line); padding:clamp(26px,4vw,44px) 0;"><h2 style="font-family:'Space Mono',monospace; font-size:.86rem; letter-spacing:.16em; text-transform:uppercase; color:var(--accent); margin:0 0 14px;">Starting point</h2><p style="font-family:'Hanken Grotesk',sans-serif; font-size:clamp(1.04rem,1.35vw,1.18rem); line-height:1.72; color:var(--body); margin:0; max-width:78ch;">Until then, recommendations were largely curated by editors by hand or came from a legacy system. Neither approach scaled with the publishing volume, and both tied up editorial capacity that was needed elsewhere.</p></section><section style="border-top:1px solid var(--line); padding:clamp(26px,4vw,44px) 0;"><h2 style="font-family:'Space Mono',monospace; font-size:.86rem; letter-spacing:.16em; text-transform:uppercase; color:var(--accent); margin:0 0 14px;">My role</h2><p style="font-family:'Hanken Grotesk',sans-serif; font-size:clamp(1.04rem,1.35vw,1.18rem); line-height:1.72; color:var(--body); margin:0; max-width:78ch;">As Product Owner, I was responsible for the product in a Scrum setup. The team included a Scrum Master, data scientists, backend developers and a data analyst. On top of that came requirements planning and alignment in a joint coordination group with ZDF, Germany&#x27;s second major public broadcaster.</p></section><section style="border-top:1px solid var(--line); padding:clamp(26px,4vw,44px) 0;"><h2 style="font-family:'Space Mono',monospace; font-size:.86rem; letter-spacing:.16em; text-transform:uppercase; color:var(--accent); margin:0 0 14px;">Approach</h2><p style="font-family:'Hanken Grotesk',sans-serif; font-size:clamp(1.04rem,1.35vw,1.18rem); line-height:1.72; color:var(--body); margin:0; max-width:78ch;">We built a recommendation system based on a machine learning model that was continuously tested, trained and fine-tuned. The model took into account publication time, topic, semantic metadata and categories, among other factors.</p><p style="font-family:'Hanken Grotesk',sans-serif; font-size:clamp(1.04rem,1.35vw,1.18rem); line-height:1.72; color:var(--body); margin:16px 0 0; max-width:78ch;">For fine-tuning, we needed editorial feedback. The real problem was not the technology but the editors&#x27; time: they were fully booked and simply had no room for another project. So we made the evaluation tool radically simple. Two recommendation variants side by side, one click on the better one, done. A few seconds per rating, no onboarding needed. Only that way did enough feedback come in, and exactly this feedback flowed back into the model as a training signal.</p></section><section style="border-top:1px solid var(--line); padding:clamp(26px,4vw,44px) 0;"><h2 style="font-family:'Space Mono',monospace; font-size:.86rem; letter-spacing:.16em; text-transform:uppercase; color:var(--accent); margin:0 0 14px;">Outcome</h2><p style="font-family:'Hanken Grotesk',sans-serif; font-size:clamp(1.04rem,1.35vw,1.18rem); line-height:1.72; color:var(--body); margin:0; max-width:78ch;">After go-live, we compared views and clicks on the recommendations with the historical numbers from the legacy system. The new system performed measurably better and ran in production permanently.</p></section><section style="border-top:1px solid var(--line); padding:clamp(26px,4vw,44px) 0;"><h2 style="font-family:'Space Mono',monospace; font-size:.86rem; letter-spacing:.16em; text-transform:uppercase; color:var(--accent); margin:0 0 14px;">What I take away</h2><p style="font-family:'Hanken Grotesk',sans-serif; font-size:clamp(1.04rem,1.35vw,1.18rem); line-height:1.72; color:var(--body); margin:0; max-width:78ch;">AI projects in editorial environments rarely fail because of the technology. They fail because the people whose knowledge you need have no time. If you make giving feedback as easy as possible, you actually get it.</p></section><nav style="border-top:1px solid var(--line);padding-top:28px;margin-top:clamp(30px,5vw,60px);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;"><a href="/en/#projekte" style="font-family:'Space Mono',monospace;font-size:.86rem;color:var(--body);text-decoration:none;">← Back to overview</a><a href="/en/projects/swr-ki-testphase/" style="font-family:'Space Mono',monospace;font-size:.86rem;color:var(--accent);text-decoration:none;">Next case →</a></nav></main><footer style="border-top:1px solid var(--line);"><div style="max-width:1360px;margin:0 auto;padding:28px clamp(20px,5vw,48px);display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;font-family:'Space Mono',monospace;font-size:.78rem;color:var(--muted);"><span>Daniel Baran · Freelance IT & Product Delivery</span><span><a href="/impressum" style="color:var(--muted);text-decoration:none;">Impressum</a> · <a href="/datenschutz" style="color:var(--muted);text-decoration:none;">Datenschutz</a></span></div></footer></body></html>
+<link rel="alternate" hreflang="x-default" href="https://daniel-baran.com/projekte/swr-ki-empfehlungsengine/">
+<link rel="icon" href="/favicon.ico">
+<meta property="og:title" content="Personalisierte Empfehlungen für die SWR-Website - Case Study - Daniel Baran">
+<meta property="og:description" content="Daniel Baran case study covering project and product work in media, startup, streaming, AI or automotive.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://daniel-baran.com/en/projects/swr-ki-empfehlungsengine/">
+<meta property="og:image" content="https://daniel-baran.com/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Personalisierte Empfehlungen für die SWR-Website - Case Study - Daniel Baran">
+<meta name="twitter:description" content="Daniel Baran case study covering project and product work in media, startup, streaming, AI or automotive.">
+<meta name="twitter:image" content="https://daniel-baran.com/assets/og-image.png">
+<script>window.__DB_DEFAULT_LANG="en";window.__DB_ALT_ROUTES={"de": "/projekte/swr-ki-empfehlungsengine/", "en": "/en/projects/swr-ki-empfehlungsengine/", "pl": "/pl/projekty/swr-ki-empfehlungsengine/"};window.__VESTIUM_YOUTUBE_ID="La4rd4JhlFE";</script>
+<script src="/assets/bundle/98fbe8e7-3e34-4182-88f6-79233bad489b.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Personalisierte Empfehlungen für die SWR-Website - Case Study - Daniel Baran</title>
+  <style>
+    @font-face { font-family:'Space Grotesk'; font-style:normal; font-weight:400; font-display:swap; src:url('/assets/fonts/space-grotesk-400.woff2') format('woff2'); }
+    @font-face { font-family:'Space Grotesk'; font-style:normal; font-weight:500; font-display:swap; src:url('/assets/fonts/space-grotesk-500.woff2') format('woff2'); }
+    html, body { margin:0; padding:0; background:#0B0B0C; }
+    body { font-family:'Space Grotesk', 'Helvetica Neue', Arial, sans-serif; color:#EDEBE5; -webkit-font-smoothing:antialiased; }
+    a { color:#EDEBE5; text-decoration:none; }
+    a:hover { color:#EDEBE5; }
+    :focus-visible { outline:2px solid #6E56E6; outline-offset:3px; }
+    ::selection { background:#6E56E6; color:#0B0B0C; }
+    button { font-family:'Space Grotesk', 'Helvetica Neue', Arial, sans-serif; }
+    @keyframes barIn { from { opacity:0; } to { opacity:1; } }
+    @keyframes softIn { from { opacity:0; transform:translateY(14px); } to { opacity:1; transform:translateY(0); } }
+    .case-track { position:relative; }
+    .case-sticky { position:sticky; top:0; height:100svh; box-sizing:border-box; overflow:hidden; display:block; }
+    .case-aside { position:absolute; top:clamp(76px,10vh,110px); left:clamp(20px,3vw,48px); right:clamp(20px,3vw,48px); bottom:clamp(20px,3.5vh,36px); z-index:0; overflow:hidden; max-width:52ch; }
+    .slides-col { position:absolute; top:clamp(76px,10vh,110px); bottom:clamp(20px,3.5vh,36px); left:50%; transform:translateX(-50%);
+      width:min(calc(100% - 2*clamp(20px,3vw,48px)), calc((100svh - clamp(76px,10vh,110px) - clamp(20px,3.5vh,36px)) * 1.5));
+      z-index:1; min-width:0; overflow:visible; background:transparent; }
+    .panels { display:flex; height:100%; gap:6vw; will-change:transform; }
+    .panel-wrap { flex:0 0 100%; min-width:0; height:100%; box-sizing:border-box;
+      display:flex; align-items:center; justify-content:center; }
+    .panel-wrap .panel { width:100%; height:100%; box-sizing:border-box; overflow:hidden;
+      clip-path:inset(0 0 100% 0); transform:scale(1.06);
+      transition:clip-path 1s cubic-bezier(0.62,0.05,0.01,0.99), transform 1s cubic-bezier(0.62,0.05,0.01,0.99); }
+    .panel-wrap.in-view .panel { clip-path:inset(0); transform:scale(1); }
+    .no-track .case-track { height:auto !important; }
+    .no-track .case-sticky { position:static; height:auto; overflow:visible; display:block; }
+    .no-track .case-aside { position:static; inset:auto; max-width:none; overflow:visible; }
+    .no-track .slides-col { position:static; inset:auto; width:auto; transform:none; height:auto; overflow:visible; margin-top:clamp(28px,5vh,44px); }
+    .no-track .panels { overflow-x:auto; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; height:auto; align-items:stretch; }
+    .no-track .panel-wrap { scroll-snap-align:start; height:auto; display:block; }
+    .no-track .panel-wrap .panel { aspect-ratio:auto; width:auto; max-height:none; max-width:none; height:auto; min-height:56svh; overflow-y:visible;
+      clip-path:inset(0) !important; transform:none !important; transition:none !important; }
+    .no-track .case-hud { display:none; }
+    @media (prefers-reduced-motion: reduce) {
+      * { animation:none !important; transition:none !important; }
+      .panel-wrap .panel { clip-path:inset(0); transform:none; }
+    }
+  </style>
+</helmet>
+
+<div class="case-root" style="min-height:100svh; background:#0B0B0C; color:#EDEBE5;">
+
+  <header style="position:fixed; top:0; left:0; right:0; z-index:10; display:grid; grid-template-columns:1fr auto 1fr; align-items:center; gap:24px; padding:14px clamp(20px,3vw,48px); border-bottom:1px solid rgba(237,235,229,0.2); background:#0B0B0C; font-size:0.8rem; letter-spacing:0.02em; animation:barIn 0.8s cubic-bezier(0.62,0.05,0.01,0.99) 0.3s both;">
+    <span style="font-size:0.78rem; letter-spacing:0.12em; text-transform:uppercase; color:#6E56E6;">{{ t.caseStudy }}</span>
+    <span style="font-weight:500; text-transform:uppercase; letter-spacing:0.04em; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; min-width:0;">SWR-Empfehlungen</span>
+    <nav aria-label="Case-Navigation" style="display:flex; justify-content:flex-end; align-items:center; gap:18px;">
+      <span style="display:flex; gap:10px; color:#8A8884;">
+        <sc-for list="{{ langs }}" as="lg" hint-placeholder-count="3">
+          <button type="button" onClick="{{ lg.select }}" aria-current="{{ lg.current }}" style="background:none; border:none; padding:0 0 2px; cursor:pointer; font-size:0.8rem; letter-spacing:0.02em; color:{{ lg.color }}; border-bottom:1px solid {{ lg.underline }};" style-hover="border-bottom-color:#6E56E6;">{{ lg.label }}</button>
+        </sc-for>
+      </span>
+      <a href="/en/projects/" style="border-bottom:1px solid transparent; padding-bottom:2px; color:#EDEBE5;" style-hover="border-bottom-color:#6E56E6;">{{ t.back }}</a>
+    </nav>
+  </header>
+
+  <div class="case-track">
+    <div class="case-sticky">
+
+      <aside class="case-aside" style="animation:softIn 0.9s cubic-bezier(0.62,0.05,0.01,0.99) 0.4s both;">
+        <p style="margin:0 0 clamp(14px,2vh,20px); font-weight:500; font-size:clamp(2.6rem,4.4vw,4rem); line-height:0.82; letter-spacing:0; color:#6E56E6;">01</p>
+        <h1 style="margin:0; font-weight:500; text-transform:uppercase; font-size:clamp(1.6rem,2.6vw,2.4rem); line-height:0.95; letter-spacing:0; max-width:16ch;">{{ t.h1 }}</h1>
+        <p style="margin:clamp(18px,3vh,28px) 0 0; font-size:0.95rem; line-height:1.4; color:#8A8884; max-width:40ch;">{{ t.lead }}</p>
+
+        <p style="margin:clamp(28px,5vh,44px) 0 0; font-size:0.78rem; letter-spacing:0.12em; text-transform:uppercase; color:#8A8884;">{{ t.projectInfo }}</p>
+        <dl style="margin:12px 0 0;">
+          <div style="display:grid; grid-template-columns:minmax(90px,120px) 1fr; gap:16px; border-top:1px solid rgba(237,235,229,0.2); padding:12px 0; align-items:baseline;">
+            <dt style="font-size:0.78rem; letter-spacing:0.12em; text-transform:uppercase; color:#8A8884;">{{ t.roleLabel }}</dt>
+            <dd style="margin:0; font-size:0.9rem; line-height:1.4; font-weight:500;">Product Owner</dd>
+          </div>
+          <div style="display:grid; grid-template-columns:minmax(90px,120px) 1fr; gap:16px; border-top:1px solid rgba(237,235,229,0.2); padding:12px 0; align-items:baseline;">
+            <dt style="font-size:0.78rem; letter-spacing:0.12em; text-transform:uppercase; color:#8A8884;">{{ t.periodLabel }}</dt>
+            <dd style="margin:0; font-size:0.9rem; line-height:1.4; font-weight:500;">{{ t.periodValue }}</dd>
+          </div>
+          <div style="display:grid; grid-template-columns:minmax(90px,120px) 1fr; gap:16px; border-top:1px solid rgba(237,235,229,0.2); padding:12px 0; align-items:baseline;">
+            <dt style="font-size:0.78rem; letter-spacing:0.12em; text-transform:uppercase; color:#8A8884;">{{ t.contextLabel }}</dt>
+            <dd style="margin:0; font-size:0.9rem; line-height:1.4; font-weight:500;">SWR/ARD · {{ t.contextValue }}</dd>
+          </div>
+          <div style="display:grid; grid-template-columns:minmax(90px,120px) 1fr; gap:16px; border-top:1px solid rgba(237,235,229,0.2); border-bottom:1px solid rgba(237,235,229,0.2); padding:12px 0; align-items:baseline;">
+            <dt style="font-size:0.78rem; letter-spacing:0.12em; text-transform:uppercase; color:#8A8884;">{{ t.industryLabel }}</dt>
+            <dd style="margin:0; font-size:0.9rem; line-height:1.4; font-weight:500;">{{ t.industryValue }}</dd>
+          </div>
+        </dl>
+      </aside>
+
+      <div class="slides-col">
+        <div class="panels">
+
+          <!-- Panel 1 · Cover -->
+          <div class="panel-wrap">
+            <section class="panel" style="background:#0B0B0C; border:1.5px solid rgba(237,235,229,0.22); color:#EDEBE5; padding:clamp(28px,4vw,56px); display:flex; flex-direction:column; justify-content:space-between;">
+              <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:20px;">
+                <span style="font-size:0.78rem; letter-spacing:0.12em; text-transform:uppercase; color:#6E56E6;">Case 01 · {{ t.chips }}</span>
+                <span style="font-size:0.78rem; letter-spacing:0.12em; text-transform:uppercase; color:#8A8884;">{{ t.periodValue }}</span>
+              </div>
+              <div>
+                <p style="margin:0; font-weight:500; font-size:clamp(4rem,11vw,9rem); line-height:0.8; letter-spacing:0; color:#6E56E6;">01</p>
+                <h2 style="margin:clamp(14px,2vh,22px) 0 0; font-weight:500; text-transform:uppercase; font-size:clamp(1.5rem,2.9vw,2.8rem); line-height:0.95; letter-spacing:0; max-width:20ch;">{{ t.h1 }}</h2>
+              </div>
+              <p style="margin:0; font-size:0.9rem; letter-spacing:0.02em; color:#8A8884; max-width:60ch;">{{ t.coverMeta }}</p>
+            </section>
+          </div>
+
+          <!-- Panel 2 · Ausgangslage -->
+          <div class="panel-wrap">
+            <section class="panel" style="background:#6E56E6; color:#0B0B0C; padding:clamp(28px,4vw,56px); display:flex; flex-direction:column; justify-content:center;">
+              <p style="margin:0 0 clamp(16px,2.5vh,26px); font-size:0.78rem; letter-spacing:0.12em; text-transform:uppercase; color:#241452;">{{ t.situationLabel }}</p>
+              <p style="margin:0; font-weight:500; text-transform:uppercase; font-size:clamp(1.5rem,3vw,2.9rem); line-height:0.95; letter-spacing:0; max-width:19ch;">{{ t.situationTitle }}</p>
+              <p style="margin:clamp(16px,2.5vh,26px) 0 0; font-size:0.95rem; line-height:1.4; color:#1B0F40; max-width:46ch;">{{ t.situationText }}</p>
+            </section>
+          </div>
+
+          <!-- Panel 3 · Feedback-Kreislauf -->
+          <div class="panel-wrap">
+            <section class="panel" style="background:#0B0B0C; border:1.5px solid rgba(237,235,229,0.22); color:#EDEBE5; padding:clamp(28px,4vw,56px); display:flex; flex-direction:column; justify-content:center; gap:clamp(20px,4vh,40px);">
+              <p style="margin:0; font-size:0.78rem; letter-spacing:0.12em; text-transform:uppercase; color:#6E56E6;">{{ t.loopLabel }}</p>
+              <div>
+                <div style="display:flex; align-items:flex-start; gap:clamp(8px,1.2vw,18px);">
+                  <div style="flex:1; min-width:0;">
+                    <p style="margin:0; font-weight:500; font-size:clamp(1.3rem,2.3vw,2.1rem); line-height:0.9; letter-spacing:0; color:#6E56E6;">01</p>
+                    <p style="margin:10px 0 0; font-size:clamp(0.8rem,1vw,0.96rem); line-height:1.3; color:#EDEBE5;">{{ t.loop1 }}</p>
+                  </div>
+                  <span aria-hidden="true" style="flex:none; margin-top:0.15em; color:#6E56E6; font-size:clamp(1rem,1.6vw,1.4rem);">→</span>
+                  <div style="flex:1; min-width:0;">
+                    <p style="margin:0; font-weight:500; font-size:clamp(1.3rem,2.3vw,2.1rem); line-height:0.9; letter-spacing:0; color:#6E56E6;">02</p>
+                    <p style="margin:10px 0 0; font-size:clamp(0.8rem,1vw,0.96rem); line-height:1.3; color:#EDEBE5;">{{ t.loop2 }}</p>
+                  </div>
+                  <span aria-hidden="true" style="flex:none; margin-top:0.15em; color:#6E56E6; font-size:clamp(1rem,1.6vw,1.4rem);">→</span>
+                  <div style="flex:1; min-width:0;">
+                    <p style="margin:0; font-weight:500; font-size:clamp(1.3rem,2.3vw,2.1rem); line-height:0.9; letter-spacing:0; color:#6E56E6;">03</p>
+                    <p style="margin:10px 0 0; font-size:clamp(0.8rem,1vw,0.96rem); line-height:1.3; color:#EDEBE5;">{{ t.loop3 }}</p>
+                  </div>
+                  <span aria-hidden="true" style="flex:none; margin-top:0.15em; color:#6E56E6; font-size:clamp(1rem,1.6vw,1.4rem);">→</span>
+                  <div style="flex:1; min-width:0;">
+                    <p style="margin:0; font-weight:500; font-size:clamp(1.3rem,2.3vw,2.1rem); line-height:0.9; letter-spacing:0; color:#6E56E6;">04</p>
+                    <p style="margin:10px 0 0; font-size:clamp(0.8rem,1vw,0.96rem); line-height:1.3; color:#EDEBE5;">{{ t.loop4 }}</p>
+                  </div>
+                </div>
+                <div style="position:relative; height:clamp(34px,6vh,56px); margin-top:clamp(14px,2vh,24px);">
+                  <div style="position:absolute; left:2%; right:2%; top:0; bottom:0; border:1.5px solid #6E56E6; border-top:none;"></div>
+                  <span aria-hidden="true" style="position:absolute; left:2%; top:-0.7em; transform:translateX(-50%); color:#6E56E6; font-size:clamp(1rem,1.6vw,1.4rem); line-height:1;">↑</span>
+                  <span style="position:absolute; left:0; right:0; bottom:calc(50% - 0.7em); text-align:center; font-size:clamp(0.78rem,1vw,0.92rem); color:#8A8884;">{{ t.loopBack }}</span>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <!-- Panel 4 · Bewertungstool-Mockup -->
+          <div class="panel-wrap">
+            <section class="panel" style="background:#EDEBE5; color:#0B0B0C; padding:clamp(28px,4vw,56px); display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:clamp(24px,3.5vw,56px); align-items:center;">
+              <div>
+                <p style="margin:0 0 clamp(14px,2vh,20px); font-size:0.78rem; letter-spacing:0.12em; text-transform:uppercase; color:#4B32C7;">{{ t.toolLabel }}</p>
+                <p style="margin:0; font-weight:500; text-transform:uppercase; font-size:clamp(1.6rem,3vw,2.7rem); line-height:0.95; letter-spacing:0;">{{ t.toolTitle }}</p>
+                <p style="margin:clamp(14px,2.5vh,22px) 0 0; font-size:0.95rem; line-height:1.4; color:#4A4945; max-width:44ch;">{{ t.toolText }}</p>
+              </div>
+              <div>
+                <div style="display:flex; gap:clamp(14px,1.8vw,24px); align-items:stretch;">
+                  <div style="flex:1; border:1.5px solid #0B0B0C; background:#F6F4EE; padding:14px; display:flex; flex-direction:column; gap:10px;">
+                    <div style="aspect-ratio:16/10; background:#D9D7D0;"></div>
+                    <div style="height:8px; background:#C4C2BB; width:82%;"></div>
+                    <div style="height:8px; background:#C4C2BB; width:58%;"></div>
+                  </div>
+                  <div style="flex:1; border:2px solid #6E56E6; background:#F6F4EE; padding:13px; display:flex; flex-direction:column; gap:10px; position:relative;">
+                    <div style="aspect-ratio:16/10; background:#D9D7D0;"></div>
+                    <div style="height:8px; background:#C4C2BB; width:82%;"></div>
+                    <div style="height:8px; background:#C4C2BB; width:58%;"></div>
+                    <span aria-hidden="true" style="position:absolute; right:-11px; bottom:-11px; width:24px; height:24px; border-radius:50%; background:#6E56E6; border:2px solid #EDEBE5;"></span>
+                  </div>
+                </div>
+                <p style="margin:16px 0 0; font-size:0.8rem; letter-spacing:0.02em; color:#8A8884;">{{ t.toolCaption }}</p>
+              </div>
+            </section>
+          </div>
+
+          <!-- Panel 5 · Screenshot-Slot -->
+          <div class="panel-wrap">
+            <section class="panel" style="background:#0B0B0C; border:1.5px solid rgba(237,235,229,0.22); color:#EDEBE5; padding:clamp(20px,2.5vw,36px); display:flex; flex-direction:column; gap:14px;">
+              <p style="margin:0; font-size:0.78rem; letter-spacing:0.12em; text-transform:uppercase; color:#6E56E6;">{{ t.shotLabel }}</p>
+              <div style="flex:1; min-height:0; border:1.5px solid #6E56E6; overflow:hidden;">
+                <img src="/assets/redesign/shot-swr-recommendations.webp" alt="{{ t.shotLabel }}" loading="lazy" style="width:100%; height:100%; object-fit:cover; object-position:top center; display:block;" />
+              </div>
+            </section>
+          </div>
+
+          <!-- Panel 6 · Ergebnis Vorher/Nachher -->
+          <div class="panel-wrap">
+            <section class="panel" style="background:#EDEBE5; color:#0B0B0C; padding:clamp(28px,4vw,56px); display:grid; grid-template-columns:minmax(0,3fr) minmax(0,2fr); gap:clamp(24px,3.5vw,56px); align-items:end;">
+              <div>
+                <p style="margin:0 0 12px; font-size:0.78rem; letter-spacing:0.12em; text-transform:uppercase; color:#4B32C7;">{{ t.resultLabel }}</p>
+                <p style="margin:0; font-weight:500; text-transform:uppercase; font-size:clamp(1.5rem,2.6vw,2.5rem); line-height:0.98; letter-spacing:0; max-width:18ch;">{{ t.resultTitle }}</p>
+                <p style="margin:14px 0 0; font-size:0.95rem; line-height:1.4; color:#4A4945; max-width:50ch;">{{ t.resultText }}</p>
+              </div>
+              <div>
+                <div style="display:flex; align-items:flex-end; gap:clamp(18px,2.5vw,40px); height:clamp(120px,22vh,220px);">
+                  <div style="flex:1; height:46%; background:#B9B7B0;"></div>
+                  <div style="flex:1; height:100%; background:#6E56E6;"></div>
+                </div>
+                <div style="display:flex; gap:clamp(18px,2.5vw,40px); margin-top:10px;">
+                  <p style="flex:1; margin:0; font-size:0.78rem; letter-spacing:0.06em; text-transform:uppercase; color:#4A4945;">{{ t.barOld }}</p>
+                  <p style="flex:1; margin:0; font-size:0.78rem; letter-spacing:0.06em; text-transform:uppercase; color:#0B0B0C; font-weight:500;">{{ t.barNew }}</p>
+                </div>
+                <p style="margin:14px 0 0; font-size:0.72rem; letter-spacing:0.02em; color:#8A8884;">{{ t.barCaption }}</p>
+              </div>
+            </section>
+          </div>
+
+          <!-- Panel 7 · Learning -->
+          <div class="panel-wrap">
+            <section class="panel" style="background:#0B0B0C; border:1.5px solid rgba(237,235,229,0.22); color:#EDEBE5; padding:clamp(28px,4vw,56px); display:flex; flex-direction:column; justify-content:center;">
+              <p style="margin:0 0 clamp(16px,2.5vh,26px); font-size:0.78rem; letter-spacing:0.12em; text-transform:uppercase; color:#6E56E6;">{{ t.takeawayLabel }}</p>
+              <p style="margin:0; font-weight:500; text-transform:uppercase; font-size:clamp(1.6rem,3.1vw,3rem); line-height:0.95; letter-spacing:0; max-width:20ch;">{{ t.takeawayTitle }}</p>
+              <p style="margin:clamp(16px,2.5vh,26px) 0 0; font-size:0.95rem; line-height:1.4; color:#8A8884; max-width:50ch;">{{ t.takeawayText }}</p>
+              <nav style="display:flex; gap:28px; flex-wrap:wrap; border-top:1px solid rgba(237,235,229,0.2); margin-top:clamp(22px,4vh,36px); padding-top:18px; font-size:0.9rem; font-weight:500;">
+                <a href="/en/projects/" style="border-bottom:1px solid #EDEBE5; padding-bottom:3px; color:#EDEBE5;" style-hover="border-bottom-color:#6E56E6;">{{ t.navOverview }}</a>
+                <a href="/en/projects/swr-ki-testphase/" style="color:#8A8884; border-bottom:1px solid transparent; padding-bottom:3px;" style-hover="border-bottom-color:#6E56E6;">{{ t.navNext }}</a>
+              </nav>
+            </section>
+          </div>
+
+        </div>
+
+        <div class="case-hud" style="position:absolute; right:clamp(14px,1.5vw,24px); bottom:0; display:flex; align-items:center; gap:18px; background:#0B0B0C; border:1px solid rgba(237,235,229,0.3); padding:8px 14px;">
+          <button type="button" onClick="{{ prev }}" aria-label="{{ t.hudPrev }}" style="background:none; border:none; padding:0 4px; cursor:pointer; font-size:1.2rem; line-height:1; color:#EDEBE5;" style-hover="color:#6E56E6;">‹</button>
+          <span class="case-counter" style="font-size:0.82rem; letter-spacing:0.06em; color:#8A8884; min-width:3.4em; text-align:center;">1 / 7</span>
+          <button type="button" onClick="{{ next }}" aria-label="{{ t.hudNext }}" style="background:none; border:none; padding:0 4px; cursor:pointer; font-size:1.2rem; line-height:1; color:#EDEBE5;" style-hover="color:#6E56E6;">›</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer style="border-top:1px solid rgba(237,235,229,0.2); padding:18px clamp(20px,3vw,48px); display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px; font-size:0.78rem; letter-spacing:0.04em; color:#8A8884;">
+    <span>{{ t.footerName }}</span>
+    <span style="display:flex; gap:18px;">
+      <a href="https://www.linkedin.com/in/daniel-baran-5b14b2269" target="_blank" rel="noopener" style="color:#8A8884; border-bottom:1px solid transparent; padding-bottom:2px;" style-hover="border-bottom-color:#6E56E6;">{{ t.footerLinkedin }}</a>
+      <a href="/en/imprint/" style="color:#8A8884; border-bottom:1px solid transparent; padding-bottom:2px;" style-hover="border-bottom-color:#6E56E6;">{{ t.footerImprint }}</a>
+      <a href="/en/privacy/" style="color:#8A8884; border-bottom:1px solid transparent; padding-bottom:2px;" style-hover="border-bottom-color:#6E56E6;">{{ t.footerPrivacy }}</a>
+    </span>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const DATA = {
+  de: {
+    caseStudy: "Case Study", back: "← Zurück",
+    h1: "Personalisierte Empfehlungen für die SWR-Website",
+    lead: "KI-Empfehlungssystem als Product Owner von der Konzeption bis in die Produktion gebracht, in Zusammenarbeit mit dem ZDF. Ein bewusst einfaches Feedback-Tool holte die ausgelasteten Redaktionen ins Training des Modells. Nach dem Go-live schnitt das System messbar besser ab als das Altsystem.",
+    projectInfo: "Project Info", roleLabel: "Rolle", periodLabel: "Zeitraum", periodValue: "2023 bis 2025",
+    contextLabel: "Kontext", contextValue: "mit dem ZDF", industryLabel: "Branche", industryValue: "Medien · KI",
+    chips: "Medien · KI",
+    coverMeta: "KI-Empfehlungssystem in Produktion · Product Owner · SWR/ARD in Zusammenarbeit mit dem ZDF",
+    situationLabel: "Ausgangslage", situationTitle: "Manuell gepflegt oder aus dem Altsystem. Beides skalierte nicht.",
+    situationText: "Die Empfehlungen unter jedem Artikel entscheiden mit, ob Leser auf der Seite bleiben oder abspringen. Manuelle Pflege band redaktionelle Kapazität, die an anderer Stelle fehlte.",
+    loopLabel: "Vorgehen · Der Feedback-Kreislauf",
+    loop1: "Modell zeigt zwei Empfehlungsvarianten", loop2: "Redaktion klickt die bessere", loop3: "Feedback als Trainingssignal", loop4: "Modell verbessert sich",
+    loopBack: "Feedback fließt zurück ins Modell",
+    toolLabel: "Das Bewertungstool", toolTitle: "Radikal einfach.",
+    toolText: "Das eigentliche Problem war nicht die Technik, sondern die Zeit der Redakteure. Zwei Varianten nebeneinander, ein Klick auf die bessere, fertig. Wenige Sekunden pro Bewertung, keine Einarbeitung nötig.",
+    toolCaption: "Zwei Empfehlungsvarianten · ein Klick auf die bessere",
+    shotLabel: "Live auf SWR.de",
+    resultLabel: "Ergebnis", resultTitle: "Messbar besser als das Altsystem.",
+    resultText: "Nach dem Go-live haben wir Aufrufe und Klicks auf die Empfehlungen mit den historischen Zahlen des Altsystems verglichen. Das neue System lief dauerhaft in Produktion.",
+    barOld: "Altsystem", barNew: "Neues System", barCaption: "Klicks auf Empfehlungen, relativ · ohne Achsenwerte",
+    takeawayLabel: "Was ich daraus mitnehme", takeawayTitle: "KI-Projekte scheitern selten an der Technik.",
+    takeawayText: "Sie scheitern daran, dass die Menschen, deren Wissen man braucht, keine Zeit haben. Wer ihnen Feedback so leicht wie möglich macht, bekommt es auch.",
+    navOverview: "← Zur Übersicht", navNext: "Nächster Case →", hudPrev: "Voriges Panel", hudNext: "Nächstes Panel",
+    footerName: "Daniel Baran · Freelance IT- & Product-Delivery", footerLinkedin: "LinkedIn ↗", footerImprint: "Impressum", footerPrivacy: "Datenschutz",
+  },
+  en: {
+    caseStudy: "Case Study", back: "← Back",
+    h1: "Personalized recommendations for the SWR website",
+    lead: "Took an AI recommendation system from concept to production as Product Owner, in collaboration with ZDF. A deliberately simple feedback tool brought the fully booked editorial teams into training the model. After go-live, the system performed measurably better than the legacy setup.",
+    projectInfo: "Project Info", roleLabel: "Role", periodLabel: "Period", periodValue: "2023 to 2025",
+    contextLabel: "Context", contextValue: "with ZDF", industryLabel: "Industry", industryValue: "Media · AI",
+    chips: "Media · AI",
+    coverMeta: "AI recommendation system in production · Product Owner · SWR/ARD in collaboration with ZDF",
+    situationLabel: "Starting point", situationTitle: "Curated by hand or from a legacy system. Neither scaled.",
+    situationText: "The recommendations below every article play a big part in whether readers stay on the site or leave. Manual curation tied up editorial capacity that was needed elsewhere.",
+    loopLabel: "Approach · The feedback loop",
+    loop1: "Model shows two recommendation variants", loop2: "Editors click the better one", loop3: "Feedback as a training signal", loop4: "Model improves",
+    loopBack: "Feedback flows back into the model",
+    toolLabel: "The evaluation tool", toolTitle: "Radically simple.",
+    toolText: "The real problem was not the technology but the editors' time. Two variants side by side, one click on the better one, done. A few seconds per rating, no onboarding needed.",
+    toolCaption: "Two recommendation variants · one click on the better one",
+    shotLabel: "Live on SWR.de",
+    resultLabel: "Result", resultTitle: "Measurably better than the legacy system.",
+    resultText: "After go-live, we compared views and clicks on the recommendations with the historical numbers from the legacy system. The new system ran in production permanently.",
+    barOld: "Legacy system", barNew: "New system", barCaption: "Clicks on recommendations, relative · no axis values",
+    takeawayLabel: "What I take away", takeawayTitle: "AI projects rarely fail because of the technology.",
+    takeawayText: "They fail because the people whose knowledge you need have no time. If you make giving feedback as easy as possible, you actually get it.",
+    navOverview: "← Back to overview", navNext: "Next case →", hudPrev: "Previous panel", hudNext: "Next panel",
+    footerName: "Daniel Baran · Freelance IT & Product Delivery", footerLinkedin: "LinkedIn ↗", footerImprint: "Legal Notice", footerPrivacy: "Privacy",
+  },
+  pl: {
+    caseStudy: "Case study", back: "← Wstecz",
+    h1: "Spersonalizowane rekomendacje dla strony SWR",
+    lead: "Jako Product Owner doprowadziłem system rekomendacji AI od koncepcji do produkcji, we współpracy z ZDF. Celowo proste narzędzie feedbackowe włączyło przeciążone redakcje w trenowanie modelu. Po starcie system wypadł mierzalnie lepiej niż stare rozwiązanie.",
+    projectInfo: "Informacje o projekcie", roleLabel: "Rola", periodLabel: "Okres", periodValue: "2023 do 2025",
+    contextLabel: "Kontekst", contextValue: "we współpracy z ZDF", industryLabel: "Branża", industryValue: "Media · AI",
+    chips: "Media · AI",
+    coverMeta: "System rekomendacji AI w produkcji · Product Owner · SWR/ARD we współpracy z ZDF",
+    situationLabel: "Punkt wyjścia", situationTitle: "Ręcznie dobierane albo ze starego systemu. Żadne nie skalowało.",
+    situationText: "Rekomendacje pod każdym artykułem współdecydują o tym, czy czytelnicy zostają na stronie, czy ją opuszczają. Ręczne dobieranie angażowało zasoby redakcji, których brakowało gdzie indziej.",
+    loopLabel: "Podejście · Pętla feedbacku",
+    loop1: "Model pokazuje dwa warianty rekomendacji", loop2: "Redakcja klika lepszy", loop3: "Feedback jako sygnał treningowy", loop4: "Model się poprawia",
+    loopBack: "Feedback wraca do modelu",
+    toolLabel: "Narzędzie do oceny", toolTitle: "Radykalnie proste.",
+    toolText: "Prawdziwym problemem nie była technologia, tylko czas redaktorów. Dwa warianty obok siebie, jedno kliknięcie na lepszy, gotowe. Kilka sekund na ocenę, zero wdrażania.",
+    toolCaption: "Dwa warianty rekomendacji · jedno kliknięcie na lepszy",
+    shotLabel: "Na żywo na SWR.de",
+    resultLabel: "Rezultat", resultTitle: "Mierzalnie lepiej niż stary system.",
+    resultText: "Po starcie produkcyjnym porównaliśmy wyświetlenia i kliknięcia rekomendacji z historycznymi danymi starego systemu. Nowy system na stałe działał w produkcji.",
+    barOld: "Stary system", barNew: "Nowy system", barCaption: "Kliknięcia rekomendacji, względnie · bez wartości osi",
+    takeawayLabel: "Co z tego wynoszę", takeawayTitle: "Projekty AI rzadko upadają przez technologię.",
+    takeawayText: "Upadają dlatego, że ludzie, których wiedzy potrzebujesz, nie mają czasu. Kto maksymalnie ułatwi im przekazywanie feedbacku, ten go dostanie.",
+    navOverview: "← Do przeglądu", navNext: "Następny case →", hudPrev: "Poprzedni panel", hudNext: "Następny panel",
+    footerName: "Daniel Baran · Freelance IT & Product Delivery", footerLinkedin: "LinkedIn ↗", footerImprint: "Nota prawna", footerPrivacy: "Prywatność",
+  },
+};
+
+class Component extends DCLogic {
+  N = 7;
+  state = {
+    lang: (() => { const d = window.__DB_DEFAULT_LANG; if (d && DATA[d]) return d; try { const l = localStorage.getItem("db-lang"); return (l && DATA[l]) ? l : "de"; } catch (e) { return "de"; } })(),
+  };
+  setLang(code) {
+    if (!DATA[code]) return;
+    try { localStorage.setItem("db-lang", code); } catch (e) {}
+    const target = window.__DB_ALT_ROUTES && window.__DB_ALT_ROUTES[code];
+    const current = window.location.pathname.endsWith("/") ? window.location.pathname : window.location.pathname + "/";
+    if (target && target !== current) {
+      window.location.href = target;
+      return;
+    }
+    this.setState({ lang: code });
+  }
+  goTo(i) {
+    const track = document.querySelector(".case-track");
+    if (!track || this._noTrack) return;
+    const idx = Math.max(0, Math.min(this.N - 1, i));
+    const top = track.offsetTop + idx * ((track.offsetHeight - window.innerHeight) / (this.N - 1));
+    window.scrollTo({ top, behavior: "smooth" });
+  }
+  current() { return Math.round((this._progress || 0) * (this.N - 1)); }
+  renderVals() {
+    const lang = DATA[this.state.lang] ? this.state.lang : "de";
+    const langs = [
+      { code: "de", label: "DE" }, { code: "pl", label: "PL" }, { code: "en", label: "EN" },
+    ].map((o) => ({
+      label: o.label, current: lang === o.code ? "true" : "false",
+      color: lang === o.code ? "#EDEBE5" : "#8A8884",
+      underline: lang === o.code ? "#EDEBE5" : "transparent",
+      select: () => this.setLang(o.code),
+    }));
+    return {
+      t: DATA[lang], langs,
+      prev: () => this.goTo(this.current() - 1),
+      next: () => this.goTo(this.current() + 1),
+    };
+  }
+  componentDidMount() {
+    const root = document.querySelector(".case-root");
+    const track = document.querySelector(".case-track");
+    const panelsRow = document.querySelector(".panels");
+    const wraps = Array.from(document.querySelectorAll(".panel-wrap"));
+    const counter = document.querySelector(".case-counter");
+    const N = this.N;
+    this._progress = 0;
+    const mqMobile = window.matchMedia("(max-width: 767px)");
+    const mqReduce = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const applyMode = () => {
+      this._noTrack = mqMobile.matches || mqReduce.matches;
+      root.classList.toggle("no-track", this._noTrack);
+      track.style.height = this._noTrack ? "auto" : (N * 100) + "vh";
+      if (this._noTrack) { panelsRow.style.transform = "none"; wraps.forEach((w) => w.classList.add("in-view")); }
+    };
+    applyMode();
+    this._onMq = applyMode;
+    mqMobile.addEventListener("change", applyMode);
+    mqReduce.addEventListener("change", applyMode);
+    let raf;
+    const tick = () => {
+      raf = requestAnimationFrame(tick);
+      if (this._noTrack) return;
+      const scrollable = track.offsetHeight - window.innerHeight;
+      const p = scrollable > 0 ? Math.max(0, Math.min(1, (window.scrollY - track.offsetTop) / scrollable)) : 0;
+      if (p !== this._progress || !this._painted) {
+        this._painted = true; this._progress = p;
+        const introFrac = Math.max(0, 1 - (p * (N - 1)) / 0.4);
+        const pctVal = introFrac * 48 - p * (N - 1) * 100;
+        panelsRow.style.transform = "translateX(calc(" + pctVal + "% - " + (p * (N - 1) * 6) + "vw))";
+        const pos = p * (N - 1);
+        wraps.forEach((w, i) => { if (!w.classList.contains("in-view") && pos > i - 0.5) w.classList.add("in-view"); });
+        if (counter) counter.textContent = (Math.round(pos) + 1) + " / " + N;
+      }
+    };
+    raf = requestAnimationFrame(tick);
+    this._raf = () => cancelAnimationFrame(raf);
+    this._onKey = (e) => {
+      if (this._noTrack) return;
+      const r = track.getBoundingClientRect();
+      if (!(r.top < window.innerHeight && r.bottom > 0)) return;
+      if (e.key === "ArrowRight") { e.preventDefault(); this.goTo(this.current() + 1); }
+      else if (e.key === "ArrowLeft") { e.preventDefault(); this.goTo(this.current() - 1); }
+    };
+    window.addEventListener("keydown", this._onKey);
+  }
+  componentWillUnmount() {
+    if (this._raf) this._raf();
+    if (this._onKey) window.removeEventListener("keydown", this._onKey);
+    if (this._onMq) {
+      window.matchMedia("(max-width: 767px)").removeEventListener("change", this._onMq);
+      window.matchMedia("(prefers-reduced-motion: reduce)").removeEventListener("change", this._onMq);
+    }
+  }
+}
+</script>
+</body>
+</html>

@@ -28,3 +28,17 @@ Resend-Voraussetzung:
 1. Domain bei Resend verifizieren.
 2. Absenderadresse in `CONTACT_FROM_EMAIL` auf eine verifizierte Domain setzen.
 3. `RESEND_API_KEY` in Cloudflare für den Worker hinterlegen.
+
+## Redesign-Generator
+
+Die Redesign-Seiten werden aus dem Design-Handoff in `scripts/build_redesign.py` erzeugt. Nach Änderungen am Handoff oder an Routen:
+
+```bash
+python3 scripts/build_redesign.py
+```
+
+Der Generator kopiert die Redesign-Bilder nach `assets/redesign/`, ersetzt Prototype-Links und schreibt Startseite, Profil, Projekte, Case-Seiten und `sitemap.xml`.
+
+## Vestium-Video
+
+Case 5 ist für einen privacy-freundlichen YouTube-Embed vorbereitet. Das Video sollte als ungelistetes YouTube-Video hochgeladen werden; danach die Video-ID in `VESTIUM_YOUTUBE_ID` in `scripts/build_redesign.py` eintragen und den Generator erneut ausführen. Das MP4 bleibt bewusst außerhalb des Repos.

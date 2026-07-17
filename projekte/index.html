@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projekte - Daniel Baran</title>
+<meta name="description" content="Neun Case Studies aus Medien, KI, Streaming, Startup und Automotive.">
+<link rel="canonical" href="https://daniel-baran.com/projekte/">
+<link rel="alternate" hreflang="de" href="https://daniel-baran.com/projekte/">
+<link rel="alternate" hreflang="en" href="https://daniel-baran.com/en/projects/">
+<link rel="alternate" hreflang="pl" href="https://daniel-baran.com/pl/projekty/">
+<link rel="alternate" hreflang="x-default" href="https://daniel-baran.com/projekte/">
+<link rel="icon" href="/favicon.ico">
+<meta property="og:title" content="Projekte - Daniel Baran">
+<meta property="og:description" content="Neun Case Studies aus Medien, KI, Streaming, Startup und Automotive.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://daniel-baran.com/projekte/">
+<meta property="og:image" content="https://daniel-baran.com/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Projekte - Daniel Baran">
+<meta name="twitter:description" content="Neun Case Studies aus Medien, KI, Streaming, Startup und Automotive.">
+<meta name="twitter:image" content="https://daniel-baran.com/assets/og-image.png">
+<script>window.__DB_DEFAULT_LANG="de";window.__DB_ALT_ROUTES={"de": "/projekte/", "en": "/en/projects/", "pl": "/pl/projekty/"};window.__VESTIUM_YOUTUBE_ID="La4rd4JhlFE";</script>
+<script src="/assets/bundle/98fbe8e7-3e34-4182-88f6-79233bad489b.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projekte - Daniel Baran</title>
+  <style>
+    @font-face { font-family:'Space Grotesk'; font-style:normal; font-weight:400; font-display:swap; src:url('/assets/fonts/space-grotesk-400.woff2') format('woff2'); }
+    @font-face { font-family:'Space Grotesk'; font-style:normal; font-weight:500; font-display:swap; src:url('/assets/fonts/space-grotesk-500.woff2') format('woff2'); }
+    html, body { margin:0; padding:0; background:#E7E5E0; }
+    body { font-family:'Space Grotesk', 'Helvetica Neue', Arial, sans-serif; color:#0D0D0C; -webkit-font-smoothing:antialiased; }
+    a { color:#0D0D0C; text-decoration:none; }
+    a:hover { color:#0D0D0C; }
+    :focus-visible { outline:2px solid #2A2AE5; outline-offset:3px; }
+    ::selection { background:#2A2AE5; color:#E7E5E0; }
+    @keyframes letterUp { from { transform:translateY(110%); } to { transform:translateY(0); } }
+    @keyframes softIn { from { opacity:0; transform:translateY(14px); } to { opacity:1; transform:translateY(0); } }
+    @keyframes barIn { from { opacity:0; } to { opacity:1; } }
+    @media (prefers-reduced-motion: reduce) {
+      * { animation:none !important; transition:none !important; }
+    }
+    @media (max-width: 720px) {
+      .case-row { grid-template-columns:1fr !important; gap:18px !important; align-items:start !important; }
+      .case-row .case-arrow { display:none !important; }
+    }
+  </style>
+</helmet>
+
+<div style="min-height:100svh; background:#E7E5E0; color:#0D0D0C;">
+
+  <!-- ===== Header-Bar ===== -->
+  <header style="position:fixed; top:0; left:0; right:0; z-index:10; display:grid; grid-template-columns:1fr auto 1fr; align-items:center; gap:24px; padding:14px clamp(20px,3vw,48px); border-bottom:1.5px solid #0D0D0C; background:#E7E5E0; font-size:0.8rem; letter-spacing:0.02em; animation:barIn 0.8s cubic-bezier(0.62,0.05,0.01,0.99) 0.9s both;">
+    <a href="/" style="font-weight:500; text-transform:uppercase; letter-spacing:0.04em; white-space:nowrap;">Daniel Baran</a>
+    <div style="color:#4A4945; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; min-width:0;">{{ t.tagline }}</div>
+    <nav aria-label="Hauptnavigation" style="display:flex; justify-content:flex-end; align-items:center; gap:22px; white-space:nowrap;">
+      <a href="/ueber-mich/" style="border-bottom:1.5px solid transparent; padding-bottom:2px;" style-hover="border-bottom-color:#2A2AE5;">{{ t.navAbout }}</a>
+      <a href="/#leistungen" style="border-bottom:1.5px solid transparent; padding-bottom:2px;" style-hover="border-bottom-color:#2A2AE5;">{{ t.navServices }}</a>
+      <a href="/#prozess" style="border-bottom:1.5px solid transparent; padding-bottom:2px;" style-hover="border-bottom-color:#2A2AE5;">{{ t.navProcess }}</a>
+      <a href="/projekte/" aria-current="page" style="border-bottom:1.5px solid #0D0D0C; padding-bottom:2px;">{{ t.navProjects }}</a>
+      <a href="/#kontakt" style="border-bottom:1.5px solid transparent; padding-bottom:2px;" style-hover="border-bottom-color:#2A2AE5;">{{ t.navContact }}</a>
+      <span style="display:flex; gap:10px; margin-left:14px; color:#4A4945;">
+        <sc-for list="{{ langs }}" as="lg" hint-placeholder-count="3">
+          <button type="button" onClick="{{ lg.select }}" aria-current="{{ lg.current }}" style="background:none; border:none; padding:0 0 2px; cursor:pointer; font-size:0.8rem; letter-spacing:0.02em; color:{{ lg.color }}; border-bottom:1.5px solid {{ lg.underline }};" style-hover="border-bottom-color:#2A2AE5;">{{ lg.label }}</button>
+        </sc-for>
+      </span>
+    </nav>
+  </header>
+
+  <!-- ===== Unterseiten-Header ===== -->
+  <section data-screen-label="Projekte Header" style="padding:clamp(130px,20vh,220px) clamp(20px,3vw,48px) clamp(48px,7vh,88px); box-sizing:border-box;">
+    <h1 aria-label="{{ t.h1 }}" style="display:flex; flex-wrap:wrap; column-gap:0.24em; row-gap:0; margin:0; font-weight:500; text-transform:uppercase; font-size:clamp(2.6rem,10.5vw,7rem); line-height:0.9; letter-spacing:0;">
+      <sc-for list="{{ headlineWords }}" as="word" hint-placeholder-count="1">
+        <span style="display:flex;"><sc-for list="{{ word.letters }}" as="l" hint-placeholder-count="8"><span aria-hidden="true" style="display:block; overflow:hidden; line-height:0.9; padding-bottom:0.1em; margin-bottom:-0.1em;"><span style="display:inline-block; animation:letterUp 1.15s cubic-bezier(0.62,0.05,0.01,0.99) {{ l.delay }} both;">{{ l.char }}</span></span></sc-for></span>
+      </sc-for>
+    </h1>
+    <div style="display:grid; grid-template-columns:minmax(160px,220px) 1fr; gap:clamp(24px,4vw,64px); margin-top:clamp(28px,5vh,52px); padding-top:clamp(20px,3vh,32px); align-items:start; animation:softIn 0.9s cubic-bezier(0.62,0.05,0.01,0.99) 0.9s both;">
+      <p style="margin:0; font-size:0.78rem; letter-spacing:0.12em; text-transform:uppercase; color:#4A4945;">{{ t.headerLabel }}</p>
+      <p style="margin:0; font-weight:500; font-size:clamp(1.15rem,1.8vw,1.5rem); line-height:1.3; max-width:40ch;">{{ t.headerLead }}</p>
+    </div>
+  </section>
+
+  <!-- ===== Alle neun Cases ===== -->
+  <section data-screen-label="Alle Projekte" style="padding:0 clamp(20px,3vw,48px) clamp(56px,9vh,110px); box-sizing:border-box;">
+    <sc-for list="{{ cases }}" as="c" hint-placeholder-count="9">
+      <a href="{{ c.href }}" data-reveal class="case-row" style="display:grid; grid-template-columns:minmax(300px,440px) 1fr auto; gap:clamp(28px,4vw,72px); align-items:center; padding:clamp(26px,4vh,46px) 0; color:#0D0D0C;" style-hover="color:#0D0D0C;">
+        <span style="display:block; aspect-ratio:3/2; overflow:hidden; background:#DEDCD5;">
+          <sc-if value="{{ c.hasImg }}" hint-placeholder-val="{{ true }}">
+            <img src="{{ c.img }}" alt="" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block;" />
+          </sc-if>
+          <sc-if value="{{ c.noImg }}" hint-placeholder-val="{{ false }}">
+            <span style="display:flex; width:100%; height:100%; align-items:center; justify-content:center; font-size:0.72rem; letter-spacing:0.16em; text-transform:uppercase; color:#A8A69E;">{{ t.imgPlaceholder }}</span>
+          </sc-if>
+        </span>
+        <span style="display:block; min-width:0;">
+          <span style="display:block; margin:0 0 14px; font-size:0.78rem; letter-spacing:0.04em; color:#4A4945;">{{ c.num }} · {{ c.chips }}</span>
+          <span style="display:inline; font-weight:500; text-transform:uppercase; font-size:clamp(1.3rem,2.6vw,2.2rem); line-height:1.0; letter-spacing:0; border-bottom:1.5px solid transparent; padding-bottom:2px; transition:border-color 0.3s cubic-bezier(0.62,0.05,0.01,0.99);" class="case-title">{{ c.title }}</span>
+          <span style="display:block; margin-top:12px; font-size:0.85rem; line-height:1.4; letter-spacing:0.02em; color:#4A4945;">{{ c.role }}</span>
+        </span>
+        <span aria-hidden="true" class="case-arrow" style="font-weight:500; font-size:clamp(1.1rem,1.8vw,1.5rem);">→</span>
+      </a>
+    </sc-for>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer style="border-top:1.5px solid #0D0D0C; padding:18px clamp(20px,3vw,48px); display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px; font-size:0.78rem; letter-spacing:0.04em; color:#4A4945;">
+    <span>{{ t.footerName }}</span>
+    <span style="display:flex; gap:18px;">
+      <a href="https://www.linkedin.com/in/daniel-baran-5b14b2269" target="_blank" rel="noopener" style="color:#4A4945; border-bottom:1.5px solid transparent; padding-bottom:2px;" style-hover="border-bottom-color:#2A2AE5;">{{ t.footerLinkedin }}</a>
+      <a href="/impressum/" style="color:#4A4945; border-bottom:1.5px solid transparent; padding-bottom:2px;" style-hover="border-bottom-color:#2A2AE5;">{{ t.footerImprint }}</a>
+      <a href="/datenschutz/" style="color:#4A4945; border-bottom:1.5px solid transparent; padding-bottom:2px;" style-hover="border-bottom-color:#2A2AE5;">{{ t.footerPrivacy }}</a>
+    </span>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const DATA = {
+  de: {
+    tagline: "Senior IT Project & Product Manager · Remote · DACH",
+    navAbout: "Über mich", navServices: "Leistungen", navProcess: "Prozess", navProjects: "Projekte", navContact: "Kontakt",
+    h1: "PROJEKTE", headerLabel: "Stationen & Projekte",
+    headerLead: "Neun Case Studies aus Medien, KI, Streaming, Startup und Automotive, ehrlich dokumentiert.",
+    imgPlaceholder: "Bild folgt",
+    footerName: "Daniel Baran · Freelance IT- & Product-Delivery", footerLinkedin: "LinkedIn ↗", footerImprint: "Impressum", footerPrivacy: "Datenschutz",
+    cases: [
+      { chips: "Medien · KI", title: "Personalisierte Empfehlungen für die SWR-Website", role: "KI-Empfehlungssystem in Produktion · Product Owner · SWR/ARD, in Zusammenarbeit mit dem ZDF · 2023 bis 2025" },
+      { chips: "Medien · KI", title: "KI-Testphase beim SWR: Vom Experiment zur festen Struktur", role: "KI-Enablement · Vertreter der Produktentwicklung in der abteilungsübergreifenden KI-Runde · SWR · 2023 bis 2025" },
+      { chips: "Medien · Streaming", title: "ARD-Multiplattformservice: Einem Projekt ohne Richtung wieder einen Zweck geben", role: "Streaming-Infrastruktur · Product Owner · SWR/ARD, Kompetenzzentrum Audio/Video · 2023 bis 2025" },
+      { chips: "Medien · Streaming", title: "Zentrales ARD-Transcoding: Übernahme mitten im Projekt, Go-live inklusive", role: "Streaming-Infrastruktur · Projektleitung · SWR/ARD · 2023 bis 2025" },
+      { chips: "Startup", title: "Vestium: Ein Fashion-Tech-Startup aufbauen, bis zum funktionierenden Prototyp", role: "3D-Scanning / Fashion-Tech · Co-Founder & COO · Vestium Inc. · 2019 bis 2022" },
+      { chips: "Streaming · Startup", title: "The Infinite Playa: Burning Man als virtuelle Welt", role: "Metaverse / Virtual Events · Project Lead (aus Support-Rolle gewachsen) · Adastra Studios · 2021" },
+      { chips: "Medien · Streaming", title: "UCI Track Champions League: Ein Metaverse-Erlebnis für Warner Bros. Discovery Sports", role: "Immersive Fanplattform · Project Manager auf Studioseite (Adastra Studios, Partner von Infinite Reality) · 2022" },
+      { chips: "Automotive", title: "Systemmigration im Konzernverbund", role: "After Sales IT · Senior IT Project Manager · MAN Truck & Bus · seit 2025" },
+      { chips: "Automotive", title: "Dokumentation für Fahrzeugumbauten", role: "After Sales IT · Senior IT Project Manager · MAN Truck & Bus · seit 2025" },
+    ],
+  },
+  en: {
+    tagline: "Senior IT Project & Product Manager · Remote · DACH",
+    navAbout: "About", navServices: "Services", navProcess: "Process", navProjects: "Projects", navContact: "Contact",
+    h1: "PROJECTS", headerLabel: "Career & Projects",
+    headerLead: "Nine case studies from media, AI, streaming, startup and automotive, honestly documented.",
+    imgPlaceholder: "Image coming soon",
+    footerName: "Daniel Baran · Freelance IT & Product Delivery", footerLinkedin: "LinkedIn ↗", footerImprint: "Legal Notice", footerPrivacy: "Privacy",
+    cases: [
+      { chips: "Media · AI", title: "Personalized recommendations for the SWR website", role: "AI recommendation system in production · Product Owner · SWR/ARD, in collaboration with ZDF · 2023 to 2025" },
+      { chips: "Media · AI", title: "AI pilot phase at SWR: from experiment to permanent structure", role: "AI enablement · Product development representative in the cross-departmental AI group · SWR · 2023 to 2025" },
+      { chips: "Media · Streaming", title: "ARD multi-platform service: giving a directionless project its purpose back", role: "Streaming infrastructure · Product Owner · SWR/ARD, Audio/Video Competence Center · 2023 to 2025" },
+      { chips: "Media · Streaming", title: "Central ARD transcoding: taking over mid-project, go-live included", role: "Streaming infrastructure · Project lead · SWR/ARD · 2023 to 2025" },
+      { chips: "Startup", title: "Vestium: building a fashion-tech startup, up to a working prototype", role: "3D scanning / fashion tech · Co-Founder & COO · Vestium Inc. · 2019 to 2022" },
+      { chips: "Streaming · Startup", title: "The Infinite Playa: Burning Man as a virtual world", role: "Metaverse / virtual events · Project Lead (grown from a support role) · Adastra Studios · 2021" },
+      { chips: "Media · Streaming", title: "UCI Track Champions League: a metaverse experience for Warner Bros. Discovery Sports", role: "Immersive fan platform · Project manager on the studio side (Adastra Studios, partner of Infinite Reality) · 2022" },
+      { chips: "Automotive", title: "System migration within the corporate group", role: "After sales IT · Senior IT Project Manager · MAN Truck & Bus · since 2025" },
+      { chips: "Automotive", title: "Documentation for vehicle conversions", role: "After sales IT · Senior IT Project Manager · MAN Truck & Bus · since 2025" },
+    ],
+  },
+  pl: {
+    tagline: "Senior IT Project & Product Manager · Zdalnie · DACH",
+    navAbout: "O mnie", navServices: "Usługi", navProcess: "Proces", navProjects: "Projekty", navContact: "Kontakt",
+    h1: "PROJEKTY", headerLabel: "Etapy i projekty",
+    headerLead: "Dziewięć case studies z mediów, AI, streamingu, startupów i motoryzacji, uczciwie udokumentowanych.",
+    imgPlaceholder: "Zdjęcie wkrótce",
+    footerName: "Daniel Baran · Freelance IT & Product Delivery", footerLinkedin: "LinkedIn ↗", footerImprint: "Nota prawna", footerPrivacy: "Prywatność",
+    cases: [
+      { chips: "Media · AI", title: "Spersonalizowane rekomendacje dla strony SWR", role: "System rekomendacji AI w produkcji · Product Owner · SWR/ARD, we współpracy z ZDF · 2023 do 2025" },
+      { chips: "Media · AI", title: "Faza testów AI w SWR: od eksperymentu do stałej struktury", role: "AI enablement · Przedstawiciel działu rozwoju produktu w międzydziałowej grupie AI · SWR · 2023 do 2025" },
+      { chips: "Media · Streaming", title: "Multiplatformowy serwis ARD: przywrócić sens projektowi bez kierunku", role: "Infrastruktura streamingowa · Product Owner · SWR/ARD, Centrum Kompetencji Audio/Video · 2023 do 2025" },
+      { chips: "Media · Streaming", title: "Centralny transcoding ARD: przejęcie w trakcie projektu, z go-live włącznie", role: "Infrastruktura streamingowa · Kierownik projektu · SWR/ARD · 2023 do 2025" },
+      { chips: "Startup", title: "Vestium: budowa fashion-tech startupu, aż do działającego prototypu", role: "Skanowanie 3D / fashion tech · Co-Founder & COO · Vestium Inc. · 2019 do 2022" },
+      { chips: "Streaming · Startup", title: "The Infinite Playa: Burning Man jako wirtualny świat", role: "Metaverse / wydarzenia wirtualne · Project Lead (wyrosły z roli wspierającej) · Adastra Studios · 2021" },
+      { chips: "Media · Streaming", title: "UCI Track Champions League: doświadczenie metaverse dla Warner Bros. Discovery Sports", role: "Immersyjna platforma dla fanów · Project manager po stronie studia (Adastra Studios, partner Infinite Reality) · 2022" },
+      { chips: "Automotive", title: "Migracja systemów w strukturach koncernu", role: "After sales IT · Senior IT Project Manager · MAN Truck & Bus · od 2025" },
+      { chips: "Automotive", title: "Dokumentacja przebudów pojazdów", role: "After sales IT · Senior IT Project Manager · MAN Truck & Bus · od 2025" },
+    ],
+  },
+};
+
+const META = [
+  { num: "01", href: "/projekte/swr-ki-empfehlungsengine/", img: "/assets/redesign/case-01-swr.webp" },
+  { num: "02", href: "/projekte/swr-ki-testphase/", img: "/assets/redesign/case-02-swr-ki.webp" },
+  { num: "03", href: "/projekte/swr-multiplatform-service/", img: "/assets/redesign/case-03-ard-multiplattform.webp" },
+  { num: "04", href: "/projekte/swr-ard-transcoding/", img: "/assets/redesign/case-04-ard-transcoding.webp" },
+  { num: "05", href: "/projekte/vestium/", img: "/assets/redesign/case-05-vestium.webp" },
+  { num: "06", href: "/projekte/infinite-playa/", img: "/assets/redesign/case-06-playa.webp" },
+  { num: "07", href: "/projekte/uci-track-champions-league/", img: "/assets/redesign/case-07-uci.webp" },
+  { num: "08", href: "/projekte/systemmigration-konzernverbund/", img: "/assets/redesign/case-08-systemmigration.webp" },
+  { num: "09", href: "/projekte/fahrzeugumbauten-dokumentation/", img: "/assets/redesign/case-09-fahrzeugumbauten.webp" },
+];
+
+class Component extends DCLogic {
+  state = {
+    lang: (() => { const d = window.__DB_DEFAULT_LANG; if (d && DATA[d]) return d; try { const l = localStorage.getItem("db-lang"); return (l && DATA[l]) ? l : "de"; } catch (e) { return "de"; } })(),
+  };
+
+  setLang(code) {
+    if (!DATA[code]) return;
+    try { localStorage.setItem("db-lang", code); } catch (e) {}
+    const target = window.__DB_ALT_ROUTES && window.__DB_ALT_ROUTES[code];
+    const current = window.location.pathname.endsWith("/") ? window.location.pathname : window.location.pathname + "/";
+    if (target && target !== current) {
+      window.location.href = target;
+      return;
+    }
+    this.setState({ lang: code });
+  }
+
+  renderVals() {
+    const lang = DATA[this.state.lang] ? this.state.lang : "de";
+    const L = DATA[lang];
+
+    let i = 0;
+    const headlineWords = L.h1.split(" ").map((w) => ({
+      letters: w.split("").map((ch) => ({ char: ch, delay: (150 + i++ * 28) + "ms" })),
+    }));
+
+    const langs = [
+      { code: "de", label: "DE" }, { code: "pl", label: "PL" }, { code: "en", label: "EN" },
+    ].map((o) => ({
+      label: o.label,
+      current: lang === o.code ? "true" : "false",
+      color: lang === o.code ? "#0D0D0C" : "#4A4945",
+      underline: lang === o.code ? "#0D0D0C" : "transparent",
+      select: () => this.setLang(o.code),
+    }));
+
+    const cases = META.map((m, idx) => Object.assign({}, m, L.cases[idx], { hasImg: !!m.img, noImg: !m.img, img: m.img || "" }));
+
+    return { t: L, langs, headlineWords, cases };
+  }
+
+  componentDidMount() {
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const els = document.querySelectorAll("[data-reveal]");
+    if (reduce) { els.forEach((el) => { el.style.opacity = "1"; }); return; }
+    const ease = "cubic-bezier(0.62,0.05,0.01,0.99)";
+    els.forEach((el) => {
+      el.style.clipPath = "inset(8% 0 8% 0)";
+      el.style.transform = "scale(1.06)";
+      el.style.opacity = "0.001";
+      el.style.transition = "clip-path 1s " + ease + ", transform 1s " + ease + ", opacity 0.6s " + ease;
+    });
+    this._io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.style.clipPath = "inset(0 0 0 0)";
+          e.target.style.transform = "scale(1)";
+          e.target.style.opacity = "1";
+          this._io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    els.forEach((el) => this._io.observe(el));
+
+    document.querySelectorAll("a[data-reveal]").forEach((a) => {
+      const t = a.querySelector(".case-title");
+      if (!t) return;
+      a.addEventListener("mouseenter", () => { t.style.borderBottomColor = "#2A2AE5"; });
+      a.addEventListener("mouseleave", () => { t.style.borderBottomColor = "transparent"; });
+    });
+  }
+
+  componentWillUnmount() {
+    if (this._io) this._io.disconnect();
+  }
+}
+</script>
+</body>
+</html>
