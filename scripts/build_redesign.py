@@ -156,6 +156,54 @@ CASE_SEO_TITLES = {
     },
 }
 
+CASE_DESCRIPTIONS = {
+    "swr-ki-empfehlungsengine": {
+        "de": "Case Study: KI-Empfehlungssystem für die SWR-Website von Konzept bis Produktion, mit Feedback-Tool und messbar besseren Empfehlungen.",
+        "en": "Case study on an AI recommendation system for the SWR website, from concept to production with a feedback tool and measurable improvements.",
+        "pl": "Case study systemu rekomendacji AI dla strony SWR: od koncepcji do produkcji, z narzędziem feedbacku i mierzalną poprawą.",
+    },
+    "swr-ki-testphase": {
+        "de": "Case Study zur SWR-KI-Testphase: Teams, Workflows und klare Leitplanken für sinnvolle KI-Nutzung im redaktionellen Alltag.",
+        "en": "Case study on the SWR AI pilot phase: enabling teams, workflows and practical guardrails for responsible AI use in editorial work.",
+        "pl": "Case study fazy testów AI w SWR: zespoły, workflow i praktyczne zasady odpowiedzialnego użycia AI w redakcji.",
+    },
+    "swr-multiplatform-service": {
+        "de": "Case Study zum ARD-Multiplattformservice: Produktarbeit für zentrale Ausspielung, Betrieb und Weiterentwicklung digitaler Medienangebote.",
+        "en": "Case study on the ARD multiplatform service: product work for central publishing, operations and digital media delivery.",
+        "pl": "Case study serwisu multiplatformowego ARD: praca produktowa nad centralną dystrybucją, operacjami i cyfrowymi mediami.",
+    },
+    "swr-ard-transcoding": {
+        "de": "Case Study: Zentrales ARD-Transcoding mit Projektleitung, Abstimmung zwischen Partnern und belastbarer Streaming-Infrastruktur.",
+        "en": "Case study on central ARD transcoding: project leadership, partner alignment and reliable streaming infrastructure.",
+        "pl": "Case study centralnego transkodowania ARD: prowadzenie projektu, koordynacja partnerów i stabilna infrastruktura streamingu.",
+    },
+    "vestium": {
+        "de": "Case Study zu Vestium: Fashion-Tech-Startup von 3D-Scanning und digitalem Kleiderschrank bis zum funktionierenden Prototyp.",
+        "en": "Case study on Vestium: building a fashion-tech startup from 3D scanning and digital wardrobe concepts to a working prototype.",
+        "pl": "Case study Vestium: fashion-tech startup od skanowania 3D i cyfrowej garderoby do działającego prototypu.",
+    },
+    "infinite-playa": {
+        "de": "Case Study zu The Infinite Playa: Metaverse-Erlebnis für Burning-Man-Kultur, virtuelle Räume und Community-Formate.",
+        "en": "Case study on The Infinite Playa: a metaverse experience for Burning Man culture, virtual spaces and community formats.",
+        "pl": "Case study The Infinite Playa: doświadczenie metaverse dla kultury Burning Man, wirtualnych przestrzeni i społeczności.",
+    },
+    "uci-track-champions-league": {
+        "de": "Case Study zur UCI Track Champions League: Metaverse-Konzept für Live-Sport, digitale Fan-Erlebnisse und virtuelle Aktivierung.",
+        "en": "Case study on the UCI Track Champions League: a metaverse concept for live sports, digital fan experiences and virtual activation.",
+        "pl": "Case study UCI Track Champions League: koncepcja metaverse dla sportu na żywo, cyfrowych doświadczeń fanów i aktywacji.",
+    },
+    "systemmigration-konzernverbund": {
+        "de": "Case Study zur MAN/VW-Systemmigration: Wechsel eines zentralen Werkstatt-Systems ohne Bruch für Nutzer, Prozesse und Support.",
+        "en": "Case study on a MAN/VW system migration: switching a central workshop system without disrupting users, processes or support.",
+        "pl": "Case study migracji systemu MAN/VW: zmiana centralnego systemu warsztatowego bez przerwy dla użytkowników, procesów i wsparcia.",
+    },
+    "fahrzeugumbauten-dokumentation": {
+        "de": "Case Study zur Dokumentation für Fahrzeugumbauten: Service-Wissen weltweit auffindbar machen und technische Informationen strukturieren.",
+        "en": "Case study on vehicle conversion documentation: making global service knowledge searchable and structuring technical information.",
+        "pl": "Case study dokumentacji przebudów pojazdów: globalna wiedza serwisowa staje się łatwa do znalezienia i uporządkowana.",
+    },
+}
+
 CASE_IMAGE_BY_SLUG = {
     "swr-ki-empfehlungsengine": "case-01-swr.webp",
     "swr-ki-testphase": "case-02-swr-ki.webp",
@@ -337,6 +385,36 @@ SITE_CSS = """    .site-header { box-sizing:border-box; grid-template-columns:au
     }
 """
 
+CASE_MOBILE_CSS = """    @media (max-width: 767px) {
+      .case-root .site-header { grid-template-columns:minmax(0,1fr) auto !important; gap:10px 12px !important; padding:12px 16px !important; }
+      .case-root .site-header > span:first-child { display:none !important; }
+      .case-root .site-header > span:nth-child(2) { min-width:0; overflow:hidden; text-overflow:ellipsis; }
+      .case-root .site-header nav { display:flex !important; justify-content:flex-end !important; align-items:center !important; gap:12px !important; min-width:0 !important; }
+      .case-root .site-header nav span { gap:8px !important; }
+      .case-root .mobile-nav { display:none !important; }
+      .no-track .case-sticky { padding-top:88px; }
+      .no-track .case-aside { padding:0 20px 28px; box-sizing:border-box; }
+      .no-track .case-aside h1 { max-width:100% !important; font-size:clamp(1.75rem,8vw,2.35rem) !important; line-height:0.98 !important; overflow-wrap:anywhere; }
+      .no-track .case-aside p, .no-track .case-aside dd { max-width:100% !important; overflow-wrap:anywhere; }
+      .no-track .case-aside dl > div { grid-template-columns:minmax(92px,34%) minmax(0,1fr) !important; gap:14px !important; }
+      .no-track .slides-col { margin-top:0; }
+      .no-track .panels { display:grid !important; grid-template-columns:1fr !important; gap:0 !important; overflow:visible !important; scroll-snap-type:none !important; height:auto !important; align-items:stretch !important; }
+      .no-track .panel-wrap { scroll-snap-align:none !important; width:100% !important; height:auto !important; display:block !important; }
+      .no-track .panel-wrap .panel { min-height:auto !important; width:100% !important; max-width:none !important; border-left:0 !important; border-right:0 !important; padding:28px 20px !important; overflow:visible !important; }
+      .no-track .panel p, .no-track .panel h2, .no-track .panel span, .no-track .panel dd { max-width:100% !important; overflow-wrap:anywhere; }
+      .no-track .panel [style*="grid-template-columns:minmax(0,1fr) minmax(0,1fr)"],
+      .no-track .panel [style*="grid-template-columns: minmax(0px, 1fr) minmax(0px, 1fr)"],
+      .no-track .panel [style*="grid-template-columns:minmax(0,3fr) minmax(0,2fr)"],
+      .no-track .panel [style*="grid-template-columns: minmax(0px, 3fr) minmax(0px, 2fr)"],
+      .no-track .panel [style*="grid-template-columns:repeat(3,minmax(0,1fr))"],
+      .no-track .panel [style*="grid-template-columns: repeat(3, minmax(0px, 1fr))"] { grid-template-columns:1fr !important; gap:22px !important; align-items:start !important; }
+      .no-track .panel [style*="display:flex; align-items:flex-start"],
+      .no-track .panel [style*="display: flex"][style*="align-items: flex-start"] { display:grid !important; grid-template-columns:1fr !important; gap:18px !important; }
+      .no-track .panel span[aria-hidden="true"] { display:none !important; }
+      .no-track .case-hud { display:none !important; }
+    }
+"""
+
 
 def route(kind: str, lang: str, slug: str | None = None) -> str:
     if kind == "home":
@@ -397,12 +475,7 @@ def js_config(lang: str, kind: str, slug: str | None = None) -> str:
 def metadata(kind: str, lang: str, slug: str | None = None) -> tuple[str, str]:
     if kind == "case":
         title = CASE_SEO_TITLES[slug][lang]
-        desc = "Case Study von Daniel Baran zu Projekt- und Produktarbeit in Medien, Startup, Streaming, KI oder Automotive."
-        if lang == "en":
-            desc = "Daniel Baran case study covering project and product work in media, startup, streaming, AI or automotive."
-        elif lang == "pl":
-            desc = "Case study Daniela Barana o pracy projektowej i produktowej w mediach, startupach, streamingu, AI lub motoryzacji."
-        return title, desc
+        return title, CASE_DESCRIPTIONS[slug][lang]
     return TITLES[kind][lang], DESCRIPTIONS[kind][lang]
 
 
@@ -706,6 +779,15 @@ def normalize_fonts(body: str) -> str:
     return body
 
 
+def update_case_mobile_layout(body: str) -> str:
+    if ".case-root .site-header > span:first-child" in body:
+        return body
+    needle = "    @media (prefers-reduced-motion: reduce) {\n"
+    if needle not in body:
+        raise RuntimeError("Case mobile CSS insertion point not found")
+    return body.replace(needle, CASE_MOBILE_CSS + needle, 1)
+
+
 def normalize_assets(body: str) -> str:
     body = body.replace('src="uploads/DSCF5508.jpg"', 'src="/assets/redesign/DSCF5508.webp"')
     body = body.replace('src="assets/', 'src="/assets/redesign/')
@@ -928,9 +1010,9 @@ def update_copy_and_case_text(body: str) -> str:
         'h1: "Dokumentation für Fahrzeugumbauten"': 'h1: "Dokumentation für Fahrzeugumbauten: Service-Wissen weltweit auffindbar machen"',
         'h1: "Documentation for vehicle conversions"': 'h1: "Documentation for vehicle conversions: making service knowledge findable worldwide"',
         'h1: "Dokumentacja przebudów pojazdów"': 'h1: "Dokumentacja przebudów pojazdów: wiedza serwisowa dostępna globalnie"',
-        "2019 bis 2022": "2021 bis 2023",
-        "2019 to 2022": "2021 to 2023",
-        "2019 do 2022": "2021 do 2023",
+        "2019 bis 2022": "2021-2023",
+        "2019 to 2022": "2021-2023",
+        "2019 do 2022": "2021-2023",
         "2022 haben wir das Projekt eingestellt.": "2023 haben wir das Projekt eingestellt.",
         "In 2022 we shut the project down.": "In 2023 we shut the project down.",
         "W 2022 roku zakończyliśmy projekt.": "W 2023 roku zakończyliśmy projekt.",
@@ -1037,10 +1119,11 @@ def update_home_form(body: str) -> str:
 
 
 def update_vestium_video(body: str) -> str:
+    video_src = f"https://www.youtube-nocookie.com/embed/{html.escape(VESTIUM_YOUTUBE_ID, quote=True)}?rel=0&modestbranding=1"
     body = body.replace(
         '<x-import component-from-global-scope="image-slot" from="./image-slot.js" id="case05-prototype" shape="rect" radius="0" placeholder="{{ t.shotPlaceholder }}" hint-size="100%,360px" style="width:100%; height:100%; display:block;"></x-import>',
         '<sc-if value="{{ hasVestiumVideo }}" hint-placeholder-val="{{ false }}">\n'
-        '                  <iframe src="{{ vestiumVideoSrc }}" title="Vestium prototype video" loading="lazy" allow="fullscreen; encrypted-media; picture-in-picture" allowfullscreen style="width:100%; height:100%; border:0; display:block; background:#0D0D0C;"></iframe>\n'
+        f'                  <iframe src="{video_src}" title="Vestium prototype video" loading="lazy" allow="fullscreen; encrypted-media; picture-in-picture" allowfullscreen style="width:100%; height:100%; border:0; display:block; background:#0D0D0C;"></iframe>\n'
         '                </sc-if>\n'
         '                <sc-if value="{{ noVestiumVideo }}" hint-placeholder-val="{{ true }}">\n'
         '                  <div style="width:100%; height:100%; min-height:320px; display:flex; align-items:center; justify-content:center; text-align:center; padding:clamp(20px,3vw,40px); box-sizing:border-box; background:linear-gradient(135deg,#181817,#0D0D0C); color:#F2EFEA;">\n'
@@ -1080,6 +1163,8 @@ def transform(source_name: str, lang: str, kind: str, slug: str | None = None) -
     body = update_responsive_markup(body, lang, kind)
     body = update_case_hover(body)
     body = update_hash_scroll(body)
+    if kind == "case":
+        body = update_case_mobile_layout(body)
     if kind == "home":
         body = update_home_form(body)
     if slug == "vestium":
