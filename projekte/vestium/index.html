@@ -33,7 +33,7 @@
   <style>
     @font-face { font-family:'Space Grotesk'; font-style:normal; font-weight:400; font-display:swap; src:url('/assets/fonts/space-grotesk-400.woff2') format('woff2'); }
     @font-face { font-family:'Space Grotesk'; font-style:normal; font-weight:500; font-display:swap; src:url('/assets/fonts/space-grotesk-500.woff2') format('woff2'); }
-    .site-header { box-sizing:border-box; }
+    .site-header { box-sizing:border-box; grid-template-columns:auto minmax(0,1fr) auto !important; }
     .site-header > * { min-width:0; }
     .mobile-nav { display:none; }
     .mobile-menu summary::-webkit-details-marker { display:none; }
@@ -41,6 +41,7 @@
     .mobile-menu[open] .mobile-menu-panel { display:grid !important; }
     .menu-icon { display:grid; gap:5px; width:20px; }
     .menu-icon span { display:block; height:1.5px; background:#0D0D0C; }
+    [id] { scroll-margin-top:72px; }
     img { max-width:100%; }
     .split-grid, .career-row, .acc-button, .acc-content-grid { min-width:0; }
     .split-grid > *, .career-row > *, .acc-button > *, .acc-content-grid > * { min-width:0; }
@@ -58,6 +59,17 @@
     .case-row:hover .case-thumb img, .case-row:focus-visible .case-thumb img { transform:scale(1.045); filter:contrast(1.04); }
     .case-row:hover .case-meta, .case-row:hover .case-role, .case-row:focus-visible .case-meta, .case-row:focus-visible .case-role { color:#0D0D0C !important; }
     .case-row:hover .case-arrow, .case-row:focus-visible .case-arrow { transform:translateX(8px); color:#0D0D0C; }
+    @media (max-width: 1100px) {
+      .site-tagline { display:none !important; }
+      .site-header { grid-template-columns:auto 1fr auto !important; }
+    }
+    @media (max-width: 860px) {
+      html, body { max-width:100%; overflow-x:hidden; }
+      .site-header { grid-template-columns:1fr auto !important; gap:14px !important; }
+      .site-nav { display:none !important; }
+      .mobile-nav { display:block !important; justify-self:end; position:relative; }
+      .mobile-menu-panel { box-sizing:border-box; }
+    }
     @media (max-width: 820px) {
       .case-row { grid-template-columns:1fr !important; gap:18px !important; align-items:start !important; }
       .case-row .case-arrow { display:none !important; }
@@ -76,11 +88,7 @@
       [style*="grid-template-columns:minmax(160px,220px) 1fr"] { grid-template-columns:1fr !important; gap:18px !important; }
     }
     @media (max-width: 520px) {
-      html, body { max-width:100%; overflow-x:hidden; }
       .site-header { grid-template-columns:1fr auto !important; gap:14px !important; padding:12px 16px !important; }
-      .site-tagline, .site-nav { display:none !important; }
-      .mobile-nav { display:block !important; justify-self:end; position:relative; }
-      .mobile-menu-panel { box-sizing:border-box; }
       .hero-media { align-items:stretch !important; margin-right:0 !important; }
       .hero-media img { width:100% !important; max-width:calc(100vw - 32px) !important; min-width:0 !important; }
       [data-screen-label="Profil Inhalt"] h2 { font-size:3rem !important; line-height:0.9 !important; }
@@ -327,7 +335,7 @@ const DATA = {
     h1: "Vestium: Ein Fashion-Tech-Startup aufbauen, bis zum funktionierenden Prototyp",
     coverTitle: "Vestium: Ein Fashion-Tech-Startup, bis zum funktionierenden Prototyp",
     lead: "Als Co-Founder und COO ein Fashion-Tech-Startup mit aufgebaut, vom Businessplan über Investoren- und Markengespräche bis zum funktionierenden 3D-Scanning-Prototyp per Smartphone. Die Finanzierung kam nicht zustande, aber die Technik war bewiesen — und die Lektion sitzt bis heute.",
-    projectInfo: "Project Info", roleLabel: "Rolle", periodLabel: "Zeitraum", periodValue: "2019 bis 2022",
+    projectInfo: "Project Info", roleLabel: "Rolle", periodLabel: "Zeitraum", periodValue: "2021 bis 2023",
     contextLabel: "Kontext", contextValue: "Vestium Inc. · eigenes Venture", industryLabel: "Branche", industryValue: "Startup · 3D-Scanning / Fashion-Tech", chips: "Startup",
     coverMeta: "3D-Scanning / Fashion-Tech · Co-Founder & COO · Vestium Inc.",
     ideaLabel: "Die Idee", ideaTitle: "Die Brücke zwischen realer und digitaler Mode.",
@@ -340,7 +348,7 @@ const DATA = {
     protoText: "Parallel: professionelles Branding, fertige App-UI/UX, Gespräche mit etablierten Modemarken und die Suche nach Finanzierung.",
     shotLabel: "Prototyp & Pitch", shotPlaceholder: "App-Prototyp / Pitch-Visual — Bild oder Video-Frame folgt",
     resultLabel: "Ergebnis", resultTitle: "Die Technik war bewiesen. Die Finanzierung kam nicht.",
-    resultText: "2022 haben wir das Projekt eingestellt. Woran es wirklich lag: Wir wollten, dass die App von Anfang an alles kann — Scan, Avatar, Marktplatz, Social Media, alles gleichzeitig. Wir haben nicht priorisiert.",
+    resultText: "2023 haben wir das Projekt eingestellt. Woran es wirklich lag: Wir wollten, dass die App von Anfang an alles kann — Scan, Avatar, Marktplatz, Social Media, alles gleichzeitig. Wir haben nicht priorisiert.",
     takeawayLabel: "Was ich daraus mitnehme",
     takeawayText: "Erst der Kern, dann der Rest. Klein starten, Feedback sammeln, fokussieren. Diese Lektion steckt heute in jeder Priorisierungsentscheidung, die ich als Projekt- und Produktmanager treffe.",
     navOverview: "← Zur Übersicht", navNext: "Nächster Case →", hudPrev: "Voriges Panel", hudNext: "Nächstes Panel",
@@ -351,7 +359,7 @@ const DATA = {
     h1: "Vestium: building a fashion-tech startup, up to a working prototype",
     coverTitle: "Vestium: a fashion-tech startup, up to a working prototype",
     lead: "Co-founded and helped build a fashion-tech startup as COO, from the business plan through investor and brand conversations to a working 3D scanning prototype via smartphone. The funding did not close, but the technology was proven — and the lesson has stuck ever since.",
-    projectInfo: "Project Info", roleLabel: "Role", periodLabel: "Period", periodValue: "2019 to 2022",
+    projectInfo: "Project Info", roleLabel: "Role", periodLabel: "Period", periodValue: "2021 to 2023",
     contextLabel: "Context", contextValue: "Vestium Inc. · own venture", industryLabel: "Industry", industryValue: "Startup · 3D scanning / fashion tech", chips: "Startup",
     coverMeta: "3D scanning / fashion tech · Co-Founder & COO · Vestium Inc.",
     ideaLabel: "The idea", ideaTitle: "A bridge between real and digital fashion.",
@@ -364,7 +372,7 @@ const DATA = {
     protoText: "In parallel: professional branding, finished app UI/UX, conversations with established fashion brands and the search for funding.",
     shotLabel: "Prototype & pitch", shotPlaceholder: "App prototype / pitch visual — image or video frame coming soon",
     resultLabel: "Result", resultTitle: "The technology was proven. The funding was not.",
-    resultText: "In 2022 we shut the project down. What it really came down to: we wanted the app to do everything from day one — scan, avatar, marketplace, social media, all at once. We did not prioritize.",
+    resultText: "In 2023 we shut the project down. What it really came down to: we wanted the app to do everything from day one — scan, avatar, marketplace, social media, all at once. We did not prioritize.",
     takeawayLabel: "What I take away",
     takeawayText: "The core first, the rest later. Start small, collect feedback, focus. This lesson is baked into every prioritization decision I make as a project and product manager today.",
     navOverview: "← Back to overview", navNext: "Next case →", hudPrev: "Previous panel", hudNext: "Next panel",
@@ -375,7 +383,7 @@ const DATA = {
     h1: "Vestium: budowa fashion-tech startupu, aż do działającego prototypu",
     coverTitle: "Vestium: fashion-tech startup, aż do działającego prototypu",
     lead: "Jako Co-Founder i COO współtworzyłem fashion-tech startup, od biznesplanu przez rozmowy z inwestorami i markami po działający prototyp skanowania 3D smartfonem. Finansowanie nie doszło do skutku, ale technologia była udowodniona — a lekcja została do dziś.",
-    projectInfo: "Informacje o projekcie", roleLabel: "Rola", periodLabel: "Okres", periodValue: "2019 do 2022",
+    projectInfo: "Informacje o projekcie", roleLabel: "Rola", periodLabel: "Okres", periodValue: "2021 do 2023",
     contextLabel: "Kontekst", contextValue: "Vestium Inc. · własne przedsięwzięcie", industryLabel: "Branża", industryValue: "Startup · skanowanie 3D / fashion tech", chips: "Startup",
     coverMeta: "Skanowanie 3D / fashion tech · Co-Founder & COO · Vestium Inc.",
     ideaLabel: "Pomysł", ideaTitle: "Most między modą realną a cyfrową.",
@@ -388,7 +396,7 @@ const DATA = {
     protoText: "Równolegle: profesjonalny branding, gotowe UI/UX aplikacji, rozmowy z uznanymi markami modowymi i poszukiwanie finansowania.",
     shotLabel: "Prototyp i pitch", shotPlaceholder: "Prototyp aplikacji / wizual pitchowy — zdjęcie lub klatka wideo wkrótce",
     resultLabel: "Rezultat", resultTitle: "Technologia była udowodniona. Finansowanie nie.",
-    resultText: "W 2022 roku zakończyliśmy projekt. O co naprawdę chodziło: chcieliśmy, żeby aplikacja od pierwszego dnia potrafiła wszystko — skan, awatar, marketplace, social media, wszystko naraz. Nie priorytetyzowaliśmy.",
+    resultText: "W 2023 roku zakończyliśmy projekt. O co naprawdę chodziło: chcieliśmy, żeby aplikacja od pierwszego dnia potrafiła wszystko — skan, awatar, marketplace, social media, wszystko naraz. Nie priorytetyzowaliśmy.",
     takeawayLabel: "Co z tego wynoszę",
     takeawayText: "Najpierw rdzeń, potem reszta. Zacząć na małą skalę, zbierać feedback, skupić się. Ta lekcja tkwi dziś w każdej decyzji o priorytetach, którą podejmuję jako project i product manager.",
     navOverview: "← Do przeglądu", navNext: "Następny case →", hudPrev: "Poprzedni panel", hudNext: "Następny panel",

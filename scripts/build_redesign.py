@@ -272,7 +272,7 @@ FONT_CSS = """    @font-face { font-family:'Space Grotesk'; font-style:normal; f
     @font-face { font-family:'Space Grotesk'; font-style:normal; font-weight:500; font-display:swap; src:url('/assets/fonts/space-grotesk-500.woff2') format('woff2'); }
 """
 
-SITE_CSS = """    .site-header { box-sizing:border-box; }
+SITE_CSS = """    .site-header { box-sizing:border-box; grid-template-columns:auto minmax(0,1fr) auto !important; }
     .site-header > * { min-width:0; }
     .mobile-nav { display:none; }
     .mobile-menu summary::-webkit-details-marker { display:none; }
@@ -280,6 +280,7 @@ SITE_CSS = """    .site-header { box-sizing:border-box; }
     .mobile-menu[open] .mobile-menu-panel { display:grid !important; }
     .menu-icon { display:grid; gap:5px; width:20px; }
     .menu-icon span { display:block; height:1.5px; background:#0D0D0C; }
+    [id] { scroll-margin-top:72px; }
     img { max-width:100%; }
     .split-grid, .career-row, .acc-button, .acc-content-grid { min-width:0; }
     .split-grid > *, .career-row > *, .acc-button > *, .acc-content-grid > * { min-width:0; }
@@ -297,6 +298,17 @@ SITE_CSS = """    .site-header { box-sizing:border-box; }
     .case-row:hover .case-thumb img, .case-row:focus-visible .case-thumb img { transform:scale(1.045); filter:contrast(1.04); }
     .case-row:hover .case-meta, .case-row:hover .case-role, .case-row:focus-visible .case-meta, .case-row:focus-visible .case-role { color:#0D0D0C !important; }
     .case-row:hover .case-arrow, .case-row:focus-visible .case-arrow { transform:translateX(8px); color:#0D0D0C; }
+    @media (max-width: 1100px) {
+      .site-tagline { display:none !important; }
+      .site-header { grid-template-columns:auto 1fr auto !important; }
+    }
+    @media (max-width: 860px) {
+      html, body { max-width:100%; overflow-x:hidden; }
+      .site-header { grid-template-columns:1fr auto !important; gap:14px !important; }
+      .site-nav { display:none !important; }
+      .mobile-nav { display:block !important; justify-self:end; position:relative; }
+      .mobile-menu-panel { box-sizing:border-box; }
+    }
     @media (max-width: 820px) {
       .case-row { grid-template-columns:1fr !important; gap:18px !important; align-items:start !important; }
       .case-row .case-arrow { display:none !important; }
@@ -315,11 +327,7 @@ SITE_CSS = """    .site-header { box-sizing:border-box; }
       [style*="grid-template-columns:minmax(160px,220px) 1fr"] { grid-template-columns:1fr !important; gap:18px !important; }
     }
     @media (max-width: 520px) {
-      html, body { max-width:100%; overflow-x:hidden; }
       .site-header { grid-template-columns:1fr auto !important; gap:14px !important; padding:12px 16px !important; }
-      .site-tagline, .site-nav { display:none !important; }
-      .mobile-nav { display:block !important; justify-self:end; position:relative; }
-      .mobile-menu-panel { box-sizing:border-box; }
       .hero-media { align-items:stretch !important; margin-right:0 !important; }
       .hero-media img { width:100% !important; max-width:calc(100vw - 32px) !important; min-width:0 !important; }
       [data-screen-label="Profil Inhalt"] h2 { font-size:3rem !important; line-height:0.9 !important; }
@@ -889,6 +897,23 @@ def update_case_hover(body: str) -> str:
     return body.replace(old, "")
 
 
+def update_hash_scroll(body: str) -> str:
+    old = """  componentDidMount() {
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;"""
+    new = """  componentDidMount() {
+    const scrollToHash = () => {
+      if (!window.location.hash) return;
+      let id = window.location.hash.slice(1);
+      try { id = decodeURIComponent(id); } catch (e) {}
+      const target = document.getElementById(id);
+      if (target) target.scrollIntoView({ block: "start" });
+    };
+    window.setTimeout(scrollToHash, 0);
+    window.setTimeout(scrollToHash, 250);
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;"""
+    return body.replace(old, new)
+
+
 def update_copy_and_case_text(body: str) -> str:
     replacements = {
         'navProjects: "Projekte", navContact: "Kontakt",': 'navProjects: "Projekte", navContact: "Kontakt", navMenuLabel: "Menü",',
@@ -903,6 +928,12 @@ def update_copy_and_case_text(body: str) -> str:
         'h1: "Dokumentation für Fahrzeugumbauten"': 'h1: "Dokumentation für Fahrzeugumbauten: Service-Wissen weltweit auffindbar machen"',
         'h1: "Documentation for vehicle conversions"': 'h1: "Documentation for vehicle conversions: making service knowledge findable worldwide"',
         'h1: "Dokumentacja przebudów pojazdów"': 'h1: "Dokumentacja przebudów pojazdów: wiedza serwisowa dostępna globalnie"',
+        "2019 bis 2022": "2021 bis 2023",
+        "2019 to 2022": "2021 to 2023",
+        "2019 do 2022": "2021 do 2023",
+        "2022 haben wir das Projekt eingestellt.": "2023 haben wir das Projekt eingestellt.",
+        "In 2022 we shut the project down.": "In 2023 we shut the project down.",
+        "W 2022 roku zakończyliśmy projekt.": "W 2023 roku zakończyliśmy projekt.",
     }
     for old, new in replacements.items():
         body = body.replace(old, new)
@@ -1048,6 +1079,7 @@ def transform(source_name: str, lang: str, kind: str, slug: str | None = None) -
     body = update_copy_and_case_text(body)
     body = update_responsive_markup(body, lang, kind)
     body = update_case_hover(body)
+    body = update_hash_scroll(body)
     if kind == "home":
         body = update_home_form(body)
     if slug == "vestium":
