@@ -3,8 +3,6 @@
 .assetsignore
 wrangler.jsonc
 README.md
-ACTION-PLAN.md
-FULL-AUDIT-REPORT.md
 Daniel Baran - Website v2.html
 src
 src/**

@@ -42,57 +42,57 @@ PAGE_SOURCES = {
 
 TITLES = {
     "home": {
-        "de": "Daniel Baran | IT Project & Product Manager",
-        "en": "Daniel Baran | IT Project & Product Manager",
-        "pl": "Daniel Baran | Projekty IT i Product Ownership",
+        "de": "Daniel Baran - Senior IT Project & Product Manager",
+        "en": "Daniel Baran - Senior IT Project & Product Manager",
+        "pl": "Daniel Baran - Senior IT Project & Product Manager",
     },
     "about": {
-        "de": "Über Daniel Baran | IT-Projektleitung",
-        "en": "About Daniel Baran | IT Delivery",
-        "pl": "O Danielu Baranie | IT Delivery",
+        "de": "Über mich - Daniel Baran, IT Project & Product Manager",
+        "en": "About Daniel Baran - IT Project & Product Manager",
+        "pl": "O Danielu Baranie - IT Project & Product Manager",
     },
     "projects": {
-        "de": "IT Case Studies | Daniel Baran",
-        "en": "IT Project Case Studies | Daniel Baran",
-        "pl": "Case studies IT | Daniel Baran",
+        "de": "Projekte - Case Studies von Daniel Baran",
+        "en": "Projects - Daniel Baran Case Studies",
+        "pl": "Projekty - case studies Daniela Barana",
     },
     "imprint": {
-        "de": "Impressum und Kontakt | Daniel Baran",
-        "en": "Legal Notice and Contact | Daniel Baran",
-        "pl": "Nota prawna i kontakt | Daniel Baran",
+        "de": "Impressum - Daniel Baran",
+        "en": "Legal Notice - Daniel Baran",
+        "pl": "Nota prawna - Daniel Baran",
     },
     "privacy": {
-        "de": "Datenschutz und Privacy | Daniel Baran",
-        "en": "Privacy Policy and Contact | Daniel Baran",
-        "pl": "Prywatność i dane | Daniel Baran",
+        "de": "Datenschutz - Daniel Baran",
+        "en": "Privacy Policy - Daniel Baran",
+        "pl": "Polityka prywatności - Daniel Baran",
     },
 }
 
 DESCRIPTIONS = {
     "home": {
-        "de": "Daniel Baran unterstützt Teams als Senior IT Project & Product Manager bei IT-Projekten, Product Ownership, KI-Enablement und Streaming-Delivery.",
-        "en": "Daniel Baran supports teams as a senior IT project and product manager for IT delivery, product ownership, AI enablement and streaming platforms.",
-        "pl": "Daniel Baran wspiera zespoły jako Senior IT Project & Product Manager w projektach IT, product ownership, wdrażaniu AI i platformach streamingowych.",
+        "de": "Senior IT Project & Product Manager für IT-Projekte, digitale Produkte und KI-Enablement im DACH-Raum.",
+        "en": "Senior IT Project & Product Manager for IT projects, digital products and AI enablement across DACH.",
+        "pl": "Senior IT Project & Product Manager wspierający projekty IT, produkty cyfrowe i wdrażanie AI w regionie DACH.",
     },
     "about": {
-        "de": "Profil von Daniel Baran: Erfahrung in IT-Projektleitung, Product Ownership, KI-Enablement, Streaming-Infrastruktur und Arbeit mit Teams in Europa.",
-        "en": "Profile of Daniel Baran: experience in IT project delivery, product ownership, AI enablement, streaming infrastructure and European remote teams.",
-        "pl": "Profil Daniela Barana: doświadczenie w prowadzeniu projektów IT, product ownership, wdrażaniu AI, infrastrukturze streamingowej i pracy z zespołami.",
+        "de": "Profil, Arbeitsweise, Karriere und Toolkit von Daniel Baran.",
+        "en": "Profile, working style, career and toolkit of Daniel Baran.",
+        "pl": "Profil, sposób pracy, kariera i toolkit Daniela Barana.",
     },
     "projects": {
-        "de": "Neun Case Studies von Daniel Baran zu KI-Empfehlungen, Streaming-Infrastruktur, Metaverse-Projekten, Fashion-Tech und Automotive-Systemen.",
-        "en": "Nine Daniel Baran case studies covering AI recommendations, streaming infrastructure, metaverse projects, fashion tech and automotive systems.",
-        "pl": "Dziewięć case studies Daniela Barana o rekomendacjach AI, infrastrukturze streamingu, projektach metaverse, fashion tech i systemach automotive.",
+        "de": "Neun Case Studies aus Medien, KI, Streaming, Startup und Automotive.",
+        "en": "Nine case studies from media, AI, streaming, startup and automotive.",
+        "pl": "Dziewięć case studies z mediów, AI, streamingu, startupów i motoryzacji.",
     },
     "imprint": {
-        "de": "Impressum, Anbieterkennzeichnung und Kontaktinformationen von Daniel Baran für die Website daniel-baran.com und freiberufliche IT-Dienstleistungen.",
-        "en": "Legal notice, provider details and contact information for Daniel Baran, daniel-baran.com and freelance IT project services.",
-        "pl": "Nota prawna, dane identyfikacyjne i informacje kontaktowe Daniela Barana dla strony daniel-baran.com oraz usług IT freelance.",
+        "de": "Impressum und Anbieterkennzeichnung von Daniel Baran.",
+        "en": "Legal notice and provider information for Daniel Baran.",
+        "pl": "Nota prawna i dane identyfikacyjne Daniela Barana.",
     },
     "privacy": {
-        "de": "Datenschutzerklärung für daniel-baran.com mit Informationen zu Hosting, Kontaktformular, lokalen Schriftarten, Sprachwahl und Betroffenenrechten.",
-        "en": "Privacy policy for daniel-baran.com covering hosting, contact form processing, local fonts, language choice and GDPR rights.",
-        "pl": "Polityka prywatności dla daniel-baran.com: hosting, formularz kontaktowy, lokalne czcionki, wybór języka i prawa wynikające z RODO.",
+        "de": "Datenschutzerklärung für daniel-baran.com.",
+        "en": "Privacy policy for daniel-baran.com.",
+        "pl": "Polityka prywatności dla daniel-baran.com.",
     },
 }
 
@@ -110,369 +110,49 @@ CASE_TITLES = {
 
 CASE_SEO_TITLES = {
     "swr-ki-empfehlungsengine": {
-        "de": "SWR KI-Empfehlungen | Daniel Baran",
-        "en": "SWR AI Recommendations | Daniel Baran",
-        "pl": "Rekomendacje AI dla SWR | Daniel Baran",
+        "de": "SWR KI-Empfehlungen - Product Owner Case Study - Daniel Baran",
+        "en": "SWR AI Recommendations - Product Owner Case Study - Daniel Baran",
+        "pl": "Rekomendacje AI dla SWR - Product Owner Case Study - Daniel Baran",
     },
     "swr-ki-testphase": {
-        "de": "SWR KI-Testphase | Daniel Baran",
-        "en": "SWR AI Pilot Phase | Daniel Baran",
-        "pl": "Faza testów AI w SWR | Daniel Baran",
+        "de": "SWR KI-Testphase - KI-Enablement Case Study - Daniel Baran",
+        "en": "SWR AI Pilot Phase - AI Enablement Case Study - Daniel Baran",
+        "pl": "Faza testów AI w SWR - AI Enablement Case Study - Daniel Baran",
     },
     "swr-multiplatform-service": {
-        "de": "ARD Multiplatform-Service | Daniel Baran",
-        "en": "ARD Multiplatform Service | Daniel Baran",
-        "pl": "Serwis multiplatformowy ARD | Daniel Baran",
+        "de": "ARD-Multiplattformservice - Product Owner Case Study - Daniel Baran",
+        "en": "ARD Multiplatform Service - Product Owner Case Study - Daniel Baran",
+        "pl": "Serwis multiplatformowy ARD - Product Owner Case Study - Daniel Baran",
     },
     "swr-ard-transcoding": {
-        "de": "ARD Transcoding | Daniel Baran",
-        "en": "ARD Transcoding | Daniel Baran",
-        "pl": "Transcoding ARD | Daniel Baran",
+        "de": "ARD-Transcoding - Projektleitung Case Study - Daniel Baran",
+        "en": "ARD Transcoding - Project Lead Case Study - Daniel Baran",
+        "pl": "Transcoding ARD - Project Lead Case Study - Daniel Baran",
     },
     "vestium": {
-        "de": "Vestium Fashion-Tech | Daniel Baran",
-        "en": "Vestium Fashion Tech | Daniel Baran",
-        "pl": "Vestium Fashion Tech | Daniel Baran",
+        "de": "Vestium Fashion-Tech Startup - Case Study - Daniel Baran",
+        "en": "Vestium Fashion-Tech Startup - Case Study - Daniel Baran",
+        "pl": "Vestium Fashion-Tech Startup - Case Study - Daniel Baran",
     },
     "infinite-playa": {
-        "de": "Infinite Playa Metaverse | Daniel Baran",
-        "en": "Infinite Playa Metaverse | Daniel Baran",
-        "pl": "Infinite Playa Metaverse | Daniel Baran",
+        "de": "The Infinite Playa Metaverse - Case Study - Daniel Baran",
+        "en": "The Infinite Playa Metaverse - Case Study - Daniel Baran",
+        "pl": "The Infinite Playa Metaverse - Case Study - Daniel Baran",
     },
     "uci-track-champions-league": {
-        "de": "UCI Metaverse Experience | Daniel Baran",
-        "en": "UCI Metaverse Experience | Daniel Baran",
-        "pl": "UCI Metaverse Experience | Daniel Baran",
+        "de": "UCI Track Champions League Metaverse - Case Study - Daniel Baran",
+        "en": "UCI Track Champions League Metaverse - Case Study - Daniel Baran",
+        "pl": "UCI Track Champions League Metaverse - Case Study - Daniel Baran",
     },
     "systemmigration-konzernverbund": {
-        "de": "MAN/VW Systemmigration | Daniel Baran",
-        "en": "MAN/VW System Migration | Daniel Baran",
-        "pl": "Migracja systemu MAN/VW | Daniel Baran",
+        "de": "Systemmigration bei MAN/VW - IT-Projekt Case Study - Daniel Baran",
+        "en": "MAN/VW System Migration - IT Project Case Study - Daniel Baran",
+        "pl": "Migracja systemu MAN/VW - IT Project Case Study - Daniel Baran",
     },
     "fahrzeugumbauten-dokumentation": {
-        "de": "Fahrzeugumbauten-Doku | Daniel Baran",
-        "en": "Vehicle Conversion Docs | Daniel Baran",
-        "pl": "Dokumentacja przebudów | Daniel Baran",
-    },
-}
-
-CASE_DESCRIPTIONS = {
-    "swr-ki-empfehlungsengine": {
-        "de": "Case Study zu einem KI-Empfehlungssystem für die SWR-Website: Product Ownership, redaktionelles Feedback, Modelltraining und produktiver Vergleich mit dem Altsystem.",
-        "en": "Case study on an AI recommendation system for the SWR website: product ownership, editorial feedback, model training and production rollout.",
-        "pl": "Case study systemu rekomendacji AI dla strony SWR: product ownership, feedback redakcji, trening modelu i porównanie produkcyjne ze starym systemem.",
-    },
-    "swr-ki-testphase": {
-        "de": "Case Study zur KI-Testphase beim SWR: Use-Case-Auswahl, Governance, Team-Befähigung und der Weg von Experimenten zu belastbaren Arbeitsweisen.",
-        "en": "Case study on the SWR AI pilot phase: use case selection, governance, team enablement and the path from experiments to reliable operating models.",
-        "pl": "Case study fazy testów AI w SWR: wybór use case'ów, governance, wsparcie zespołów i przejście od eksperymentów do stabilnych sposobów pracy.",
-    },
-    "swr-multiplatform-service": {
-        "de": "Case Study zum ARD-Multiplattformservice: Product Ownership für cloud-native Streaming-Infrastruktur, Manifest-Logik und Betrieb in der ARD-Mediathek.",
-        "en": "Case study on the ARD multiplatform service: product ownership for cloud-native streaming infrastructure, manifest logic and ARD Mediathek operations.",
-        "pl": "Case study serwisu multiplatformowego ARD: product ownership dla cloud-native infrastruktury streamingu, logiki manifestów i działania ARD Mediathek.",
-    },
-    "swr-ard-transcoding": {
-        "de": "Case Study zum zentralen ARD-Transcoding: Projektleitung für VOD- und Live-Workflows, Schnittstellen, Rollout und robuste Medienproduktion.",
-        "en": "Case study on central ARD transcoding: project leadership for VOD and live workflows, interfaces, rollout and robust media production.",
-        "pl": "Case study centralnego transcodingu ARD: prowadzenie projektu dla workflow VOD i live, interfejsów, rolloutów i stabilnej produkcji mediów.",
-    },
-    "vestium": {
-        "de": "Case Study zum Fashion-Tech-Startup Vestium: 3D-Scan-Avatare, virtuelle Anprobe, Teamaufbau und Produktarbeit zwischen Vision und technischer Machbarkeit.",
-        "en": "Case study on the fashion tech startup Vestium: 3D scan avatars, virtual try-on, team building and product work between vision and technical feasibility.",
-        "pl": "Case study startupu fashion tech Vestium: awatary ze skanów 3D, wirtualna przymiarka, budowa zespołu i produkt między wizją a wykonalnością.",
-    },
-    "infinite-playa": {
-        "de": "Case Study zu The Infinite Playa: virtuelle Burning-Man-Welt, internationale Delivery, Support-Prozesse und Führung eines interdisziplinären Teams.",
-        "en": "Case study on The Infinite Playa: virtual Burning Man world, international delivery, support processes and leadership of an interdisciplinary team.",
-        "pl": "Case study The Infinite Playa: wirtualny świat Burning Man, międzynarodowa realizacja, procesy wsparcia i prowadzenie interdyscyplinarnego zespołu.",
-    },
-    "uci-track-champions-league": {
-        "de": "Case Study zum UCI Track Champions League Metaverse: immersive Fanplattform, Event-Delivery und Abstimmung zwischen Studio, Partnern und Sportmarke.",
-        "en": "Case study on the UCI Track Champions League metaverse: immersive fan platform, event delivery and alignment between studio, partners and sports brand.",
-        "pl": "Case study metaverse UCI Track Champions League: immersyjna platforma fanowska, realizacja eventu i koordynacja studia, partnerów oraz marki sportowej.",
-    },
-    "systemmigration-konzernverbund": {
-        "de": "Case Study zur MAN/VW-Systemmigration: weltweiter After-Sales-Kontext, Schnittstellensteuerung, Support-Aufbau und Migration eines zentralen Werkstatt-Systems.",
-        "en": "Case study on MAN/VW system migration: global after-sales context, interface steering, support setup and migration of a central workshop system.",
-        "pl": "Case study migracji systemu MAN/VW: globalny kontekst after-sales, koordynacja interfejsów, budowa supportu i migracja centralnego systemu warsztatowego.",
-    },
-    "fahrzeugumbauten-dokumentation": {
-        "de": "Case Study zur Dokumentation von Fahrzeugumbauten: IT-Projektarbeit, strukturierte Service-Informationen und weltweit auffindbares Wissen für Werkstätten.",
-        "en": "Case study on vehicle conversion documentation: IT project work, structured service information and globally findable knowledge for workshops.",
-        "pl": "Case study dokumentacji przebudów pojazdów: praca projektowa IT, uporządkowane informacje serwisowe i globalnie dostępna wiedza dla warsztatów.",
-    },
-}
-
-STATIC_PAGE_COPY = {
-    "home": {
-        "de": {
-            "eyebrow": "Kurzprofil",
-            "heading": "Was Daniel Baran für IT- und Produktteams leistet",
-            "paragraphs": [
-                "Daniel Baran ist Senior IT Project & Product Manager für Organisationen, die komplexe digitale Vorhaben zuverlässig in Produktion bringen müssen. Der Schwerpunkt liegt auf IT-Projektmanagement, Product Ownership, KI-Enablement, cloud-nativer Streaming-Infrastruktur und Schnittstellen zwischen Fachbereich, Engineering, Partnern und Management.",
-                "Die Arbeit beginnt dort, wo ein Projekt nicht nur technisch, sondern auch organisatorisch anspruchsvoll ist: mehrere Stakeholder, gewachsene Systeme, knappe Fachkapazitäten, Datenschutzanforderungen, externe Dienstleister und ein Zielbild, das in belastbare Arbeitspakete übersetzt werden muss.",
-                "Aus Projekten bei SWR, ARD, MAN/Volkswagen, Adastra Studios und dem Fashion-Tech-Startup Vestium bringt Daniel Erfahrung aus Medien, Automotive, Entertainment, Streaming, KI und Startup-Aufbau mit. Die Case Studies zeigen Produktarbeit, Projektleitung, Teamkoordination und technische Delivery in realen Produktionskontexten.",
-                "Teams buchen Daniel, wenn sie einen Umsetzer brauchen, der technische Details versteht, Projektstruktur schafft, Entscheidungen vorbereitet und gleichzeitig Menschen mitnimmt. Ziel ist nicht nur ein sauberer Plan, sondern ein Ergebnis, das nutzbar, wartbar und im Alltag tragfähig ist.",
-            ],
-            "bullets": [
-                "IT-Projektmanagement für komplexe System- und Plattformvorhaben",
-                "Product Ownership für digitale Produkte, Backlogs und Roadmaps",
-                "KI-Enablement von Use-Case-Auswahl bis produktiver Einführung",
-                "Streaming-, Cloud- und Transcoding-Projekte im Medienumfeld",
-                "Remote-Zusammenarbeit auf Deutsch, Englisch und Polnisch",
-            ],
-        },
-        "en": {
-            "eyebrow": "Profile summary",
-            "heading": "What Daniel Baran delivers for IT and product teams",
-            "paragraphs": [
-                "Daniel Baran is a senior IT Project & Product Manager for organizations that need to take complex digital initiatives reliably into production. His focus is IT project management, product ownership, AI enablement, cloud-native streaming infrastructure and the interface between business teams, engineering, partners and management.",
-                "The work starts where a project is not only technically demanding but organizationally difficult: multiple stakeholders, legacy systems, limited subject-matter capacity, data protection requirements, external vendors and a target picture that has to become clear work packages.",
-                "Through projects with SWR, ARD, MAN/Volkswagen, Adastra Studios and the fashion-tech startup Vestium, Daniel brings experience across media, automotive, entertainment, streaming, AI and startup building. The case studies document product work, project leadership, team coordination and technical delivery in real production environments.",
-                "Teams bring Daniel in when they need someone who understands technical detail, creates project structure, prepares decisions and keeps people aligned. The goal is not just a neat plan but an outcome that is usable, maintainable and robust in daily operations.",
-            ],
-            "bullets": [
-                "IT project management for complex system and platform initiatives",
-                "Product ownership for digital products, backlogs and roadmaps",
-                "AI enablement from use-case selection to production adoption",
-                "Streaming, cloud and transcoding projects in media environments",
-                "Remote collaboration in German, English and Polish",
-            ],
-        },
-        "pl": {
-            "eyebrow": "Krótki profil",
-            "heading": "Jak Daniel Baran wspiera zespoły IT i produktowe",
-            "paragraphs": [
-                "Daniel Baran jest Senior IT Project & Product Managerem dla organizacji, które muszą niezawodnie doprowadzać złożone inicjatywy cyfrowe do produkcji. Główne obszary to zarządzanie projektami IT, product ownership, wdrażanie AI, cloud-native infrastruktura streamingu oraz praca na styku biznesu, engineeringu, partnerów i managementu.",
-                "Praca zaczyna się tam, gdzie projekt jest wymagający nie tylko technicznie, lecz także organizacyjnie: wielu interesariuszy, starsze systemy, ograniczony czas ekspertów, wymagania ochrony danych, zewnętrzni dostawcy i cel, który trzeba przełożyć na konkretne pakiety pracy.",
-                "Dzięki projektom dla SWR, ARD, MAN/Volkswagen, Adastra Studios oraz startupu fashion-tech Vestium Daniel wnosi doświadczenie z mediów, automotive, entertainment, streamingu, AI i budowy startupu. Case studies pokazują product work, prowadzenie projektów, koordynację zespołów i techniczną realizację w realnych środowiskach produkcyjnych.",
-                "Zespoły angażują Daniela, gdy potrzebują osoby, która rozumie szczegóły techniczne, porządkuje projekt, przygotowuje decyzje i utrzymuje alignment między ludźmi. Celem nie jest tylko dobry plan, lecz rezultat, który działa, da się utrzymać i sprawdza się w codziennej pracy.",
-            ],
-            "bullets": [
-                "Zarządzanie projektami IT dla złożonych systemów i platform",
-                "Product ownership dla produktów cyfrowych, backlogów i roadmap",
-                "Wdrażanie AI od wyboru use case'ów po produkcyjne użycie",
-                "Projekty streamingowe, cloud i transcoding w środowisku mediów",
-                "Współpraca zdalna po niemiecku, angielsku i polsku",
-            ],
-        },
-    },
-    "about": {
-        "de": {
-            "eyebrow": "Erfahrung und Arbeitsweise",
-            "heading": "Zwischen Technik, Produkt und Organisation",
-            "paragraphs": [
-                "Daniel Baran arbeitet an der Schnittstelle von Projektleitung, Product Ownership und technischer Delivery. Seine Rolle ist besonders wirksam, wenn ein Vorhaben mehrere Systeme, Teams und Interessen verbindet und trotzdem einen klaren Weg in Richtung Produktion braucht.",
-                "Seine Erfahrung reicht von öffentlich-rechtlicher Medieninfrastruktur über KI-Empfehlungssysteme und Transcoding-Workflows bis zu Metaverse-Events, Fashion-Tech und Automotive-Systemmigration. Diese Breite hilft, technische Anforderungen, Business-Ziele und operative Realität zusammenzubringen.",
-                "Methodisch verbindet er strukturierte Projektarbeit mit pragmatischer Produktverantwortung: klare Entscheidungsgrundlagen, nachvollziehbare Backlogs, belastbare Roadmaps, transparente Kommunikation und genug technisches Verständnis, um Risiken früh zu erkennen.",
-            ],
-            "bullets": [
-                "Certified Product Management Expert (XDi)",
-                "Generative AI & GPAI Weiterbildung bei Bitkom",
-                "AI for Business über Wharton Online",
-                "Google Project Management über Coursera",
-                "Deutsch, Englisch und Polnisch in Projekten einsetzbar",
-            ],
-        },
-        "en": {
-            "eyebrow": "Experience and working style",
-            "heading": "Between technology, product and organization",
-            "paragraphs": [
-                "Daniel Baran works at the intersection of project leadership, product ownership and technical delivery. His role is strongest when an initiative connects several systems, teams and interests but still needs a clear path toward production.",
-                "His experience ranges from public broadcasting infrastructure, AI recommendation systems and transcoding workflows to metaverse events, fashion tech and automotive system migration. This range helps connect technical requirements, business goals and operational reality.",
-                "His working style combines structured project management with pragmatic product responsibility: clear decision material, transparent backlogs, reliable roadmaps, direct communication and enough technical understanding to identify risks early.",
-            ],
-            "bullets": [
-                "Certified Product Management Expert (XDi)",
-                "Generative AI & GPAI training with Bitkom",
-                "AI for Business through Wharton Online",
-                "Google Project Management through Coursera",
-                "German, English and Polish available in project work",
-            ],
-        },
-        "pl": {
-            "eyebrow": "Doświadczenie i sposób pracy",
-            "heading": "Między technologią, produktem i organizacją",
-            "paragraphs": [
-                "Daniel Baran pracuje na styku prowadzenia projektów, product ownership i technicznej realizacji. Jego rola jest szczególnie skuteczna wtedy, gdy inicjatywa łączy kilka systemów, zespołów i interesów, ale nadal potrzebuje jasnej drogi do produkcji.",
-                "Doświadczenie obejmuje infrastrukturę mediów publicznych, systemy rekomendacji AI, workflow transcodingu, eventy metaverse, fashion tech oraz migracje systemów automotive. Ta szerokość pomaga łączyć wymagania techniczne, cele biznesowe i realia operacyjne.",
-                "Sposób pracy łączy uporządkowane zarządzanie projektem z pragmatyczną odpowiedzialnością produktową: jasne materiały decyzyjne, przejrzyste backlogi, realistyczne roadmapy, bezpośrednia komunikacja i techniczne zrozumienie ryzyk.",
-            ],
-            "bullets": [
-                "Certified Product Management Expert (XDi)",
-                "Szkolenie Generative AI & GPAI w Bitkom",
-                "AI for Business przez Wharton Online",
-                "Google Project Management przez Coursera",
-                "Niemiecki, angielski i polski w pracy projektowej",
-            ],
-        },
-    },
-    "projects": {
-        "de": {
-            "eyebrow": "Case-Study-Übersicht",
-            "heading": "Nachweise aus Medien, KI, Streaming, Startup und Automotive",
-            "paragraphs": [
-                "Die Projekte zeigen, wie Daniel Baran Produkt- und Projektverantwortung in unterschiedlichen Umfeldern übernommen hat: öffentlich-rechtliche Medien, cloud-native Streaming-Services, KI-Empfehlungen, virtuelle Events, Fashion-Tech und globale Automotive-Prozesse.",
-                "Jede Case Study beschreibt einen konkreten Kontext, die eigene Rolle, zentrale Entscheidungen und das Ergebnis. Entscheidend ist dabei nicht nur die Technologie, sondern auch die Übersetzung zwischen Stakeholdern, Teams, Systemen und operativem Betrieb.",
-                "Die Auswahl ist bewusst breit: Sie zeigt, dass Delivery nicht an einer Branche hängt, sondern an sauberer Kommunikation, technischer Anschlussfähigkeit, klaren Prioritäten und einem realistischen Verständnis von Organisationen.",
-            ],
-            "bullets": [],
-        },
-        "en": {
-            "eyebrow": "Case study overview",
-            "heading": "Proof across media, AI, streaming, startup and automotive",
-            "paragraphs": [
-                "The projects show how Daniel Baran has taken product and project responsibility in different environments: public broadcasting, cloud-native streaming services, AI recommendations, virtual events, fashion tech and global automotive processes.",
-                "Each case study describes a concrete context, Daniel's role, key decisions and the outcome. The important part is not only the technology but the translation between stakeholders, teams, systems and operational reality.",
-                "The selection is intentionally broad. It shows that delivery is not tied to one industry but to clear communication, technical fluency, realistic prioritization and an understanding of how organizations actually work.",
-            ],
-            "bullets": [],
-        },
-        "pl": {
-            "eyebrow": "Przegląd case studies",
-            "heading": "Dowody pracy w mediach, AI, streamingu, startupie i automotive",
-            "paragraphs": [
-                "Projekty pokazują, jak Daniel Baran przejmował odpowiedzialność produktową i projektową w różnych środowiskach: media publiczne, cloud-native usługi streamingowe, rekomendacje AI, eventy wirtualne, fashion tech i globalne procesy automotive.",
-                "Każde case study opisuje konkretny kontekst, rolę Daniela, kluczowe decyzje i rezultat. Ważna jest nie tylko technologia, lecz także tłumaczenie między interesariuszami, zespołami, systemami i codzienną operacją.",
-                "Wybór jest celowo szeroki. Pokazuje, że delivery nie zależy od jednej branży, lecz od jasnej komunikacji, technicznego zrozumienia, realistycznych priorytetów i wiedzy o tym, jak działają organizacje.",
-            ],
-            "bullets": [],
-        },
-    },
-}
-
-CASE_STATIC_BULLETS = {
-    "swr-ki-empfehlungsengine": {
-        "de": ["Product Ownership für ein KI-Empfehlungssystem", "Feedback-Prozess für ausgelastete Redaktionen", "Produktiver Vergleich mit dem bisherigen System"],
-        "en": ["Product ownership for an AI recommendation system", "Feedback process for busy editorial teams", "Production comparison with the previous system"],
-        "pl": ["Product ownership systemu rekomendacji AI", "Proces feedbacku dla obciążonych redakcji", "Porównanie produkcyjne z poprzednim systemem"],
-    },
-    "swr-ki-testphase": {
-        "de": ["Bewertung realer KI-Anwendungsfälle", "Governance für Datenschutz und Modellwahl", "Befähigung von Teams statt isolierter Experimente"],
-        "en": ["Evaluation of real AI use cases", "Governance for privacy and model selection", "Team enablement instead of isolated experiments"],
-        "pl": ["Ocena realnych zastosowań AI", "Governance dla ochrony danych i wyboru modeli", "Wspieranie zespołów zamiast izolowanych eksperymentów"],
-    },
-    "swr-multiplatform-service": {
-        "de": ["Cloud-native Streaming-Infrastruktur", "Manifest-Logik für HLS/DASH-Workflows", "Betrieb im Umfeld der ARD-Mediathek"],
-        "en": ["Cloud-native streaming infrastructure", "Manifest logic for HLS/DASH workflows", "Operations in the ARD Mediathek environment"],
-        "pl": ["Cloud-native infrastruktura streamingowa", "Logika manifestów dla workflow HLS/DASH", "Działanie w środowisku ARD Mediathek"],
-    },
-    "swr-ard-transcoding": {
-        "de": ["Zentrale Workflows für VOD und Live", "Koordination technischer Schnittstellen", "Projektleitung für robuste Medienproduktion"],
-        "en": ["Central workflows for VOD and live", "Coordination of technical interfaces", "Project leadership for robust media production"],
-        "pl": ["Centralne workflow dla VOD i live", "Koordynacja interfejsów technicznych", "Prowadzenie projektu stabilnej produkcji mediów"],
-    },
-    "vestium": {
-        "de": ["3D-Scan-Avatare für virtuelle Anprobe", "Teamaufbau für Rendering und Visualisierung", "Produktarbeit zwischen Vision und Machbarkeit"],
-        "en": ["3D scan avatars for virtual try-on", "Team setup for rendering and visualization", "Product work between vision and feasibility"],
-        "pl": ["Awatary ze skanów 3D do wirtualnej przymiarki", "Budowa zespołu renderingu i wizualizacji", "Produkt między wizją i wykonalnością"],
-    },
-    "infinite-playa": {
-        "de": ["Virtuelle Burning-Man-Welt", "Internationale Delivery mit interdisziplinärem Team", "Support-Prozesse für ein neues Eventformat"],
-        "en": ["Virtual Burning Man world", "International delivery with an interdisciplinary team", "Support processes for a new event format"],
-        "pl": ["Wirtualny świat Burning Man", "Międzynarodowa realizacja z interdyscyplinarnym zespołem", "Procesy wsparcia dla nowego formatu eventu"],
-    },
-    "uci-track-champions-league": {
-        "de": ["Immersive Fanplattform für ein Sportevent", "Abstimmung zwischen Studio, Partnern und Marke", "Event-Delivery mit sichtbarem Nutzererlebnis"],
-        "en": ["Immersive fan platform for a sports event", "Alignment between studio, partners and brand", "Event delivery with a visible user experience"],
-        "pl": ["Immersyjna platforma fanowska dla eventu sportowego", "Koordynacja studia, partnerów i marki", "Realizacja eventu z widocznym doświadczeniem użytkownika"],
-    },
-    "systemmigration-konzernverbund": {
-        "de": ["Migration eines zentralen Werkstatt-Systems", "Schnittstellensteuerung zwischen MAN und Volkswagen", "Aufbau einer globalen Support-Funktion"],
-        "en": ["Migration of a central workshop system", "Interface steering between MAN and Volkswagen", "Setup of a global support function"],
-        "pl": ["Migracja centralnego systemu warsztatowego", "Koordynacja interfejsów między MAN i Volkswagenem", "Budowa globalnej funkcji supportu"],
-    },
-    "fahrzeugumbauten-dokumentation": {
-        "de": ["Strukturierte Dokumentation für Fahrzeugumbauten", "Auffindbares Service-Wissen für Werkstätten", "IT-Projektarbeit im Automotive-Umfeld"],
-        "en": ["Structured documentation for vehicle conversions", "Findable service knowledge for workshops", "IT project work in an automotive environment"],
-        "pl": ["Uporządkowana dokumentacja przebudów pojazdów", "Dostępna wiedza serwisowa dla warsztatów", "Praca projektowa IT w środowisku automotive"],
-    },
-}
-
-STATIC_EXTRA_PARAGRAPHS = {
-    "home": {
-        "de": [
-            "Typische Einsätze sind Übergaben zwischen Strategie und Umsetzung, festgefahrene Backlogs, unklare technische Abhängigkeiten, Tool- oder Systemmigrationen, KI-Initiativen nach der ersten Experimentierphase und Plattformprojekte, die mehrere Teams gleichzeitig betreffen. In solchen Situationen braucht es jemanden, der Struktur schafft, ohne die technische Realität zu vereinfachen.",
-            "Die Zusammenarbeit ist auf klare Verantwortung ausgelegt: Ziele schärfen, Risiken sichtbar machen, Stakeholder synchronisieren, Lieferobjekte definieren und die nächsten Entscheidungen vorbereiten. Dadurch entsteht ein Arbeitsmodus, der sowohl für Fachbereiche als auch für Engineering-Teams nachvollziehbar bleibt.",
-            "Besonders relevant ist diese Rolle, wenn bestehende Teams bereits viel Wissen haben, aber zu wenig Zeit, um daraus ein tragfähiges Vorgehen zu formen. Daniel verdichtet Informationen, trennt Annahmen von gesicherten Fakten und sorgt dafür, dass Entscheidungen dokumentiert, anschlussfähig und später überprüfbar bleiben.",
-            "Der Fokus liegt dabei nicht auf mehr Prozess um des Prozesses willen. Entscheidend ist, dass Planung, Produktlogik und technische Umsetzung in eine Form kommen, die im Alltag nutzbar ist: mit klaren Verantwortlichkeiten, transparenten Abhängigkeiten, belastbaren Prioritäten und einem gemeinsamen Verständnis für das gewünschte Ergebnis.",
-            "So wird die Website auch für Suchsysteme klarer: Sie benennt konkrete Einsatzfelder, Rollen, Branchen und Ergebnisse statt nur allgemein Projektmanagement zu behaupten.",
-        ],
-        "en": [
-            "Typical engagements include handovers between strategy and implementation, stuck backlogs, unclear technical dependencies, tool or system migrations, AI initiatives after the first experiment phase and platform projects that affect several teams at once. In these situations, the work needs structure without oversimplifying the technical reality.",
-            "The collaboration is built around clear ownership: sharpening goals, making risks visible, synchronizing stakeholders, defining deliverables and preparing the next decisions. That creates a working mode that remains understandable for both business teams and engineering teams.",
-            "This role is especially useful when existing teams already hold a lot of knowledge but lack the time to turn it into a reliable delivery path. Daniel condenses information, separates assumptions from confirmed facts and keeps decisions documented, connected and reviewable later.",
-            "The focus is not more process for its own sake. What matters is turning planning, product logic and technical implementation into a working format: clear responsibilities, transparent dependencies, reliable priorities and a shared understanding of the outcome the team is trying to reach.",
-            "That also makes the website clearer for search systems: it names concrete engagement types, roles, industries and outcomes instead of making only generic project management claims.",
-        ],
-        "pl": [
-            "Typowe zadania to przejścia między strategią a realizacją, zablokowane backlogi, niejasne zależności techniczne, migracje narzędzi lub systemów, inicjatywy AI po pierwszej fazie eksperymentów oraz projekty platformowe obejmujące kilka zespołów jednocześnie. W takich sytuacjach potrzebna jest struktura bez upraszczania rzeczywistości technicznej.",
-            "Współpraca opiera się na jasnej odpowiedzialności: doprecyzowaniu celów, uwidocznieniu ryzyk, synchronizacji interesariuszy, zdefiniowaniu rezultatów i przygotowaniu kolejnych decyzji. Dzięki temu sposób pracy pozostaje zrozumiały zarówno dla biznesu, jak i zespołów engineeringowych.",
-            "Ta rola jest szczególnie przydatna, gdy zespoły mają już dużo wiedzy, ale brakuje im czasu, aby przełożyć ją na stabilną ścieżkę delivery. Daniel kondensuje informacje, oddziela założenia od faktów i dba o to, aby decyzje były udokumentowane, połączone z kontekstem i możliwe do późniejszej weryfikacji.",
-            "Nie chodzi przy tym o proces dla samego procesu. Najważniejsze jest przełożenie planowania, logiki produktu i implementacji technicznej na format pracy: jasne odpowiedzialności, widoczne zależności, wiarygodne priorytety i wspólne rozumienie rezultatu, do którego dąży zespół.",
-            "Dzięki temu strona jest czytelniejsza także dla systemów wyszukiwania: pokazuje konkretne typy zadań, role, branże i rezultaty zamiast ogólnych deklaracji o project management.",
-        ],
-    },
-    "about": {
-        "de": [
-            "In der Praxis bedeutet das: Anforderungen so formulieren, dass Teams sie bauen können; technische Diskussionen so strukturieren, dass Fachbereiche entscheiden können; und Risiken so früh adressieren, dass sie nicht erst im Rollout sichtbar werden. Diese Übersetzungsarbeit ist oft der Unterschied zwischen einem Projekt, das gut klingt, und einem Projekt, das tatsächlich funktioniert.",
-            "Daniel arbeitet nicht als reine Koordinationsschicht. Er geht tief genug in Architektur, Datenflüsse, Betriebsfragen und Nutzerbedürfnisse, um technische Abhängigkeiten realistisch einzuschätzen. Gleichzeitig bleibt der Blick auf Budget, Timing, Verantwortlichkeiten und Kommunikationswege erhalten.",
-            "Seine Stärke liegt besonders in Umfeldern, in denen mehrere Organisationen oder Abteilungen beteiligt sind. Dort braucht Delivery mehr als Statusmeetings: klare Entscheidungswege, belastbare Dokumentation, priorisierte Arbeitspakete und eine Sprache, die technische und nichttechnische Beteiligte verbindet.",
-            "Das Ergebnis dieser Arbeitsweise ist ein Projektmodus, in dem Teams schneller wissen, was als Nächstes zählt. Offene Punkte werden nicht versteckt, sondern priorisiert; Entscheidungen werden vorbereitet statt vertagt; und Fortschritt wird an nutzbaren Ergebnissen gemessen.",
-            "Die Erfahrung reicht von öffentlich-rechtlichen Medienplattformen über KI-gestützte Workflows bis zu Automotive-Systemen und digitalen Produktteams. Diese Breite hilft dabei, Muster früh zu erkennen: wo Governance fehlt, wo Produktentscheidungen unklar sind und wo technische Risiken vor dem nächsten Meilenstein sauber geklärt werden müssen.",
-            "Für Auftraggeber zählt vor allem diese Kombination: operative Umsetzungskraft, saubere Kommunikation und genug technisches Verständnis, um schwierige Abwägungen nicht nur zu moderieren, sondern entscheidungsreif zu machen.",
-        ],
-        "en": [
-            "In practice, that means framing requirements so teams can build them, structuring technical discussions so business stakeholders can decide, and addressing risks early enough that they do not first appear during rollout. This translation work is often the difference between a project that sounds good and a project that actually works.",
-            "Daniel does not work as a pure coordination layer. He goes deep enough into architecture, data flows, operations and user needs to judge technical dependencies realistically. At the same time, budget, timing, ownership and communication paths stay visible.",
-            "His strength is especially relevant in environments where several organizations or departments are involved. Delivery then needs more than status meetings: clear decision paths, reliable documentation, prioritized work packages and a language that connects technical and non-technical participants.",
-            "The result is a project mode in which teams understand faster what matters next. Open points are not hidden but prioritized, decisions are prepared instead of postponed, and progress is measured against usable outcomes.",
-            "The experience spans public media platforms, AI-supported workflows, automotive systems and digital product teams. That range helps identify patterns early: where governance is missing, where product decisions are unclear and where technical risks need to be resolved before the next milestone.",
-            "For clients, the useful part is this combination: operational delivery strength, clear communication and enough technical understanding to turn difficult trade-offs into decisions.",
-        ],
-        "pl": [
-            "W praktyce oznacza to formułowanie wymagań tak, aby zespoły mogły je zbudować, porządkowanie dyskusji technicznych tak, aby biznes mógł podejmować decyzje, oraz adresowanie ryzyk zanim ujawnią się dopiero przy rolloutcie. Ta praca translatorska często decyduje, czy projekt tylko dobrze brzmi, czy rzeczywiście działa.",
-            "Daniel nie działa wyłącznie jako warstwa koordynacyjna. Wchodzi wystarczająco głęboko w architekturę, przepływy danych, operacje i potrzeby użytkowników, aby realistycznie ocenić zależności techniczne. Jednocześnie pozostają widoczne budżet, timing, odpowiedzialności i komunikacja.",
-            "Jego mocną stroną są szczególnie środowiska z udziałem kilku organizacji lub działów. Delivery wymaga wtedy czegoś więcej niż status meetingów: jasnych ścieżek decyzyjnych, rzetelnej dokumentacji, priorytetowych pakietów pracy i języka łączącego osoby techniczne oraz nietechniczne.",
-            "Efektem jest tryb projektu, w którym zespoły szybciej rozumieją, co jest następne i najważniejsze. Otwarte tematy nie są ukrywane, lecz priorytetyzowane; decyzje są przygotowywane zamiast odkładane; a postęp mierzy się użytecznymi rezultatami.",
-            "Doświadczenie obejmuje publiczne platformy medialne, workflow wspierane przez AI, systemy automotive oraz zespoły produktów cyfrowych. Ta szerokość pomaga wcześnie rozpoznawać wzorce: gdzie brakuje governance, gdzie decyzje produktowe są niejasne i gdzie ryzyka techniczne trzeba rozwiązać przed kolejnym milestone.",
-            "Dla klientów praktyczna jest właśnie ta kombinacja: operacyjna siła delivery, jasna komunikacja i wystarczające zrozumienie techniczne, aby trudne kompromisy doprowadzić do decyzji.",
-        ],
-    },
-    "projects": {
-        "de": [
-            "Die Case Studies sind so ausgewählt, dass sie unterschiedliche Arten von Komplexität zeigen: Produktentscheidungen in KI-Systemen, Plattform- und Infrastrukturarbeit im Streaming, internationale Event-Delivery, Startup-Aufbau und Migrationen in Konzernstrukturen. Dadurch entsteht ein nachvollziehbares Bild der Arbeitsweise in sehr verschiedenen Rahmenbedingungen.",
-            "Für potenzielle Auftraggeber sind die Beispiele vor allem als Entscheidungshilfe gedacht. Sie zeigen, welche Arten von Problemen Daniel bereits bearbeitet hat, welche Rollen er übernommen hat und wo seine Kombination aus Projektleitung, Product Ownership und technischem Verständnis besonders gut passt.",
-        ],
-        "en": [
-            "The case studies are selected to show different kinds of complexity: product decisions in AI systems, platform and infrastructure work in streaming, international event delivery, startup building and migrations in corporate structures. Together they create a concrete picture of how Daniel works under very different conditions.",
-            "For potential clients, the examples are meant as decision support. They show what kinds of problems Daniel has already worked on, which roles he has taken and where his combination of project leadership, product ownership and technical understanding fits especially well.",
-        ],
-        "pl": [
-            "Case studies dobrano tak, aby pokazać różne rodzaje złożoności: decyzje produktowe w systemach AI, pracę platformową i infrastrukturalną w streamingu, międzynarodową realizację eventów, budowę startupu oraz migracje w strukturach korporacyjnych. Razem tworzą konkretny obraz pracy w różnych warunkach.",
-            "Dla potencjalnych klientów przykłady są wsparciem decyzyjnym. Pokazują, z jakimi problemami Daniel już pracował, jakie role przejmował i gdzie szczególnie dobrze pasuje połączenie project leadership, product ownership oraz technicznego zrozumienia.",
-        ],
-    },
-    "case": {
-        "de": [
-            "Die Case Study ist bewusst als Arbeitsnachweis formuliert. Sie beschreibt nicht nur ein Endergebnis, sondern auch die Art der Komplexität: beteiligte Systeme, Abstimmungsbedarf, Entscheidungsdruck und die Übersetzung zwischen produktfachlichen und technischen Anforderungen.",
-            "Für ähnliche Projekte ist vor allem relevant, welche Rolle Daniel übernommen hat: Struktur schaffen, Stakeholder synchronisieren, technische Optionen verständlich machen, Prioritäten klären und den Weg in Richtung produktiver Nutzung absichern.",
-            "Der praktische Wert liegt in der Verbindung aus Projektführung und Produktverständnis. Dadurch werden Anforderungen nicht nur gesammelt, sondern bewertet, in sinnvolle Sequenzen gebracht und so kommuniziert, dass Teams handlungsfähig bleiben.",
-            "Die beschriebenen Beispiele zeigen außerdem, wie wichtig belastbare Übergaben sind: Entscheidungen, Annahmen, Risiken und nächste Schritte müssen so dokumentiert werden, dass sie auch außerhalb einzelner Meetings nachvollziehbar bleiben und neue Beteiligte schnell anschließen können.",
-        ],
-        "en": [
-            "The case study is written as evidence of work, not only as a final result. It describes the kind of complexity involved: systems, alignment needs, decision pressure and the translation between product-facing and technical requirements.",
-            "For similar projects, the relevant part is the role Daniel took: creating structure, synchronizing stakeholders, making technical options understandable, clarifying priorities and securing the path toward production use.",
-            "The practical value lies in combining project leadership with product understanding. Requirements are not only collected but evaluated, sequenced and communicated in a way that keeps teams able to act.",
-            "The examples also show why reliable handovers matter: decisions, assumptions, risks and next steps need to be documented so they remain understandable outside individual meetings and new contributors can join the work quickly.",
-        ],
-        "pl": [
-            "Case study jest opisane jako dowód pracy, nie tylko jako rezultat końcowy. Pokazuje rodzaj złożoności: systemy, potrzebę uzgodnień, presję decyzyjną oraz tłumaczenie między wymaganiami produktowymi i technicznymi.",
-            "Dla podobnych projektów najważniejsza jest rola Daniela: tworzenie struktury, synchronizacja interesariuszy, wyjaśnianie opcji technicznych, porządkowanie priorytetów i zabezpieczanie drogi do użycia produkcyjnego.",
-            "Praktyczna wartość polega na połączeniu prowadzenia projektu ze zrozumieniem produktu. Wymagania są nie tylko zbierane, lecz oceniane, układane w sensowną kolejność i komunikowane tak, aby zespoły mogły działać.",
-            "Przykłady pokazują także, dlaczego ważne są stabilne przekazania: decyzje, założenia, ryzyka i kolejne kroki muszą być udokumentowane tak, aby były zrozumiałe poza pojedynczymi spotkaniami i aby nowe osoby mogły szybko wejść w pracę.",
-        ],
+        "de": "Fahrzeugumbauten-Dokumentation - IT-Projekt Case Study - Daniel Baran",
+        "en": "Vehicle Conversion Documentation - IT Project Case Study - Daniel Baran",
+        "pl": "Dokumentacja przebudów pojazdów - IT Project Case Study - Daniel Baran",
     },
 }
 
@@ -618,15 +298,6 @@ SITE_CSS = """    .site-header { box-sizing:border-box; grid-template-columns:au
     .case-row:hover .case-thumb img, .case-row:focus-visible .case-thumb img { transform:scale(1.045); filter:contrast(1.04); }
     .case-row:hover .case-meta, .case-row:hover .case-role, .case-row:focus-visible .case-meta, .case-row:focus-visible .case-role { color:#0D0D0C !important; }
     .case-row:hover .case-arrow, .case-row:focus-visible .case-arrow { transform:translateX(8px); color:#0D0D0C; }
-    .case-root { overflow-x:hidden; }
-    .case-track { min-height:100svh; }
-    .case-sticky { min-height:100svh; display:grid; grid-template-columns:minmax(260px,30vw) minmax(0,1fr); gap:clamp(24px,4vw,64px); align-items:stretch; padding:clamp(96px,13vh,132px) clamp(20px,3vw,48px) clamp(36px,5vh,64px); box-sizing:border-box; }
-    .case-aside { min-width:0; align-self:start; position:sticky; top:clamp(88px,13vh,120px); }
-    .slides-col { position:relative; min-width:0; overflow:hidden; }
-    .panels { display:flex; gap:6vw; min-width:0; will-change:transform; transition:transform 0.08s linear; }
-    .panel-wrap { flex:0 0 min(72vw,980px); min-width:0; min-height:min(68vh,720px); display:flex; }
-    .panel { width:100%; min-width:0; box-sizing:border-box; overflow:hidden; }
-    .seo-static-grid { display:grid; grid-template-columns:minmax(160px,220px) minmax(0,860px); gap:clamp(24px,5vw,76px); align-items:start; }
     @media (max-width: 1100px) {
       .site-tagline { display:none !important; }
       .site-header { grid-template-columns:auto 1fr auto !important; }
@@ -637,30 +308,6 @@ SITE_CSS = """    .site-header { box-sizing:border-box; grid-template-columns:au
       .site-nav { display:none !important; }
       .mobile-nav { display:block !important; justify-self:end; position:relative; }
       .mobile-menu-panel { box-sizing:border-box; }
-      .case-root .site-header { grid-template-columns:minmax(0,1fr) auto !important; padding:12px 16px !important; gap:12px !important; }
-      .case-root .site-header > span:first-child { display:none !important; }
-      .case-root .site-header > span:nth-child(2) { font-size:0.78rem !important; letter-spacing:0.03em !important; overflow:hidden !important; text-overflow:ellipsis !important; }
-      .case-root .site-header nav { justify-content:flex-end !important; gap:10px !important; min-width:0 !important; }
-      .case-root .site-header nav > a { display:none !important; }
-      .case-root .site-header nav span { gap:8px !important; }
-      .case-root .site-header nav button { min-width:30px !important; min-height:30px !important; padding:0 !important; }
-      .case-root .mobile-nav { display:none !important; }
-      .case-sticky { display:block !important; min-height:0 !important; padding:86px 0 0 !important; }
-      .case-aside { position:relative !important; top:auto !important; padding:0 20px 28px !important; box-sizing:border-box; }
-      .case-aside h1 { max-width:100% !important; font-size:clamp(1.8rem,8.2vw,2.35rem) !important; line-height:0.96 !important; overflow-wrap:anywhere !important; word-break:normal !important; hyphens:auto !important; }
-      .case-aside p, .case-aside dd { max-width:100% !important; overflow-wrap:anywhere !important; word-break:normal !important; }
-      .case-aside dl > div { grid-template-columns:minmax(96px,34%) minmax(0,1fr) !important; gap:14px !important; }
-      .slides-col { overflow:visible !important; }
-      .panels { display:grid !important; grid-template-columns:1fr !important; gap:0 !important; transform:none !important; transition:none !important; }
-      .panel-wrap { display:block !important; flex:none !important; width:100% !important; min-height:0 !important; opacity:1 !important; transform:none !important; }
-      .panel { min-height:0 !important; border-left:0 !important; border-right:0 !important; padding:28px 20px !important; overflow:visible !important; }
-      .panel h2, .panel p, .panel span, .panel dd { max-width:100% !important; overflow-wrap:anywhere !important; word-break:normal !important; }
-      .panel h2 { font-size:clamp(1.55rem,7vw,2.2rem) !important; line-height:0.98 !important; }
-      .panel [style*="grid-template-columns:minmax(0,1fr) minmax(0,1fr)"], .panel [style*="grid-template-columns:minmax(0,3fr) minmax(0,2fr)"] { grid-template-columns:1fr !important; gap:22px !important; }
-      .panel [style*="gap:clamp(14px,1.8vw,24px)"], .panel [style*="gap: clamp(14px, 1.8vw, 24px)"] { flex-direction:column !important; }
-      .panel [style*="align-items:flex-start"], .panel [style*="align-items: flex-start"] { display:grid !important; grid-template-columns:1fr !important; gap:18px !important; }
-      .panel [style*="align-items:flex-start"] > span[aria-hidden="true"], .panel [style*="align-items: flex-start"] > span[aria-hidden="true"] { display:none !important; }
-      .case-hud { display:none !important; }
     }
     @media (max-width: 820px) {
       .case-row { grid-template-columns:1fr !important; gap:18px !important; align-items:start !important; }
@@ -678,7 +325,6 @@ SITE_CSS = """    .site-header { box-sizing:border-box; grid-template-columns:au
       .acc-content-grid { grid-template-columns:1fr !important; gap:16px !important; }
       .acc-content-grid > span:first-child { display:none !important; }
       [style*="grid-template-columns:minmax(160px,220px) 1fr"] { grid-template-columns:1fr !important; gap:18px !important; }
-      .seo-static-grid { grid-template-columns:1fr !important; gap:18px !important; }
     }
     @media (max-width: 520px) {
       .site-header { grid-template-columns:1fr auto !important; gap:14px !important; padding:12px 16px !important; }
@@ -751,71 +397,18 @@ def js_config(lang: str, kind: str, slug: str | None = None) -> str:
 def metadata(kind: str, lang: str, slug: str | None = None) -> tuple[str, str]:
     if kind == "case":
         title = CASE_SEO_TITLES[slug][lang]
-        return title, CASE_DESCRIPTIONS[slug][lang]
+        desc = "Case Study von Daniel Baran zu Projekt- und Produktarbeit in Medien, Startup, Streaming, KI oder Automotive."
+        if lang == "en":
+            desc = "Daniel Baran case study covering project and product work in media, startup, streaming, AI or automotive."
+        elif lang == "pl":
+            desc = "Case study Daniela Barana o pracy projektowej i produktowej w mediach, startupach, streamingu, AI lub motoryzacji."
+        return title, desc
     return TITLES[kind][lang], DESCRIPTIONS[kind][lang]
-
-
-def breadcrumb_items(kind: str, lang: str, slug: str | None = None) -> list[tuple[str, str]]:
-    labels = {
-        "de": {"home": "Startseite", "about": "Über mich", "projects": "Projekte", "imprint": "Impressum", "privacy": "Datenschutz"},
-        "en": {"home": "Home", "about": "About", "projects": "Projects", "imprint": "Legal Notice", "privacy": "Privacy"},
-        "pl": {"home": "Strona główna", "about": "O mnie", "projects": "Projekty", "imprint": "Nota prawna", "privacy": "Prywatność"},
-    }[lang]
-    items = [(labels["home"], SITE + route("home", lang))]
-    if kind == "home":
-        return items
-    if kind == "case":
-        items.append((labels["projects"], SITE + route("projects", lang)))
-        items.append((CASE_SEO_TITLES[slug][lang].split(" | ")[0], SITE + route("case", lang, slug)))
-        return items
-    items.append((labels[kind], SITE + route(kind, lang)))
-    return items
-
-
-def breadcrumb_schema(kind: str, lang: str, slug: str | None = None) -> dict[str, object] | None:
-    items = breadcrumb_items(kind, lang, slug)
-    if len(items) < 2:
-        return None
-    return {
-        "@type": "BreadcrumbList",
-        "@id": f"{SITE}{route(kind, lang, slug)}#breadcrumb",
-        "itemListElement": [
-            {
-                "@type": "ListItem",
-                "position": idx + 1,
-                "name": name,
-                "item": url,
-            }
-            for idx, (name, url) in enumerate(items)
-        ],
-    }
-
-
-def page_schema_type(kind: str) -> str | list[str]:
-    if kind in {"home", "about"}:
-        return ["ProfilePage", "WebPage"]
-    if kind == "projects":
-        return ["CollectionPage", "WebPage"]
-    return "WebPage"
 
 
 def structured_data(kind: str, lang: str, slug: str | None = None) -> str:
     title, desc = metadata(kind, lang, slug)
     url = SITE + route(kind, lang, slug)
-    organization = {
-        "@type": "Organization",
-        "@id": f"{SITE}/#organization",
-        "name": "Daniel Baran",
-        "url": SITE,
-        "logo": f"{SITE}/assets/og-image.png",
-        "sameAs": [LINKEDIN],
-        "contactPoint": {
-            "@type": "ContactPoint",
-            "email": "kontakt@daniel-baran.com",
-            "contactType": "business inquiries",
-            "availableLanguage": ["de", "en", "pl"],
-        },
-    }
     person = {
         "@type": "Person",
         "@id": f"{SITE}/#person",
@@ -831,42 +424,10 @@ def structured_data(kind: str, lang: str, slug: str | None = None) -> str:
             "Streaming infrastructure",
             "Digital products",
         ],
-        "worksFor": {"@id": f"{SITE}/#organization"},
     }
-    graph: list[dict[str, object]] = [organization, person]
-
-    if kind == "home":
-        graph.append(
-            {
-                "@type": "WebSite",
-                "@id": f"{SITE}/#website",
-                "name": "Daniel Baran",
-                "url": SITE + "/",
-                "inLanguage": ["de", "en", "pl"],
-                "publisher": {"@id": f"{SITE}/#organization"},
-            }
-        )
-
-    breadcrumb = breadcrumb_schema(kind, lang, slug)
-    if breadcrumb:
-        graph.append(breadcrumb)
-
-    page: dict[str, object] = {
-        "@type": page_schema_type(kind),
-        "@id": f"{url}#webpage",
-        "name": title,
-        "description": desc,
-        "url": url,
-        "inLanguage": lang,
-        "dateModified": LASTMOD,
-        "isPartOf": {"@id": f"{SITE}/#website"},
-        "about": {"@id": f"{SITE}/#person"},
-    }
-    if breadcrumb:
-        page["breadcrumb"] = {"@id": breadcrumb["@id"]}
+    graph: list[dict[str, object]] = [person]
 
     if kind == "case":
-        page["mainEntity"] = {"@id": f"{url}#case-study"}
         graph.append(
             {
                 "@type": "CreativeWork",
@@ -876,28 +437,57 @@ def structured_data(kind: str, lang: str, slug: str | None = None) -> str:
                 "url": url,
                 "inLanguage": lang,
                 "author": {"@id": f"{SITE}/#person"},
-                "publisher": {"@id": f"{SITE}/#organization"},
-                "dateModified": LASTMOD,
                 "image": f"{SITE}/assets/redesign/{CASE_IMAGE_BY_SLUG[slug]}",
             }
         )
     elif kind == "projects":
-        page["mainEntity"] = {
-            "@type": "ItemList",
-            "itemListElement": [
-                {
-                    "@type": "ListItem",
-                    "position": idx + 1,
-                    "url": SITE + route("case", lang, case_slug),
-                    "name": CASE_SEO_TITLES[case_slug][lang],
-                }
-                for idx, case_slug in enumerate(CASE_ORDER)
-            ],
-        }
-    elif kind in {"home", "about"}:
-        page["mainEntity"] = {"@id": f"{SITE}/#person"}
-
-    graph.append(page)
+        graph.append(
+            {
+                "@type": "CollectionPage",
+                "@id": f"{url}#webpage",
+                "name": title,
+                "description": desc,
+                "url": url,
+                "inLanguage": lang,
+                "about": {"@id": f"{SITE}/#person"},
+                "mainEntity": {
+                    "@type": "ItemList",
+                    "itemListElement": [
+                        {
+                            "@type": "ListItem",
+                            "position": idx + 1,
+                            "url": SITE + route("case", lang, case_slug),
+                            "name": CASE_SEO_TITLES[case_slug][lang],
+                        }
+                        for idx, case_slug in enumerate(CASE_ORDER)
+                    ],
+                },
+            }
+        )
+    elif kind in {"imprint", "privacy"}:
+        graph.append(
+            {
+                "@type": "WebPage",
+                "@id": f"{url}#webpage",
+                "name": title,
+                "description": desc,
+                "url": url,
+                "inLanguage": lang,
+                "about": {"@id": f"{SITE}/#person"},
+            }
+        )
+    else:
+        graph.append(
+            {
+                "@type": "ProfilePage",
+                "@id": f"{url}#webpage",
+                "name": title,
+                "description": desc,
+                "url": url,
+                "inLanguage": lang,
+                "mainEntity": {"@id": f"{SITE}/#person"},
+            }
+        )
 
     data = json.dumps({"@context": "https://schema.org", "@graph": graph}, ensure_ascii=False)
     safe_data = data.replace("</", "<\\/")
@@ -936,67 +526,6 @@ def head(lang: str, kind: str, slug: str | None = None) -> str:
 {js_config(lang, kind, slug)}
 <script src="{RUNTIME}"></script>
 </head>"""
-
-
-def seo_static_section(kind: str, lang: str, slug: str | None = None) -> str:
-    if kind in {"imprint", "privacy"}:
-        return ""
-    if kind == "case":
-        assert slug
-        title = CASE_SEO_TITLES[slug][lang].split(" | ")[0]
-        paragraphs = [
-            CASE_DESCRIPTIONS[slug][lang],
-            {
-                "de": "Diese statische Zusammenfassung ergänzt die interaktive Case-Study-Ansicht und macht Kontext, Rolle und Ergebnis auch ohne JavaScript klar lesbar. Sie hilft Suchmaschinen und AI-Crawlern, die wichtigsten Fakten der Seite direkt im HTML zu erfassen.",
-                "en": "This static summary complements the interactive case study view and keeps context, role and outcome readable without JavaScript. It helps search engines and AI crawlers understand the most important facts directly in the HTML.",
-                "pl": "To statyczne podsumowanie uzupełnia interaktywny widok case study i sprawia, że kontekst, rola oraz rezultat są czytelne również bez JavaScriptu. Pomaga wyszukiwarkom i crawlerom AI odczytać najważniejsze fakty bezpośrednio w HTML.",
-            }[lang],
-        ] + STATIC_EXTRA_PARAGRAPHS["case"][lang]
-        bullets = CASE_STATIC_BULLETS[slug][lang]
-        eyebrow = {"de": "Case-Study-Zusammenfassung", "en": "Case study summary", "pl": "Podsumowanie case study"}[lang]
-    else:
-        copy = STATIC_PAGE_COPY[kind][lang]
-        title = copy["heading"]
-        paragraphs = copy["paragraphs"] + STATIC_EXTRA_PARAGRAPHS.get(kind, {}).get(lang, [])
-        bullets = list(copy["bullets"])
-        eyebrow = copy["eyebrow"]
-        if kind == "projects":
-            bullets = [
-                f"{CASE_SEO_TITLES[case_slug][lang].split(' | ')[0]}: {CASE_DESCRIPTIONS[case_slug][lang]}"
-                for case_slug in CASE_ORDER
-            ]
-
-    paragraph_html = "\n".join(
-        f'      <p style="margin:0; font-size:1rem; line-height:1.58; color:#4A4945; max-width:74ch;">{html.escape(text)}</p>'
-        for text in paragraphs
-    )
-    bullets_html = ""
-    if bullets:
-        bullets_html = "\n".join(
-            f'        <li style="margin:0; padding:14px 0; border-top:1px solid rgba(13,13,12,0.18); font-size:0.96rem; line-height:1.45; color:#0D0D0C;">{html.escape(item)}</li>'
-            for item in bullets
-        )
-        bullets_html = f'      <ul style="list-style:none; margin:clamp(24px,4vh,36px) 0 0; padding:0; max-width:78ch;">\n{bullets_html}\n      </ul>'
-
-    project_link = ""
-    if kind == "case":
-        project_link = f'      <p style="margin:clamp(24px,4vh,36px) 0 0;"><a href="{route("projects", lang)}" style="font-weight:500; color:#0D0D0C; border-bottom:1.5px solid #0D0D0C; padding-bottom:3px;">{html.escape({"de": "Alle Case Studies ansehen", "en": "View all case studies", "pl": "Zobacz wszystkie case studies"}[lang])}</a></p>'
-
-    return f"""
-  <section id="seo-summary" aria-label="{html.escape(eyebrow)}" style="background:#F3F1EA; color:#0D0D0C; border-top:1.5px solid #0D0D0C; padding:clamp(56px,9vh,104px) clamp(20px,3vw,48px);">
-    <div class="seo-static-grid">
-      <p style="margin:0; font-size:0.78rem; letter-spacing:0.12em; text-transform:uppercase; color:#4A4945;">{html.escape(eyebrow)}</p>
-      <div style="min-width:0;">
-        <h2 style="margin:0 0 clamp(22px,4vh,36px); font-weight:500; text-transform:uppercase; font-size:clamp(2rem,5vw,4.6rem); line-height:0.92; letter-spacing:0; max-width:15ch;">{html.escape(title)}</h2>
-        <div style="display:grid; gap:18px;">
-{paragraph_html}
-        </div>
-{bullets_html}
-{project_link}
-        <p style="margin:clamp(24px,4vh,36px) 0 0; font-size:0.78rem; letter-spacing:0.08em; text-transform:uppercase; color:#4A4945;">Last updated: {LASTMOD}</p>
-      </div>
-    </div>
-  </section>"""
 
 
 def legal_css() -> str:
@@ -1172,10 +701,7 @@ def normalize_fonts(body: str) -> str:
     body = re.sub(r"\s*<link href=\"https://fonts\.googleapis\.com[^\"]+\" rel=\"stylesheet\">\n?", "\n", body)
     body = body.replace("'Archivo'", "'Space Grotesk'")
     body = body.replace("font-family:'Space Grotesk', sans-serif", "font-family:'Space Grotesk', 'Helvetica Neue', Arial, sans-serif")
-    if "<style>" in body:
-        body = body.replace("<style>\n", "<style>\n" + FONT_CSS + SITE_CSS, 1)
-    else:
-        body = "<style>\n" + FONT_CSS + SITE_CSS + "</style>\n" + body
+    body = body.replace("<style>\n", "<style>\n" + FONT_CSS + SITE_CSS, 1)
     body = re.sub(r"letter-spacing:-0\.[0-9]+em", "letter-spacing:0", body)
     return body
 
@@ -1402,9 +928,9 @@ def update_copy_and_case_text(body: str) -> str:
         'h1: "Dokumentation für Fahrzeugumbauten"': 'h1: "Dokumentation für Fahrzeugumbauten: Service-Wissen weltweit auffindbar machen"',
         'h1: "Documentation for vehicle conversions"': 'h1: "Documentation for vehicle conversions: making service knowledge findable worldwide"',
         'h1: "Dokumentacja przebudów pojazdów"': 'h1: "Dokumentacja przebudów pojazdów: wiedza serwisowa dostępna globalnie"',
-        "2019 bis 2022": "2021-2023",
-        "2019 to 2022": "2021-2023",
-        "2019 do 2022": "2021-2023",
+        "2019 bis 2022": "2021 bis 2023",
+        "2019 to 2022": "2021 to 2023",
+        "2019 do 2022": "2021 do 2023",
         "2022 haben wir das Projekt eingestellt.": "2023 haben wir das Projekt eingestellt.",
         "In 2022 we shut the project down.": "In 2023 we shut the project down.",
         "W 2022 roku zakończyliśmy projekt.": "W 2023 roku zakończyliśmy projekt.",
@@ -1511,11 +1037,10 @@ def update_home_form(body: str) -> str:
 
 
 def update_vestium_video(body: str) -> str:
-    vestium_embed_src = f"https://www.youtube-nocookie.com/embed/{VESTIUM_YOUTUBE_ID}?rel=0&modestbranding=1"
     body = body.replace(
         '<x-import component-from-global-scope="image-slot" from="./image-slot.js" id="case05-prototype" shape="rect" radius="0" placeholder="{{ t.shotPlaceholder }}" hint-size="100%,360px" style="width:100%; height:100%; display:block;"></x-import>',
         '<sc-if value="{{ hasVestiumVideo }}" hint-placeholder-val="{{ false }}">\n'
-        f'                  <iframe src="{vestium_embed_src}" title="Vestium prototype video" loading="lazy" allow="fullscreen; encrypted-media; picture-in-picture" allowfullscreen style="width:100%; height:100%; border:0; display:block; background:#0D0D0C;"></iframe>\n'
+        '                  <iframe src="{{ vestiumVideoSrc }}" title="Vestium prototype video" loading="lazy" allow="fullscreen; encrypted-media; picture-in-picture" allowfullscreen style="width:100%; height:100%; border:0; display:block; background:#0D0D0C;"></iframe>\n'
         '                </sc-if>\n'
         '                <sc-if value="{{ noVestiumVideo }}" hint-placeholder-val="{{ true }}">\n'
         '                  <div style="width:100%; height:100%; min-height:320px; display:flex; align-items:center; justify-content:center; text-align:center; padding:clamp(20px,3vw,40px); box-sizing:border-box; background:linear-gradient(135deg,#181817,#0D0D0C); color:#F2EFEA;">\n'
@@ -1545,7 +1070,6 @@ def update_vestium_video(body: str) -> str:
 def transform(source_name: str, lang: str, kind: str, slug: str | None = None) -> str:
     source = (HANDOFF / source_name).read_text(encoding="utf-8")
     body = extract_body(source)
-    body = re.sub(r"\s*<helmet>.*?</helmet>\s*", "\n", body, count=1, flags=re.S)
     title, _ = metadata(kind, lang, slug)
     body = re.sub(r"<title>.*?</title>", f"<title>{html.escape(title)}</title>", body, count=1, flags=re.S)
     body = normalize_fonts(body)
@@ -1561,7 +1085,7 @@ def transform(source_name: str, lang: str, kind: str, slug: str | None = None) -
     if slug == "vestium":
         body = update_vestium_video(body)
     body = body.replace("./image-slot.js", "")
-    page = f"{head(lang, kind, slug)}\n<body>\n{body}\n{seo_static_section(kind, lang, slug)}\n</body>\n</html>\n"
+    page = f"{head(lang, kind, slug)}\n<body>\n{body}\n</body>\n</html>\n"
     checks = ["support.js", "fonts.googleapis", "fonts.gstatic", "image-slot.js"]
     leftovers = [needle for needle in checks if needle in page]
     if leftovers:
