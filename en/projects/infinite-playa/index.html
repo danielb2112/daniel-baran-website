@@ -437,6 +437,7 @@ class Component extends DCLogic {
   setLang(code) {
     if (!DATA[code]) return;
     try { localStorage.setItem("db-lang", code); } catch (e) {}
+    try { document.cookie = "db-lang=" + code + "; Path=/; Max-Age=31536000; SameSite=Lax; Secure"; } catch (e) {}
     const target = window.__DB_ALT_ROUTES && window.__DB_ALT_ROUTES[code];
     const current = window.location.pathname.endsWith("/") ? window.location.pathname : window.location.pathname + "/";
     if (target && target !== current) {

@@ -13,6 +13,14 @@ const BUDGETS = new Set(["under-10", "10-25", "25-60", "over-60", "unclear"]);
 const ALLOWED_ORIGINS = new Set(["https://daniel-baran.com", "https://www.daniel-baran.com"]);
 const MAX_BODY_BYTES = 4096;
 const RATE_LIMIT = new Map();
+const LANGUAGE_COOKIE_NAME = "db-lang";
+const LANGUAGE_COOKIE_MAX_AGE = 31536000;
+const LANGUAGE_PATHS = {
+  de: "/",
+  en: "/en/",
+  pl: "/pl/",
+};
+const BOT_USER_AGENT_PATTERN = /(bot|crawler|spider|slurp|bingpreview|facebookexternalhit|linkedinbot|whatsapp|telegrambot)/i;
 
 function canonicalHostRedirect(url) {
   if (url.hostname !== "www.daniel-baran.com") return null;
@@ -20,34 +28,115 @@ function canonicalHostRedirect(url) {
   return Response.redirect(url.toString(), 301);
 }
 
-function temporaryLanguageRedirect(url) {
-  return new Response(null, {
-    status: 302,
-    headers: {
-      location: url.toString(),
-      vary: "Accept-Language",
-      "cache-control": "no-store",
-    },
+function canonicalPathRedirect(url) {
+  const target = {
+    "/datenschutz": "/datenschutz/",
+    "/datenschutz.html": "/datenschutz/",
+    "/impressum": "/impressum/",
+    "/impressum.html": "/impressum/",
+  }[url.pathname];
+  if (!target) return null;
+  url.pathname = target;
+  return Response.redirect(url.toString(), 301);
+}
+
+function languageCookieHeader(lang) {
+  return `${LANGUAGE_COOKIE_NAME}=${lang}; Path=/; Max-Age=${LANGUAGE_COOKIE_MAX_AGE}; SameSite=Lax; Secure`;
+}
+
+function withLanguageCookie(response, lang) {
+  const headers = new Headers(response.headers);
+  headers.set("set-cookie", languageCookieHeader(lang));
+  headers.set("cache-control", "no-store");
+  return new Response(response.body, {
+    status: response.status,
+    statusText: response.statusText,
+    headers,
   });
 }
 
-function browserLanguageRedirect(request, url) {
-  if (!["GET", "HEAD"].includes(request.method) || url.pathname !== "/") return null;
-  if (url.searchParams.get("lang") === "de") return null;
+function temporaryLanguageRedirect(url, lang) {
+  const headers = {
+    location: url.toString(),
+    vary: "Accept-Language, Cookie",
+    "cache-control": "no-store",
+  };
+  if (lang) headers["set-cookie"] = languageCookieHeader(lang);
 
+  return new Response(null, {
+    status: 302,
+    headers,
+  });
+}
+
+function normalizeLanguage(value) {
+  return Object.hasOwn(LANGUAGE_PATHS, value) ? value : null;
+}
+
+function languageFromCookie(request) {
+  const cookieHeader = request.headers.get("cookie");
+  if (!cookieHeader) return null;
+
+  for (const part of cookieHeader.split(";")) {
+    const [name, value = ""] = part.trim().split("=");
+    if (name === LANGUAGE_COOKIE_NAME) return normalizeLanguage(value.trim());
+  }
+
+  return null;
+}
+
+function languageFromAcceptLanguage(request) {
   const acceptLanguage = request.headers.get("accept-language");
   if (!acceptLanguage) return null;
 
   const firstLanguage = acceptLanguage.split(",", 1)[0].trim().toLowerCase();
-  if (!firstLanguage || firstLanguage.startsWith("de")) return null;
+  if (!firstLanguage) return null;
+  if (firstLanguage.startsWith("de")) return "de";
+  if (firstLanguage.startsWith("pl")) return "pl";
+  return "en";
+}
 
-  if (firstLanguage.startsWith("pl")) {
-    url.pathname = "/pl/";
-    return temporaryLanguageRedirect(url);
+function isBotRequest(request) {
+  return BOT_USER_AGENT_PATTERN.test(request.headers.get("user-agent") || "");
+}
+
+function rootLanguageRouting(request, url) {
+  if (!["GET", "HEAD"].includes(request.method) || url.pathname !== "/") return null;
+  if (isBotRequest(request)) return null;
+
+  const queryLanguage = normalizeLanguage(url.searchParams.get("lang"));
+  if (queryLanguage) {
+    if (queryLanguage === "de") return { cookieOnly: queryLanguage };
+    url.pathname = LANGUAGE_PATHS[queryLanguage];
+    return { response: temporaryLanguageRedirect(url, queryLanguage) };
   }
 
-  url.pathname = "/en/";
-  return temporaryLanguageRedirect(url);
+  const cookieLanguage = languageFromCookie(request);
+  if (cookieLanguage) {
+    if (cookieLanguage === "de") return null;
+    url.pathname = LANGUAGE_PATHS[cookieLanguage];
+    return { response: temporaryLanguageRedirect(url) };
+  }
+
+  const acceptLanguage = languageFromAcceptLanguage(request);
+  if (!acceptLanguage || acceptLanguage === "de") return null;
+  url.pathname = LANGUAGE_PATHS[acceptLanguage];
+  return { response: temporaryLanguageRedirect(url, acceptLanguage) };
+}
+
+async function fetchAsset(request, env, cookieLanguage) {
+  const response = await env.ASSETS.fetch(request);
+  if (!cookieLanguage) return response;
+  return withLanguageCookie(response, cookieLanguage);
+}
+
+async function assetOrLanguageCookie(request, env, languageRouting) {
+  if (languageRouting?.response) return languageRouting.response;
+  if (languageRouting?.cookieOnly) {
+    return fetchAsset(request, env, languageRouting.cookieOnly);
+  }
+
+  return fetchAsset(request, env);
 }
 
 function json(data, status = 200, headers = {}) {
@@ -217,12 +306,15 @@ export default {
     const redirect = canonicalHostRedirect(url);
     if (redirect) return redirect;
 
-    const languageRedirect = browserLanguageRedirect(request, url);
-    if (languageRedirect) return languageRedirect;
+    const pathRedirect = canonicalPathRedirect(url);
+    if (pathRedirect) return pathRedirect;
+
+    const languageRouting = rootLanguageRouting(request, url);
+    if (languageRouting?.response) return languageRouting.response;
 
     if (url.pathname === "/api/contact") {
       return handleContact(request, env);
     }
-    return env.ASSETS.fetch(request);
+    return assetOrLanguageCookie(request, env, languageRouting);
   },
 };

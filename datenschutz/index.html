@@ -130,7 +130,7 @@ a { color:#0D0D0C; text-decoration:none; }
       <a href="/#prozess" style="border-bottom:1.5px solid transparent; padding-bottom:2px;">Prozess</a>
       <a href="/projekte/" style="border-bottom:1.5px solid transparent; padding-bottom:2px;">Projekte</a>
       <a href="/#kontakt" style="border-bottom:1.5px solid transparent; padding-bottom:2px;">Kontakt</a>
-      <span style="display:flex; gap:10px; margin-left:14px; color:#4A4945;"><a href="/datenschutz/" aria-current="page" style="border-bottom:1.5px solid #0D0D0C; padding-bottom:2px; color:#0D0D0C;">DE</a><a href="/en/privacy/" style="border-bottom:1.5px solid transparent; padding-bottom:2px; color:#4A4945;">EN</a><a href="/pl/prywatnosc/" style="border-bottom:1.5px solid transparent; padding-bottom:2px; color:#4A4945;">PL</a></span>
+      <span style="display:flex; gap:10px; margin-left:14px; color:#4A4945;"><a href="/datenschutz/" onclick="document.cookie='db-lang=de; Path=/; Max-Age=31536000; SameSite=Lax; Secure';" aria-current="page" style="border-bottom:1.5px solid #0D0D0C; padding-bottom:2px; color:#0D0D0C;">DE</a><a href="/en/privacy/" onclick="document.cookie='db-lang=en; Path=/; Max-Age=31536000; SameSite=Lax; Secure';" style="border-bottom:1.5px solid transparent; padding-bottom:2px; color:#4A4945;">EN</a><a href="/pl/prywatnosc/" onclick="document.cookie='db-lang=pl; Path=/; Max-Age=31536000; SameSite=Lax; Secure';" style="border-bottom:1.5px solid transparent; padding-bottom:2px; color:#4A4945;">PL</a></span>
     </nav>
     <details class="mobile-nav mobile-menu" style="display:none;">
       <summary aria-label="Menü" style="list-style:none; width:36px; height:32px; display:grid; place-items:center; cursor:pointer;">
@@ -143,9 +143,9 @@ a { color:#0D0D0C; text-decoration:none; }
         <a href="/projekte/" style="font-weight:500; text-transform:uppercase; letter-spacing:0.04em; border-bottom:1.5px solid transparent; padding:0 0 4px;">Projekte</a>
         <a href="/#kontakt" style="font-weight:500; text-transform:uppercase; letter-spacing:0.04em; border-bottom:1.5px solid transparent; padding:0 0 4px;">Kontakt</a>
         <span style="display:flex; gap:14px; padding-top:4px; color:#4A4945;">
-          <a href="/datenschutz/" aria-current="page" style="border-bottom:1.5px solid #0D0D0C; padding-bottom:2px; color:#0D0D0C;">DE</a>
-          <a href="/en/privacy/" style="border-bottom:1.5px solid transparent; padding-bottom:2px; color:#4A4945;">EN</a>
-          <a href="/pl/prywatnosc/" style="border-bottom:1.5px solid transparent; padding-bottom:2px; color:#4A4945;">PL</a>
+          <a href="/datenschutz/" onclick="document.cookie='db-lang=de; Path=/; Max-Age=31536000; SameSite=Lax; Secure';" aria-current="page" style="border-bottom:1.5px solid #0D0D0C; padding-bottom:2px; color:#0D0D0C;">DE</a>
+          <a href="/en/privacy/" onclick="document.cookie='db-lang=en; Path=/; Max-Age=31536000; SameSite=Lax; Secure';" style="border-bottom:1.5px solid transparent; padding-bottom:2px; color:#4A4945;">EN</a>
+          <a href="/pl/prywatnosc/" onclick="document.cookie='db-lang=pl; Path=/; Max-Age=31536000; SameSite=Lax; Secure';" style="border-bottom:1.5px solid transparent; padding-bottom:2px; color:#4A4945;">PL</a>
         </span>
       </div>
     </details>
@@ -162,11 +162,11 @@ a { color:#0D0D0C; text-decoration:none; }
         <h2>1. Verantwortlicher</h2>
         <p>Daniel Baran<br>Jasionka 33, 28-300 Jędrzejów, Polen<br>E-Mail: kontakt@daniel-baran.com</p>
         <h2>2. Allgemeines</h2>
-        <p>Diese Website ist ein rein informatives Angebot. Es werden keine Tracking- oder Analyse-Dienste eingesetzt, keine Cookies gesetzt und keine personenbezogenen Daten zu Werbezwecken verarbeitet. Schriftarten werden lokal von dieser Website geladen; es findet keine Verbindung zu Google Fonts oder ähnlichen Diensten statt.</p>
+        <p>Diese Website ist ein rein informatives Angebot. Es werden keine Tracking- oder Analyse-Dienste eingesetzt und keine personenbezogenen Daten zu Werbezwecken verarbeitet. Schriftarten werden lokal von dieser Website geladen; es findet keine Verbindung zu Google Fonts oder ähnlichen Diensten statt.</p>
         <h2>3. Hosting (Cloudflare)</h2>
         <p>Diese Website wird bei Cloudflare, Inc., 101 Townsend St, San Francisco, CA 94107, USA, gehostet. Beim Aufruf der Website verarbeitet Cloudflare technisch notwendige Daten wie IP-Adresse, Datum und Uhrzeit des Zugriffs, aufgerufene Seite, Browsertyp und Betriebssystem (Server-Logfiles). Diese Verarbeitung ist für den sicheren und stabilen Betrieb der Website erforderlich (Art. 6 Abs. 1 lit. f DSGVO – berechtigtes Interesse). Cloudflare ist unter dem EU-U.S. Data Privacy Framework zertifiziert; zudem bestehen Standardvertragsklauseln. Weitere Informationen: <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener">https://www.cloudflare.com/privacypolicy/</a></p>
-        <h2>4. Lokale Speicherung (Sprachwahl)</h2>
-        <p>Die Website stellt feste Sprachversionen unter /, /pl/ und /en/ bereit. Beim Aufruf der Startseite kann der Browser-Header Accept-Language technisch ausgewertet werden, um Besucher einmalig auf die passende Sprachversion zu leiten. Zusätzlich kann die gewählte Sprache lokal im Browser gespeichert werden, wenn Sie den Sprachumschalter nutzen. Diese Speicherung dient nur der Navigation auf dieser Website.</p>
+        <h2>4. Sprachwahl und lokale Speicherung</h2>
+        <p>Die Website stellt feste Sprachversionen unter /, /pl/ und /en/ bereit. Beim Aufruf der Startseite kann der Browser-Header Accept-Language technisch ausgewertet werden, um Besucher auf die passende Sprachversion zu leiten. Wenn Sie eine Sprache wählen oder eine Sprache automatisch erkannt wurde, kann das technisch notwendige Cookie db-lang mit dem Sprachcode de, en oder pl gesetzt werden. Zweck ist ausschließlich die Speicherung der Sprachwahl und die korrekte Navigation auf dieser Website. Die Speicherdauer beträgt 12 Monate. Rechtsgrundlage für das Setzen des Cookies ist § 25 Abs. 2 TTDSG; die weitere Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Zusätzlich kann derselbe Sprachcode lokal im Browser als localStorage-Eintrag db-lang gespeichert werden. Es findet kein Tracking statt und die Sprachwahl wird nicht an Dritte weitergegeben.</p>
         <h2>5. Kontaktaufnahme</h2>
         <p>Wenn Sie mich per Kontaktformular, E-Mail oder Telefon kontaktieren, verarbeite ich die von Ihnen mitgeteilten Daten (Name, Kontaktdaten, Inhalt der Anfrage, ausgewählte Themen und Budgetrahmen) zur Bearbeitung Ihrer Anfrage und für Anschlussfragen. Das Kontaktformular wird technisch über Cloudflare Workers verarbeitet und per E-Mail über den Dienst Resend, Resend, Inc., 2261 Market Street #5039, San Francisco, CA 94114, USA, an mich zugestellt. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO bzw. Art. 6 Abs. 1 lit. f DSGVO. Die Daten werden gelöscht, sobald sie für die Bearbeitung nicht mehr erforderlich sind und keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</p>
         <h2>6. Externe Links</h2>
