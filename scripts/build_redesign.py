@@ -1056,6 +1056,13 @@ def replace_language_state(body: str) -> str:
 
 def update_home_form(body: str) -> str:
     body = body.replace(
+        '<p style="margin:clamp(16px,2.5vh,24px) 0 0; font-size:0.95rem; line-height:1.4; color:#4A4945; max-width:42ch;">{{ t.contactIntro }}</p>',
+        '<p style="margin:clamp(16px,2.5vh,24px) 0 0; font-size:0.95rem; line-height:1.4; color:#4A4945; max-width:42ch;">{{ t.contactIntro }}</p>\n'
+        '      <p style="margin:14px 0 0; font-size:0.95rem; line-height:1.4; color:#4A4945; max-width:42ch;">\n'
+        '        <a href="mailto:kontakt@daniel-baran.com" style="color:#0D0D0C; border-bottom:1.5px solid #0D0D0C; padding-bottom:2px;" style-hover="border-bottom-color:#2A2AE5;">kontakt@daniel-baran.com</a>\n'
+        '      </p>',
+    )
+    body = body.replace(
         '<form data-reveal onSubmit="{{ submitForm }}" novalidate style="margin-top:clamp(32px,5vh,56px); display:grid;',
         '<form data-reveal onSubmit="{{ submitForm }}" novalidate style="margin-top:clamp(32px,5vh,56px); position:relative; display:grid;',
     )
