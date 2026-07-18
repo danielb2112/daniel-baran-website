@@ -1,8 +1,14 @@
 .git
 .git/**
+.gitignore
+.DS_Store
+.seo-cache
+.seo-cache/**
 .assetsignore
 wrangler.jsonc
 README.md
 Daniel Baran - Website v2.html
+scripts
+scripts/**
 src
 src/**
