@@ -585,6 +585,7 @@ def head(lang: str, kind: str, slug: str | None = None) -> str:
 <link rel="canonical" href="{SITE}{canonical}">
 {alternates}
 <link rel="alternate" hreflang="x-default" href="{SITE}{alts['de']}">
+<link rel="icon" href="/assets/brand-icon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon.ico">
 <meta property="og:title" content="{html.escape(title)}">
 <meta property="og:description" content="{html.escape(desc)}">
@@ -1058,8 +1059,8 @@ def update_home_form(body: str) -> str:
     body = body.replace(
         '<p style="margin:clamp(16px,2.5vh,24px) 0 0; font-size:0.95rem; line-height:1.4; color:#4A4945; max-width:42ch;">{{ t.contactIntro }}</p>',
         '<p style="margin:clamp(16px,2.5vh,24px) 0 0; font-size:0.95rem; line-height:1.4; color:#4A4945; max-width:42ch;">{{ t.contactIntro }}</p>\n'
-        '      <p style="margin:14px 0 0; font-size:0.95rem; line-height:1.4; color:#4A4945; max-width:42ch;">\n'
-        '        <a href="mailto:kontakt@daniel-baran.com" style="color:#0D0D0C; border-bottom:1.5px solid #0D0D0C; padding-bottom:2px;" style-hover="border-bottom-color:#2A2AE5;">kontakt@daniel-baran.com</a>\n'
+        '      <p style="margin:18px 0 0; font-size:clamp(1.1rem,1.8vw,1.35rem); line-height:1.25; color:#4A4945; max-width:42ch; font-weight:500;">\n'
+        '        <a href="mailto:kontakt@daniel-baran.com" style="color:#0D0D0C; border-bottom:1.5px solid #0D0D0C; padding-bottom:3px;" style-hover="border-bottom-color:#2A2AE5;">kontakt@daniel-baran.com</a>\n'
         '      </p>',
     )
     body = body.replace(
