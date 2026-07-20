@@ -222,7 +222,10 @@ function isLongLivedAsset(url) {
 async function handleAsset(request, env, url) {
   const html = isHtmlRequest(url);
   const assetRequest = html ? new Request(request, { cache: "no-store" }) : request;
-  const response = await env.ASSETS.fetch(assetRequest);
+  const response = await env.ASSETS.fetch(
+    assetRequest,
+    html ? { cf: { cacheControl: "no-store" } } : undefined,
+  );
   const next = new Response(response.body, response);
 
   if (html && next.headers.get("content-type")?.includes("text/html")) {
