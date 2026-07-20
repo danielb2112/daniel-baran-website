@@ -1,16 +1,34 @@
 # daniel-baran-website
 
-Statische Website für `daniel-baran.com`: HTML, CSS und JavaScript ohne Build-Step und ohne externe Requests zur Laufzeit.
+Statische Website für `daniel-baran.com`: dreisprachig vorgerendertes HTML, lokale Assets und schlankes Vanilla-JS für Interaktivität.
+
+## Build
+
+Der Build läuft vollständig im Repo und verwendet Node, weil die vorhandenen Inhalte als JavaScript-`DATA`/`META`-Objekte in den bestehenden Templates liegen. Es gibt keine externe Handoff- oder `/private/tmp`-Abhängigkeit.
+
+```bash
+npm run build
+```
+
+Der Build schreibt das vollständige Deploy-Artefakt nach `dist/`. Production enthält kein React, kein Babel und kein altes DC-Runtime-Bundle.
+
+Lokale Vorschau mit Live-Reload:
+
+```bash
+npm run dev
+```
 
 ## Cloudflare Deploy
 
-Die Website wird als Cloudflare Worker mit statischen Assets deployed. Der Worker liefert die Dateien aus `.` aus und verarbeitet zusätzlich `POST /api/contact`.
+Die Website wird als Cloudflare Worker mit statischen Assets deployed. Der Worker liefert die Dateien aus `dist/` aus und verarbeitet zusätzlich `POST /api/contact`.
 
 Build/Deploy command in Cloudflare:
 
 ```bash
-npx wrangler deploy
+npm run build && npx wrangler deploy
 ```
+
+Der Worker macht keine nutzerabhängigen Sprach-Redirects auf `/`. Sprachwechsel passieren über feste Links (`/`, `/en/`, `/pl/`) und der Sprachumschalter speichert optional `db-lang` in Cookie/localStorage.
 
 ## Kontaktformular
 
@@ -29,16 +47,16 @@ Resend-Voraussetzung:
 2. Absenderadresse in `CONTACT_FROM_EMAIL` auf eine verifizierte Domain setzen.
 3. `RESEND_API_KEY` in Cloudflare für den Worker hinterlegen.
 
-## Redesign-Generator
+## Static Renderer
 
-Die Redesign-Seiten werden aus dem Design-Handoff in `scripts/build_redesign.py` erzeugt. Nach Änderungen am Handoff oder an Routen:
+Die statischen Sprachseiten werden aus den vorhandenen HTML-Templates und deren eingebetteten `DATA`/`META`-Objekten erzeugt:
 
 ```bash
-python3 scripts/build_redesign.py
+node scripts/build-static.mjs
 ```
 
-Der Generator kopiert die Redesign-Bilder nach `assets/redesign/`, ersetzt Prototype-Links und schreibt Startseite, Profil, Projekte, Case-Seiten und `sitemap.xml`.
+Der alte `scripts/build_redesign.py` bleibt nur als historische Referenz im Repo. Für Deployments ist `npm run build` maßgeblich.
 
 ## Vestium-Video
 
-Case 5 ist für einen privacy-freundlichen YouTube-Embed vorbereitet. Das Video sollte als ungelistetes YouTube-Video hochgeladen werden; danach die Video-ID in `VESTIUM_YOUTUBE_ID` in `scripts/build_redesign.py` eintragen und den Generator erneut ausführen. Das MP4 bleibt bewusst außerhalb des Repos.
+Case 5 nutzt einen privacy-freundlichen YouTube-Embed. Die Video-ID steht in `VESTIUM_YOUTUBE_ID` in `scripts/build-static.mjs`. Das MP4 bleibt bewusst außerhalb des Repos.

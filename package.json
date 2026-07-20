@@ -1,0 +1,11 @@
+{
+  "name": "daniel-baran-website",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-static.mjs",
+    "dev": "node scripts/dev.mjs",
+    "deploy": "npm run build && npx wrangler deploy"
+  }
+}
