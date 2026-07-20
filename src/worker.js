@@ -33,6 +33,23 @@ function canonicalPathRedirect(url) {
   return Response.redirect(url.toString(), 301);
 }
 
+function canonicalTrailingSlashRedirect(url) {
+  if (
+    url.pathname === "/" ||
+    url.pathname.endsWith("/") ||
+    url.pathname.startsWith("/api/") ||
+    url.pathname.startsWith("/assets/")
+  ) {
+    return null;
+  }
+
+  const lastSegment = url.pathname.split("/").pop() || "";
+  if (lastSegment.includes(".")) return null;
+
+  url.pathname = `${url.pathname}/`;
+  return Response.redirect(url.toString(), 301);
+}
+
 function json(data, status = 200, headers = {}) {
   return new Response(JSON.stringify(data), { status, headers: { ...JSON_HEADERS, ...headers } });
 }
@@ -194,6 +211,36 @@ async function handleContact(request, env) {
   return json({ ok: true });
 }
 
+function isHtmlRequest(url) {
+  return url.pathname === "/" || url.pathname.endsWith("/") || url.pathname.endsWith(".html");
+}
+
+function isLongLivedAsset(url) {
+  return /\.(?:avif|webp|png|jpe?g|gif|ico|svg|woff2?)$/i.test(url.pathname);
+}
+
+async function handleAsset(request, env, url) {
+  const html = isHtmlRequest(url);
+  const assetRequest = html ? new Request(request, { cache: "no-store" }) : request;
+  const response = await env.ASSETS.fetch(assetRequest);
+  const next = new Response(response.body, response);
+
+  if (html && next.headers.get("content-type")?.includes("text/html")) {
+    next.headers.set("cache-control", "no-store, no-cache, max-age=0, must-revalidate");
+    next.headers.set("cdn-cache-control", "no-store");
+    next.headers.set("cloudflare-cdn-cache-control", "no-store");
+    next.headers.set("pragma", "no-cache");
+    next.headers.set("expires", "0");
+    return next;
+  }
+
+  if (isLongLivedAsset(url) && response.ok) {
+    next.headers.set("cache-control", "public, max-age=31536000, immutable");
+  }
+
+  return next;
+}
+
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
@@ -203,10 +250,13 @@ export default {
     const pathRedirect = canonicalPathRedirect(url);
     if (pathRedirect) return pathRedirect;
 
+    const trailingSlashRedirect = canonicalTrailingSlashRedirect(url);
+    if (trailingSlashRedirect) return trailingSlashRedirect;
+
     if (url.pathname === "/api/contact") {
       return handleContact(request, env);
     }
 
-    return env.ASSETS.fetch(request);
+    return handleAsset(request, env, url);
   },
 };
