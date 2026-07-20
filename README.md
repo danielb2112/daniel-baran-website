@@ -22,11 +22,30 @@ npm run dev
 
 Die Website wird als Cloudflare Worker mit statischen Assets deployed. Der Worker liefert die Dateien aus `dist/` aus und verarbeitet zusätzlich `POST /api/contact`.
 
-Build/Deploy command in Cloudflare:
+Lokaler manueller Deploy:
 
 ```bash
-npm run build && npx wrangler deploy
+npm run deploy
 ```
+
+## Cloudflare Workers Builds
+
+Cloudflare Workers Builds läuft aus einem frischen Git-Checkout. `dist/` ist bewusst nicht im Repo und muss vor `wrangler deploy` erzeugt werden. Deshalb darf die Workers-Build-Konfiguration nicht nur `npx wrangler deploy` ausführen.
+
+Empfohlene Einstellung in **Worker > Settings > Build**:
+
+- **Root directory:** leer lassen, wenn das Repository direkt `daniel-baran-website` ist; sonst auf den Projektordner setzen.
+- **Install command:** `npm ci`
+- **Build command:** `npm run build`
+- **Deploy command:** `npm run deploy:worker`
+
+Alternative, falls Cloudflare nur ein kombiniertes Deploy-Feld nutzt:
+
+```bash
+npm run deploy
+```
+
+`wrangler` ist als Dev-Dependency in `package.json` gepinnt. Workers Builds verwendet dadurch die im Repo definierte Wrangler-Version. Der Build selbst ist Node-only und ruft kein Python-Script auf.
 
 Der Worker macht keine nutzerabhängigen Sprach-Redirects auf `/`. Sprachwechsel passieren über feste Links (`/`, `/en/`, `/pl/`) und der Sprachumschalter speichert optional `db-lang` in Cookie/localStorage.
 
