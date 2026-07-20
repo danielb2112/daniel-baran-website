@@ -90,9 +90,9 @@ DESCRIPTIONS = {
         "pl": "Nota prawna i dane identyfikacyjne Daniela Barana.",
     },
     "privacy": {
-        "de": "Datenschutzerklärung für daniel-baran.com.",
-        "en": "Privacy policy for daniel-baran.com.",
-        "pl": "Polityka prywatności dla daniel-baran.com.",
+        "de": "Informationen zur Verarbeitung personenbezogener Daten, Kontaktformular, Sprachwahl, Cookies/localStorage und Cloudflare auf daniel-baran.com.",
+        "en": "Information on personal data processing, contact form, language choice, cookies/localStorage and Cloudflare on daniel-baran.com.",
+        "pl": "Informacje o przetwarzaniu danych osobowych, formularzu kontaktowym, wyborze języka, cookies/localStorage i Cloudflare na daniel-baran.com.",
     },
 }
 
