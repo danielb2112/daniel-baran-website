@@ -51,7 +51,8 @@
 
   function initAccordions() {
     document.querySelectorAll(".acc-button").forEach((button) => {
-      const panel = button.nextElementSibling;
+      const heading = button.closest("h1, h2, h3, h4, h5, h6");
+      const panel = button.nextElementSibling || heading?.nextElementSibling;
       const icon = button.lastElementChild;
       if (!panel) return;
 
