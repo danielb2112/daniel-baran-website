@@ -209,9 +209,9 @@
       <p style="margin:0 0 18px; font-size:0.78rem; letter-spacing:0.12em; text-transform:uppercase; color:#4A4945;">{{ t.servicesLabel }}</p>
       <h2 style="margin:0; font-weight:500; text-transform:uppercase; font-size:clamp(2rem,5.5vw,4.4rem); line-height:0.9; letter-spacing:0; max-width:16ch;">{{ t.servicesH2 }}</h2>
     </div>
-    <div style="margin-top:clamp(28px,4vh,44px); border-bottom:1.5px solid #0D0D0C;">
+    <div style="margin-top:clamp(28px,4vh,44px);">
       <sc-for list="{{ services }}" as="sv" hint-placeholder-count="3">
-        <article data-reveal style="border-top:1.5px solid #0D0D0C;">
+        <article data-reveal>
           <h3 style="margin:0;">
             <button class="acc-button" type="button" onClick="{{ sv.toggle }}" aria-expanded="{{ sv.open }}" style="width:100%; display:grid; grid-template-columns:minmax(160px,220px) 1fr auto; gap:clamp(24px,4vw,64px); align-items:baseline; background:none; border:none; padding:clamp(20px,3vh,32px) 0; cursor:pointer; text-align:left; color:#0D0D0C;">
               <span style="font-size:0.78rem; letter-spacing:0.04em; color:#4A4945; font-weight:400;">{{ sv.num }}</span>
@@ -242,9 +242,9 @@
       <h2 style="margin:0; font-weight:500; text-transform:uppercase; font-size:clamp(2rem,5.5vw,4.4rem); line-height:0.9; letter-spacing:0; max-width:16ch;">{{ t.processH2 }}</h2>
       <p style="margin:clamp(16px,2.5vh,24px) 0 0; font-size:0.95rem; line-height:1.4; color:#4A4945; max-width:42ch;">{{ t.processIntro }}</p>
     </div>
-    <div style="margin-top:clamp(28px,4vh,44px); border-bottom:1.5px solid #0D0D0C;">
+    <div style="margin-top:clamp(28px,4vh,44px);">
       <sc-for list="{{ processSteps }}" as="p" hint-placeholder-count="4">
-        <article data-reveal style="border-top:1.5px solid #0D0D0C;">
+        <article data-reveal>
           <h3 style="margin:0;">
             <button class="acc-button" type="button" onClick="{{ p.toggle }}" aria-expanded="{{ p.open }}" style="width:100%; display:grid; grid-template-columns:minmax(160px,220px) 1fr auto; gap:clamp(24px,4vw,64px); align-items:baseline; background:none; border:none; padding:clamp(20px,3vh,32px) 0; cursor:pointer; text-align:left; color:#0D0D0C;">
               <span style="font-size:0.78rem; letter-spacing:0.04em; color:#4A4945; font-weight:400;">{{ p.num }}</span>
